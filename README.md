@@ -121,9 +121,9 @@ Run ESLint to check for code quality issues:
 
 ### Download MongoDB local sever
 
-<https://github.com/codingUnited/MokseWebsite.git>
+<https://www.mongodb.com/try/download/community>
 
-Mkae sure you select the correct platform Windows/Ubuntu/Mac
+Make sure you select the correct platform Windows/Ubuntu/Mac
 
 - For Windows and Mac no extra steps needed downlaod will include MongoDB Compass
 
