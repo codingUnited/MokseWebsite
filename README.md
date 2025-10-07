@@ -127,6 +127,8 @@ Make sure you select the correct platform Windows/Ubuntu/Mac
 
 - For Windows and Mac no extra steps needed downlaod will include MongoDB Compass
 
+**NOTE** during install for windows make sure to install as a **Service Network**
+
 #### Linux
 
   1. Download Compass
