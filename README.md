@@ -1,168 +1,36 @@
-# Mokse Website
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-A modern React + Vite + Tailwind CSS website for the Mokse project.
+## Getting Started
 
-This repository contains the front-end source code. It uses **Vite** as the build tool, **React 19** for the UI, and **Tailwind CSS 4** for styling.
+First, run the development server:
 
----
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-## Prerequisites
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Before running this project, make sure **Node.js** and **npm** are installed on your system.
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-### Windows
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-1. Download the **LTS version** of Node.js from the [official website](https://nodejs.org/).
-2. Run the installer (`.msi`) and follow the prompts — keep the default options.
-3. After installation, verify Node.js and npm:
+## Learn More
 
-   ```bash
-   node -v
-   npm -v
-   ```
+To learn more about Next.js, take a look at the following resources:
 
-### macOS
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-1. Install via Homebrew (recommended):
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-  ```bash
-  brew install node
-  ```
+## Deploy on Vercel
 
-Or download and install from nodejs.org.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-2. Verify installation:
-
-  ```bash
-  node -v
-  npm -v
-  ```
-
-### Linux (Ubuntu/Debian)
-
-Run the following commands:
-
-  ```bash
-  sudo apt update
-  sudo apt install -y nodejs npm
-  ```
-
-For the latest version of Node.js, you can install nvm (Node Version Manager):
-
-  ```bash
-  curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
-  source ~/.bashrc
-  nvm install --lts
-  ```
-
-Verify installation:
-
-  ```bash
-  node -v
-  npm -v
-  ```
-
-## Project Setup
-
-Once Node.js and npm are installed:
-
-1. Clone this repository
-
-  ```bash
-  git clone https://github.com/codingUnited/MokseWebsite.git
-  cd mokse-website
-  ```
-
-2. Install dependencies
-
-  ```bash
-  npm install
-  ```
-
-This will install all required dependencies defined in the package.json file.
-
-## Development Server
-
-Start the local development server:
-
-  ```bash
-  npm run dev
-  ```
-
-Then open the provided URL (usually <http://localhost:5173>) in your browser.
-
-The site will automatically reload as you make changes.
-
-## Build for Production
-
-To generate an optimized production build:
-
-  ```bash
-  npm run build
-  ```
-
-This outputs the compiled static files into the dist/ directory.
-
-To preview the production build locally:
-
-  ```bash
-  npm run preview
-  ```
-
-### Linting
-
-Run ESLint to check for code quality issues:
-
-  ```bash
-  npm run lint
-  ```
-
-## DB Setup
-
-### Download MongoDB local sever
-
-<https://www.mongodb.com/try/download/community>
-
-Make sure you select the correct platform Windows/Ubuntu/Mac
-
-- For Windows and Mac no extra steps needed downlaod will include MongoDB Compass
-
-**NOTE** during install for windows make sure to install as a **Service Network**
-
-#### Linux
-
-  1. Download Compass
-
-  ```bash
-  wget https://downloads.mongodb.com/compass/mongodb-compass_1.43.3_amd64.deb
-  ```
-
-  2. Install the package
-
-  ```bash
-  sudo dpkg -i mongodb-compass_1.43.3_amd64.deb
-  ```
-
-  3. Fix any missing dependencies
-
-  ```bash
-  sudo apt-get install -f
-  ```
-
-  4. Launch Compass
-
-  ```bash
-  mongodb-compass
-  ```
-
-### Tech Stack
-
-- Vite — Fast modern build tool
-
-- React 19
-
-- Tailwind CSS 4
-
-- ESLint — Linting and code quality
-
-- MongoDB
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
