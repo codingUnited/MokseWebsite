@@ -1,12 +1,14 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
     <footer>
       <div>
         <section>
+          <Image src="/mokse-logo.png" alt="Mokse" width={200} height={51} />
           <p>A society where all individuals have equal opportunities to thrive, learn, and lead.</p>
           <ul>
             <li>
