@@ -1,10 +1,11 @@
 import FeatureCard from "@/components/ui/feature-card";
 import Navbar from "../components/ui/navbar";
 import { empowerment } from "@/data/empowerment";
+import { getInvolved } from "@/data/get-involved";
 
 export default function Home() {
   return (
-    <body>
+    <>
       <div>
         <Navbar />
         <img src="/HeroImage.jpg" />
@@ -26,6 +27,41 @@ export default function Home() {
           ))}
         </div>
       </div>
-    </body>    
+      <div>
+        <img src="/Image-1-1.jpg" alt="College students" />
+        <h3>Make a Difference – Get Involved!</h3>
+        <p>Are you passionate about helping justice-impacted individuals? 
+          We need compassionate volunteers to assist in various roles, including
+           mentorship, tutoring, and administrative support.</p>
+        <button>Get Involved</button>
+      </div>
+      <div>
+        <div>
+          {getInvolved.map((f) => (
+            <FeatureCard key={f.title} {...f} />
+          ))}
+        </div>
+        <button>Donate</button>
+      </div>
+      <div>
+        <h2>special story: The Three Words That Change My Life.</h2>
+        <p>Mokse is proud to share the TEDx talk of Dr. Matthews.</p>
+        <div>
+          <iframe src="https://www.youtube.com/embed/p2q--KoXnXA" frameBorder="0"></iframe>
+        </div>
+      </div>
+      <div>
+        <div>
+          <img src="IMG_0997-1-1024x683.webp" alt="" />
+          <img src="IMG_1004-1024x683.webp" alt="" />
+        </div>
+        <div>
+          <img src="IMG_1011-300x300.webp" alt="" />
+          <img src="IMG_1012-300x300.webp" alt="" />
+          <img src="IMG_1027-300x300.webp" alt="" />
+          <img src="IMG_0995-300x300.webp" alt="" />
+        </div>
+      </div>
+    </>    
   );
 }
