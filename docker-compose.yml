@@ -1,0 +1,19 @@
+services:
+  web:
+    # Select the final stage by env var: "dev" or "runner"
+    build:
+      context: .
+      target: ${BUILD_TARGET:-dev}
+    image: k-web:${BUILD_TARGET:-dev}
+    ports:
+      - "${APP_PORT:-3000}:3000"
+    environment:
+      NODE_ENV: ${NODE_ENV:-development}
+      NEXT_TELEMETRY_DISABLED: "1"
+    # Dev-only bind mounts (no impact in prod if you set BUILD_TARGET=runner and COMPOSE_PROFILES=prod)
+    volumes:
+      - ${DEV_MOUNT:-.:/app}
+      - ${DEV_NODEMODULES_MOUNT:-/app/node_modules}
+    command: ${APP_CMD:-npm run dev}
+    profiles:
+      - ${COMPOSE_PROFILES:-dev}
