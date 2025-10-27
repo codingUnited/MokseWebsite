@@ -1,19 +1,47 @@
 services:
   web:
-    # Select the final stage by env var: "dev" or "runner"
     build:
       context: .
-      target: ${BUILD_TARGET:-dev}
+      target: ${BUILD_TARGET:-dev}          # dev | runner
     image: k-web:${BUILD_TARGET:-dev}
     ports:
       - "${APP_PORT:-3000}:3000"
     environment:
       NODE_ENV: ${NODE_ENV:-development}
       NEXT_TELEMETRY_DISABLED: "1"
-    # Dev-only bind mounts (no impact in prod if you set BUILD_TARGET=runner and COMPOSE_PROFILES=prod)
+      # App uses this to connect to Mongo:
+      MONGODB_URI: ${MONGODB_URI:-mongodb://appuser:apppass@mongo:27017/mokse?authSource=admin}
     volumes:
       - ${DEV_MOUNT:-.:/app}
       - ${DEV_NODEMODULES_MOUNT:-/app/node_modules}
     command: ${APP_CMD:-npm run dev}
+    depends_on:
+      mongo:
+        condition: service_healthy
     profiles:
       - ${COMPOSE_PROFILES:-dev}
+
+  mongo:
+    image: mongo:7
+    container_name: mongo
+    restart: unless-stopped
+    # Expose the port ONLY in dev by default (override via .env if needed)
+    ports:
+      - "${MONGO_PORT:-27017}:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_ROOT_USER:-root}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_ROOT_PASS:-changeme}
+      MONGO_INITDB_DATABASE: ${MONGO_DB:-mokse}
+    volumes:
+      - mongo_data:/data/db
+      - ./docker/mongo/init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "mongosh --norc --quiet --eval \"db.runCommand({ ping: 1 }).ok\" | grep 1 >/dev/null"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    profiles:
+      - ${COMPOSE_PROFILES:-dev}
+
+volumes:
+  mongo_data:

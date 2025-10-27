@@ -1,36 +1,141 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mokse Website
+
+This is a [Next.js](https://nextjs.org/) project containerized with Docker and MongoDB, built for local development and easy deployment.
+The stack includes:
+
+- Next.js 14+
+- Node.js 20 (Alpine)
+- MongoDB 7 (containerized)
+- Docker Compose (single-file setup for dev & prod)
 
 ## Getting Started
 
-First, run the development server:
+1️⃣ Prerequisites
+
+Make sure you have these installed:
+
+- [Docker & Docker Compose](https://docs.docker.com/get-docker/)
+- [Node.js 20+](https://nodejs.org/) (optional for local non-Docker testing)
+- [MongoDB Compass](https://www.mongodb.com/try/download/compass) (optional GUI)
+
+2️⃣ Environment Setup
+
+Copy the example environment file and adjust values if needed:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+cp .env.example .env
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Update secrets (especially for production):
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+MONGO_ROOT_PASS=your-secure-password
+MONGO_APP_PASS=your-secure-password
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3️⃣ Start the Project (Docker)
 
-## Learn More
+Run the full stack — Next.js + MongoDB — with one command:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+docker compose up --build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+After it builds, visit:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+[http://localhost:3000](http://localhost:3000)
 
-## Deploy on Vercel
+This will:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Start the web container in hot-reload dev mode.
+- Start the mongo container with persistent data stored in a local volume.
+- Auto-create a MongoDB appuser for your web app.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4️⃣ Local Development Commands
+
+To view container status:
+
+```bash
+docker compose ps
+```
+
+To open Mongo shell inside the container:
+
+```bash
+docker exec -it mongo mongosh -u root -p changeme --authenticationDatabase admin
+```
+
+To inspect Mongo logs:
+
+```bash
+docker compose logs mongo | tail -n 20
+```
+
+5️⃣ Connect with MongoDB Compass (Optional)
+
+If you want to browse your data visually, connect using:
+
+```bash
+mongodb://root:changeme@localhost:27017/mokse?authSource=admin
+```
+
+Replace credentials as needed.
+
+6️⃣ Switching to Production Mode
+
+Build and run with optimized production settings:
+
+```bash
+export COMPOSE_PROFILES=prod BUILD_TARGET=runner NODE_ENV=production
+docker compose --env-file .env up --build -d
+```
+
+This will:
+
+- Use the runner stage from the Dockerfile.
+- Disable bind mounts and hot reload.
+- Keep Mongo isolated (port not exposed if MONGO_PORT is blank).
+
+## Project Structure
+
+```init
+.
+├── Dockerfile
+├── docker-compose.yml
+├── .env.example
+├── docker/
+│   └── mongo/
+│       └── init/
+│           └── 01-create-app-user.js
+├── app/
+│   └── page.tsx
+├── public/
+├── package.json
+└── README.md
+```
+
+## Environment Variables
+
+|Variable | Description | Default |
+|-----------|---------------|---------|
+|COMPOSE_PROFILES | Compose profile (dev or prod) | dev |
+|BUILD_TARGET | Docker build stage (dev or runner) | dev |
+|APP_PORT | Port exposed on host | 3000 |
+|NODE_ENV | Node environment | development |
+|MONGO_PORT | Mongo host port (omit for prod) | 27017 |
+|MONGO_DB | Database name | mokse |
+|MONGO_ROOT_USER | Root Mongo user | root |
+|MONGO_ROOT_PASS | Root password | changeme |
+|MONGO_APP_USER | App DB user | appuser |
+|MONGO_APP_PASS | App DB password | apppass |
+|MONGODB_URI | App Mongo connection string | `mongodb://${MONGO_APP_USER}:${MONGO_APP_PASS}@mongo:27017/${MONGO_DB}?authSource=admin` |
+
+## Useful Commands
+
+| Task | Command |
+|------|---------|
+| Rebuild containers | docker compose build |
+| Restart stack | docker compose restart |
+| Stop containers | docker compose down |
+| Remove all volumes | docker compose down -v |
+| Shell into web container | docker exec -it $(docker compose ps -q web) sh |
