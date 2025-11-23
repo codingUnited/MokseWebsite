@@ -104,8 +104,8 @@ export default function Home() {
                 alignItems={"center"}
               >
                 <VStack>
-                  <Heading as={"h1"}>
-                    <Text textStyle="3xl" fontWeight={'bold'}>Empowering Change Through Education and Advocacy</Text>
+                  <Heading as={"h2"} p={2} justifyContent={'end'}>
+                    <Text textStyle={"4xl"}>Empowering Change Through Education And Advocacy</Text>
                   </Heading>
                   <p>We strive to break down barriers and stop the stigma associated with
                     incarceration through consulting services, educational conferences, and business support programs.</p>
