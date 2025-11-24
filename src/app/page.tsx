@@ -8,6 +8,8 @@ import { empowerment } from "@/data/empowerment";
 import { getInvolved } from "@/data/get-involved";
 import { useBreakpointValue, Box, Text, Button, AbsoluteCenter, VStack, Heading, Link as ChakraLink, Center } from '@chakra-ui/react';
 import { RiArrowRightLine } from 'react-icons/ri';
+import { poppins } from '@/components/ui/fonts';
+
 
 export default function Home() {
   const current = useBreakpointValue({
@@ -42,11 +44,14 @@ export default function Home() {
                 alignItems={"center"}
               >
                 <VStack>
-                  <Heading as={"h1"} p={2} justifyContent={'end'}>
-                    <Text textStyle={"7xl"} >Empowering Change Through Education And Advocacy</Text>
+                  <Heading as={"h1"} p={2} >
+                    <Text textStyle={"7xl"} className={poppins.variable} textAlign={'left'} overflow={'hidden'}
+                    >Empowering Change Through Education And Advocacy</Text>
                   </Heading>
-                  <Text>We strive to break down barriers and stop the stigma associated with
-                    incarceration through consulting services, educational conferences, and business support programs.</Text>
+                  <Text>
+                    We strive to break down barriers and stop the stigma associated with
+                    incarceration through consulting services, educational conferences, and business support programs.
+                  </Text>
                   <ChakraLink asChild>
                     <Link href="/services">
                       <Button colorPalette="teal" variant="solid">
@@ -107,7 +112,7 @@ export default function Home() {
                 <img src="IMG_0995-300x300.webp" alt="" />
               </Box>
             </Box>
-          </VStack>
+          </VStack >
         ) : (
           <VStack>
             <Box
