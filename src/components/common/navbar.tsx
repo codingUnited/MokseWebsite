@@ -3,8 +3,11 @@
 import Image from 'next/image';
 import NextLink from 'next/link';
 import { HStack, Container, Link as ChakraLink, Button, useBreakpointValue, Text } from '@chakra-ui/react'
+import { MdBrightness4 as MdMoon, MdBrightness4 as MdSun } from "react-icons/md";
+import { useColorMode } from '../ui/color-mode';
 
 export default function Navbar() {
+    const { toggleColorMode, colorMode, } = useColorMode();
 
     const current = useBreakpointValue({
         base: "base",
@@ -17,7 +20,7 @@ export default function Navbar() {
 
     return (
         <nav>
-            <Container h={'10vh'} zIndex={1} position={"absolute"} w={'100vw'} py={8}>
+            <Container h={'10vh'} zIndex={1} position={"absolute"} fluid py={8}>
                 {current !== "base" && current !== "sm" ? (
                     <HStack justifyContent={'space-between'} px={8}>
                         <ChakraLink asChild pl={2}>
@@ -52,6 +55,9 @@ export default function Navbar() {
                                         <Text textStyle={'md'} color={"white"}>Call Us Today</Text>
                                     </NextLink>
                                 </ChakraLink>
+                            </Button>
+                            <Button bg={'blackAlpha.50'} variant="solid" rounded="md" size={'xl'} onClick={toggleColorMode}>
+                                {colorMode === "light" ? <MdSun /> : <MdMoon />}
                             </Button>
                         </HStack>
                     </HStack>
