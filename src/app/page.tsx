@@ -44,10 +44,10 @@ export default function Home() {
                 <VStack>
                   <Heading as={"h1"} p={2} >
                     <Text textStyle={"7xl"} className={poppins.variable} textAlign={'left'} overflow={'hidden'} wordBreak={"break-word"} verticalAlign={'top'}
-                    >Empowering Change Through Education And Advocacy
+                      _light={{ color: "white" }}>Empowering Change Through Education And Advocacy
                     </Text>
                   </Heading>
-                  <Text>
+                  <Text _light={{ color: "white" }}>
                     We strive to break down barriers and stop the stigma associated with
                     incarceration through consulting services, educational conferences, and business support programs.
                   </Text>
@@ -138,12 +138,12 @@ export default function Home() {
 
                 </Box>
                 <Card.Body w={"25px"}>
-                  <Container>
+                  <Container _light={{ color: "white" }}>
                     <h3>Make a Difference – Get Involved!</h3>
                     <p>Are you passionate about helping justice-impacted individuals?
                       We need compassionate volunteers to assist in various roles, including
                       mentorship, tutoring, and administrative support.</p>
-                    <button>Get Involved</button>
+                    <Button >Get Involved</Button>
                   </Container>
 
                 </Card.Body>
@@ -156,10 +156,10 @@ export default function Home() {
                 <FeatureCard key={f.title} {...f} />
               ))}
               </Stack>
-              <Button colorPalette="teal" variant="solid" size={'xl'} >
+              <Button colorPalette="teal" variant="solid" size={'xl'}>
                 <ChakraLink asChild>
                   <NextLink href="/services">
-                    <Text >Donate</Text>
+                    <Text _light={{ color: "white" }}>Donate</Text>
                   </NextLink>
                 </ChakraLink>
               </Button>
