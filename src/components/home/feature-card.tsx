@@ -1,7 +1,7 @@
 'use client'
 
 import type { ReactNode } from 'react';
-import { Card, Avatar, Icon } from '@chakra-ui/react';
+import { Card, Avatar, Icon, Text } from '@chakra-ui/react';
 
 type FeatureCardProps = {
   title: string;
@@ -17,17 +17,14 @@ export default function FeatureCard({
 }: FeatureCardProps) {
 
   return (
-    <Card.Root>
-      <Card.Header>
-        <Avatar.Root my={4} boxSize={12}>
-          <Icon >{icon}</Icon>
-        </Avatar.Root>
+    <Card.Root variant="outline" w={'sm'} h={'xs'}>
+      <Card.Body><Avatar.Root my={4} boxSize={12}>
+        <Icon >{icon}</Icon>
+      </Avatar.Root>
         <Card.Title>{title}</Card.Title>
-      </Card.Header>
-      <Card.Body>
-        <p>
+        <Text>
           {description}
-        </p>
+        </Text>
       </Card.Body>
     </Card.Root >
   );
