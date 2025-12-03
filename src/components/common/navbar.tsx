@@ -2,8 +2,8 @@
 
 import Image from 'next/image';
 import NextLink from 'next/link';
-import { HStack, Container, Link as ChakraLink, Button, useBreakpointValue, Text } from '@chakra-ui/react'
-import { MdBrightness4 as MdMoon, MdBrightness4 as MdSun } from "react-icons/md";
+import { HStack, Container, Link as ChakraLink, Button, useBreakpointValue, Text, Icon } from '@chakra-ui/react'
+import { MdBrightness4 as MdMoon, MdBrightness5 as MdSun } from "react-icons/md";
 import { useColorMode } from '../ui/color-mode';
 import { useState, useEffect } from 'react';
 
@@ -35,9 +35,9 @@ export default function Navbar() {
 
     return (
         <nav>
-            <Container h={'10vh'} zIndex={1} position={isFixed ? 'fixed' : 'absolute'} fluid py={8} transition="all 0.3s ease-in-out"
+            <Container h={'10vh'} zIndex={1} position={isFixed ? 'fixed' : 'absolute'} fluid py={8} transition="all 0.2s ease-in-out"
                 transform={isFixed ? 'translateY(0)' : 'translateY(-20px)'}
-                opacity={isFixed ? 1 : 0.9} boxShadow={isFixed ? '2xl' : 'none'} bg={isFixed ? 'blackAlpha.950' : 'transparent'} >
+                opacity={isFixed ? 1 : 0.9} boxShadow={isFixed ? '2xl' : 'none'} bg={isFixed ? (colorMode === "light" ? 'black' : 'blackAlpha.950') : 'transparent'} >
                 {current !== "base" && current !== "sm" ? (
                     <HStack justifyContent={'space-between'} px={8}>
                         <ChakraLink asChild pl={2}  >
@@ -73,8 +73,18 @@ export default function Navbar() {
                                     </NextLink>
                                 </ChakraLink>
                             </Button>
-                            <Button bg={isFixed ? (colorMode === "light" ? 'teal.focusRing' : 'teal.focusRing') : 'transparent'} variant="solid" rounded="md" size={'xl'} onClick={toggleColorMode} >
-                                {colorMode === "light" ? <MdSun /> : <MdMoon />}
+                            <Button
+                                bg={isFixed ?
+                                    (colorMode === "light" ? 'teal.focusRing' : 'teal.focusRing')
+                                    : 'transparent'}
+                                variant={isFixed ? "solid" : "ghost"}
+                                rounded="md"
+                                size={'xl'}
+                                onClick={toggleColorMode}
+
+                            >
+                                <Icon as={colorMode === "light" ? MdMoon : MdSun} />
+
                             </Button>
                         </HStack>
                     </HStack>
