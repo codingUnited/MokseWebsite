@@ -3,6 +3,8 @@
 import type { ReactNode } from 'react';
 import { Card, Avatar, Icon, Text } from '@chakra-ui/react';
 
+import { poppins } from '@/components/ui/fonts';
+
 type FeatureCardProps = {
   title: string;
   description: string;
@@ -21,7 +23,7 @@ export default function FeatureCard({
       <Card.Body><Avatar.Root my={4} boxSize={12}>
         <Icon >{icon}</Icon>
       </Avatar.Root>
-        <Card.Title>{title}</Card.Title>
+        <Card.Title className={poppins.className}>{title}</Card.Title>
         <Text>
           {description}
         </Text>
