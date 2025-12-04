@@ -41,24 +41,26 @@ export default function Home() {
                 h={"100%"}
                 alignItems={"center"}
               >
-                <VStack>
-                  <Heading as={"h1"} p={2} >
-                    <Text textStyle={"7xl"} className={poppins.variable} textAlign={'left'} overflow={'hidden'} wordBreak={"break-word"} verticalAlign={'top'}
-                      _light={{ color: "white" }}>Empowering Change Through Education And Advocacy
+                <SimpleGrid columns={2} gap={6}>
+                  <VStack w={"75%"} pl={16}>
+                    <Heading as={"h1"} p={2} >
+                      <Text textStyle={"7xl"} className={poppins.className} textAlign={'start'} textTransform={'capitalize'} overflow={'hidden'} wordBreak={"none"} verticalAlign={'baseline'}
+                        _light={{ color: "white" }}>Empowering change through education and advocacy
+                      </Text>
+                    </Heading>
+                    <Text _light={{ color: "white" }}>
+                      We strive to break down barriers and stop the stigma associated with
+                      incarceration through consulting services, educational conferences, and business support programs.
                     </Text>
-                  </Heading>
-                  <Text _light={{ color: "white" }}>
-                    We strive to break down barriers and stop the stigma associated with
-                    incarceration through consulting services, educational conferences, and business support programs.
-                  </Text>
-                  <Button bg={'teal.focusRing'} variant="solid" rounded="md" size={'xl'}>
-                    <ChakraLink asChild>
-                      <NextLink href="/services">
-                        Learn More <RiArrowRightLine />
-                      </NextLink>
-                    </ChakraLink>
-                  </Button>
-                </VStack>
+                    <Button bg={'teal.focusRing'} variant="solid" rounded="md" size={'xl'}>
+                      <ChakraLink asChild>
+                        <NextLink href="/services">
+                          Learn More <RiArrowRightLine />
+                        </NextLink>
+                      </ChakraLink>
+                    </Button>
+                  </VStack>
+                </SimpleGrid>
               </AbsoluteCenter>
             </Box>
 
@@ -156,32 +158,40 @@ export default function Home() {
                 <FeatureCard key={f.title} {...f} />
               ))}
               </Stack>
-              <Button colorPalette="teal" variant="solid" size={'xl'}>
-                <ChakraLink asChild>
-                  <NextLink href="/services">
-                    <Text _light={{ color: "white" }}>Donate</Text>
-                  </NextLink>
-                </ChakraLink>
-              </Button>
+              <Center>
+                <Button colorPalette="teal" variant="solid" size={'xl'}>
+                  <ChakraLink asChild>
+                    <NextLink href="/services">
+                      <Text _light={{ color: "white" }}>Donate</Text>
+                    </NextLink>
+                  </ChakraLink>
+                </Button>
+              </Center>
             </Stack>
 
 
 
             <Container w={'7xl'} pb={14} asChild>
               <Center>
-                <Card.Root flexDirection="row" justifyContent={'space-between'} borderRadius={'0'} gap={6} w={"95%"} bg="rgba(0, 0, 0, 0.0)" border={0} p="0" m="0">
-                  <Card.Body>
-                  </Card.Body>
-                  <Stack direction={'column'} w={'sm'}>
-                    <Container fluid p={12}>
+                <Card.Root flexDirection="row" justifyContent={'space-between'} borderRadius={'0'} gap={6} w={"100%"} bg="rgba(0, 0, 0, 0.0)" border={0} p="0" m="0">
+                  <Card.Body><Stack direction={'column'} w={'sm'}>
+                    <Container fluid p={12} >
                       <Heading>
-                        <Text textStyle={'4xl'} className={poppins.variable} textAlign={'left'} verticalAlign={'baseline'} wordWrap={'break-word'}>
-                          Special Story: The Three Words That Changed My Life
+                        <Text textStyle={'4xl'} className={poppins.className} textAlign={'left'} verticalAlign={'baseline'} wordWrap={'break-word'} w={340} textTransform={'capitalize'} >
+                          Special Story:
+                        </Text>
+                        <Text textStyle={'4xl'} className={poppins.className} textAlign={'left'} verticalAlign={'baseline'} wordWrap={'break-word'} w={340} textTransform={'capitalize'} >
+                          The three words
+                        </Text>
+                        <Text textStyle={'4xl'} className={poppins.className} textAlign={'left'} verticalAlign={'baseline'} wordWrap={'break-word'} w={340} textTransform={'capitalize'} >
+                          that changed my life
                         </Text>
                       </Heading>
                       <Card.Description>Mokse is proud to share the TEDx talk of Dr. Matthews.</Card.Description>
                     </Container>
                   </Stack>
+                  </Card.Body>
+
                   <Box asChild>
                     <iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/p2q--KoXnXA?si=6mz92ZtuwqfrvnSZ" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin"></iframe>
                   </Box>
