@@ -83,9 +83,7 @@ export default function Navbar() {
                                 onClick={toggleColorMode}
 
                             >
-                                <Icon as={colorMode === "light" ? MdMoon : MdSun} />
-
-                            </Button>
+                                <Text>{colorMode === "light" ? <MdMoon /> : <MdSun />}</Text> </Button>
                         </HStack>
                     </HStack>
                 ) : (
