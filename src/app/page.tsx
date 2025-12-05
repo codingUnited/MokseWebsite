@@ -141,7 +141,7 @@ export default function Home() {
                 </Box>
                 <Card.Body w={"25px"}>
                   <Container _light={{ color: "white" }}>
-                    <h3>Make a Difference – Get Involved!</h3>
+                    <h3>Make a Difference - Get Involved!</h3>
                     <p>Are you passionate about helping justice-impacted individuals?
                       We need compassionate volunteers to assist in various roles, including
                       mentorship, tutoring, and administrative support.</p>
@@ -173,23 +173,17 @@ export default function Home() {
 
             <Container w={'7xl'} pb={14} asChild>
               <Center>
-                <Card.Root flexDirection="row" justifyContent={'space-between'} borderRadius={'0'} gap={6} w={"100%"} bg="rgba(0, 0, 0, 0.0)" border={0} p="0" m="0">
-                  <Card.Body><Stack direction={'column'} w={'sm'}>
-                    <Container fluid p={12} >
+                <Card.Root flexDirection="row" borderRadius={'0'} gap={6} w={"100%"} bg="rgba(0, 0, 0, 0.0)" border={0}>
+                  <Card.Body w={'xl'}>
+                    <Stack direction={'column'} w={'sm'}>
                       <Heading>
-                        <Text textStyle={'4xl'} className={poppins.className} textAlign={'left'} verticalAlign={'baseline'} wordWrap={'break-word'} w={340} textTransform={'capitalize'} >
-                          Special Story:
-                        </Text>
-                        <Text textStyle={'4xl'} className={poppins.className} textAlign={'left'} verticalAlign={'baseline'} wordWrap={'break-word'} w={340} textTransform={'capitalize'} >
-                          The three words
-                        </Text>
-                        <Text textStyle={'4xl'} className={poppins.className} textAlign={'left'} verticalAlign={'baseline'} wordWrap={'break-word'} w={340} textTransform={'capitalize'} >
-                          that changed my life
+                        <Text textStyle={'4xl'} className={poppins.className} textAlign={'left'} verticalAlign={'baseline'} textTransform={'capitalize'} >
+                          Special Story: The three words that changed my life
                         </Text>
                       </Heading>
                       <Card.Description>Mokse is proud to share the TEDx talk of Dr. Matthews.</Card.Description>
-                    </Container>
-                  </Stack>
+
+                    </Stack>
                   </Card.Body>
 
                   <Box asChild>
