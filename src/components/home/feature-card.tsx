@@ -1,4 +1,9 @@
+'use client'
+
 import type { ReactNode } from 'react';
+import { Card, Avatar, Icon, Text } from '@chakra-ui/react';
+
+import { poppins } from '@/components/ui/fonts';
 
 type FeatureCardProps = {
   title: string;
@@ -6,16 +11,23 @@ type FeatureCardProps = {
   icon: ReactNode;
 };
 
+
 export default function FeatureCard({
   title,
   description,
   icon,
 }: FeatureCardProps) {
+
   return (
-    <div>
-      <div>{icon}</div>
-      <h3>{title}</h3>
-      <p>{description}</p>
-    </div>
+    <Card.Root variant="outline" w={'sm'} h={'xs'}>
+      <Card.Body><Avatar.Root my={4} boxSize={12}>
+        <Icon >{icon}</Icon>
+      </Avatar.Root>
+        <Card.Title className={poppins.className}>{title}</Card.Title>
+        <Text>
+          {description}
+        </Text>
+      </Card.Body>
+    </Card.Root >
   );
 }

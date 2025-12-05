@@ -1,0 +1,15 @@
+import { Geist, Geist_Mono, Poppins } from "next/font/google";
+const geistSans = Geist({
+    variable: "--font-geist-sans",
+    subsets: ["latin"],
+});
+const geistMono = Geist_Mono({
+    variable: "--font-geist-mono",
+    subsets: ["latin"],
+});
+const poppins = Poppins({
+    weight: ["600"],
+    variable: "--font-poppins",
+    subsets: ["latin"],
+});
+export { poppins, geistSans, geistMono };
