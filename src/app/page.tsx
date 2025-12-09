@@ -101,7 +101,7 @@ export default function Home() {
                   borderRadius={'xl'}
                   w={"350px"}
                   h={"55vh"}
-                  bgImage={"url('/backdrop-image.jpg')"}
+                  bgImage={"url('/home-backdrop-image.jpg')"}
                   bgSize={"cover"}
                   backgroundPosition={"center"}
                   bgRepeat={"no-repeat"}
