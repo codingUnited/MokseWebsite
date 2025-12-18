@@ -2,107 +2,96 @@
 
 import Image from 'next/image';
 import NextLink from 'next/link';
-import { HStack, Container, Link as ChakraLink, Button, useBreakpointValue, Text, Icon } from '@chakra-ui/react'
-import { MdBrightness4 as MdMoon, MdBrightness5 as MdSun } from "react-icons/md";
+import { HStack, Container, Link as ChakraLink, Button, useBreakpointValue, Text } from '@chakra-ui/react';
+import { MdBrightness4 as MdMoon, MdBrightness5 as MdSun } from 'react-icons/md';
 import { useColorMode } from '../ui/color-mode';
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { Open_Sans } from 'next/font/google';
+
+const openSans = Open_Sans({ subsets: ['latin'], weight: ['400', '600', '700'] });
 
 export default function Navbar() {
-    const { toggleColorMode, colorMode, } = useColorMode();
+  const { toggleColorMode, colorMode } = useColorMode();
+  const isMobile = useBreakpointValue({ base: true, md: false });
 
-    const current = useBreakpointValue({
-        base: "base",
-        sm: "sm",
-        md: "md",
-        lg: "lg",
-        xl: "xl",
-        "2xl": "2xl",
-    });
+  const [isFixed, setIsFixed] = useState(false);
 
-    const [isFixed, setIsFixed] = useState(false);
-    useEffect(() => {
-        const handleScroll = () => {
-            if (window?.scrollY > 50) {
-                setIsFixed(true);
-            } else {
-                setIsFixed(false);
-            }
-        };
-        window?.addEventListener('scroll', handleScroll);
-        return () => window?.removeEventListener('scroll', handleScroll);
-    }, []);
+  useEffect(() => {
+    const onScroll = () => setIsFixed(window.scrollY > 50);
+    onScroll();
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
+  const navTextProps = {
+    fontSize: '30px',
+    fontWeight: 600,
+    _light: { color: 'white' },
+  };
 
-    return (
-        <nav>
-            <Container h={'10vh'} zIndex={1} position={isFixed ? 'fixed' : 'absolute'} fluid py={8} transition="all 0.2s ease-in-out"
-                transform={isFixed ? 'translateY(0)' : 'translateY(-20px)'}
-                opacity={isFixed ? 1 : 0.9} boxShadow={isFixed ? '2xl' : 'none'} bg={isFixed ? (colorMode === "light" ? 'black' : 'blackAlpha.950') : 'transparent'} >
-                {current !== "base" && current !== "sm" ? (
-                    <HStack justifyContent={'space-between'} px={8}>
-                        <ChakraLink asChild pl={2}  >
-                            <NextLink href="/">
-                                <Image src="/MOKSE-3-180x46.png" alt="MOKSE Logo" width={180} height={48} />
-                            </NextLink>
-                        </ChakraLink>
-                        <HStack justifyContent={'space-evenly'} spaceX={6} pr={8} >
-                            <ChakraLink asChild>
-                                <NextLink href="/">
-                                    <Text textStyle={'md'} _light={{ color: "white" }}>Home</Text>
-                                </NextLink>
-                            </ChakraLink>
-                            <ChakraLink asChild>
-                                <NextLink href="/about-us">
-                                    <Text textStyle={'md'} _light={{ color: "white" }}>About Us</Text>
-                                </NextLink>
-                            </ChakraLink>
-                            <ChakraLink asChild>
-                                <NextLink href="/services">
-                                    <Text textStyle={'md'} _light={{ color: "white" }}>Services</Text>
-                                </NextLink>
-                            </ChakraLink>
-                            <ChakraLink asChild>
-                                <NextLink href="/contact">
-                                    <Text textStyle={'md'} _light={{ color: "white" }} >Contact</Text>
-                                </NextLink>
-                            </ChakraLink>
-                            <Button bg={'teal.focusRing'} variant="solid" rounded="md" size={'xl'}>
-                                <ChakraLink asChild>
-                                    <NextLink href="tel:+16034961535">
-                                        <Text textStyle={'md'} _light={{ color: "white" }}>Call Us Today</Text>
-                                    </NextLink>
-                                </ChakraLink>
-                            </Button>
-                            <Button
-                                bg={isFixed ?
-                                    (colorMode === "light" ? 'teal.focusRing' : 'teal.focusRing')
-                                    : 'transparent'}
-                                variant={isFixed ? "solid" : "ghost"}
-                                rounded="md"
-                                size={'xl'}
-                                onClick={toggleColorMode}
+  const containerProps = {
+    h: '10vh',
+    w: '75%',
+    zIndex: 1,
+    py: 8,
+    position: isFixed ? 'fixed' : 'absolute',
+    top: isFixed ? 0 : '0.3%',
+    left: '15%',
+    transition: 'all 0.2s ease-in-out',
+    transform: isFixed ? 'translateY(0)' : 'translateY(-20px)',
+    opacity: isFixed ? 1 : 0.9,
+    boxShadow: isFixed ? '2xl' : 'none',
+    bg: isFixed ? '#003300' : 'transparent',
+  } as const;
 
-                            >
-                                <Text>{colorMode === "light" ? <MdMoon /> : <MdSun />}</Text> </Button>
-                        </HStack>
-                    </HStack>
-                ) : (
-                    <HStack justifyContent={'space-between'} py={3.5} px={1}>
-                        <ChakraLink asChild >
-                            <NextLink href="/">
-                                <Image src="/MOKSE-3-180x46.png" alt="MOKSE Logo" width={180} height={48} />
-                            </NextLink>
-                        </ChakraLink>
-                        <Button>
-                            Menu
-                        </Button>
+  return (
+    <nav>
+      <Container {...containerProps} fluid className={openSans.className}>
+        {!isMobile ? (
+          <HStack justify="space-between" px={8}>
+            <ChakraLink asChild>
+              <NextLink href="/">
+                <Image src="/MOKSE-3-180x46.png" alt="MOKSE Logo" width={235} height={55} />
+              </NextLink>
+            </ChakraLink>
 
-                    </HStack>
-                )}
+            <HStack gap={6}>
+              <ChakraLink asChild><NextLink href="/"><Text {...navTextProps}>Home</Text></NextLink></ChakraLink>
+              <ChakraLink asChild><NextLink href="/about-us"><Text {...navTextProps}>About Us</Text></NextLink></ChakraLink>
+              <ChakraLink asChild><NextLink href="/services"><Text {...navTextProps}>Services</Text></NextLink></ChakraLink>
+              <ChakraLink asChild><NextLink href="/contact"><Text {...navTextProps}>Contact</Text></NextLink></ChakraLink>
 
+              <Button bg="teal.focusRing" rounded="md" size="xl">
+                <ChakraLink asChild>
+                  <NextLink href="tel:+16034961535">
+                    <Text {...navTextProps}>Call Us Today</Text>
+                  </NextLink>
+                </ChakraLink>
+              </Button>
 
-            </Container>
-        </nav >
+              <Button
+                onClick={toggleColorMode}
+                bg={isFixed ? 'teal.focusRing' : 'transparent'}
+                variant={isFixed ? 'solid' : 'ghost'}
+                rounded="md"
+                size="xl"
+              >
+                {colorMode === 'light' ? <MdMoon /> : <MdSun />}
+              </Button>
+            </HStack>
+          </HStack>
+        ) : (
+          <HStack justify="space-between" py={3.5} px={1}>
+            <ChakraLink asChild>
+              <NextLink href="/">
+                <Image src="/MOKSE-3-180x46.png" alt="MOKSE Logo" width={180} height={48} />
+              </NextLink>
+            </ChakraLink>
 
-    )
-};
+            <Button>Menu</Button>
+          </HStack>
+        )}
+      </Container>
+    </nav>
+  );
+}
