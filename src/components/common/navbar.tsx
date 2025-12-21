@@ -2,20 +2,25 @@
 
 import Image from 'next/image';
 import NextLink from 'next/link';
-import { HStack, Container, Link as ChakraLink, Button, Text, Icon } from '@chakra-ui/react'
-import { MdBrightness4 as MdMoon, MdBrightness5 as MdSun } from "react-icons/md";
+import { HStack, Container, Link as ChakraLink, Button, Text } from '@chakra-ui/react';
+import { MdBrightness4 as MdMoon, MdBrightness5 as MdSun } from 'react-icons/md';
 import { useColorMode } from '../ui/color-mode';
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { Open_Sans } from 'next/font/google';
+
+const openSans = Open_Sans({ subsets: ['latin'], weight: ['400', '600', '700'] });
 import checkDeviceSize from '@/components/ui/breakpoints';
 
 export default function Navbar() {
     const { toggleColorMode, colorMode, } = useColorMode();
-    const notMobileDevice = checkDeviceSize();
+
+    const deviceSize = checkDeviceSize();
+    const notMobileDevice = deviceSize !== 'base' && deviceSize !== 'sm';
+
     const [isFixed, setIsFixed] = useState(false);
     useEffect(() => {
         const handleScroll = () => {
-            const threshold = notMobileDevice ? 0 : 25;
-            if (window?.scrollY > threshold) {
+            if (window?.scrollY > 50) {
                 setIsFixed(true);
             } else {
                 setIsFixed(false);
@@ -44,8 +49,13 @@ export default function Navbar() {
                 colorMode === "light" ? 'black'
                     : 'blackAlpha.950'
                 : 'transparent'
-    }
+    } as const
 
+    const navTextProps = {
+        fontSize: '30px',
+        fontWeight: 600,
+        _light: { color: 'white' },
+    } as const;
 
     return (
         <nav>
@@ -55,34 +65,34 @@ export default function Navbar() {
                     <HStack justifyContent={'space-between'} px={8}>
                         <ChakraLink asChild pl={2}  >
                             <NextLink href="/">
-                                <Image src="/MOKSE-3-180x46.png" alt="MOKSE Logo" width={180} height={48} />
+                                <Image src="/MOKSE-3-180x46.png" alt="MOKSE Logo" width={235} height={55} />
                             </NextLink>
                         </ChakraLink>
-                        <HStack justifyContent={'space-evenly'} spaceX={6} pr={8} >
+                        <HStack justifyContent={'space-evenly'} spaceX={6} px={8} >
                             <ChakraLink asChild>
                                 <NextLink href="/">
-                                    <Text textStyle={'md'} _light={{ color: "white" }}>Home</Text>
+                                    <Text {...navTextProps} >Home</Text>
                                 </NextLink>
                             </ChakraLink>
                             <ChakraLink asChild>
                                 <NextLink href="/about-us">
-                                    <Text textStyle={'md'} _light={{ color: "white" }}>About Us</Text>
+                                    <Text {...navTextProps}>About Us</Text>
                                 </NextLink>
                             </ChakraLink>
                             <ChakraLink asChild>
                                 <NextLink href="/services">
-                                    <Text textStyle={'md'} _light={{ color: "white" }}>Services</Text>
+                                    <Text {...navTextProps}>Services</Text>
                                 </NextLink>
                             </ChakraLink>
                             <ChakraLink asChild>
                                 <NextLink href="/contact">
-                                    <Text textStyle={'md'} _light={{ color: "white" }} >Contact</Text>
+                                    <Text {...navTextProps}>Contact</Text>
                                 </NextLink>
                             </ChakraLink>
                             <Button bg={'teal.focusRing'} variant="solid" rounded="md" size={'xl'}>
                                 <ChakraLink asChild>
                                     <NextLink href="tel:+16034961535">
-                                        <Text textStyle={'md'} _light={{ color: "white" }}>Call Us Today</Text>
+                                        <Text {...navTextProps}>Call Us Today</Text>
                                     </NextLink>
                                 </ChakraLink>
                             </Button>
@@ -96,26 +106,23 @@ export default function Navbar() {
                                 onClick={toggleColorMode}
 
                             >
-                                <Text>{colorMode === "light" ? <MdMoon /> : <MdSun />}</Text> </Button>
-                        </HStack>
-                    </HStack>
-
-                ) :
-                    (
-                        <HStack justifyContent={'space-between'} px={1}>
-                            <ChakraLink asChild >
-                                <NextLink href="/">
-                                    <Image src="/MOKSE-3-180x46.png" alt="MOKSE Logo" width={120} height={48} />
-                                </NextLink>
-                            </ChakraLink>
-                            <Button>
-                                Menu
+                                <Text>{colorMode === "light" ? <MdMoon /> : <MdSun />}</Text>
                             </Button>
-
                         </HStack>
-                    )}
+                    </HStack>) : (
+                    <HStack justifyContent={'space-between'} px={1}>
+                        <ChakraLink asChild >
+                            <NextLink href="/">
+                                <Image src="/MOKSE-3-180x46.png" alt="MOKSE Logo" width={180} height={48} />
+                            </NextLink>
+                        </ChakraLink>
+                        <Button>
+                            Menu
+                        </Button>
+
+                    </HStack>
+                )}
             </Container>
         </nav >
-
-    )
-};
+    );
+}
