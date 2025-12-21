@@ -2,27 +2,20 @@
 
 import Image from 'next/image';
 import NextLink from 'next/link';
-import { HStack, Container, Link as ChakraLink, Button, useBreakpointValue, Text, Icon } from '@chakra-ui/react'
+import { HStack, Container, Link as ChakraLink, Button, Text, Icon } from '@chakra-ui/react'
 import { MdBrightness4 as MdMoon, MdBrightness5 as MdSun } from "react-icons/md";
 import { useColorMode } from '../ui/color-mode';
 import { useState, useEffect } from 'react';
+import checkDeviceSize from '@/components/ui/breakpoints';
 
 export default function Navbar() {
     const { toggleColorMode, colorMode, } = useColorMode();
-
-    const current = useBreakpointValue({
-        base: "base",
-        sm: "sm",
-        md: "md",
-        lg: "lg",
-        xl: "xl",
-        "2xl": "2xl",
-    });
-
+    const notMobileDevice = checkDeviceSize();
     const [isFixed, setIsFixed] = useState(false);
     useEffect(() => {
         const handleScroll = () => {
-            if (window?.scrollY > 50) {
+            const threshold = notMobileDevice ? 0 : 25;
+            if (window?.scrollY > threshold) {
                 setIsFixed(true);
             } else {
                 setIsFixed(false);
@@ -32,13 +25,33 @@ export default function Navbar() {
         return () => window?.removeEventListener('scroll', handleScroll);
     }, []);
 
+    const ContainerProps = {
+        h: notMobileDevice ? ('10vh') : ('5vh'),
+        zIndex: 1,
+        position: isFixed ? ('fixed') : ('absolute'),
+        fluid: true,
+        py:
+            isFixed ?
+                notMobileDevice ? (8) : (2) :
+                notMobileDevice ? (8) : (5),
+        transition: "all 0.2s ease-in-out",
+        transform:
+            isFixed ? ('translateY(0)') : ('translateY(-20px)'),
+        opacity: isFixed ? 1 : 0.9,
+        boxShadow: isFixed ? '2xl' : 'none',
+        bg:
+            isFixed ?
+                colorMode === "light" ? 'black'
+                    : 'blackAlpha.950'
+                : 'transparent'
+    }
+
 
     return (
         <nav>
-            <Container h={'10vh'} zIndex={1} position={isFixed ? 'fixed' : 'absolute'} fluid py={8} transition="all 0.2s ease-in-out"
-                transform={isFixed ? 'translateY(0)' : 'translateY(-20px)'}
-                opacity={isFixed ? 1 : 0.9} boxShadow={isFixed ? '2xl' : 'none'} bg={isFixed ? (colorMode === "light" ? 'black' : 'blackAlpha.950') : 'transparent'} >
-                {current !== "base" && current !== "sm" ? (
+
+            <Container {...ContainerProps} >
+                {notMobileDevice ? (
                     <HStack justifyContent={'space-between'} px={8}>
                         <ChakraLink asChild pl={2}  >
                             <NextLink href="/">
@@ -86,21 +99,21 @@ export default function Navbar() {
                                 <Text>{colorMode === "light" ? <MdMoon /> : <MdSun />}</Text> </Button>
                         </HStack>
                     </HStack>
-                ) : (
-                    <HStack justifyContent={'space-between'} py={3.5} px={1}>
-                        <ChakraLink asChild >
-                            <NextLink href="/">
-                                <Image src="/MOKSE-3-180x46.png" alt="MOKSE Logo" width={180} height={48} />
-                            </NextLink>
-                        </ChakraLink>
-                        <Button>
-                            Menu
-                        </Button>
 
-                    </HStack>
-                )}
+                ) :
+                    (
+                        <HStack justifyContent={'space-between'} px={1}>
+                            <ChakraLink asChild >
+                                <NextLink href="/">
+                                    <Image src="/MOKSE-3-180x46.png" alt="MOKSE Logo" width={120} height={48} />
+                                </NextLink>
+                            </ChakraLink>
+                            <Button>
+                                Menu
+                            </Button>
 
-
+                        </HStack>
+                    )}
             </Container>
         </nav >
 
