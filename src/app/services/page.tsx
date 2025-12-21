@@ -45,7 +45,7 @@ export default function Services() {
         <section>
           <h2>Take the Next Step Today!</h2>
           <p>
-            Whether you're seeking support for yourself or your organization, we
+            Whether you&apos;re seeking support for yourself or your organization, we
             invite you to learn more about our services and how we can help.
           </p>
           <div>
