@@ -3,7 +3,7 @@
 import type { ReactNode } from 'react';
 import { Card, Avatar, Icon, Text } from '@chakra-ui/react';
 
-import { poppins } from '@/components/ui/fonts';
+import { poppins } from '../ui/fonts';
 
 type FeatureCardProps = {
   title: string;

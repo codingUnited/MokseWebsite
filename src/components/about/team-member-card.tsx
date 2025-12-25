@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import type { TeamMember } from '@/data/team';
+import type { TeamMember } from '../../data/team';
 import { Card, Text } from '@chakra-ui/react';
 import { poppins } from '../ui/fonts';
 
