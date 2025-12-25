@@ -3,12 +3,12 @@ import { poppins } from '../ui/fonts';
 
 
 
-export function HeaderTemplate({ image, imageLabel, description, direction }: { image?: string; imageLabel?: string; description?: string; direction?: "row" | "column"; }) {
+export function HeaderTemplate({ title, image, imageHeight, imageLabel, description, direction }: { title?: string; image?: string; imageHeight?: string; imageLabel?: string; description?: string; direction?: "row" | "column"; }) {
     return (
         <>
             <Box position="relative"
                 w={"100%"}
-                h={"58vh"}
+                h={imageHeight ?? "58vh"}
                 bgImage={`url(${image})`}
                 bgSize={"cover"}
                 backgroundPosition={"center"}
@@ -26,7 +26,7 @@ export function HeaderTemplate({ image, imageLabel, description, direction }: { 
                         <Stack direction={direction} w={"75%"} pl={16}>
                             <Heading as={"h1"} p={2} >
                                 <Text textStyle={"7xl"} className={poppins.className} textAlign={'start'} textTransform={'capitalize'} overflow={'hidden'} wordBreak={"none"} verticalAlign={'baseline'}
-                                    _light={{ color: "white" }}>Services
+                                    _light={{ color: "white" }}>{title}
                                 </Text>
                             </Heading>
                             <Text _light={{ color: "white" }}>
