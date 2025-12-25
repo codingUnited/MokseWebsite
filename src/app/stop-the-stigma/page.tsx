@@ -1,6 +1,14 @@
 "use client";
 import { useEffect, useState } from "react";
+import NextLink from 'next/link';
+import { Card, For, Stack, Center, Text, VStack, HStack, Image, Heading, Button, Strong, Link as ChakraLink, } from "@chakra-ui/react";
+import { useColorMode } from "../../components/ui/color-mode";
+import { poppins } from "../../components/ui/fonts"
+import { HeaderTemplate, PageBuilder, BodyTemplate, SectionTemplate } from '../../components/page-builder/template';
+import FeatureCard from "../../components/home/feature-card";
 
+import { FaRegObjectGroup as FaObjectGroup, FaRegListAlt as FaListAlt, FaRegNewspaper as FaNewspaper, FaRegKeyboard as FaKeyboard } from "react-icons/fa";
+import { MdBrightness4 as MdMoon, MdBrightness5 as MdSun } from 'react-icons/md';
 export default function StopTheStigma() {
   const [countdownTarget, setCountdownTarget] = useState<{
     target: number;
@@ -22,228 +30,171 @@ export default function StopTheStigma() {
   });
 
   useEffect(() => {
-    return () => {
-      let updateTimer = setInterval(() => {
-        // Get today's date and time
-        let now = new Date().getTime();
-        // Find the distance between now and the countdown date
-        let distance = countdownTarget.target - now;
-        // If the count down is over, write some text
-        if (distance < 0) {
-          clearInterval(updateTimer);
-          setCountdown((prev) => ({
-            ...prev,
-            days: "O",
-            hours: "V",
-            minutes: "E",
-            seconds: "R",
-          }));
-          return;
-        }
+    let updateTimer = setInterval(() => {
+      // Get today's date and time
+      let now = new Date().getTime();
+      // Find the distance between now and the countdown date
+      let distance = countdownTarget.target - now;
+      // If the count down is over, write some text
+      if (distance < 0) {
+        clearInterval(updateTimer);
         setCountdown((prev) => ({
           ...prev,
-          days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-          hours: Math.floor(
-            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-          ),
-          minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
-          seconds: Math.floor((distance % (1000 * 60)) / 1000),
+          days: "O",
+          hours: "V",
+          minutes: "E",
+          seconds: "R",
         }));
-      }, 1000);
-      clearInterval(updateTimer);
-    };
+        return;
+      }
+      setCountdown((prev) => ({
+        ...prev,
+        days: Math.floor(distance / (1000 * 60 * 60 * 24)),
+        hours: Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        ),
+        minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+        seconds: Math.floor((distance % (1000 * 60)) / 1000),
+      }));
+    }, 1000);
+    return () => clearInterval(updateTimer);
+
   }, []);
+
+  const { colorMode, toggleColorMode } = useColorMode();
   return (
     <>
-      {countdown.days}d {countdown.hours}h {countdown.minutes}m{" "}
-      {countdown.seconds}s
-      <div
-        className="elementor-element elementor-element-aa486f9 e-con-full e-flex e-con e-parent e-lazyloaded"
-        data-id="aa486f9"
-        data-element_type="container"
-        data-settings='{"background_background":"slideshow","background_slideshow_gallery":[{"id":1850,"url":"https:\/\/mokse.org\/wp-content\/uploads\/2025\/12\/64712.webp"}],"background_slideshow_loop":"yes","background_slideshow_slide_duration":5000,"background_slideshow_slide_transition":"fade","background_slideshow_transition_duration":500}'
-      >
-        <div className="elementor-background-slideshow swiper" dir="rtl">
-          <div className="swiper-wrapper">
-            <div className="elementor-background-slideshow__slide swiper-slide">
-              <div
-                className="elementor-background-slideshow__slide__image"
-                style={{
-                  backgroundImage: `url(
-                    "https://mokse.org/wp-content/uploads/2025/12/64712.webp"
-                  )`,
+      <PageBuilder>
+        <HeaderTemplate
+          image='/stop-stigma-auditorium.webp'
+          imageHeight="100vh"
+          imageLabel='Stop The Stigma Conference'
+          title='Stop The Stigma Conference'
+        />
+
+        <Card.Root>
+          <Card.Body>
+            <Stack gap={"xl"} direction={'row'}>
+              <For each={[
+                { label: "Days", value: countdown.days },
+                { label: "Hours", value: countdown.hours },
+                { label: "Minutes", value: countdown.minutes },
+                { label: "Seconds", value: countdown.seconds },
+              ]}>
+                {(item) => {
+                  const { label, value } = item;
+                  return (
+                    <Card.Root key={label} bg={'blackAlpha.950'} w={'75px'}>
+                      <Card.Body color={colorMode === "dark" ? "black" : "white"}>
+                        <Center>
+                          <VStack>
+                            <Text className={poppins.className}>{value}</Text>
+                            <Text className={poppins.className}>{label}</Text>
+                          </VStack>
+                        </Center>
+                      </Card.Body>
+                    </Card.Root>
+                  )
                 }}
-              ></div>
-            </div>
-          </div>
-        </div>
-        <div
-          className="elementor-element elementor-element-5808c0e elementor-widget elementor-widget-heading"
-          data-id="5808c0e"
-          data-element_type="widget"
-          data-widget_type="heading.default"
-        >
-          <div className="elementor-widget-container">
-            <h1 className="elementor-heading-title elementor-size-default">
-              Stop The Stigma Conference
-            </h1>{" "}
-          </div>
-        </div>
-        <div
-          className="elementor-element elementor-element-c9969b5 e-con-full e-flex e-con e-child"
-          data-id="c9969b5"
-          data-element_type="container"
-        >
-          <div
-            className="elementor-element elementor-element-26bfc6f elementor-widget elementor-widget-html"
-            data-id="26bfc6f"
-            data-element_type="widget"
-            data-widget_type="html.default"
-          >
-            <div className="elementor-widget-container">
-              {/* <!--jQuery CDN link starts here--> */}
-            </div>
-          </div>
-        </div>
-        <div
-          className="elementor-element elementor-element-6e6ad68 e-con-full e-flex e-con e-child"
-          data-id="6e6ad68"
-          data-element_type="container"
-        >
-          <div
-            className="elementor-element elementor-element-24eafaa e-con-full e-flex e-con e-child"
-            data-id="24eafaa"
-            data-element_type="container"
-            data-settings='{"background_background":"classic"}'
-          >
-            <div
-              className="elementor-element elementor-element-fff71e1 elementor-widget elementor-widget-heading"
-              data-id="fff71e1"
-              data-element_type="widget"
-              data-widget_type="heading.default"
-            >
-              <div className="elementor-widget-container">
-                <h2 className="elementor-heading-title elementor-size-default">
-                  <span id="num1" className="num">
-                    56
-                  </span>
-                </h2>{" "}
+              </For>
+            </Stack>
+          </Card.Body>
+        </Card.Root>
+        <HStack>
+          <Image src='/Linkedin-Carousels.png' />
+          <VStack>
+            <Heading as="h1" size="lg" mb={4}>
+              What is STOP THE STIGMA?
+            </Heading>
+
+            <Text>
+              <Strong>STOP THE STIGMA</Strong> is an annual conference centered on the stigma of disability and incarceration. Now in its fourth year the conference continues to provide a space for justice impacted individuals to have their voices and stories heard. Presented by Mokse and The Community, STOP THE STIGMA integrates innovative media, storytelling, and design to engage audiences and amplify impact. Together, we build an inclusive platform to challenge assumptions and inspire action.
+            </Text>
+            <Button bg={'teal.focusRing'} variant="solid" rounded="md" size={'xl'}>
+              <ChakraLink asChild>
+                <NextLink href="https://docs.google.com/forms/d/e/1FAIpQLSe4Z0LI5JpkPH3eKBw-8ANquRWRxNJKwpS465KOStu3Jb4v_A/viewform?usp=embed_facebook">
+                  <Text>Register Here</Text>
+                </NextLink>
+              </ChakraLink>
+            </Button>
+
+
+          </VStack>
+
+        </HStack>
+        <HeaderTemplate
+          image='/stop-stigma-sect2_background.webp'
+          imageHeight="100vh"
+          imageLabel='Stop The Stigma Conference'
+        />
+        Confrence Highlights
+        <FeatureCard
+          title={'Opening Night Film - Being Michelle'}
+          description={'A groundbreaking documentary that sets the tone for the conference by centering the lived experience of a Deaf woman navigating incarceration and disability.'}
+          icon={<FaKeyboard />}
+
+        />
+        <FeatureCard
+          title={'Panels on Race, Incarceration, and Disability'}
+          description={'Thought-provoking conversations that tackle the intersections of systemic racism, ableism, and mass incarceration—areas where stigma and structural barriers collide most powerfully.'}
+          icon={<FaNewspaper />}
+        />
+        <FeatureCard
+          title={'Theatrical Premiere - Brick by Brick'}
+          description={'A one-act play debuting at the conference, offering a creative lens into stories of resilience, justice, and belonging.'}
+          icon={<FaListAlt />}
+        />
+        <FeatureCard
+          title={'35 Inspiring Speakers'}
+          description={'A diverse lineup of national leaders, educators, advocates, and directly impacted individuals sharing expertise, lived experience, and visions for inclusive futures.'}
+          icon={<FaObjectGroup />}
+        />
+
+        <section className="elementor-section elementor-top-section elementor-element elementor-element-ln1z48d elementor-section-full_width elementor-section-content-middle elementor-section-height-default elementor-section-height-default" data-id="ln1z48d" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+          <div className="elementor-container elementor-column-gap-no">
+            <div className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-4292f5a" data-id="4292f5a" data-element_type="column">
+              <div className="elementor-widget-wrap elementor-element-populated">
+                <div className="elementor-element elementor-element-6d93f44 elementor-widget elementor-widget-image" data-id="6d93f44" data-element_type="widget" data-widget_type="image.default">
+                  <div className="elementor-widget-container">
+                    <img fetchPriority="high" decoding="async" width="1080" height="1350" src="https://mokse.org/wp-content/uploads/2025/12/Linkedin-Carousels.png" className="attachment-full size-full wp-image-1852" alt="Stop The Stigma Conference Flyer" srcSet="https://mokse.org/wp-content/uploads/2025/12/Linkedin-Carousels.png 1080w, https://mokse.org/wp-content/uploads/2025/12/Linkedin-Carousels-240x300.png 240w, https://mokse.org/wp-content/uploads/2025/12/Linkedin-Carousels-819x1024.png 819w, https://mokse.org/wp-content/uploads/2025/12/Linkedin-Carousels-768x960.png 768w" sizes="(max-width: 1080px) 100vw, 1080px" />
+                  </div>
+                </div>
               </div>
             </div>
-            <div
-              className="elementor-element elementor-element-0712e48 elementor-widget elementor-widget-heading"
-              data-id="0712e48"
-              data-element_type="widget"
-              data-widget_type="heading.default"
-            >
-              <div className="elementor-widget-container">
-                <h2 className="elementor-heading-title elementor-size-default">
-                  Days
-                </h2>{" "}
-              </div>
-            </div>
-          </div>
-          <div
-            className="elementor-element elementor-element-bcd6ec0 e-con-full e-flex e-con e-child"
-            data-id="bcd6ec0"
-            data-element_type="container"
-            data-settings='{"background_background":"classic"}'
-          >
-            <div
-              className="elementor-element elementor-element-98d8ed2 elementor-widget elementor-widget-heading"
-              data-id="98d8ed2"
-              data-element_type="widget"
-              data-widget_type="heading.default"
-            >
-              <div className="elementor-widget-container">
-                <h2 className="elementor-heading-title elementor-size-default">
-                  <span id="num2" className="num">
-                    01
-                  </span>
-                </h2>{" "}
-              </div>
-            </div>
-            <div
-              className="elementor-element elementor-element-eb07b79 elementor-widget elementor-widget-heading"
-              data-id="eb07b79"
-              data-element_type="widget"
-              data-widget_type="heading.default"
-            >
-              <div className="elementor-widget-container">
-                <h2 className="elementor-heading-title elementor-size-default">
-                  Hours
-                </h2>{" "}
+            <div className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-a8c8ff0" data-id="a8c8ff0" data-element_type="column">
+              <div className="elementor-widget-wrap elementor-element-populated">
+                <section className="elementor-section elementor-inner-section elementor-element elementor-element-a893ccd elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="a893ccd" data-element_type="section">
+                  <div className="elementor-container elementor-column-gap-no">
+                    <div className="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-6534f2c" data-id="6534f2c" data-element_type="column">
+                      <div className="elementor-widget-wrap elementor-element-populated">
+                        <div className="elementor-element elementor-element-fc9b946 elementor-widget elementor-widget-heading" data-id="fc9b946" data-element_type="widget" data-widget_type="heading.default">
+                          <div className="elementor-widget-container">
+                            <h1 className="elementor-heading-title elementor-size-default">What is STOP THE STIGMA?</h1>				</div>
+                        </div>
+                        <div className="elementor-element elementor-element-2d62856 elementor-widget elementor-widget-text-editor" data-id="2d62856" data-element_type="widget" data-widget_type="text-editor.default">
+                          <div className="elementor-widget-container">
+                            <p>STOP THE STIGMA is an annual conference centered on the stigma of disability and incarceration. Now in itsfourth year the conference continues to provide a space for justice impacted individuals to have their voices and stories heard. Presented by Mokse and The Community, STOP THE STIGMA integrates innovative media, storytelling, and design to engage audiences and amplify impact. Together, we build an inclusive platform to challenge assumptions and inspire action.</p>								</div>
+                        </div>
+                        <div className="elementor-element elementor-element-319cf5c elementor-align-left elementor-widget elementor-widget-button" data-id="319cf5c" data-element_type="widget" data-widget_type="button.default">
+                          <div className="elementor-widget-container">
+                            <div className="elementor-button-wrapper">
+                              <a className="elementor-button elementor-button-link elementor-size-sm" href="https://docs.google.com/forms/d/e/1FAIpQLSe4Z0LI5JpkPH3eKBw-8ANquRWRxNJKwpS465KOStu3Jb4v_A/viewform?usp=embed_facebook">
+                                <span className="elementor-button-content-wrapper">
+                                  <span className="elementor-button-text">Register Here</span>
+                                </span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
               </div>
             </div>
           </div>
-          <div
-            className="elementor-element elementor-element-b196b13 e-con-full e-flex e-con e-child"
-            data-id="b196b13"
-            data-element_type="container"
-            data-settings='{"background_background":"classic"}'
-          >
-            <div
-              className="elementor-element elementor-element-7e0f55c elementor-widget elementor-widget-heading"
-              data-id="7e0f55c"
-              data-element_type="widget"
-              data-widget_type="heading.default"
-            >
-              <div className="elementor-widget-container">
-                <h2 className="elementor-heading-title elementor-size-default">
-                  <span id="num3" className="num">
-                    17
-                  </span>
-                </h2>{" "}
-              </div>
-            </div>
-            <div
-              className="elementor-element elementor-element-8e31e48 elementor-widget elementor-widget-heading"
-              data-id="8e31e48"
-              data-element_type="widget"
-              data-widget_type="heading.default"
-            >
-              <div className="elementor-widget-container">
-                <h2 className="elementor-heading-title elementor-size-default">
-                  Minutes
-                </h2>{" "}
-              </div>
-            </div>
-          </div>
-          <div
-            className="elementor-element elementor-element-5d282c7 e-con-full e-flex e-con e-child"
-            data-id="5d282c7"
-            data-element_type="container"
-            data-settings='{"background_background":"classic"}'
-          >
-            <div
-              className="elementor-element elementor-element-5b08fe1 elementor-widget elementor-widget-heading"
-              data-id="5b08fe1"
-              data-element_type="widget"
-              data-widget_type="heading.default"
-            >
-              <div className="elementor-widget-container">
-                <h2 className="elementor-heading-title elementor-size-default">
-                  <span id="num4" className="num">
-                    47
-                  </span>
-                </h2>{" "}
-              </div>
-            </div>
-            <div
-              className="elementor-element elementor-element-5a93b0b elementor-widget elementor-widget-heading"
-              data-id="5a93b0b"
-              data-element_type="widget"
-              data-widget_type="heading.default"
-            >
-              <div className="elementor-widget-container">
-                <h2 className="elementor-heading-title elementor-size-default">
-                  Seconds
-                </h2>{" "}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+        </section>
+      </PageBuilder >
     </>
   );
 }
