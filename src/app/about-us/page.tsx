@@ -1,16 +1,16 @@
 "use client"
 import Image from 'next/image';
-import TeamMemberCard from '@/components/about/team-member-card';
-import GemIcon from '@/components/about/gem-icon';
-import { executiveBoard, teamMembers } from '@/data/team';
+import TeamMemberCard from '../../components/about/team-member-card';
+import GemIcon from '../../components/about/gem-icon';
+import { executiveBoard, teamMembers } from '../../data/team';
 import {
   Container, Box, Text, Button, AbsoluteCenter, VStack, HStack, Heading,
   Link as ChakraLink, Center, SimpleGrid, GridItem, Stack, Card, Image as ChakraImage
 } from '@chakra-ui/react';
 import { RiArrowRightLine } from 'react-icons/ri';
-import { poppins } from '@/components/ui/fonts';
+import { poppins } from '../../components/ui/fonts';
 import NextLink from 'next/link';
-import checkDeviceSize from '@/components/ui/breakpoints';
+import checkDeviceSize from '../../components/ui/breakpoints';
 
 export default function AboutUs() {
 
