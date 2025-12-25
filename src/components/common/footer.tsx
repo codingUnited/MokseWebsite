@@ -8,8 +8,8 @@ import { IoIosArrowForward as IoRightArrow } from "react-icons/io";
 import { MdLocationPin, MdPhone, MdOutlineMailOutline as MdMail } from "react-icons/md";
 import { FaFacebook as FB, FaLinkedin as LinkedIn, FaYoutube as YouTube, FaInstagram as Instagram } from "react-icons/fa6";
 
-import { poppins } from '@/components/ui/fonts';
-import checkDeviceSize from '@/components/ui/breakpoints';
+import { poppins } from '../ui/fonts';
+import checkDeviceSize from '../ui/breakpoints';
 
 export default function Footer() {
 
