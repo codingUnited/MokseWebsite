@@ -1,7 +1,7 @@
 'use client';
 
 import { useBreakpointValue } from '@chakra-ui/react';
-export default function checkDeviceSize() {
+export default function useDeviceSize() {
     const current = useBreakpointValue({
         base: "base",
         sm: "sm",

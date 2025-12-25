@@ -1,13 +1,13 @@
 'use client'
 
 import NextLink from 'next/link';
-import FeatureCard from "@/components/home/feature-card";
-import { empowerment } from "@/data/empowerment";
-import { getInvolved } from "@/data/get-involved";
+import FeatureCard from "../components/home/feature-card";
+import { empowerment } from "../data/empowerment";
+import { getInvolved } from "../data/get-involved";
 import { useBreakpointValue, Container, Box, Text, Button, AbsoluteCenter, VStack, Heading, Link as ChakraLink, Center, SimpleGrid, GridItem, Stack, Card, Image as ChakraImage } from '@chakra-ui/react';
 import { RiArrowRightLine } from 'react-icons/ri';
-import { poppins } from '@/components/ui/fonts';
-import checkDeviceSize from '@/components/ui/breakpoints';
+import { poppins } from '../components/ui/fonts';
+import checkDeviceSize from '../components/ui/breakpoints';
 
 
 export default function Home() {

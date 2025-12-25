@@ -6,30 +6,38 @@ import { HStack, Container, Link as ChakraLink, Button, Text } from '@chakra-ui/
 import { MdBrightness4 as MdMoon, MdBrightness5 as MdSun } from 'react-icons/md';
 import { useColorMode } from '../ui/color-mode';
 import { useEffect, useState } from 'react';
-import { Open_Sans } from 'next/font/google';
-
-const openSans = Open_Sans({ subsets: ['latin'], weight: ['400', '600', '700'] });
-import checkDeviceSize from '@/components/ui/breakpoints';
+import { openSans } from '../ui/fonts';
+import useDeviceSize from '../ui/breakpoints';
 
 export default function Navbar() {
-    const { toggleColorMode, colorMode, } = useColorMode();
+    const { colorMode, toggleColorMode } = useColorMode();
+    const deviceSize = useDeviceSize();
+    const notMobileDevice =
+        deviceSize !== 'base'
+        &&
+        deviceSize !== 'sm';
 
-    const deviceSize = checkDeviceSize();
-    const notMobileDevice = deviceSize !== 'base' && deviceSize !== 'sm';
-
+    const [isMounted, setIsMounted] = useState(false);
     const [isFixed, setIsFixed] = useState(false);
+
+    // Mount check for screen size check
     useEffect(() => {
-        const handleScroll = () => {
-            if (window?.scrollY > 50) {
-                setIsFixed(true);
-            } else {
-                setIsFixed(false);
-            }
-        };
-        window?.addEventListener('scroll', handleScroll);
-        return () => window?.removeEventListener('scroll', handleScroll);
+        setIsMounted(true);
     }, []);
 
+    // Check device scroll position for navbar position
+    useEffect(() => {
+        if (!isMounted) return;
+        const handleScroll = () => {
+            const scrollPosition = window?.scrollY;
+            setIsFixed(scrollPosition >= 50);
+        };
+        handleScroll();
+        window?.addEventListener('scroll', handleScroll);
+        return () => window?.removeEventListener('scroll', handleScroll);
+    }, [isMounted]);
+
+    // Container props
     const ContainerProps = {
         h: notMobileDevice ? ('10vh') : ('5vh'),
         zIndex: 1,
@@ -48,11 +56,13 @@ export default function Navbar() {
             isFixed ?
                 colorMode === "light" ? 'black'
                     : 'blackAlpha.950'
-                : 'transparent'
-    } as const
+                : 'transparent',
+        className: openSans.className,
+    } as const;
 
+    // Nav text props
     const navTextProps = {
-        fontSize: '30px',
+        fontSize: '24px',
         fontWeight: 600,
         _light: { color: 'white' },
     } as const;
@@ -63,9 +73,9 @@ export default function Navbar() {
             <Container {...ContainerProps} >
                 {notMobileDevice ? (
                     <HStack justifyContent={'space-between'} px={8}>
-                        <ChakraLink asChild pl={2}  >
+                        <ChakraLink asChild pl={8}  >
                             <NextLink href="/">
-                                <Image src="/MOKSE-3-180x46.png" alt="MOKSE Logo" width={235} height={55} />
+                                <Image src="/MOKSE-3-180x46.png" alt="MOKSE Logo" width={180} height={46} />
                             </NextLink>
                         </ChakraLink>
                         <HStack justifyContent={'space-evenly'} spaceX={6} px={8} >
@@ -85,6 +95,11 @@ export default function Navbar() {
                                 </NextLink>
                             </ChakraLink>
                             <ChakraLink asChild>
+                                <NextLink href="/stop-the-stigma">
+                                    <Text {...navTextProps}>Stop The Stigma</Text>
+                                </NextLink>
+                            </ChakraLink>
+                            <ChakraLink asChild>
                                 <NextLink href="/contact">
                                     <Text {...navTextProps}>Contact</Text>
                                 </NextLink>
@@ -98,20 +113,19 @@ export default function Navbar() {
                             </Button>
                             <Button
                                 bg={isFixed ?
-                                    (colorMode === "light" ? 'teal.focusRing' : 'teal.focusRing')
+                                    (isMounted ? 'teal.focusRing' : 'teal.focusRing')
                                     : 'transparent'}
                                 variant={isFixed ? "solid" : "ghost"}
                                 rounded="md"
                                 size={'xl'}
                                 onClick={toggleColorMode}
 
-                            >
-                                <Text>{colorMode === "light" ? <MdMoon /> : <MdSun />}</Text>
+                            > {isMounted && (colorMode === "light" ? <MdMoon /> : <MdSun />)}
                             </Button>
                         </HStack>
                     </HStack>) : (
                     <HStack justifyContent={'space-between'} px={1}>
-                        <ChakraLink asChild >
+                        <ChakraLink asChild>
                             <NextLink href="/">
                                 <Image src="/MOKSE-3-180x46.png" alt="MOKSE Logo" width={180} height={48} />
                             </NextLink>
@@ -119,7 +133,6 @@ export default function Navbar() {
                         <Button>
                             Menu
                         </Button>
-
                     </HStack>
                 )}
             </Container>
