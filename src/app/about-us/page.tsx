@@ -1,88 +1,136 @@
+"use client"
 import Image from 'next/image';
-import Navbar from '@/components/common/navbar';
-import TeamMemberCard from '@/components/about/team-member-card';
-import GemIcon from '@/components/about/gem-icon';
-import { executiveBoard, teamMembers } from '@/data/team';
+import TeamMemberCard from '../../components/about/team-member-card';
+import GemIcon from '../../components/about/gem-icon';
+import { executiveBoard, teamMembers } from '../../data/team';
+import {
+  Container, Box, Text, Button, AbsoluteCenter, VStack, HStack, Heading,
+  Link as ChakraLink, Center, SimpleGrid, GridItem, Stack, Card, Image as ChakraImage
+} from '@chakra-ui/react';
+import { RiArrowRightLine } from 'react-icons/ri';
+import { poppins } from '../../components/ui/fonts';
+import NextLink from 'next/link';
+import checkDeviceSize from '../../components/ui/breakpoints';
 
 export default function AboutUs() {
+
+  const notMobileDevice = checkDeviceSize();
   return (
-    <>
-      <header>
-        <Navbar />
-      </header>
 
-      <main>
-        <section>
-          <h1>About Us</h1>
-          <p>
-            Our organization strives to break down barriers and stop the stigma
-            associated with incarceration through technical assistance, consulting
-            services, educational conferences, and business support programs.
-          </p>
-        </section>
+    <> {
+      notMobileDevice ? (
+        <VStack w={"100%"} >
+          <Box position="relative"
+            w={"100%"}
+            h={"58vh"}
+            bgImage={"url('/about-backdrop-image.webp')"}
+            bgSize={"cover"}
+            backgroundPosition={"center"}
+            bgRepeat={"no-repeat"}
 
-        <section>
-          <article>
-            <GemIcon />
-            <div>
-              <h3>Vision</h3>
-              <p>
-                A society where all individuals have equal opportunities to thrive,
-                learn, and lead. Empowered to contribute positively to their
-                communities without the stigma or limitations from their past.
-              </p>
-            </div>
-          </article>
+          //  alt="Mokse hero image"
+          >
+            <AbsoluteCenter
+              textAlign="center"
+              bg="rgba(0, 0, 0, 0.4)"
+              w={"100%"}
+              h={"100%"}
+              alignItems={"center"}
+            >
+              <SimpleGrid columns={2} gap={6}>
+                <VStack w={"75%"} pl={16}>
+                  <Heading as={"h1"} p={2} >
+                    <Text textStyle={"7xl"} className={poppins.className} textAlign={'start'} textTransform={'capitalize'} overflow={'hidden'} wordBreak={"none"} verticalAlign={'baseline'}
+                      _light={{ color: "white" }}>About Us
+                    </Text>
+                  </Heading>
+                  <Text _light={{ color: "white" }}>
+                    Our organization strives to break down barriers and stop the stigma
+                    associated with incarceration through technical assistance, consulting
+                    services, educational conferences, and business support programs.
+                  </Text>
+                </VStack>
+              </SimpleGrid>
+            </AbsoluteCenter>
+          </Box>
 
-          <article>
-            <GemIcon />
-            <div>
-              <h3>Mission</h3>
-              <p>
-                To promote education, empowerment, and entrepreneurship among
-                incarcerated learners and individuals. Our organization strives to
-                break down barriers and stop the stigma associated with incarceration
-                through consulting services, educational conferences, and business
-                support programs.
-              </p>
-            </div>
-          </article>
-        </section>
 
-        <section>
-          <h2>Executive Board Members</h2>
-          <div>
-            {executiveBoard.map((member) => (
-              <TeamMemberCard key={member.name} {...member} />
-            ))}
-          </div>
-        </section>
+          {/* ABOUT US */}
+          <Container as={'main'} maxW={'7xl'} h={"100%"}>
+            <HStack as={"section"}>
+              <article>
+                <GemIcon />
+                <Box>
+                  <Heading as="h3">Vision</Heading>
+                  <Text>
+                    A society where all individuals have equal opportunities to thrive,
+                    learn, and lead. Empowered to contribute positively to their
+                    communities without the stigma or limitations from their past.
+                  </Text>
+                </Box>
+              </article>
 
-        <section>
-          <h2>Our Team</h2>
-          <div>
-            {teamMembers.map((member) => (
-              <TeamMemberCard key={member.name + member.email} {...member} />
-            ))}
-          </div>
-        </section>
+              <article>
+                <GemIcon />
+                <Box>
+                  <Heading as="h3">Mission</Heading>
+                  <Text>
+                    To promote education, empowerment, and entrepreneurship among
+                    incarcerated learners and individuals. Our organization strives to
+                    break down barriers and stop the stigma associated with incarceration
+                    through consulting services, educational conferences, and business
+                    support programs.
+                  </Text>
+                </Box>
+              </article>
+            </HStack>
 
-        <section>
-          <h2>Our Partners</h2>
-          <p>
-            Join us in creating meaningful change through collaborative projects and
-            shared resources.
-          </p>
-          <div>
-            <a href="https://www.facebook.com/profile.php?id=61569163410278" target="_blank" rel="noopener noreferrer">
-              <Image src="/partners/ht-logo.webp" alt="HT Partner" width={300} height={300} />
-            </a>
-            <a href="https://www.instagram.com/osobeautifulreentry/" target="_blank" rel="noopener noreferrer">
-              <Image src="/partners/oh-so-beautiful-logo.webp" alt="Oh So Beautiful Reentry" width={300} height={300} />
-            </a>
-          </div>
-        </section>
-      </main>
-    </>
+
+            <section>
+              <Heading as="h2" textAlign={'center'} className={poppins.className} textStyle={'4xl'}>Executive Board Members</Heading>
+              <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} gap={8}>
+                {executiveBoard.map((member) => (
+                  <TeamMemberCard key={member.name} {...member} />
+                ))}
+              </SimpleGrid>
+            </section>
+
+            <section>
+              <Heading as="h2" textAlign={'center'} className={poppins.className} textStyle={'4xl'}>Our Team</Heading>
+              <SimpleGrid columns={[2, 3, 4]} gapY={10} gapX={16}>
+                {teamMembers.map((member) => (
+                  <TeamMemberCard key={member.name + member.email} {...member} />
+                ))}
+              </SimpleGrid>
+            </section>
+
+            <section>
+              <Heading as="h2" textAlign={'center'} className={poppins.className} textStyle={'4xl'}>Our Partners</Heading>
+              <Text textAlign={"center"} mt={4}>
+                Join us in creating meaningful change through collaborative projects and
+                shared resources.
+              </Text>
+              <HStack justifyContent={"center"} gap={16} mt={8}>
+                <Box>
+                  <ChakraLink asChild variant="underline">
+                    <NextLink href="https://www.facebook.com/profile.php?id=61569163410278" target="_blank" rel="noopener noreferrer">
+                      <Image src="/partners/ht-logo.webp" alt="HT Partner" width={300} height={300} />
+                    </NextLink>
+                  </ChakraLink>
+                </Box>
+                <Box>
+                  <ChakraLink asChild variant="underline">
+                    <NextLink href="https://www.instagram.com/osobeautifulreentry/" target="_blank" rel="noopener noreferrer">
+                      <Image src="/partners/oh-so-beautiful-logo.webp" alt="Oh So Beautiful Reentry" width={300} height={300} />
+                    </NextLink>
+                  </ChakraLink>
+                </Box>
+              </HStack>
+            </section>
+          </Container>
+        </VStack >
+
+      ) : null
+    }</>
   );
 }

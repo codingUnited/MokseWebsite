@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import PlusIcon from './icons/plus-icon';
 import MinusIcon from './icons/minus-icon';
+import { Button } from '@chakra-ui/react';
 
 interface FaqItemProps {
   question: string;
@@ -14,10 +15,10 @@ export default function FaqItem({ question, answer }: FaqItemProps) {
 
   return (
     <article>
-      <button onClick={() => setIsOpen(!isOpen)} aria-expanded={isOpen}>
+      <Button onClick={() => setIsOpen(!isOpen)} aria-expanded={isOpen}>
         <h5>{question}</h5>
         {isOpen ? <MinusIcon /> : <PlusIcon />}
-      </button>
+      </Button>
       {isOpen && <p>{answer}</p>}
     </article>
   );

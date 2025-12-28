@@ -1,32 +1,26 @@
 'use client'
 
 import NextLink from 'next/link';
-import FeatureCard from "@/components/home/feature-card";
-import { empowerment } from "@/data/empowerment";
-import { getInvolved } from "@/data/get-involved";
+import FeatureCard from "../components/home/feature-card";
+import { empowerment } from "../data/empowerment";
+import { getInvolved } from "../data/get-involved";
 import { useBreakpointValue, Container, Box, Text, Button, AbsoluteCenter, VStack, Heading, Link as ChakraLink, Center, SimpleGrid, GridItem, Stack, Card, Image as ChakraImage } from '@chakra-ui/react';
 import { RiArrowRightLine } from 'react-icons/ri';
-import { poppins } from '@/components/ui/fonts';
+import { poppins } from '../components/ui/fonts';
+import checkDeviceSize from '../components/ui/breakpoints';
 
 
 export default function Home() {
-  const current = useBreakpointValue({
-    base: "base",
-    sm: "sm",
-    md: "md",
-    lg: "lg",
-    xl: "xl",
-    "2xl": "2xl",
-  });
-
+  
+  const notMobileDevice = checkDeviceSize();
   return (
     <>
       {
-        current !== "base" && current !== "sm" ? (
+        notMobileDevice ? (
           <VStack w={"100%"} >
             <Box position="relative"
               w={"100%"}
-              h={"100vh"}
+              h={["82vh", null, "100vh"]}
               bgImage={"url('/HeroImage.jpg')"}
               bgSize={"cover"}
               backgroundPosition={"center"}
@@ -85,7 +79,7 @@ export default function Home() {
                   </ChakraLink>
                 </Button>
                 <Center>
-                  <SimpleGrid columns={[2, null, 2]} row={[2, null, 2]} gapX={8} gapY={16} w={'3xl'}>
+                  <SimpleGrid columns={[1, null, 2]} row={[2, null, 2]} gapX={8} gapY={16} w={'3xl'}>
                     {empowerment.map((f) => (
                       <FeatureCard key={f.title} {...f} />
                     ))}
@@ -101,7 +95,7 @@ export default function Home() {
                   borderRadius={'xl'}
                   w={"350px"}
                   h={"55vh"}
-                  bgImage={"url('/backdrop-image.jpg')"}
+                  bgImage={"url('/home-backdrop-image.jpg')"}
                   bgSize={"cover"}
                   backgroundPosition={"center"}
                   bgRepeat={"no-repeat"}
@@ -198,7 +192,7 @@ export default function Home() {
 
             <Container w={'7xl'}>
 
-              <SimpleGrid columns={[null, 4, 4]} gapX={6} gapY={6}>
+              <SimpleGrid columns={[1, 4, 4]} gapX={6} gapY={6}>
                 <GridItem colSpan={2}>
                   <ChakraImage rounded="md"
 
