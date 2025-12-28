@@ -26,7 +26,8 @@ export default function Contact() {
               imageHeight={'52.1vh'}
               image='/assets/contact/1500.jpg'
               imageLabel='Contact Us Hero'
-              description='Find out how you can contribute and make a positive impact in your community' />
+              description='Find out how you can contribute and make a positive impact in your community'
+              />
 
 
 

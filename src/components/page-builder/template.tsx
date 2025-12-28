@@ -28,9 +28,10 @@ export function HeaderTemplate({ title, image, imageHeight, imageLabel, descript
                                 _light={{ color: "white" }}>{title}
                             </Text>
                         </Heading>
-                        <Text _light={{ color: "white" }}>
+                        <Container fluid><Text _light={{ color: "white" }}>
                             {description}
                         </Text>
+                        </Container>
                     </VStack>
                 </SimpleGrid>
             </AbsoluteCenter>
