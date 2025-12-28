@@ -9,7 +9,7 @@ export default function Contact() {
         {/* Hero Section */}
         <section>
           <Image
-            src="/1500.jpg"
+            src="/assets/contact/1500.jpg"
             alt="Contact Mokse"
             fill
             priority
