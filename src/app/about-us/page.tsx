@@ -23,7 +23,7 @@ export default function AboutUs() {
           <Box position="relative"
             w={"100%"}
             h={"58vh"}
-            bgImage={"url('/about-backdrop-image.webp')"}
+            bgImage={"url('/assets/about-us/about-HeroImage.webp')"}
             bgSize={"cover"}
             backgroundPosition={"center"}
             bgRepeat={"no-repeat"}
