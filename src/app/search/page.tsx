@@ -50,7 +50,7 @@ export default function Search() {
           alignItems={"center"}
         >
 
-        // This is a placeholder for the mobile view to be updated later  
+        
         <SimpleGrid columns={2} gap={6}>
           <VStack w={"75%"} pl={16}>
             <Heading as={"h1"} p={2} >
@@ -98,7 +98,9 @@ export default function Search() {
         </Container>
       </VStack >
 
-      ) : null
+      ) : 
+      // This is a placeholder for the mobile view to be updated later  
+      null
     }</>
   );
 }
