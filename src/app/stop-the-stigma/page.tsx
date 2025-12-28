@@ -30,11 +30,11 @@ export default function StopTheStigma() {
   });
 
   useEffect(() => {
-    let updateTimer = setInterval(() => {
+    const updateTimer = setInterval(() => {
       // Get today's date and time
-      let now = new Date().getTime();
+      const now = new Date().getTime();
       // Find the distance between now and the countdown date
-      let distance = countdownTarget.target - now;
+      const distance = countdownTarget.target - now;
       // If the count down is over, write some text
       if (distance < 0) {
         clearInterval(updateTimer);
