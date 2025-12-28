@@ -1,4 +1,4 @@
-import { CubeIcon, PlugIcon, UsersCogIcon, NewspaperIcon, UsersIcon } from '@/components/assets/services/icons/index';
+import { CubeIcon, PlugIcon, UsersCogIcon, NewspaperIcon, UsersIcon } from '@/components/ui/icons/index';
 
 export interface Service {
   icon: React.ComponentType;
