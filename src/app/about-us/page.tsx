@@ -1,5 +1,5 @@
 "use client"
-import Image from 'next/image';
+import NextImage from 'next/image';
 import TeamMemberCard from '../../components/about/team-member-card';
 import GemIcon from '../../components/about/gem-icon';
 import { executiveBoard, teamMembers } from '../../data/team';
@@ -114,14 +114,18 @@ export default function AboutUs() {
                 <Box>
                   <ChakraLink asChild variant="underline">
                     <NextLink href="https://www.facebook.com/profile.php?id=61569163410278" target="_blank" rel="noopener noreferrer">
-                      <Image src="/partners/ht-logo.webp" alt="HT Partner" width={300} height={300} />
+                      <ChakraImage>
+                        <NextImage src="/partners/ht-logo.webp" alt="HT Partner" width={300} height={300} />
+                      </ChakraImage>
                     </NextLink>
                   </ChakraLink>
                 </Box>
                 <Box>
                   <ChakraLink asChild variant="underline">
                     <NextLink href="https://www.instagram.com/osobeautifulreentry/" target="_blank" rel="noopener noreferrer">
-                      <Image src="/partners/oh-so-beautiful-logo.webp" alt="Oh So Beautiful Reentry" width={300} height={300} />
+                      <ChakraImage>
+                        <NextImage src="/partners/oh-so-beautiful-logo.webp" alt="Oh So Beautiful Reentry" width={300} height={300} />
+                      </ChakraImage>
                     </NextLink>
                   </ChakraLink>
                 </Box>

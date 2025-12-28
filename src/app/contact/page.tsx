@@ -1,15 +1,10 @@
 import Image from 'next/image';
-import Navbar from '../../components/common/navbar';
 import ContactForm from '../../components/contact/contact-form';
 import { contactInfo, socialLinks, mapEmbedUrl } from '../../data/contact';
 
 export default function Contact() {
   return (
     <>
-      <header>
-        <Navbar />
-      </header>
-
       <main>
         {/* Hero Section */}
         <section>
