@@ -27,6 +27,9 @@ export default function Contact() {
               image='/assets/contact/1500.jpg'
               imageLabel='Contact Us Hero'
               description='Find out how you can contribute and make a positive impact in your community' />
+
+
+
             <main>
               {/* Get In Touch Section */}
               <section>
