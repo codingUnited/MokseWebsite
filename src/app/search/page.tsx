@@ -57,9 +57,8 @@ export default function Search() {
               <Text textStyle={"7xl"} className={poppins.className} textAlign={'start'} textTransform={'capitalize'} overflow={'hidden'} wordBreak={"none"} verticalAlign={'baseline'}
                 _light={{ color: "white" }}>Search
               </Text>
-            </Heading>
-            <Text _light={{ color: "white" }}>
-              <InputGroup endElement={endElement}>
+            </Heading> 
+              <InputGroup endElement={endElement} _light={{ color: "white" }}>
                 <Input
                   ref={inputRef}
                   placeholder="Email"
@@ -68,39 +67,37 @@ export default function Search() {
                     setValue(e.currentTarget.value)
                   }}
                 />
-              </InputGroup>
-            </Text>
+              </InputGroup> 
           </VStack>
         </SimpleGrid>
         </AbsoluteCenter>
-      </Box>
+        </VStack >
 
-        {/* Search */}
-        <Container as={'main'} maxW={'7xl'} h={"100%"}>
-          <HStack as={"section"}>
-            <article>
-              <GemIcon />
-              <Box>
-                <Heading as="h3">Search</Heading>
-                <InputGroup endElement={endElement}>
-                  <Input
-                    ref={inputRef}
-                    placeholder="Email"
-                    value={value}
-                    onChange={(e) => {
-                      setValue(e.currentTarget.value)
-                    }}
-                  />
-                </InputGroup>
-              </Box>
-            </article>
-          </HStack>
-        </Container>
-      </VStack >
-
-      ) : 
-      // This is a placeholder for the mobile view to be updated later  
-      null
+      ) :
+        // This is a placeholder for the mobile view to be updated later  
+        // Search  
+        (
+          <Container as={'main'} maxW={'7xl'} h={"100%"}>
+            <HStack as={"section"}>
+              <article>
+                <GemIcon />
+                <Box>
+                  <Heading as="h3">Search</Heading>
+                  <InputGroup endElement={endElement}>
+                    <Input
+                      ref={inputRef}
+                      placeholder="Email"
+                      value={value}
+                      onChange={(e) => {
+                        setValue(e.currentTarget.value)
+                      }}
+                    />
+                  </InputGroup>
+                </Box>
+              </article>
+            </HStack>
+          </Container>
+        )
     }</>
   );
 }
