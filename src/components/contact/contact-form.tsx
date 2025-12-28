@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, FormEvent } from 'react';
+import { useState, FormEvent } from 'react'; 
 
 interface FormData {
   name: string;
@@ -30,7 +30,7 @@ export default function ContactForm() {
     setStatus({ type: null, message: '' });
 
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch('@/app/(API Routes)/api/contact/route', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

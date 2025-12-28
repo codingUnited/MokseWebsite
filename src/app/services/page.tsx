@@ -18,7 +18,7 @@ export default function Services() {
     <>
       <PageBuilder>
         <HeaderTemplate
-          image='/services/2033.jpg'
+          image='/assets/services/2033.jpg'
           imageLabel='Services Hero'
           description='At MOKSE, we offer a range of services designed to empower and support our community' />
         <BodyTemplate>
@@ -57,7 +57,7 @@ export default function Services() {
 
         <section>
           <Image
-            src="/services/volunteer.jpg"
+            src="/Image-1-1.jpg"
             alt="Volunteer with us"
             width={600}
             height={400}

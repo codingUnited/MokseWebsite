@@ -66,7 +66,7 @@ export default function StopTheStigma() {
     <>
       <PageBuilder>
         <HeaderTemplate
-          image='/stop-stigma-auditorium.webp'
+          image='/assets/stop-the-stigma/stop-stigma-auditorium.webp'
           imageHeight="100vh"
           imageLabel='Stop The Stigma Conference'
           title='Stop The Stigma Conference'
@@ -101,7 +101,7 @@ export default function StopTheStigma() {
           </Card.Body>
         </Card.Root>
         <HStack>
-          <Image src='/Linkedin-Carousels.png' />
+          <Image src='/assets/stop-the-stigma/Linkedin-Carousels.png' />
           <VStack>
             <Heading as="h1" size="lg" mb={4}>
               What is STOP THE STIGMA?
@@ -123,7 +123,7 @@ export default function StopTheStigma() {
 
         </HStack>
         <HeaderTemplate
-          image='/stop-stigma-sect2_background.webp'
+          image='/assets/stop-the-stigma/stop-stigma-sect2_background.webp'
           imageHeight="100vh"
           imageLabel='Stop The Stigma Conference'
         />

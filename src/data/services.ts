@@ -1,8 +1,4 @@
-import CubeIcon from '../components/services/icons/cube-icon';
-import PlugIcon from '../components/services/icons/plug-icon';
-import UsersCogIcon from '../components/services/icons/users-cog-icon';
-import NewspaperIcon from '../components/services/icons/newspaper-icon';
-import UsersIcon from '../components/services/icons/users-icon';
+import { CubeIcon, PlugIcon, UsersCogIcon, NewspaperIcon, UsersIcon } from '@/components/ui/icons/index';
 
 export interface Service {
   icon: React.ComponentType;
@@ -28,21 +24,21 @@ export const services: Service[] = [
     icon: CubeIcon,
     title: 'Technical Assistance and Consulting for Colleges and Universities',
     description: 'To provide consulting services to colleges and universities interested in establishing prison programs for incarcerated learners using micro-credentials and badging.',
-    image: '/services/technical-assistance.jpg',
+    image: '/assets/services/technical-assistance.jpg',
     imageAlt: 'Technical Assistance',
   },
   {
     icon: PlugIcon,
     title: 'Stop the Stigma Conference',
     description: 'To organize an annual conference that raises awareness and educates college students and community members about the issues surrounding incarceration and the importance of stopping the stigma.',
-    image: '/services/stop-stigma.jpg',
+    image: '/assets/services/stop-stigma.jpg',
     imageAlt: 'Stop the Stigma Conference',
   },
   {
     icon: UsersCogIcon,
     title: 'Entrepreneurship Support for Formerly Incarcerated Individuals',
     description: 'To provide support and resources to formerly incarcerated individuals who aspire to start their businesses',
-    image: '/services/entrepreneurship.jpg',
+    image: '/assets/services/entrepreneurship.jpg',
     imageAlt: 'Entrepreneurship Support',
   },
 ];

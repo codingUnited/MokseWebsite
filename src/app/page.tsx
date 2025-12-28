@@ -21,7 +21,7 @@ export default function Home() {
             <Box position="relative"
               w={"100%"}
               h={["82vh", null, "100vh"]}
-              bgImage={"url('/HeroImage.jpg')"}
+              bgImage={"url('/assets/home/HeroImage.jpg')"}
               bgSize={"cover"}
               backgroundPosition={"center"}
               bgRepeat={"no-repeat"}
@@ -200,7 +200,7 @@ export default function Home() {
 
                     aspectRatio={3 / 2}
                     fit="contain"
-                    src="IMG_0997-1-1024x683.webp" alt=""
+                    src="/assets/home/IMG_0997-1-1024x683.webp" alt=""
                   />
                 </GridItem>
 
@@ -209,35 +209,35 @@ export default function Home() {
                     height="100%"
                     width="100%"
                     fit="contain"
-                    src="IMG_1004-1024x683.webp" alt="" />
+                    src="/assets/home/IMG_1004-1024x683.webp" alt="" />
                 </GridItem>
 
                 <GridItem colSpan={1}><ChakraImage rounded="md"
                   height="100%"
                   width="100%"
                   fit="contain"
-                  src="IMG_1011-300x300.webp" alt="" /></GridItem>
+                  src="/assets/home/IMG_1011-300x300.webp" alt="" /></GridItem>
 
 
                 <GridItem colSpan={1}><ChakraImage rounded="md"
                   height="100%"
                   width="100%"
                   fit="contain"
-                  src="IMG_1012-300x300.webp" alt="" /></GridItem>
+                  src="/assets/home/IMG_1012-300x300.webp" alt="" /></GridItem>
 
 
                 <GridItem colSpan={1}><ChakraImage rounded="md"
                   height="100%"
                   width="100%"
                   fit="contain"
-                  src="IMG_1027-300x300.webp" alt="" /></GridItem>
+                  src="/assets/home/IMG_1027-300x300.webp" alt="" /></GridItem>
 
 
                 <GridItem colSpan={1}><ChakraImage rounded="md"
                   height="100%"
                   width="100%"
                   fit="contain"
-                  src="IMG_0995-300x300.webp" alt="" /></GridItem>
+                  src="/assets/home/IMG_0995-300x300.webp" alt="" /></GridItem>
 
 
               </SimpleGrid>
@@ -250,7 +250,7 @@ export default function Home() {
               position="relative"
               w="100vw"
               h="82vh"
-              bgImage="url('/HeroImage.jpg')"
+              bgImage="url('/assets/home/HeroImage.jpg')"
               bgSize="cover"
               backgroundPosition="right"
               bgRepeat="no-repeat"

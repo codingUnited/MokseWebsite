@@ -1,13 +1,12 @@
 "use client"
-import Image from 'next/image';
+import NextImage from 'next/image';
 import TeamMemberCard from '../../components/about/team-member-card';
-import GemIcon from '../../components/about/gem-icon';
+import { GemIcon } from '@/components/ui/icons';
 import { executiveBoard, teamMembers } from '../../data/team';
 import {
-  Container, Box, Text, Button, AbsoluteCenter, VStack, HStack, Heading,
-  Link as ChakraLink, Center, SimpleGrid, GridItem, Stack, Card, Image as ChakraImage
+  Container, Box, Text, AbsoluteCenter, VStack, HStack, Heading,
+  Link as ChakraLink, SimpleGrid, Image as ChakraImage
 } from '@chakra-ui/react';
-import { RiArrowRightLine } from 'react-icons/ri';
 import { poppins } from '../../components/ui/fonts';
 import NextLink from 'next/link';
 import checkDeviceSize from '../../components/ui/breakpoints';
@@ -23,7 +22,7 @@ export default function AboutUs() {
           <Box position="relative"
             w={"100%"}
             h={"58vh"}
-            bgImage={"url('/about-backdrop-image.webp')"}
+            bgImage={"url('/assets/about-us/about-HeroImage.webp')"}
             bgSize={"cover"}
             backgroundPosition={"center"}
             bgRepeat={"no-repeat"}
@@ -114,14 +113,18 @@ export default function AboutUs() {
                 <Box>
                   <ChakraLink asChild variant="underline">
                     <NextLink href="https://www.facebook.com/profile.php?id=61569163410278" target="_blank" rel="noopener noreferrer">
-                      <Image src="/partners/ht-logo.webp" alt="HT Partner" width={300} height={300} />
+                      <ChakraImage>
+                        <NextImage src="/assets/partners/ht-logo.webp" alt="HT Partner" width={300} height={300} />
+                      </ChakraImage>
                     </NextLink>
                   </ChakraLink>
                 </Box>
                 <Box>
                   <ChakraLink asChild variant="underline">
                     <NextLink href="https://www.instagram.com/osobeautifulreentry/" target="_blank" rel="noopener noreferrer">
-                      <Image src="/partners/oh-so-beautiful-logo.webp" alt="Oh So Beautiful Reentry" width={300} height={300} />
+                      <ChakraImage>
+                        <NextImage src="/assets/partners/oh-so-beautiful-logo.webp" alt="Oh So Beautiful Reentry" width={300} height={300} />
+                      </ChakraImage>
                     </NextLink>
                   </ChakraLink>
                 </Box>
