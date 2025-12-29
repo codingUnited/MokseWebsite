@@ -8,9 +8,33 @@ import {
 import { useRef, useState } from "react"
 import { poppins } from '@/components/ui/fonts';
 import checkDeviceSize from '@/components/ui/breakpoints';
+import mockData from '@/app/search/mock.json'
+
+
+import {
+  Combobox,
+  Portal,
+  useFilter,
+  useListCollection,
+} from "@chakra-ui/react"
+
 
 export default function Search() {
+  //Retrieve mock data from json file
+  const [searchlist, setSearchlist] = useState(mockData)
 
+  const { contains } = useFilter({ sensitivity: "base" })
+  const { collection, filter } = useListCollection({
+    initialItems: searchlist,
+    itemToString: (item) => item.title,
+    itemToValue: (item) => item.link,
+    filter: contains,
+  })
+
+  const handleInputChange = (details: Combobox.InputValueChangeDetails) => {
+    filter(details.inputValue)
+  }
+  //////////////////
   const [value, setValue] = useState("Initial value")
   const inputRef = useRef<HTMLInputElement | null>(null)
   const notMobileDevice = checkDeviceSize();
@@ -58,8 +82,36 @@ export default function Search() {
                       _light={{ color: "white" }}>Search
                     </Text>
                   </Heading>
+                  <Combobox.Root
+                    collection={collection}
+                    onInputValueChange={handleInputChange}
+                  >
+                    <Combobox.Label>Search Data</Combobox.Label>
+                    <Combobox.Control>
+                      <Combobox.Input placeholder="e.g. Educational Advancement" w={"50vw"} />
+                      <Combobox.IndicatorGroup>
+                        <Combobox.ClearTrigger />
+                      </Combobox.IndicatorGroup>
+                    </Combobox.Control>
+
+                    <Portal>
+                      <Combobox.Positioner>
+                        <Combobox.Content>
+                          <Combobox.Empty>No items found</Combobox.Empty>
+
+                          {collection.items.map((item) => (
+                            <Combobox.Item key={item.title} item={item}>
+                              {item.title}
+                            </Combobox.Item>
+                          ))}
+                        </Combobox.Content>
+                      </Combobox.Positioner>
+                    </Portal>
+                  </Combobox.Root>
+
                   <InputGroup endElement={endElement} _light={{ color: "white" }}>
                     <Input
+                      list={searchlist.toString()}
                       ref={inputRef}
                       placeholder="Email"
                       value={value}
@@ -84,8 +136,9 @@ export default function Search() {
                 <GemIcon />
                 <Box>
                   <Heading as="h3">Search</Heading>
-                  <InputGroup endElement={endElement}>
+                  <InputGroup endElement={endElement} >
                     <Input
+                      list={searchlist.toString()}
                       ref={inputRef}
                       placeholder="Email"
                       value={value}
