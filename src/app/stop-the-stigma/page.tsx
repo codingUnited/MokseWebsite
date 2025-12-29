@@ -8,7 +8,7 @@ import { HeaderTemplate, PageBuilder, BodyTemplate, SectionTemplate } from '../.
 import FeatureCard from "../../components/home/feature-card";
 
 import { FaRegObjectGroup as FaObjectGroup, FaRegListAlt as FaListAlt, FaRegNewspaper as FaNewspaper, FaRegKeyboard as FaKeyboard } from "react-icons/fa";
-import { MdBrightness4 as MdMoon, MdBrightness5 as MdSun } from 'react-icons/md';
+import { MdBrightness5 as MdSun } from 'react-icons/md';
 export default function StopTheStigma() {
   const [countdownTarget, setCountdownTarget] = useState<{
     target: number;
@@ -30,11 +30,11 @@ export default function StopTheStigma() {
   });
 
   useEffect(() => {
-    let updateTimer = setInterval(() => {
+    const updateTimer = setInterval(() => {
       // Get today's date and time
-      let now = new Date().getTime();
+      const now = new Date().getTime();
       // Find the distance between now and the countdown date
-      let distance = countdownTarget.target - now;
+      const distance = countdownTarget.target - now;
       // If the count down is over, write some text
       if (distance < 0) {
         clearInterval(updateTimer);

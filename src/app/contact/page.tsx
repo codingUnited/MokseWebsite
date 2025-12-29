@@ -10,7 +10,7 @@ import {
 import { poppins } from '../../components/ui/fonts';
 
 import checkDeviceSize from '@/components/ui/breakpoints';
-import { HeaderTemplate, PageBuilder, BodyTemplate, SectionTemplate } from '../../components/page-builder/template';
+import { HeaderTemplate, PageBuilder } from '../../components/page-builder/template';
 
 export default function Contact() {
   const notMobileDevice = checkDeviceSize();

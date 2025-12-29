@@ -1,6 +1,6 @@
 import {
     FaCube, FaPlug, FaUsersCog, FaRegNewspaper, FaUsers, FaRegGem,
-    FaLongArrowAltRight
+    FaLongArrowAltRight, FaMinus, FaPlus
 } from "react-icons/fa";
 
 export {
@@ -11,4 +11,6 @@ export {
     FaUsers as UsersIcon,
     FaRegGem as GemIcon,
     FaLongArrowAltRight as ArrowRightIcon,
+    FaMinus as MinusIcon,
+    FaPlus as PlusIcon
 };

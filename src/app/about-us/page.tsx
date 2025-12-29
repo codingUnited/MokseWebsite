@@ -113,7 +113,7 @@ export default function AboutUs() {
                 <Box>
                   <ChakraLink asChild variant="underline">
                     <NextLink href="https://www.facebook.com/profile.php?id=61569163410278" target="_blank" rel="noopener noreferrer">
-                      <ChakraImage>
+                      <ChakraImage asChild>
                         <NextImage src="/assets/partners/ht-logo.webp" alt="HT Partner" width={300} height={300} />
                       </ChakraImage>
                     </NextLink>
@@ -122,7 +122,7 @@ export default function AboutUs() {
                 <Box>
                   <ChakraLink asChild variant="underline">
                     <NextLink href="https://www.instagram.com/osobeautifulreentry/" target="_blank" rel="noopener noreferrer">
-                      <ChakraImage>
+                      <ChakraImage asChild>
                         <NextImage src="/assets/partners/oh-so-beautiful-logo.webp" alt="Oh So Beautiful Reentry" width={300} height={300} />
                       </ChakraImage>
                     </NextLink>
