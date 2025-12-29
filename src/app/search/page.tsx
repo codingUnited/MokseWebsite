@@ -93,7 +93,6 @@ export default function Search() {
                         <Combobox.ClearTrigger />
                       </Combobox.IndicatorGroup>
                     </Combobox.Control>
-
                     <Portal>
                       <Combobox.Positioner>
                         <Combobox.Content>
@@ -108,18 +107,6 @@ export default function Search() {
                       </Combobox.Positioner>
                     </Portal>
                   </Combobox.Root>
-
-                  <InputGroup endElement={endElement} _light={{ color: "white" }}>
-                    <Input
-                      list={searchlist.toString()}
-                      ref={inputRef}
-                      placeholder="Email"
-                      value={value}
-                      onChange={(e) => {
-                        setValue(e.currentTarget.value)
-                      }}
-                    />
-                  </InputGroup>
                 </VStack>
               </SimpleGrid>
             </AbsoluteCenter>
