@@ -13,7 +13,7 @@ services:
       MONGODB_URI: ${MONGODB_URI:-mongodb://appuser:apppass@mongo:27017/mokse?authSource=admin}
     volumes:
       - ${DEV_MOUNT:-.:/app}
-      - ${DEV_NODEMODULES_MOUNT:-/app/node_modules}
+      # - ${DEV_NODEMODULES_MOUNT:-/app/node_modules} this is handled in Dockerfile now
     command: ${APP_CMD:-npm run dev}
     depends_on:
       mongo:
