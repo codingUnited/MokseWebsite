@@ -1,8 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import PlusIcon from './icons/plus-icon';
-import MinusIcon from './icons/minus-icon';
+import { PlusIcon, MinusIcon } from '../ui/icons';
 import { Button } from '@chakra-ui/react';
 
 interface FaqItemProps {
