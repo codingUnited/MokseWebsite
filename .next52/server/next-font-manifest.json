@@ -1,0 +1,55 @@
+{
+  "app": {
+    "[project]/app/(Pages)/about-us/page": [
+      "static/media/cf514f5d0007dafa-s.p.417aa1a2.woff2",
+      "static/media/caa3a2e1cccd8315-s.p.853070df.woff2",
+      "static/media/797e433ab948586e-s.p.dbea232f.woff2",
+      "static/media/e2334d715941921e-s.p.d82a9aff.woff2"
+    ],
+    "[project]/app/(Pages)/contact/page": [
+      "static/media/cf514f5d0007dafa-s.p.417aa1a2.woff2",
+      "static/media/caa3a2e1cccd8315-s.p.853070df.woff2",
+      "static/media/797e433ab948586e-s.p.dbea232f.woff2",
+      "static/media/e2334d715941921e-s.p.d82a9aff.woff2"
+    ],
+    "[project]/app/(Pages)/search/[mock-blog]/page": [
+      "static/media/cf514f5d0007dafa-s.p.417aa1a2.woff2",
+      "static/media/caa3a2e1cccd8315-s.p.853070df.woff2",
+      "static/media/797e433ab948586e-s.p.dbea232f.woff2",
+      "static/media/e2334d715941921e-s.p.d82a9aff.woff2"
+    ],
+    "[project]/app/(Pages)/search/page": [
+      "static/media/cf514f5d0007dafa-s.p.417aa1a2.woff2",
+      "static/media/caa3a2e1cccd8315-s.p.853070df.woff2",
+      "static/media/797e433ab948586e-s.p.dbea232f.woff2",
+      "static/media/e2334d715941921e-s.p.d82a9aff.woff2"
+    ],
+    "[project]/app/(Pages)/services/page": [
+      "static/media/cf514f5d0007dafa-s.p.417aa1a2.woff2",
+      "static/media/caa3a2e1cccd8315-s.p.853070df.woff2",
+      "static/media/797e433ab948586e-s.p.dbea232f.woff2",
+      "static/media/e2334d715941921e-s.p.d82a9aff.woff2"
+    ],
+    "[project]/app/(Pages)/stop-the-stigma/page": [
+      "static/media/cf514f5d0007dafa-s.p.417aa1a2.woff2",
+      "static/media/caa3a2e1cccd8315-s.p.853070df.woff2",
+      "static/media/797e433ab948586e-s.p.dbea232f.woff2",
+      "static/media/e2334d715941921e-s.p.d82a9aff.woff2"
+    ],
+    "[project]/app/_not-found/page": [
+      "static/media/cf514f5d0007dafa-s.p.417aa1a2.woff2",
+      "static/media/caa3a2e1cccd8315-s.p.853070df.woff2",
+      "static/media/797e433ab948586e-s.p.dbea232f.woff2",
+      "static/media/e2334d715941921e-s.p.d82a9aff.woff2"
+    ],
+    "[project]/app/page": [
+      "static/media/cf514f5d0007dafa-s.p.417aa1a2.woff2",
+      "static/media/caa3a2e1cccd8315-s.p.853070df.woff2",
+      "static/media/797e433ab948586e-s.p.dbea232f.woff2",
+      "static/media/e2334d715941921e-s.p.d82a9aff.woff2"
+    ]
+  },
+  "appUsingSizeAdjust": true,
+  "pages": {},
+  "pagesUsingSizeAdjust": false
+}

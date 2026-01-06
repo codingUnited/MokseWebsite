@@ -4,5 +4,6 @@
       "command": "npx",
       "args": ["-y", "@chakra-ui/react-mcp"]
     }
-  }
+  },
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
