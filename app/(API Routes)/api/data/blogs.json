@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "dateFull": "2025-12-29T12:00:00Z",
+        "dateY": 2025,
+        "dateM": 12,
+        "dateD": 29,
+        "title": "Sample Blog Post 1",
+        "description": "Fixed image rendering issues in the About Us page by updating ChakraImage components to use 'asChild' prop for better compatibility with NextImage.",
+        "files": [
+            "src/app/about-us/page.tsx"
+        ]
+    },
+    {
+        "id": 2,
+        "dateFull": "2025-12-30T12:00:00Z",
+        "dateY": 2025,
+        "dateM": 12,
+        "dateD": 30,
+        "title": "Sample Blog Post 2",
+        "description": "Fixed image rendering issues in the About Us page by updating ChakraImage components to use 'asChild' prop for better compatibility with NextImage.",
+        "files": [
+            "src/app/about-us/page.tsx"
+        ]
+    },
+    {
+        "id": 3,
+        "dateFull": "2025-12-31T12:00:00Z",
+        "dateY": 2025,
+        "dateM": 12,
+        "dateD": 31,
+        "title": "Sample Blog Post 3",
+        "description": "Fixed image rendering issues in the About Us page by updating ChakraImage components to use 'asChild' prop for better compatibility with NextImage.",
+        "files": [
+            "src/app/about-us/page.tsx"
+        ]
+    },
+    {
+        "id": 4,
+        "dateFull": "2026-01-01T14:30:00Z",
+        "dateY": 2026,
+        "dateM": 1,
+        "dateD": 1,
+        "title": "Sample Blog Post 4",
+        "description": "Fixed image rendering issues in the About Us page by updating ChakraImage components to use 'asChild' prop for better compatibility with NextImage.",
+        "files": [
+            "src/app/about-us/page.tsx"
+        ]
+    }
+]

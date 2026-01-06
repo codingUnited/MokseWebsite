@@ -1,0 +1,17 @@
+{
+  "/(API Routes)/api/blog/[year]/[month]/[day]/route": "app/(API Routes)/api/blog/[year]/[month]/[day]/route.js",
+  "/(API Routes)/api/blog/[year]/[month]/route": "app/(API Routes)/api/blog/[year]/[month]/route.js",
+  "/(API Routes)/api/blog/[year]/route": "app/(API Routes)/api/blog/[year]/route.js",
+  "/(API Routes)/api/blog/search/route": "app/(API Routes)/api/blog/search/route.js",
+  "/(API Routes)/api/contact/route": "app/(API Routes)/api/contact/route.js",
+  "/(Pages)/about-us/page": "app/(Pages)/about-us/page.js",
+  "/(Pages)/contact/page": "app/(Pages)/contact/page.js",
+  "/(Pages)/search/[mock-blog]/page": "app/(Pages)/search/[mock-blog]/page.js",
+  "/(Pages)/search/page": "app/(Pages)/search/page.js",
+  "/(Pages)/services/page": "app/(Pages)/services/page.js",
+  "/(Pages)/stop-the-stigma/page": "app/(Pages)/stop-the-stigma/page.js",
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/page": "app/page.js"
+}

@@ -108,6 +108,7 @@ This will:
 │       └── init/
 │           └── 01-create-app-user.js
 ├── app/
+│   ├── layout.tsx
 │   └── page.tsx
 ├── public/
 ├── package.json
