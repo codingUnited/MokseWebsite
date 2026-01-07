@@ -5,8 +5,6 @@ import Footer from "../components/common/footer";
 import { Provider } from "./provider";
 import Navbar from "../components/common/navbar";
 
-
-
 const openSans = Open_Sans({
   weight: ["400", "600", "700"],
   variable: "--font-open-sans",
@@ -14,7 +12,8 @@ const openSans = Open_Sans({
 });
 export const metadata: Metadata = {
   title: "Mokse - Empowering Change Through Education and Advocacy",
-  description: "We strive to break down barriers and stop the stigma associated with incarceration through consulting services, educational conferences, and business support programs.",
+  description:
+    "We strive to break down barriers and stop the stigma associated with incarceration through consulting services, educational conferences, and business support programs.",
 };
 
 export default function RootLayout({
@@ -24,15 +23,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${openSans.variable} antialiased`}
-      >
+      <body className={`${openSans.variable} antialiased`}>
         <Provider>
           <Navbar />
           {children}
           <Footer />
         </Provider>
-
       </body>
     </html>
   );
