@@ -1,0 +1,53 @@
+name: Lint Detection and Issue Management
+
+on:
+  # Trigger on pull requests targeting the master branch
+  pull_request:
+    branches:
+      - master
+
+  # Trigger on direct pushes or merges to the master branch
+  push:
+    branches:
+      - master
+
+jobs:
+  lint-and-issue-management:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Checkout the repository
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # Set up Node.js and install npm dependencies
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'
+        cache: 'npm'
+
+    - name: Install Dependencies
+      working-directory: ./Application
+      run: npm install
+
+    # Run the linter and collect results
+    - name: Run Linter and Collect Results
+      id: lint
+      working-directory: ./Application
+      run: |
+        npm run lint --json > lint-output.json
+
+    # Generate a file tree for comparison of the repository (excluding node_modules)
+    - name: Generate Directory Tree
+      id: tree
+      run: |
+        apt-get update && apt-get install -y tree
+        tree -L 5 -I "node_modules" > tree-output.txt
+
+    # Use the lint output and tree output to manage GitHub Issues
+    - name: Manage Lint Issues
+      run: |
+        node /path/to/manageLintIssues.js ./Application/lint-output.json tree-output.txt
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
