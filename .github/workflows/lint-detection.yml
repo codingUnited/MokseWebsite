@@ -1,0 +1,53 @@
+name: Lint Detection and Issue Management
+
+on:
+  # Trigger workflow for pull requests targeting the master branch
+  pull_request:
+    branches:
+      - master
+
+  # Trigger workflow for direct pushes or merges to the master branch
+  push:
+    branches:
+      - master
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Checkout the repository to make the code available to the workflow
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # Step 2: Set up Node.js environment and install npm dependencies
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20' # Adjust this based on your project's requirements
+        cache: 'npm'       # Use npm caching for faster workflow execution
+
+    - name: Install Node.js Dependencies
+      working-directory: ./Application
+      run: npm install
+
+    # Step 3: Run the linter and export its output as JSON
+    - name: Run Linter and Export Results
+      id: lint
+      working-directory: ./Application
+      run: |
+        npm run lint --json > lint-output.json
+
+    # Step 4: Install and run the tree command for directory mapping
+    - name: Generate Repository File Tree (Exclude node_modules)
+      id: tree
+      run: |
+        apt-get update && apt-get install -y tree
+        tree -L 5 -I "node_modules" > tree-output.txt
+
+    # Step 5: Run the issue management script using the lint output and tree file
+    - name: Process and Manage GitHub Issues for Lint
+      run: |
+        node scripts/manageLintIssues.js ./Application/lint-output.json tree-output.txt
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
