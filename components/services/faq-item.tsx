@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { PlusIcon, MinusIcon } from '../ui/icons';
-import { Button } from '@chakra-ui/react';
+import { useState } from "react";
+import { Button } from "@chakra-ui/react";
+import { Icon } from "../ui/icons/icon";
 
 interface FaqItemProps {
   question: string;
@@ -16,7 +16,7 @@ export default function FaqItem({ question, answer }: FaqItemProps) {
     <article>
       <Button onClick={() => setIsOpen(!isOpen)} aria-expanded={isOpen}>
         <h5>{question}</h5>
-        {isOpen ? <MinusIcon /> : <PlusIcon />}
+        {isOpen ? <Icon name="Minus" /> : <Icon name="Plus" />}
       </Button>
       {isOpen && <p>{answer}</p>}
     </article>

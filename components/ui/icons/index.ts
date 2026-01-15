@@ -1,4 +1,4 @@
-import {
+export {
   FaCube,
   FaPlug,
   FaUsersCog,
@@ -16,24 +16,10 @@ import {
   FaPhoneAlt,
   FaEnvelope,
   FaAngleRight,
+  FaBookOpen,
+  FaBullhorn,
+  FaNetworkWired,
+  FaHandHoldingHeart,
+  FaHandshake,
+  FaDonate,
 } from "react-icons/fa";
-
-export {
-  FaCube as CubeIcon,
-  FaPlug as PlugIcon,
-  FaUsersCog as UsersCogIcon,
-  FaRegNewspaper as NewspaperIcon,
-  FaUsers as UsersIcon,
-  FaRegGem as GemIcon,
-  FaLongArrowAltRight as ArrowRightIcon,
-  FaMinus as MinusIcon,
-  FaPlus as PlusIcon,
-  FaMapPin as MapPinIcon,
-  FaFacebook as FB,
-  FaLinkedin as LinkedIn,
-  FaYoutube as YouTube,
-  FaInstagram as Instagram,
-  FaPhoneAlt as PhoneIcon,
-  FaEnvelope as MailIcon,
-  FaAngleRight as AngleRightIcon,
-};
