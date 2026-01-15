@@ -7,7 +7,6 @@ export function GET(request: Request) {
 
     const dataFile = path.join(
         process.cwd(),
-        "src",
         "app",
         "(API Routes)",
         "api",
