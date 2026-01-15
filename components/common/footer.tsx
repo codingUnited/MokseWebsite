@@ -13,25 +13,16 @@ import {
   Heading,
   Center,
   IconButton,
-  Icon,
   Image,
   Box,
   Flex,
 } from "@chakra-ui/react";
-import { useColorMode } from "../ui/color-mode";
+import { useColorMode, useColorModeValue } from "../ui/color-mode";
 
 import { poppins } from "../ui/fonts";
 import checkDeviceSize from "../ui/breakpoints";
-import {
-  FB,
-  LinkedIn,
-  YouTube,
-  Instagram,
-  PhoneIcon,
-  MapPinIcon,
-  MailIcon,
-  AngleRightIcon,
-} from "../ui/icons";
+
+import { Icon } from "@/components/ui/icons/icon";
 
 export default function Footer() {
   const { colorMode } = useColorMode();
@@ -54,11 +45,10 @@ export default function Footer() {
               <Box>
                 <Image asChild>
                   <NextImage
-                    src={
-                      colorMode == "light"
-                        ? "/mokse-logo.png"
-                        : "/MOKSE-3-180x46.png"
-                    }
+                    src={useColorModeValue(
+                      "/mokse-logo.png",
+                      "/MOKSE-3-180x46.png"
+                    )}
                     alt="MOKSE Logo"
                     width={200}
                     height={51}
@@ -84,7 +74,7 @@ export default function Footer() {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <FB size={10} />
+                        <Icon name="Facebook" />
                       </NextLink>
                     </ChakraLink>
                   </IconButton>
@@ -104,7 +94,7 @@ export default function Footer() {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <LinkedIn size={20} />
+                        <Icon name="LinkedIn" />
                       </NextLink>
                     </ChakraLink>
                   </IconButton>
@@ -124,7 +114,7 @@ export default function Footer() {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <YouTube size={10} />
+                        <Icon name="YouTube" />
                       </NextLink>
                     </ChakraLink>
                   </IconButton>
@@ -144,7 +134,7 @@ export default function Footer() {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <Instagram size={10} />
+                        <Icon name="Instagram" />
                       </NextLink>
                     </ChakraLink>
                   </IconButton>
@@ -164,7 +154,7 @@ export default function Footer() {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <MailIcon size={10} />
+                        <Icon name="Mail" />
                       </NextLink>
                     </ChakraLink>
                   </IconButton>
@@ -187,10 +177,10 @@ export default function Footer() {
                       <ChakraLink asChild>
                         <NextLink href="/">
                           <Center>
-                            <AngleRightIcon
+                            <Icon
+                              name="AngleRight"
+                              size={6}
                               color={"teal.focusRing"}
-                              height={6}
-                              width={6}
                             />
                             <Text textStyle={"md"}>Home</Text>
                           </Center>
@@ -200,10 +190,10 @@ export default function Footer() {
                       <ChakraLink asChild>
                         <NextLink href="/about-us">
                           <Center>
-                            <AngleRightIcon
+                            <Icon
+                              name="AngleRight"
+                              size={6}
                               color={"teal.focusRing"}
-                              height={6}
-                              width={6}
                             />
                             <Text textStyle={"md"}>About Us</Text>
                           </Center>
@@ -213,10 +203,10 @@ export default function Footer() {
                       <ChakraLink asChild>
                         <NextLink href="/services">
                           <Center>
-                            <AngleRightIcon
+                            <Icon
+                              name="AngleRight"
+                              size={6}
                               color={"teal.focusRing"}
-                              height={6}
-                              width={6}
                             />
                             <Text textStyle={"md"}>Services</Text>
                           </Center>
@@ -226,10 +216,10 @@ export default function Footer() {
                       <ChakraLink asChild>
                         <NextLink href="/contact">
                           <Center>
-                            <AngleRightIcon
+                            <Icon
+                              name="AngleRight"
+                              size={6}
                               color={"teal.focusRing"}
-                              height={6}
-                              width={6}
                             />
                             <Text textStyle={"md"}>Contact</Text>
                           </Center>
@@ -303,7 +293,12 @@ export default function Footer() {
                           {/* <Icon color="teal" height={6} width={6}>
                             test
                           </Text> */}
-                          <MapPinIcon color="teal" height={6} width={6} />
+                          <Icon
+                            name="MapPin"
+                            color="teal"
+                            height={6}
+                            width={6}
+                          />
                           <Box>
                             <Text>497 Hooksett Road,</Text>
                             <Text> Suite 362,</Text>
@@ -313,7 +308,12 @@ export default function Footer() {
                       </Box>
                       <Box>
                         <HStack>
-                          <PhoneIcon color="teal" height={6} width={6} />
+                          <Icon
+                            name="Phone"
+                            color="teal"
+                            height={6}
+                            width={6}
+                          />
                           {/* <Text color="teal" height={6} width={6}>
                             test
                           </Text> */}
@@ -326,7 +326,7 @@ export default function Footer() {
                       </Box>
                       <Box>
                         <HStack>
-                          <MailIcon color="teal" height={6} width={6} />
+                          <Icon name="Mail" color="teal" height={6} width={6} />
                           {/* <Text asChild bg="teal" height={6} width={6}>
                           </Text> */}
                           <ChakraLink asChild>
