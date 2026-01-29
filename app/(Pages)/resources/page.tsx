@@ -127,18 +127,17 @@ export default function SearchResources() {
         <>
           <PageBuilder>
             <HeaderTemplate title="Resources" imageHeight={"25vh"} />
-
             <Container fluid>
               <Card.Root>
                 <Card.Body gap={6}>
                   <Group attached align={"center"} justify={"center"}>
                     <Combobox.Root
                       collection={regionDropDown}
-                      onInputValueChange={(e) => {
-                        const value = e?.inputValue;
+                      onInputValueChange={(event) => {
+                        const value = event?.inputValue;
                         setRegionInput(value);
-                        setFormData((prev) => ({
-                          ...prev,
+                        setFormData((previousInfo) => ({
+                          ...previousInfo,
                           searchRegion: value,
                         }));
                         if (!value) {
@@ -156,8 +155,8 @@ export default function SearchResources() {
                           onSelect={(details) => {
                             const { value } = details?.currentTarget;
                             setRegionInput(value);
-                            setFormData((prev) => ({
-                              ...prev,
+                            setFormData((previousInfo) => ({
+                              ...previousInfo,
                               searchRegion: value,
                             }));
                             if (!value) {
@@ -168,11 +167,11 @@ export default function SearchResources() {
                               applyFilters();
                             }
                           }}
-                          onChange={(e) => {
-                            const { value } = e?.target;
+                          onChange={(event) => {
+                            const { value } = event?.target;
                             setRegionInput(value);
-                            setFormData((prev) => ({
-                              ...prev,
+                            setFormData((previousInfo) => ({
+                              ...previousInfo,
                               searchRegion: value,
                             }));
                             if (!value) {
@@ -205,11 +204,11 @@ export default function SearchResources() {
                     </Combobox.Root>
                     <Combobox.Root
                       collection={categoryDropDown}
-                      onInputValueChange={(e) => {
-                        const value = e?.inputValue;
+                      onInputValueChange={(event) => {
+                        const value = event?.inputValue;
                         setCategoryInput(value);
-                        setFormData((prev) => ({
-                          ...prev,
+                        setFormData((previousInfo) => ({
+                          ...previousInfo,
                           searchCategory: value,
                         }));
                         if (!value) {
@@ -227,8 +226,8 @@ export default function SearchResources() {
                           onSelect={(details) => {
                             const { value } = details?.currentTarget;
                             setCategoryInput(value);
-                            setFormData((prev) => ({
-                              ...prev,
+                            setFormData((previousInfo) => ({
+                              ...previousInfo,
                               searchCategory: value,
                             }));
                             if (!value) {
@@ -239,11 +238,11 @@ export default function SearchResources() {
                               applyFilters();
                             }
                           }}
-                          onChange={(e) => {
-                            const { value } = e?.target;
+                          onChange={(event) => {
+                            const { value } = event?.target;
                             setCategoryInput(value);
-                            setFormData((prev) => ({
-                              ...prev,
+                            setFormData((previousInfo) => ({
+                              ...previousInfo,
                               searchCategory: value,
                             }));
                             if (!value) {
@@ -276,11 +275,11 @@ export default function SearchResources() {
                     </Combobox.Root>
                     <Combobox.Root
                       collection={titleDropDown}
-                      onInputValueChange={(e) => {
-                        const value = e?.inputValue;
+                      onInputValueChange={(event) => {
+                        const value = event?.inputValue;
                         setTitleInput(value);
-                        setFormData((prev) => ({
-                          ...prev,
+                        setFormData((previousInfo) => ({
+                        ...previousInfo,
                           searchQuery: value,
                         }));
                         if (!value) {
@@ -294,8 +293,8 @@ export default function SearchResources() {
                       <Combobox.Control>
                         <Combobox.Input
                           placeholder="Search by Title"
-                          onChange={(e) => {
-                            const { value } = e?.target;
+                          onChange={(event) => {
+                            const { value } = event?.target;
                             setTitleInput(value);
                             setFormData((prev) => ({
                               ...prev,
@@ -388,7 +387,6 @@ export default function SearchResources() {
                                       </Tag.Label>
                                     </Tag.Root>
                                   </Tooltip>
-
                                   <Tag.Root size={"lg"} maxW={"xs"}>
                                     <Tag.Label>
                                       {item.category.join(", ")}
