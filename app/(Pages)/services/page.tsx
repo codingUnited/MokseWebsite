@@ -36,34 +36,24 @@ export default function Services() {
             </SimpleGrid>
           </SectionTemplate>
           <section>
-            <div>
-              <h3>Make a Difference – Get Involved!</h3>
-              <ChakraLink asChild>
-                <NextLink
-                  href="https://docs.google.com/forms/d/e/1FAIpQLSfQtlMlWUxXDEr_bq0dUIBf2hNIX0VZF1r6GzZ_6FSSQ6lvYw/viewform"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Get Involved
-                </NextLink>
-              </ChakraLink>
-            </div>
+            
+              
+            
           </section>
           <section>
-            <SimpleGrid columns={[null, null, 3]}>
-              {supportOptions.map((option) => (
-                <SupportCard key={option.title} {...option} />
-              ))}
-            </SimpleGrid>
-            <ChakraLink asChild>
-              <NextLink
-                href="https://www.paypal.com/donate/?hosted_button_id=G46WV8T5NG85A"
-                target="_blank"
-                rel="noopener noreferrer"
+
+              <SectionTemplate
+                          title="Make a Difference!"
+                          description="Get Involved!
+                          Your support can make a significant impact on the lives of justice-impacted individuals. Explore the various ways you can contribute to our mission and help us create a more inclusive and supportive community."
               >
-                Donate
-              </NextLink>
-            </ChakraLink>
+
+              <SimpleGrid columns={[null, null, 3]}>
+                {supportOptions.map((option) => (
+                  <SupportCard key={option.title} {...option} />
+                ))}
+              </SimpleGrid>
+            </SectionTemplate>            
           </section>
           <FaqItem />
         </BodyTemplate>
