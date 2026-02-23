@@ -11,6 +11,8 @@ export interface SupportOption {
   icon: IconName;
   title: string;
   description: string;
+  image: string;
+  imageAlt: string;
 }
 
 export interface FaqItem {
@@ -52,13 +54,25 @@ export const supportOptions: SupportOption[] = [
     title: "Donate",
     description:
       "Your donation goes directly toward supporting our programs and services, creating a positive impact on the lives of justice-impacted individuals. Every contribution, big or small, makes a difference.",
+    image: "/assets/services/donate.jpg",
+    imageAlt: "Donate",
   },
   {
     icon: "Users",
     title: "Partnership Opportunities",
     description:
       "We welcome partnerships with businesses, educational institutions, state agencies, and other nonprofits. Join us in creating meaningful change through collaborative projects and shared resources.",
+    image: "/assets/services/partnership.jpg",
+    imageAlt: "Partnership Opportunities",
   },
+  {
+    icon: "Handshake",
+    title: "Volunteer",
+    description:
+      "Are you passionate about helping justice-impacted individuals? We need compassionate volunteers to assist in various roles, including mentorship, tutoring, and administrative support.",
+    image: "/assets/services/volunteer.jpg",
+    imageAlt: "Volunteer",
+  }
 ];
 
 export const faqItems: FaqItem[] = [

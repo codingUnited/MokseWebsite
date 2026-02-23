@@ -36,20 +36,8 @@ export default function Services() {
             </SimpleGrid>
           </SectionTemplate>
           <section>
-            <Image
-              src="/Image-1-1.jpg"
-              alt="Volunteer with us"
-              width={600}
-              height={400}
-            />
             <div>
               <h3>Make a Difference – Get Involved!</h3>
-              <p>
-                Are you passionate about helping justice-impacted individuals?
-                We need compassionate volunteers to assist in various roles,
-                including mentorship, tutoring, and administrative support.
-              </p>
-
               <ChakraLink asChild>
                 <NextLink
                   href="https://docs.google.com/forms/d/e/1FAIpQLSfQtlMlWUxXDEr_bq0dUIBf2hNIX0VZF1r6GzZ_6FSSQ6lvYw/viewform"
