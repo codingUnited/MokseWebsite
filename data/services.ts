@@ -5,12 +5,16 @@ export interface Service {
   description: string;
   image: string;
   imageAlt: string;
+  iconLink: string;
 }
 
 export interface SupportOption {
   icon: IconName;
   title: string;
   description: string;
+  image: string;
+  imageAlt: string;
+  iconLink: string;
 }
 
 export interface FaqItem {
@@ -27,6 +31,7 @@ export const services: Service[] = [
       "To provide consulting services to colleges and universities interested in establishing prison programs for incarcerated learners using micro-credentials and badging.",
     image: "/assets/services/technical-assistance.jpg",
     imageAlt: "Technical Assistance",
+    iconLink: "https://www.mokse.org/contact",
   },
   {
     icon: "Plug",
@@ -35,6 +40,7 @@ export const services: Service[] = [
       "To organize an annual conference that raises awareness and educates college students and community members about the issues surrounding incarceration and the importance of stopping the stigma.",
     image: "/assets/services/stop-stigma.jpg",
     imageAlt: "Stop the Stigma Conference",
+    iconLink: "https://www.mokse.org/contact",
   },
   {
     icon: "UsersCog",
@@ -43,6 +49,7 @@ export const services: Service[] = [
       "To provide support and resources to formerly incarcerated individuals who aspire to start their businesses",
     image: "/assets/services/entrepreneurship.jpg",
     imageAlt: "Entrepreneurship Support",
+    iconLink: "https://www.mokse.org/contact",
   },
 ];
 
@@ -52,13 +59,28 @@ export const supportOptions: SupportOption[] = [
     title: "Donate",
     description:
       "Your donation goes directly toward supporting our programs and services, creating a positive impact on the lives of justice-impacted individuals. Every contribution, big or small, makes a difference.",
+    image: "/assets/services/donate.jpg",
+    imageAlt: "Donate",
+    iconLink: "https://www.paypal.com/donate/?hosted_button_id=G46WV8T5NG85A",
   },
   {
     icon: "Users",
     title: "Partnership Opportunities",
     description:
       "We welcome partnerships with businesses, educational institutions, state agencies, and other nonprofits. Join us in creating meaningful change through collaborative projects and shared resources.",
+    image: "/assets/services/partnership.jpg",
+    imageAlt: "Partnership Opportunities",
+    iconLink: "https://www.mokse.org/contact",
   },
+  {
+    icon: "Handshake",
+    title: "Volunteer",
+    description:
+      "Are you passionate about helping justice-impacted individuals? We need compassionate volunteers to assist in various roles, including mentorship, tutoring, and administrative support.",
+    image: "/assets/services/volunteer.jpg",
+    imageAlt: "Volunteer",
+    iconLink: "https://docs.google.com/forms/d/e/1FAIpQLSfQtlMlWUxXDEr_bq0dUIBf2hNIX0VZF1r6GzZ_6FSSQ6lvYw/viewform",
+  }
 ];
 
 export const faqItems: FaqItem[] = [

@@ -4,7 +4,7 @@ export interface ContactInfo {
   icon: IconName;
   label: string;
   value: string;
-  href?: string;
+  phoneNumber: string;
 }
 
 export interface SocialLink {
@@ -16,19 +16,20 @@ export const contactInfo: ContactInfo[] = [
   {
     icon: "MapPin",
     label: "Mailing Address",
-    value: "497 Hooksett Road,Suite 362,Manchester NH,03104",
+    value: "497 Hooksett Road,Suite 362",
+    phoneNumber: "Manchester NH,03104"
   },
   {
     icon: "Phone",
     label: "Call Us On",
     value: "+1 603 496 1535",
-    href: "tel:+16034961535",
+    phoneNumber: "tel:+16034961535",
   },
   {
     icon: "Mail",
     label: "Email us",
     value: "info@mokse.org",
-    href: "mailto:info@mokse.org",
+    phoneNumber: "mailto:info@mokse.org",
   },
 ];
 
