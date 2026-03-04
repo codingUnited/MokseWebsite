@@ -1,0 +1,6 @@
+[
+  { "loginID": "dev1", "password": "devAdmin123" },
+  { "loginID": "dev2", "password": "devUser456" },
+  { "loginID": "admin1", "password": "adminUser123" },
+  { "loginID": "editor1", "password": "editorUser123" }
+]

@@ -19,23 +19,31 @@ import {
   Avatar,
 } from "@chakra-ui/react";
 import { useState } from "react";
+import membersData from "./settings/members.json";
 
 export default function Admin() {
   const auth = {
     userName: "D.Robinson",
     password: "admin123",
   };
+  const [authedUsers, setAuthedUsers] = useState(membersData);
   const [input, setInput] = useState({ userName: "", password: "" });
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   const handleAuthUser = (userName: string, password: string) => {
-    if (userName !== auth.userName) {
+    const existingUser = authedUsers.some(
+      (found) => found.loginID === userName,
+    );
+    if (!existingUser) {
       return (
         setIsAuthenticated(false),
         alert("Access denied: Invalid username")
       );
     }
-    if (password !== auth.password) {
+    const passwordMatch = authedUsers.some(
+      (found) => found.password === password,
+    );
+    if (!passwordMatch) {
       return (
         setIsAuthenticated(false),
         alert("Access denied: Invalid password")
@@ -127,10 +135,10 @@ export default function Admin() {
                                 <Tabs.Trigger value="developers">
                                   Developers
                                 </Tabs.Trigger>
-                                <Tabs.Trigger value="team">Team</Tabs.Trigger>
                                 <Tabs.Trigger value="boardMembers">
                                   Board Members
                                 </Tabs.Trigger>
+                                <Tabs.Trigger value="team">Team</Tabs.Trigger>
                               </Tabs.List>
                               <Tabs.Content value="developers">
                                 <SimpleGrid>

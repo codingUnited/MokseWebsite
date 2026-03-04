@@ -26,7 +26,6 @@ export default function AboutUs() {
   const notMobileDevice = checkDeviceSize();
   return (
     <>
-      {" "}
       {notMobileDevice ? (
         <VStack w={"100%"}>
           <Box
@@ -73,7 +72,6 @@ export default function AboutUs() {
               </SimpleGrid>
             </AbsoluteCenter>
           </Box>
-
           {/* ABOUT US */}
           <Container as={"main"} maxW={"7xl"} h={"100%"}>
             <SimpleGrid as={"section"} pt={12} pb={35} columns={[1, 2]} gap={6}>
@@ -91,7 +89,6 @@ export default function AboutUs() {
                   </Text>
                 </Box>
               </Card.Root>
-
               <Card.Root p={8}>
                 <Avatar.Root size={"2xl"}>
                   <Icon name={"Gem"} size={8} color={"#44C1B4"} />
@@ -109,7 +106,6 @@ export default function AboutUs() {
                 </Box>
               </Card.Root>
             </SimpleGrid>
-
             <section>
               <Heading
                 as="h2"
@@ -125,7 +121,6 @@ export default function AboutUs() {
                 ))}
               </SimpleGrid>
             </section>
-
             <section>
               <Heading
                 as="h2"
@@ -144,7 +139,6 @@ export default function AboutUs() {
                 ))}
               </SimpleGrid>
             </section>
-
             <section>
               <Heading
                 as="h2"

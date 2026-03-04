@@ -41,7 +41,7 @@ export default function Contact() {
           <div>
             <Heading as={"h2"}>Get in Touch</Heading>
             <Text>
-              We&apos;re here to support you. Reach out to learn more about our
+              We're here to support you. Reach out to learn more about our
               services, volunteer opportunities, and ways to contribute
             </Text>
 
@@ -112,9 +112,9 @@ export default function Contact() {
                 ></iframe>
               </Box>
               {/* Contact Form Section */}
-              <section>
-                <ContactForm />
-              </section>
+            </section>
+            <section>
+              <ContactForm />
             </section>
           </div>
 
@@ -178,7 +178,8 @@ export default function Contact() {
                   );
 
                   return (
-                    <article key={info.label}>hello
+                    <article key={info.label}>
+                      hello
                       <div>{info.icon}</div>
                       <h4>{info.label}</h4>
                       {content}
