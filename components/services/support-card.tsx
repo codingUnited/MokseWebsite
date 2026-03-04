@@ -27,31 +27,31 @@ export default function SupportCard({
 }: SupportCardProps) {
   return (
     <Card.Root maxW={430} minW={342} borderRadius={8} gapY={8} minH={650}>
-          <ChakraImage asChild borderTopRadius={8}>
-            <Image src={image} alt={imageAlt} width={384} height={286} />
-          </ChakraImage>
-          <Card.Body height={400}>
-            <ChakraLink asChild>
-              <NextLink
-                href={iconLink}
-                target="_blank"
-                rel="noopener noreferrer"
-              >    
-              <Icon
-                name={icon}
-                bg={"teal.focusRing"}
-                borderRadius={"lg"}
-                p={4}
-                boxSize={14}
-                position={"absolute"}
-                right={10}
-                top={255}
-              />       
-              </NextLink>
-            </ChakraLink>            
-            <Heading as={"h4"}>{title}</Heading>
-            <Card.Description>{description}</Card.Description>
-          </Card.Body>
-        </Card.Root>
+      <ChakraImage asChild borderTopRadius={8}>
+        <Image src={image} alt={imageAlt} width={384} height={286} />
+      </ChakraImage>
+      <Card.Body height={400}>
+        <ChakraLink asChild>
+          <NextLink
+            href={iconLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >    
+          <Icon
+            name={icon}
+            bg={"teal.focusRing"}
+            borderRadius={"lg"}
+            p={4}
+            boxSize={14}
+            position={"absolute"}
+            right={10}
+            top={255}
+          />       
+          </NextLink>
+        </ChakraLink>            
+      <Heading as={"h4"}>{title}</Heading>
+      <Card.Description>{description}</Card.Description>
+      </Card.Body>
+    </Card.Root>
   );
-}
+} 
