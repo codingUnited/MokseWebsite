@@ -70,10 +70,10 @@ export default function Contact() {
             {/* Contact Info Cards Section */}
             <HStack>
               {contactInfo.map((info) => {
-                info.href ? (
-                  <a href={info.href}>{info.value}</a>
+                info.value ? (
+                  <a href={info.value}>{info.value}</a>
                 ) : (
-                  <Text>{info.value}aaaa</Text>
+                  <Text>{info.value}</Text>
                 );
 
                 return (
