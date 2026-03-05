@@ -90,7 +90,7 @@ export default function Contact() {
                       <Card.Title className={poppins.className}>
                         {info.label}
                       </Card.Title>
-                      <ChakraLink href={info.href}>{info.value}</ChakraLink>
+                      <ChakraLink href={info.phoneNumber}>{info.value}</ChakraLink>
                     </Card.Body>
                   </Card.Root>
                 );
@@ -171,8 +171,8 @@ export default function Contact() {
             <section>
               <div>
                 {contactInfo.map((info) => {
-                  const content = info.href ? (
-                    <a href={info.href}>{info.value}</a>
+                  const content = info.phoneNumber ? (
+                    <a href={info.phoneNumber}>{info.value}</a>
                   ) : (
                     <p>{info.value}</p>
                   );
