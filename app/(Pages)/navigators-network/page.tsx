@@ -35,26 +35,21 @@ export default function NavigatorsNetwork() {
                     </Button>
                 </HStack>
             </SectionTemplate>
-
-
             <SectionTemplate>
                 <HStack>
                     <Heading size={'4xl'}>Built for Organizations That Want to Work Better Together</Heading>
-                    <Text>Navigator’s Network connects:</Text>
-
+                    <Text>Navigator's Network connects:</Text>
                     <List.Root>
                         <List.Item>Service providers</List.Item>
                         <List.Item>Government and community agencies</List.Item>
                         <List.Item>Community-focused businesses</List.Item>
                     </List.Root>
-
                     <Text>So they can:</Text>
                     <List.Root>
                         <List.Item>Share reliable referral pathways</List.Item>
                         <List.Item>Coordinate support across systems</List.Item>
                         <List.Item>Work from the same playbook</List.Item>
                     </List.Root>
-
                     <Image asChild alt="">
                         <NextImage
                             src="/assets/navigators-network/women-shaking-hands-outside.webp"
@@ -65,7 +60,6 @@ export default function NavigatorsNetwork() {
                     </Image>
                 </HStack>
             </SectionTemplate>
-
             <SectionTemplate>
                 <HStack>
                     <Image asChild alt="">
@@ -87,7 +81,6 @@ export default function NavigatorsNetwork() {
                     </List.Root>
                 </HStack>
             </SectionTemplate>
-
             <SectionTemplate>
                 <HStack>
                     <Heading size={'4xl'}>Get In Touch</Heading>
@@ -108,7 +101,6 @@ export default function NavigatorsNetwork() {
                     </Image>
                 </HStack>
             </SectionTemplate>
-
         </PageBuilder >
 
     )
