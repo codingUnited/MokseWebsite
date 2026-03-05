@@ -19,6 +19,7 @@ import {
   Center,
   Tag,
   Stack,
+  Tabs,
 } from "@chakra-ui/react";
 import { useRef, useState } from "react";
 import checkDeviceSize from "@/components/ui/breakpoints";
@@ -31,6 +32,9 @@ import {
 import { resourceCollectionRegistry } from "./mockResourceRegistry";
 import { AllResources } from "./mockIndex";
 import { Tooltip } from "@/components/ui/tooltip";
+import Navigators from "./Navigators";
+import Networks from "./Networks";
+import Calendar from "./Calendar";
 export default function SearchResources() {
   //Retrieve mock data from json file
   const [searchlist, setSearchlist] = useState(null);
@@ -126,287 +130,39 @@ export default function SearchResources() {
       {notMobileDevice ? (
         <>
           <PageBuilder>
-            <HeaderTemplate title="Resources" imageHeight={"25vh"} />
-
+            <HeaderTemplate title="Resources" imageHeight={"20vh"} />
             <Container fluid>
               <Card.Root>
-                <Card.Body gap={6}>
-                  <Group attached align={"center"} justify={"center"}>
-                    <Combobox.Root
-                      collection={regionDropDown}
-                      onInputValueChange={(e) => {
-                        const value = e?.inputValue;
-                        setRegionInput(value);
-                        setFormData((prev) => ({
-                          ...prev,
-                          searchRegion: value,
-                        }));
-                        if (!value) {
-                          filterRegions("");
-                          setFilteredItems(AllResources);
-                        } else {
-                          filterRegions(value);
-                          applyFilters();
-                        }
-                      }}
-                    >
-                      <Combobox.Control>
-                        <Combobox.Input
-                          placeholder="Select a Region"
-                          onSelect={(details) => {
-                            const { value } = details?.currentTarget;
-                            setRegionInput(value);
-                            setFormData((prev) => ({
-                              ...prev,
-                              searchRegion: value,
-                            }));
-                            if (!value) {
-                              filterRegions("");
-                              setFilteredItems(AllResources);
-                            } else {
-                              filterRegions(value);
-                              applyFilters();
-                            }
-                          }}
-                          onChange={(e) => {
-                            const { value } = e?.target;
-                            setRegionInput(value);
-                            setFormData((prev) => ({
-                              ...prev,
-                              searchRegion: value,
-                            }));
-                            if (!value) {
-                              filterRegions("");
-                              setFilteredItems(AllResources);
-                            } else {
-                              filterRegions(value);
-                              applyFilters();
-                            }
-                          }}
-                        />
-                        <Combobox.IndicatorGroup>
-                          <Combobox.ClearTrigger />
-                          <Combobox.Trigger />
-                        </Combobox.IndicatorGroup>
-                      </Combobox.Control>
-                      <Portal>
-                        <Combobox.Positioner>
-                          <Combobox.Content>
-                            <Combobox.Empty>No items found</Combobox.Empty>
-                            {regionDropDown.items.map((item) => (
-                              <Combobox.Item item={item} key={item.value}>
-                                {item.label}
-                                <Combobox.ItemIndicator />
-                              </Combobox.Item>
-                            ))}
-                          </Combobox.Content>
-                        </Combobox.Positioner>
-                      </Portal>
-                    </Combobox.Root>
-                    <Combobox.Root
-                      collection={categoryDropDown}
-                      onInputValueChange={(e) => {
-                        const value = e?.inputValue;
-                        setCategoryInput(value);
-                        setFormData((prev) => ({
-                          ...prev,
-                          searchCategory: value,
-                        }));
-                        if (!value) {
-                          filterCategories("");
-                          setFilteredItems(AllResources);
-                        } else {
-                          filterCategories(value);
-                          applyFilters();
-                        }
-                      }}
-                    >
-                      <Combobox.Control>
-                        <Combobox.Input
-                          placeholder=" Select a Category"
-                          onSelect={(details) => {
-                            const { value } = details?.currentTarget;
-                            setCategoryInput(value);
-                            setFormData((prev) => ({
-                              ...prev,
-                              searchCategory: value,
-                            }));
-                            if (!value) {
-                              filterCategories("");
-                              setFilteredItems(AllResources);
-                            } else {
-                              filterCategories(value);
-                              applyFilters();
-                            }
-                          }}
-                          onChange={(e) => {
-                            const { value } = e?.target;
-                            setCategoryInput(value);
-                            setFormData((prev) => ({
-                              ...prev,
-                              searchCategory: value,
-                            }));
-                            if (!value) {
-                              filterCategories("");
-                              setFilteredItems(AllResources);
-                            }
-                            filterCategories(value);
-                            applyFilters();
-                          }}
-                        />
-                        <Combobox.IndicatorGroup>
-                          <Combobox.ClearTrigger />
-                          <Combobox.Trigger />
-                        </Combobox.IndicatorGroup>
-                      </Combobox.Control>
-
-                      <Portal>
-                        <Combobox.Positioner>
-                          <Combobox.Content>
-                            <Combobox.Empty>No items found</Combobox.Empty>
-                            {categoryDropDown.items.map((item) => (
-                              <Combobox.Item item={item} key={item.value}>
-                                {item.label}
-                                <Combobox.ItemIndicator />
-                              </Combobox.Item>
-                            ))}
-                          </Combobox.Content>
-                        </Combobox.Positioner>
-                      </Portal>
-                    </Combobox.Root>
-                    <Combobox.Root
-                      collection={titleDropDown}
-                      onInputValueChange={(e) => {
-                        const value = e?.inputValue;
-                        setTitleInput(value);
-                        setFormData((prev) => ({
-                          ...prev,
-                          searchQuery: value,
-                        }));
-                        if (!value) {
-                          filterTitles("");
-                          setFilteredItems(AllResources);
-                        }
-                        filterTitles(value);
-                        applyFilters();
-                      }}
-                    >
-                      <Combobox.Control>
-                        <Combobox.Input
-                          placeholder="Search by Title"
-                          onChange={(e) => {
-                            const { value } = e?.target;
-                            setTitleInput(value);
-                            setFormData((prev) => ({
-                              ...prev,
-                              searchQuery: value,
-                            }));
-                            if (!value) {
-                              filterTitles("");
-                              setFilteredItems(AllResources);
-                            }
-                            filterTitles(value);
-                            applyFilters();
-                          }}
-                          onSelect={(details) => {
-                            const { value } = details?.currentTarget;
-                            setTitleInput(value);
-                            setFormData((prev) => ({
-                              ...prev,
-                              searchQuery: value,
-                            }));
-                            if (!value) {
-                              filterTitles("");
-                              setFilteredItems(AllResources);
-                            }
-                            filterTitles(value);
-                            applyFilters();
-                          }}
-                        />
-                        <Combobox.IndicatorGroup>
-                          <Combobox.ClearTrigger />
-                        </Combobox.IndicatorGroup>
-                      </Combobox.Control>
-
-                      <Portal>
-                        <Combobox.Positioner>
-                          <Combobox.Content>
-                            <Combobox.Empty>No items found</Combobox.Empty>
-                            {titleDropDown.items.map((item) => (
-                              <Combobox.Item item={item} key={item.value}>
-                                {item.label}
-                                <Combobox.ItemIndicator />
-                              </Combobox.Item>
-                            ))}
-                          </Combobox.Content>
-                        </Combobox.Positioner>
-                      </Portal>
-                    </Combobox.Root>
-                    <Button
-                      onClick={() => {
-                        if (!titleInput && !categoryInput && !regionInput) {
-                          filterTitles("");
-                          filterCategories("");
-                          filterRegions("");
-                          setFilteredItems(AllResources);
-                        }
-                        applyFilters();
-                      }}
-                      aria-label="Search Resources"
-                    >
-                      <Icon name={"Search"} />
-                    </Button>
-                  </Group>
-                  {/* CARD TABLE SECTION */}
-                  <ScrollArea.Root height={"xl"} maxW="full">
-                    <ScrollArea.Viewport>
-                      <ScrollArea.Content spaceY="1" textStyle="sm">
-                        {filteredItems.map((item) => (
-                          <Card.Root
-                            key={item.id}
-                            borderWidth=".5px"
-                            borderRadius="md"
-                            shadow="xs"
-                            flexDirection="row"
-                          >
-                            <Center borderRadius="md">
-                              <Box boxSize={120} bg={"blue.500"} />
-                            </Center>
-                            <Card.Body p={4}>
-                              <Stack>
-                                <strong>{item.title}</strong>
-                                <Box fontSize="sm" color="gray.500">
-                                  {item.description}
-                                </Box>
-                                <Stack direction={"row"} gap={2}>
-                                  <Tooltip content={item.region.join(", ")}>
-                                    <Tag.Root size={"lg"} maxW={"xs"}>
-                                      <Tag.Label>
-                                        {item.region.length > 0
-                                          ? `+${item.region.length} Regions`
-                                          : item.region}
-                                      </Tag.Label>
-                                    </Tag.Root>
-                                  </Tooltip>
-
-                                  <Tag.Root size={"lg"} maxW={"xs"}>
-                                    <Tag.Label>
-                                      {item.category.join(", ")}
-                                    </Tag.Label>
-                                  </Tag.Root>
-                                </Stack>
-                              </Stack>
-                            </Card.Body>
-                          </Card.Root>
-                        ))}
-                      </ScrollArea.Content>
-                    </ScrollArea.Viewport>
-                    <ScrollArea.Scrollbar>
-                      <ScrollArea.Thumb />
-                    </ScrollArea.Scrollbar>
-                    <ScrollArea.Corner />
-                  </ScrollArea.Root>
-                </Card.Body>
+                <Tabs.Root defaultValue="Navigators">
+                  <Tabs.List>
+                    <Container fluid asChild>
+                      <Tabs.Trigger value="Navigators" textAlign={"center"}>
+                        Navigators
+                      </Tabs.Trigger>
+                    </Container>
+                    <Container fluid asChild>
+                      <Tabs.Trigger value="Networks">Networks</Tabs.Trigger>
+                    </Container>
+                    <Container fluid asChild>
+                      <Tabs.Trigger value="Events">Events</Tabs.Trigger>
+                    </Container>
+                  </Tabs.List>
+                  <Tabs.Content value="Navigators">
+                    <Card.Root>
+                      <Navigators />
+                    </Card.Root>
+                  </Tabs.Content>
+                  <Tabs.Content value="Networks">
+                    <Card.Root>
+                      <Networks />
+                    </Card.Root>
+                  </Tabs.Content>
+                  <Tabs.Content value="Events">
+                    <Card.Root>
+                      <Calendar />
+                    </Card.Root>
+                  </Tabs.Content>
+                </Tabs.Root>
               </Card.Root>
             </Container>
           </PageBuilder>

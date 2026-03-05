@@ -41,7 +41,7 @@ export default function Contact() {
           <div>
             <Heading as={"h2"}>Get in Touch</Heading>
             <Text>
-              We&apos;re here to support you. Reach out to learn more about our
+              We're here to support you. Reach out to learn more about our
               services, volunteer opportunities, and ways to contribute
             </Text>
 
@@ -70,10 +70,10 @@ export default function Contact() {
             {/* Contact Info Cards Section */}
             <HStack>
               {contactInfo.map((info) => {
-                const content = info.phoneNumber ? (
-                  <a href={info.phoneNumber}>{info.value}</a>
+                info.href ? (
+                  <a href={info.href}>{info.value}</a>
                 ) : (
-                  <Text>{info.value}</Text>
+                  <Text>{info.value}aaaa</Text>
                 );
 
                 return (
@@ -112,9 +112,9 @@ export default function Contact() {
                 ></iframe>
               </Box>
               {/* Contact Form Section */}
-              <section>
-                <ContactForm />
-              </section>
+            </section>
+            <section>
+              <ContactForm />
             </section>
           </div>
 
@@ -178,7 +178,8 @@ export default function Contact() {
                   );
 
                   return (
-                    <article key={info.label}>hello
+                    <article key={info.label}>
+                      hello
                       <div>{info.icon}</div>
                       <h4>{info.label}</h4>
                       {content}
