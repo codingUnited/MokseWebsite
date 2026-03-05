@@ -13,8 +13,6 @@ import {
   Container,
   HStack,
   Tabs,
-  Text,
-  List,
   SimpleGrid,
   Avatar,
 } from "@chakra-ui/react";
@@ -22,10 +20,6 @@ import { useState } from "react";
 import membersData from "./settings/members.json";
 
 export default function Admin() {
-  const auth = {
-    userName: "D.Robinson",
-    password: "admin123",
-  };
   const [authedUsers, setAuthedUsers] = useState(membersData);
   const [input, setInput] = useState({ userName: "", password: "" });
   const [isAuthenticated, setIsAuthenticated] = useState(false);
