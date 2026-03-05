@@ -30,7 +30,8 @@ export default function Navbar() {
   const runMountCheck = () => {
     if (typeof window !== "undefined") {
       setIsMounted(true);
-    }}
+    }
+  }
   useEffect(() => {
     runMountCheck();
   }, []);
@@ -110,22 +111,15 @@ export default function Navbar() {
                 </NextLink>
               </ChakraLink>
               <ChakraLink asChild>
+                <NextLink href="/navigators-network">
+                  <Text {...navTextProps}>Navigators Network</Text>
+                </NextLink>
+              </ChakraLink>
+              <ChakraLink asChild>
                 <NextLink href="/resources">
                   <Text {...navTextProps}>Resources</Text>
                 </NextLink>
               </ChakraLink>
-              <Button
-                bg={"teal.focusRing"}
-                variant="solid"
-                rounded="md"
-                size={"xl"}
-              >
-                <ChakraLink asChild>
-                  <NextLink href="tel:+16034961535">
-                    <Text {...navTextProps}>Call Us Today</Text>
-                  </NextLink>
-                </ChakraLink>
-              </Button>
               <Button
                 bg={
                   isFixed
