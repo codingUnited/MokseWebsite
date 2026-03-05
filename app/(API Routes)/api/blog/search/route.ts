@@ -3,7 +3,7 @@ import path from "path";
 
 export function GET(request: Request) {
     const url = new URL(request.url);
-    const q = url.searchParams.get("q")?.toLowerCase() ?? "";
+    const query = url.searchParams.get("q")?.toLowerCase() ?? "";
 
     const dataFile = path.join(
         process.cwd(),
@@ -16,8 +16,8 @@ export function GET(request: Request) {
 
     const blogs = JSON.parse(fs.readFileSync(dataFile, "utf8"));
 
-    const filtered = blogs.filter((b: any) =>
-        b.title.toLowerCase().includes(q)
+    const filtered = blogs.filter((blog: {title:string}) =>
+        blog.title.toLowerCase().includes(query)
     );
 
     return Response.json(filtered);
