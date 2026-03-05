@@ -3,7 +3,9 @@
 import {
     Box,
     Button,
+    Card,
     Center,
+    Container,
     DatePicker,
     Flex,
     HStack,
@@ -43,83 +45,92 @@ export default function Calendar() {
     }
 
     return (
-        <Flex
-            direction={{ base: "column", md: "row" }}
-            borderWidth="1px"
-            rounded="xl"
-            overflow="hidden"
-            width="fit-content"
-        >
-            {/* Calendar */}
-            <Box
-                borderEndWidth={{ md: "1px" }}
-                borderBottomWidth={{ base: "1px", md: "0" }}
-            >
-                <Stack gap="0" px="5" py="5">
-                    <Text fontWeight="semibold" textStyle="lg">
-                        Select a Date
-                    </Text>
-                    <Text textStyle="sm" color="fg.muted">
-                        Pick a day for your meeting
-                    </Text>
-                </Stack>
+        <>
+            <Container fluid>
+                <Card.Root w={'fit-content'}>
+                    <Card.Header>
+                        <Text textStyle="2xl" fontWeight="semibold">
+                            Select a Date
+                        </Text>
+                        <Card.Description textStyle="sm" color="fg.muted">
+                            Pick a day for your meeting
+                        </Card.Description>
+                    </Card.Header>
+                    <Card.Body>
 
-                <DatePicker.Root
-                    inline
-                    value={selectedDate}
-                    onValueChange={handleDateChange}
-                    isDateUnavailable={(date) => isWeekend(date, "en-US")}
+
+
+                        <DatePicker.Root
+                            inline
+                            value={selectedDate}
+                            onValueChange={handleDateChange}
+                            // isDateUnavailable={(date) => isWeekend(date, "en-US")} make a specific date unavailable by comparing to a hardcoded value instead of using isWeekend
+                            //Green for past dates, blue for available dates, gray for unavailable dates
+                            width="fit-content"
+                        >
+                            <DatePicker.Content unstyled px="3" pb="4">
+                                <DatePicker.View view="day">
+                                    <HStack justify="space-between" gap="0">
+                                        <DatePicker.PrevTrigger />
+                                        <DatePicker.RangeText fontWeight="medium" textStyle="sm" />
+                                        <DatePicker.NextTrigger />
+                                    </HStack>
+                                    <DatePicker.DayTable />
+                                </DatePicker.View>
+                            </DatePicker.Content>
+                        </DatePicker.Root>
+
+                        <HStack px="5" pb="4" color="fg.muted" textStyle="xs">
+                            <LuGlobe />
+                            <span>{tz}</span>
+                        </HStack>
+
+
+                        {/* Time slots */}
+                        <Stack minW="240px" flex="1">
+                            {date && nativeDate ? (
+                                <Stack gap="0" flex="1">
+                                    <Stack gap="0" px="5" pt="5" pb="3">
+                                        <Text fontWeight="semibold">
+                                            {isToday(date, tz) ? "Today" : formatWeekday(nativeDate)}
+                                        </Text>
+                                        <Text textStyle="sm" color="fg.muted">
+                                            {formatMonthDay(nativeDate)}
+                                        </Text>
+                                    </Stack>
+
+                                    <TimeGrid
+                                        slots={slots}
+                                        selectedTime={selectedTime}
+                                        onTimeClick={handleTimeClick}
+                                    />
+                                </Stack>
+                            ) : (
+                                <Center height="full" px="8" py="10" color="fg.muted">
+                                    <Stack align="center" gap="1" textAlign="center">
+                                        <Text textStyle="sm" fontWeight="medium">
+                                            Select a date
+                                        </Text>
+                                        <Text textStyle="xs">Available time slots will appear here</Text>
+                                    </Stack>
+                                </Center>
+                            )}
+                        </Stack>
+                    </Card.Body>
+                </Card.Root>
+                <Flex
+                    direction={{ base: "column", md: "row" }}
+                    borderWidth="1px"
+                    rounded="xl"
+                    overflow="hidden"
                     width="fit-content"
                 >
-                    <DatePicker.Content unstyled px="3" pb="4">
-                        <DatePicker.View view="day">
-                            <HStack justify="space-between" gap="0">
-                                <DatePicker.PrevTrigger />
-                                <DatePicker.RangeText fontWeight="medium" textStyle="sm" />
-                                <DatePicker.NextTrigger />
-                            </HStack>
-                            <DatePicker.DayTable />
-                        </DatePicker.View>
-                    </DatePicker.Content>
-                </DatePicker.Root>
+                    {/* Calendar */}
 
-                <HStack px="5" pb="4" color="fg.muted" textStyle="xs">
-                    <LuGlobe />
-                    <span>{tz}</span>
-                </HStack>
-            </Box>
+                </Flex>
+            </Container>
 
-            {/* Time slots */}
-            <Stack minW="240px" flex="1">
-                {date && nativeDate ? (
-                    <Stack gap="0" flex="1">
-                        <Stack gap="0" px="5" pt="5" pb="3">
-                            <Text fontWeight="semibold">
-                                {isToday(date, tz) ? "Today" : formatWeekday(nativeDate)}
-                            </Text>
-                            <Text textStyle="sm" color="fg.muted">
-                                {formatMonthDay(nativeDate)}
-                            </Text>
-                        </Stack>
-
-                        <TimeGrid
-                            slots={slots}
-                            selectedTime={selectedTime}
-                            onTimeClick={handleTimeClick}
-                        />
-                    </Stack>
-                ) : (
-                    <Center height="full" px="8" py="10" color="fg.muted">
-                        <Stack align="center" gap="1" textAlign="center">
-                            <Text textStyle="sm" fontWeight="medium">
-                                Select a date
-                            </Text>
-                            <Text textStyle="xs">Available time slots will appear here</Text>
-                        </Stack>
-                    </Center>
-                )}
-            </Stack>
-        </Flex>
+        </>
     )
 }
 
