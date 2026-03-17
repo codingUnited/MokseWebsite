@@ -68,6 +68,21 @@ export default function Navigators() {
   const [titleInput, setTitleInput] = useState("");
   const [filteredItems, setFilteredItems] = useState(AllResources);
 
+  const searchNotion = async () => {
+    try {
+      const response = await fetch("/api/notion/database", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+      return response;
+    } catch (error) {
+      console.error("Error searching Notion database:", error);
+    }
+  };
+
   const applyFilters = () => {
     const noFilters =
       !formData.searchRegion &&
@@ -313,7 +328,7 @@ export default function Navigators() {
           </Portal>
         </Combobox.Root>
         <Button
-          onClick={() => {
+          onClick={async () => {
             if (!titleInput && !categoryInput && !regionInput) {
               filterTitles("");
               filterCategories("");
@@ -321,6 +336,7 @@ export default function Navigators() {
               setFilteredItems(AllResources);
             }
             applyFilters();
+            await searchNotion();
           }}
           aria-label="Search Resources"
         >

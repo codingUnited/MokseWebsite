@@ -7,7 +7,10 @@ import {
   VStack,
   Heading,
   SimpleGrid,
+  Link,
 } from "@chakra-ui/react";
+import NextLink from "next/link";
+
 import { poppins } from "../ui/fonts";
 
 export function HeaderTemplate({
@@ -124,4 +127,22 @@ export function PageBuilder({
       {children}
     </Stack>
   );
+}
+
+/** 
+* @param linkTo The URL to link to  
+* @param props The props for the text element
+* @param displayText The text to display
+*/
+export function LinkBuilder(
+  { linkTo, props, displayText }
+    : Readonly<{
+      linkTo: string;
+      props: React.ComponentProps<typeof Text>
+      displayText: string;
+    }>) {
+  return <Link asChild>
+    <NextLink href={linkTo}>
+      <Text {...props}>{displayText}</Text></NextLink>
+  </Link>;
 }
