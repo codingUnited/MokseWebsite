@@ -8,6 +8,9 @@ import {
   Link as ChakraLink,
   Button,
   Text,
+  Badge,
+  VStack,
+  Float,
 } from "@chakra-ui/react";
 import {
   MdBrightness4 as MdMoon,
@@ -105,19 +108,33 @@ export default function Navbar() {
                   <Text {...navTextProps}>Services</Text>
                 </NextLink>
               </ChakraLink>
+
               <ChakraLink asChild>
-                <NextLink href="/stop-the-stigma">
-                  <Text {...navTextProps}>Stop The Stigma</Text>
-                </NextLink>
-              </ChakraLink>
-              <ChakraLink asChild>
-                <NextLink href="/navigators-network">
-                  <Text {...navTextProps}>Navigators Network</Text>
+                <NextLink href="/programs">
+                  <Text {...navTextProps}>
+                    {/* Float the badge to the above the text */}
+                    <Float placement={"top-center"} offsetX="1" offsetY="1"
+                    >
+                      <Badge variant="solid" colorPalette="green">
+                        New
+                      </Badge>
+                    </Float>
+                    Programs
+                  </Text>
                 </NextLink>
               </ChakraLink>
               <ChakraLink asChild>
                 <NextLink href="/resources">
-                  <Text {...navTextProps}>Resources</Text>
+                  <Text {...navTextProps}>
+                    {/* Float the badge to the above the text */}
+                    <Float placement={"top-center"} offsetX="1" offsetY="1"
+                    >
+                      <Badge variant="solid" colorPalette="green">
+                        New
+                      </Badge>
+                    </Float>
+                    Resources
+                  </Text>
                 </NextLink>
               </ChakraLink>
               <Button
@@ -133,7 +150,6 @@ export default function Navbar() {
                 size={"xl"}
                 onClick={toggleColorMode}
               >
-                {" "}
                 {isMounted && (colorMode === "light" ? <MdMoon /> : <MdSun />)}
               </Button>
             </HStack>
@@ -154,6 +170,6 @@ export default function Navbar() {
           </HStack>
         )}
       </Container>
-    </nav>
+    </nav >
   );
 }
