@@ -6,7 +6,7 @@
 # Custom `dependabot.yml` file with
 # Configuration for package managers
 # Enable version updates to used package managers and create pull requests to update any that are out of date
-# "daily" interval's default is set for Monday.
+# The "weekly" interval's default day is set for Monday.
 
 version: 2
 updates:
