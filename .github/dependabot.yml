@@ -23,9 +23,3 @@ updates:
     directory: "/"
     schedule:
       interval: "monthly"
-
-  # Enable version updates to .NET
-  - package-ecosystem: "nuget"
-    directory: "/code/"
-    schedule:
-      interval: "weekly"
