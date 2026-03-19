@@ -166,7 +166,7 @@ export default function Home() {
                     left={"-125px"}
                     w={"350px"}
                     h={"55vh"}
-                    bgImage={"url('/Image-1-1.jpg')"}
+                    bgImage={"url('/assets/home/Image-1-1.jpg')"}
                     bgSize={"cover"}
                     backgroundPosition={"center"}
                     bgRepeat={"no-repeat"}
