@@ -10,13 +10,20 @@ name: Microsoft Security DevOps
 on:
   push:
     branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
   schedule:
     - cron: '43 21 * * 3'
 
 permissions:
   contents: read
+  security-events: write
+
+jobs:
+  OSSAR-Scan:
+    runs-on: windows-latest
+
+    env:
+      # Opt-in early to Node.js 24 for all JavaScript-based actions
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 env:
   # Opt-in early to Node.js 24 for all JavaScript-based actions
@@ -32,7 +39,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633 # v4.1.7
 
       # Run Microsoft Security DevOps CLI
       - name: Run Microsoft Security DevOps
@@ -42,5 +49,36 @@ jobs:
       # Upload results to the Security tab
       - name: Upload results to Security tab
         uses: github/codeql-action/upload-sarif@v3
+      # Ensure a compatible version of dotnet is installed.
+      # The [Microsoft Security Code Analysis CLI](https://aka.ms/mscadocs) is built with dotnet v3.1.201.
+      # A version greater than or equal to v3.1.201 of dotnet must be installed on the agent in order to run this action.
+      # GitHub hosted runners already have a compatible version of dotnet installed and this step may be skipped.
+      # For self-hosted runners, ensure dotnet version 3.1.201 or later is installed by including this action:
+      # - name: Install .NET
+      #   uses: actions/setup-dotnet@v4
+      #   with:
+      #     dotnet-version: '3.1.x'
+
+      # Run Microsoft Security DevOps CLI
+      - name: Run Microsoft Security DevOps
+        uses: microsoft/security-devops-action@08976cb623803b1b36d7112d4ff9f59eae704de0 # v1.12.0
+        id: msdo
+        continue-on-error: true
+
+      # Run open source static analysis tools
+      - name: Run OSSAR
+        uses: github/ossar-action@b0197a0864d7095a2c2bb7d1cf8e17826dfec353 # v1
+        id: ossar
+
+      # Upload MSDO results to the Security tab
+      - name: Upload MSDO results
+        uses: github/codeql-action/upload-sarif@e5f05b81d5b6ff8cfa111c80c22c5fd02a384118 # v3
+        with:
+          sarif_file: ${{ steps.msdo.outputs.sarifFile }}
+        if: steps.msdo.outputs.sarifFile
+
+      # Upload OSSAR results to the Security tab
+      - name: Upload OSSAR results
+        uses: github/codeql-action/upload-sarif@e5f05b81d5b6ff8cfa111c80c22c5fd02a384118 # v3
         with:
           sarif_file: ${{ steps.msdo.outputs.sarifFile }}
