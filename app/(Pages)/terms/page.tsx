@@ -9,16 +9,14 @@ import {
 export default function Page() {
   return (
     <PageBuilder>
-      <HeaderTemplate
-        title=" "
-        description="" imageHeight={"10vh"} 
-      />
+      {/* 
+      * NEEDS to resize with "block height" param. 
+      <HeaderTemplate/> */}
       <BodyTemplate>
         <SectionTemplate
           title="Terms and Conditions"
           description="Read our terms and conditions to understand the rules and guidelines for using our website and services."
-        > </SectionTemplate>
-        <div className="prose prose-lg">
+        ><div className="prose prose-lg">
           <h1>Terms and Conditions</h1>
           <p>
             Welcome to Mokse! These terms and conditions outline the rules and
@@ -69,7 +67,8 @@ export default function Page() {
             If you have any questions about these terms and conditions, please
             contact us at <a href="mailto:info@mokse.org">info@mokse.org</a>.
           </p>
-        </div>
+        </div></SectionTemplate>
+        
       </BodyTemplate>
     </PageBuilder>
   );
