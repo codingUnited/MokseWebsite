@@ -1,7 +1,6 @@
 "use client";
 import {
   BodyTemplate,
-  HeaderTemplate,
   PageBuilder,
   SectionTemplate,
 } from "@/components/page-builder/template";
@@ -10,16 +9,12 @@ import { Box } from "@chakra-ui/react";
 export default function Page() {
   return (
     <PageBuilder>
-      {/* 
-      * NEEDS to resize with "block height" param. 
-      <HeaderTemplate/> */}
       <BodyTemplate>
         <Box height={"10vh"}/>
         <SectionTemplate
           title="Terms and Conditions"
           description="Read our terms and conditions to understand the rules and guidelines for using our website and services."
         ><div className="prose prose-lg">
-          <h1>Terms and Conditions</h1>
           <p>
             Welcome to Mokse! These terms and conditions outline the rules and
             regulations for the use of our website and services. By accessing or
