@@ -14,7 +14,7 @@ export default function Page() {
         <SectionTemplate
           title="Terms and Conditions"
           description="Read our terms and conditions to understand the rules and guidelines for using our website and services."
-        ><div className="prose prose-lg">
+        ><div className="text-base lg:text-lg space-y-4">
           <p>
             Welcome to Mokse! These terms and conditions outline the rules and
             regulations for the use of our website and services. By accessing or
