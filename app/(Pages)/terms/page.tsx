@@ -5,6 +5,7 @@ import {
   PageBuilder,
   SectionTemplate,
 } from "@/components/page-builder/template";
+import { Box } from "@chakra-ui/react";
 
 export default function Page() {
   return (
@@ -13,6 +14,7 @@ export default function Page() {
       * NEEDS to resize with "block height" param. 
       <HeaderTemplate/> */}
       <BodyTemplate>
+        <Box height={"10vh"}/>
         <SectionTemplate
           title="Terms and Conditions"
           description="Read our terms and conditions to understand the rules and guidelines for using our website and services."
