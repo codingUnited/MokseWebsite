@@ -176,19 +176,6 @@ export default function Footer() {
                     </Heading>
                     <VStack align={"left"}>
                       <ChakraLink asChild>
-                        <NextLink href="/">
-                          <Center>
-                            <Icon
-                              name="AngleRight"
-                              size={6}
-                              color={"teal.focusRing"}
-                            />
-                            <Text textStyle={"md"}>Home</Text>
-                          </Center>
-                        </NextLink>
-                      </ChakraLink>
-
-                      <ChakraLink asChild>
                         <NextLink href="/about-us">
                           <Center>
                             <Icon
