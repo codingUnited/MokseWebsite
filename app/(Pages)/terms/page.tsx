@@ -6,7 +6,7 @@ import {
 } from "@/components/page-builder/template";
 import { Box } from "@chakra-ui/react";
 
-export default function Page() {
+export default function Terms() {
   return (
     <PageBuilder>
       <BodyTemplate>
