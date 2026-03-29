@@ -345,7 +345,7 @@ export default function Footer() {
 
             <Center>
               <HStack h={"10vh"}>
-                <p>Copyright &copy; 2025 Mokse | Powered by Mokse</p>
+                <p>Copyright &copy; 2025 Mokse | <ChakraLink as={NextLink} href='https://codingunited.vercel.app/'>Developed By Coding United</ChakraLink> </p>
               </HStack>
             </Center>
           </VStack>
