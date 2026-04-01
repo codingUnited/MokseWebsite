@@ -8,6 +8,7 @@ import {
   Heading,
   SimpleGrid,
   Link,
+  GridItem,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 
@@ -15,6 +16,8 @@ import { poppins } from "../ui/fonts";
 
 export function HeaderTemplate({
   title,
+  titleAlignment = 1,
+  titleLocation = 75,
   image,
   imageHeight,
   imageLabel,
@@ -22,6 +25,8 @@ export function HeaderTemplate({
   direction,
 }: {
   title?: string;
+  titleAlignment?: number;
+  titleLocation?: number;
   image?: string;
   imageHeight?: string;
   imageLabel?: string;
@@ -47,28 +52,30 @@ export function HeaderTemplate({
         alignItems={"center"}
       >
         <SimpleGrid columns={2} gap={6}>
-          <VStack direction={direction} w={"75%"} pl={16}>
-            <Heading as={"h1"} p={2} alignItems={"left"}>
-              <Text
-                textStyle={"7xl"}
-                className={poppins.className}
-                // textAlign={"start"}
-                textTransform={"capitalize"}
-                overflow={"hidden"}
-                wordBreak={"none"}
-                verticalAlign={"baseline"}
-                _light={{ color: "white" }}
-              >
-                {title}
-              </Text>
-            </Heading>
-            <Container fluid>
-              <Text _light={{ color: "white" }}>{description}</Text>
-            </Container>
-          </VStack>
+          <GridItem colSpan={titleAlignment}>
+            <VStack direction={direction} w={`${titleLocation}%`} pl={16} >
+              <Heading as={"h1"} p={2} alignItems={"center"}>
+                <Text
+                  textStyle={"7xl"}
+                  className={poppins.className}
+                  // textAlign={"start"}
+                  textTransform={"capitalize"}
+                  overflow={"hidden"}
+                  wordBreak={"none"}
+                  verticalAlign={"baseline"}
+                  _light={{ color: "white" }}
+                >
+                  {title}
+                </Text>
+              </Heading>
+              <Container fluid>
+                <Text _light={{ color: "white" }}>{description}</Text>
+              </Container>
+            </VStack>
+          </GridItem>
         </SimpleGrid>
       </AbsoluteCenter>
-    </Box>
+    </Box >
   );
 }
 export function BodyTemplate({ children }: { children: React.ReactNode }) {
