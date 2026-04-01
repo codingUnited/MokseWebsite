@@ -11,6 +11,7 @@ import {
   Badge,
   VStack,
   Float,
+  Box,
 } from "@chakra-ui/react";
 import {
   MdBrightness4 as MdMoon,
@@ -111,30 +112,34 @@ export default function Navbar() {
 
               <ChakraLink asChild>
                 <NextLink href="/programs">
-                  <Text {...navTextProps}>
-                    {/* Float the badge to the above the text */}
-                    <Float placement={"top-center"} offsetX="1" offsetY="1"
-                    >
+                  <Box position={"relative"} display={"inline-block"}>
+                    <Text {...navTextProps}>
+                      {/* Float the badge to the above the text */}
+                      Programs
+                    </Text>
+                    <Float placement={"top-center"} offsetX="1" offsetY="-1">
                       <Badge variant="solid" colorPalette="green">
                         New
                       </Badge>
                     </Float>
-                    Programs
-                  </Text>
+                  </Box>
                 </NextLink>
               </ChakraLink>
               <ChakraLink asChild>
                 <NextLink href="/resources">
-                  <Text {...navTextProps}>
-                    {/* Float the badge to the above the text */}
-                    <Float placement={"top-center"} offsetX="1" offsetY="1"
+                  <Box position={"relative"} display={"inline-block"}>
+                    <Text {...navTextProps}>
+                      {/* Float the badge to the above the text */}
+
+                      Resources
+                    </Text>
+                    <Float placement={"top-center"} offsetX="1" offsetY="-1"
                     >
                       <Badge variant="solid" colorPalette="green">
                         New
                       </Badge>
                     </Float>
-                    Resources
-                  </Text>
+                  </Box>
                 </NextLink>
               </ChakraLink>
               <Button

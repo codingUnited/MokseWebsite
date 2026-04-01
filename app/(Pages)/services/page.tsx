@@ -4,7 +4,7 @@ import ServiceCard from "../../../components/services/service-card";
 import SupportCard from "../../../components/services/support-card";
 import FaqItem from "../../../components/services/faq-item";
 import { services, supportOptions, faqItems } from "../../../data/services";
-import { Link as ChakraLink, SimpleGrid } from "@chakra-ui/react";
+import { Link as ChakraLink, HStack, SimpleGrid } from "@chakra-ui/react";
 import {
   HeaderTemplate,
   PageBuilder,
@@ -36,24 +36,23 @@ export default function Services() {
             </SimpleGrid>
           </SectionTemplate>
           <section>
-            
-              
-            
+
+
+
           </section>
           <section>
 
-              <SectionTemplate
-                          title="Make a Difference!"
-                          description="Get Involved!
+            <SectionTemplate
+              title="Make a Difference!"
+              description="Get Involved!
                           Your support can make a significant impact on the lives of justice-impacted individuals. Explore the various ways you can contribute to our mission and help us create a more inclusive and supportive community."
-              >
-
-              <SimpleGrid columns={[null, null, 3]}>
+            >
+              <HStack justify={"center"} align={"center"} gap={4} wrap={"wrap"} paddingTop={10}>
                 {supportOptions.map((option) => (
                   <SupportCard key={option.title} {...option} />
                 ))}
-              </SimpleGrid>
-            </SectionTemplate>            
+              </HStack>
+            </SectionTemplate>
           </section>
           <FaqItem />
         </BodyTemplate>
