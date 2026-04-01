@@ -17,9 +17,11 @@ updates:
     # Check the npm registry for updates every day
     schedule:
       interval: "daily"
+      target-branch: "Mokse-59-Create-a-dev-test-branch"
 
   # Enable version updates to GitHub Actions
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "monthly"
+      target-branch: "Mokse-59-Create-a-dev-test-branch"
