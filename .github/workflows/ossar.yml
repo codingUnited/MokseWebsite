@@ -22,23 +22,15 @@ jobs:
   OSSAR-Scan:
     runs-on: windows-latest
 
-    env:
-      # Opt-in early to Node.js 24 for all JavaScript-based actions
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633 # v4.1.7
 
-      # Ensure a compatible version of dotnet is installed.
-      # The [Microsoft Security Code Analysis CLI](https://aka.ms/mscadocs) is built with dotnet v3.1.201.
-      # A version greater than or equal to v3.1.201 of dotnet must be installed on the agent in order to run this action.
-      # GitHub hosted runners already have a compatible version of dotnet installed and this step may be skipped.
-      # For self-hosted runners, ensure dotnet version 3.1.201 or later is installed by including this action:
-      # - name: Install .NET
-      #   uses: actions/setup-dotnet@v4
-      #   with:
-      #     dotnet-version: '3.1.x'
+      # Microsoft Security DevOps (`microsoft/security-devops-action`) runs on GitHub-hosted runners
+      # without requiring the deprecated Microsoft Security Code Analysis CLI or .NET Core 3.1.x.
+      # If you are using self-hosted runners, refer to the MSDO action documentation for any
+      # current runtime requirements and install only supported .NET versions if needed:
+      # https://github.com/microsoft/security-devops-action
 
       # Run Microsoft Security DevOps CLI
       - name: Run Microsoft Security DevOps
