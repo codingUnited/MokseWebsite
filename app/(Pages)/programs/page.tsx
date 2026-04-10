@@ -19,7 +19,7 @@ export default function Programs() {
                             <Tabs.Root defaultValue="Navigators-Network" orientation="vertical">
                                 <Tabs.List >
                                     <Tabs.Trigger value="Navigators-Network">Navigators Network</Tabs.Trigger>
-                                    <Tabs.Trigger value="projects">Stop The Stigma</Tabs.Trigger>
+                                    <Tabs.Trigger value="Stop-The-Stigma">Stop The Stigma</Tabs.Trigger>
                                 </Tabs.List>
                                 <Tabs.Content value="Navigators-Network">
                                     Programs Info coming soon!
