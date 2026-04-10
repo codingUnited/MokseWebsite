@@ -1,5 +1,9 @@
 import { BodyTemplate, HeaderTemplate, PageBuilder, SectionTemplate } from "@/components/page-builder/template";
-import { Card, Container, Flex, HStack, Tabs, VStack } from "@chakra-ui/react";
+import { Box, Card, Center, Container, Flex, HStack, ScrollArea, Stack, Tabs, Tag, VStack } from "@chakra-ui/react";
+import NavigatorsNetwork from "./navigators-network/page";
+import StopTheStigma from "./stop-the-stigma/page";
+
+import { Tooltip } from "@/components/ui/tooltip";
 
 
 export default function Programs() {
@@ -22,11 +26,62 @@ export default function Programs() {
                                     <Tabs.Trigger value="Stop-The-Stigma">Stop The Stigma</Tabs.Trigger>
                                 </Tabs.List>
                                 <Tabs.Content value="Navigators-Network">
-                                    Programs Info coming soon!
+                                    <ScrollArea.Root height={"xl"} maxW="full">
+                                        <ScrollArea.Viewport>
+                                            <ScrollArea.Content spaceY="1" textStyle="sm">
+                                                {/* <NavigatorsNetwork /> */}
+                                                <Card.Root
+                                                    borderWidth=".5px"
+                                                    borderRadius="md"
+                                                    shadow="xs"
+                                                    flexDirection="row"
+                                                >
+                                                    <Center borderRadius="md">
+                                                        <Box boxSize={120} bg={"blue.500"} />
+                                                    </Center>
+                                                    <Card.Body p={4}>
+                                                        <Stack>
+                                                            <strong>Title</strong>
+                                                            <Box fontSize="sm" color="gray.500">
+                                                                description
+                                                            </Box>
+                                                            <Stack direction={"row"} gap={2}>
+                                                                <Tooltip content={"test"}>
+                                                                    <Tag.Root size={"lg"} maxW={"xs"}>
+                                                                        <Tag.Label>
+                                                                            Label
+                                                                        </Tag.Label>
+                                                                    </Tag.Root>
+                                                                </Tooltip>
+                                                                <Tag.Root size={"lg"} maxW={"xs"}>
+                                                                    <Tag.Label>{"Category"}</Tag.Label>
+                                                                </Tag.Root>
+                                                            </Stack>
+                                                        </Stack>
+                                                    </Card.Body>
+                                                </Card.Root>
+                                            </ScrollArea.Content>
+                                        </ScrollArea.Viewport>
+                                        <ScrollArea.Scrollbar>
+                                            <ScrollArea.Thumb />
+                                        </ScrollArea.Scrollbar>
+                                        <ScrollArea.Corner />
+                                    </ScrollArea.Root>
+                                </Tabs.Content>
+                                <Tabs.Content value="Stop-The-Stigma">
+                                    <ScrollArea.Root height={"xl"} maxW="full">
+                                        <ScrollArea.Viewport>
+                                            <ScrollArea.Content spaceY="1" textStyle="sm">
+                                                <StopTheStigma />
+                                            </ScrollArea.Content>
+                                        </ScrollArea.Viewport>
+                                        <ScrollArea.Scrollbar>
+                                            <ScrollArea.Thumb />
+                                        </ScrollArea.Scrollbar>
+                                        <ScrollArea.Corner />
+                                    </ScrollArea.Root>
                                 </Tabs.Content>
                             </Tabs.Root >
-
-
                         </Flex >
                     </Card.Body>
 
