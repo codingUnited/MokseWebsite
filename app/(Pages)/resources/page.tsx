@@ -25,6 +25,7 @@ import { useRef, useState } from "react";
 import checkDeviceSize from "@/components/ui/breakpoints";
 import { Icon } from "@/components/ui/icons/icon";
 import {
+  BodyTemplate,
   HeaderTemplate,
   PageBuilder,
 } from "@/components/page-builder/template";
@@ -130,41 +131,19 @@ export default function SearchResources() {
       {notMobileDevice ? (
         <>
           <PageBuilder>
-            <HeaderTemplate title="Resources" imageHeight={"20vh"} />
-            <Container fluid>
-              <Card.Root>
-                <Tabs.Root defaultValue="Navigators">
-                  <Tabs.List>
-                    <Container fluid asChild>
-                      <Tabs.Trigger value="Navigators" textAlign={"center"}>
-                        Navigators
-                      </Tabs.Trigger>
-                    </Container>
-                    <Container fluid asChild>
-                      <Tabs.Trigger value="Networks">Networks</Tabs.Trigger>
-                    </Container>
-                    <Container fluid asChild>
-                      <Tabs.Trigger value="Events">Events</Tabs.Trigger>
-                    </Container>
-                  </Tabs.List>
-                  <Tabs.Content value="Navigators">
-                    <Card.Root>
-                      <Navigators />
-                    </Card.Root>
-                  </Tabs.Content>
-                  <Tabs.Content value="Networks">
-                    <Card.Root>
-                      <Networks />
-                    </Card.Root>
-                  </Tabs.Content>
-                  <Tabs.Content value="Events">
-                    <Card.Root>
-                      <Calendar />
-                    </Card.Root>
-                  </Tabs.Content>
-                </Tabs.Root>
-              </Card.Root>
-            </Container>
+            <HeaderTemplate
+              title={"Resources"}
+              imageHeight={"28vh"}
+              titleAlignment={2}
+              titleLocation={100} />
+            <BodyTemplate>
+              <Container fluid>
+                <Card.Root>
+                  <Navigators /> 
+                </Card.Root>
+              </Container>
+            </BodyTemplate>
+
           </PageBuilder>
         </>
       ) : (
@@ -174,7 +153,6 @@ export default function SearchResources() {
           <HStack as={"section"}>
             <article>
               <Icon name="Gem" />
-              {/* <GemIcon /> */}
               <Box>
                 <Heading as="h3">Search</Heading>
                 <InputGroup endElement={endElement}>

@@ -6,6 +6,7 @@ import {
   HStack,
   Container,
   Link as ChakraLink,
+  Image as ChakraImage,
   Button,
   Text,
   Badge,
@@ -85,12 +86,15 @@ export default function Navbar() {
           <HStack justifyContent={"space-between"} px={8}>
             <ChakraLink asChild pl={8}>
               <NextLink href="/">
-                <Image
-                  src="/MOKSE-3-180x46.png"
-                  alt="MOKSE Logo"
-                  width={180}
-                  height={46}
-                />
+                <ChakraImage asChild>
+                  <Image
+                    src="/MOKSE-3-180x46.png"
+                    alt="MOKSE Logo"
+                    width={180}
+                    height={46}
+                  />
+                </ChakraImage>
+
               </NextLink>
             </ChakraLink>
             <HStack justifyContent={"space-evenly"} spaceX={6} px={8}>
@@ -163,12 +167,13 @@ export default function Navbar() {
           <HStack justifyContent={"space-between"} px={1}>
             <ChakraLink asChild>
               <NextLink href="/">
-                <Image
-                  src="/MOKSE-3-180x46.png"
-                  alt="MOKSE Logo"
-                  width={180}
-                  height={48}
-                />
+                <ChakraImage asChild>
+                  <Image
+                    src="/MOKSE-3-180x46.png"
+                    alt="MOKSE Logo"
+                    width={180}
+                    height={48}
+                  /></ChakraImage>
               </NextLink>
             </ChakraLink>
             <Button>Menu</Button>

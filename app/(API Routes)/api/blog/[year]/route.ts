@@ -20,6 +20,6 @@ export function GET(
     // const blogs = JSON.parse(fs.readFileSync(dataFile, "utf8"));
     // const filtered = blogs.filter((b: any) => b.dateY.toString() === params.year);
     // return Response.json(filtered);
-    return
+    return;
 
 } 

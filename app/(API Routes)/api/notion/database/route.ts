@@ -37,16 +37,15 @@ export async function POST(req: NextRequest) {
         }
         const data = await response.json();
         const payload = data.results.map((entry: NotionDatabaseEntry) => {
+            const baseSchema = entry.properties;
             return {
-                region: entry.properties.region?.multi_select?.map((location) => location.name) || [],
-                category: entry.properties.category?.multi_select?.map(category => category.name) || [],
-                id: entry.properties.id?.number || null,
-                description: entry.properties.description?.rich_text[0]?.plain_text || "",
-                url: entry.properties.url?.url || "",
-                Name: entry.properties.Name?.title.map(({ text }) => text.content).join(" ") || "",
-
-
-            }
+                region: baseSchema.region?.multi_select?.map((location) => location.name) || [],
+                category: baseSchema.category?.multi_select?.map(category => category.name) || [],
+                id: baseSchema.id?.number || null,
+                description: baseSchema.description?.rich_text[0]?.plain_text || "",
+                url: baseSchema.url?.url || "",
+                Name: baseSchema.Name?.title.map(({ text }) => text.content).join(" ") || "",
+            };
         });
 
 
