@@ -16,12 +16,12 @@ export default function Programs() {
 
                     <Card.Body asChild>
                         <Flex direction={'row'} gap={0}>
-                            <Tabs.Root defaultValue="Navigators" orientation="vertical">
+                            <Tabs.Root defaultValue="Navigators-Network" orientation="vertical">
                                 <Tabs.List >
-                                    <Tabs.Trigger value="members">Navigators Network</Tabs.Trigger>
+                                    <Tabs.Trigger value="Navigators-Network">Navigators Network</Tabs.Trigger>
                                     <Tabs.Trigger value="projects">Stop The Stigma</Tabs.Trigger>
                                 </Tabs.List>
-                                <Tabs.Content value="members">
+                                <Tabs.Content value="Navigators-Network">
                                     Programs Info coming soon!
                                 </Tabs.Content>
                             </Tabs.Root >
