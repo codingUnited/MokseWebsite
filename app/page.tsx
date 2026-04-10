@@ -204,7 +204,7 @@ export default function Home() {
             <Center>
               <Button colorPalette="teal" variant="solid" size={"xl"}>
                 <ChakraLink asChild>
-                  <NextLink href="/services">
+                  <NextLink href="https://www.paypal.com/donate/?hosted_button_id=G46WV8T5NG85A">
                     <Text _light={{ color: "white" }}>Donate</Text>
                   </NextLink>
                 </ChakraLink>
