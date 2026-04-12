@@ -16,7 +16,7 @@ export default function Programs() {
         <PageBuilder>
             <Card.Root>
                 <HeaderTemplate
-                    imageHeight="9vh"
+                    imageHeight="10vh"
                 />
                 <Tabs.Root defaultValue="Programs" orientation="vertical" variant={'outline'}>
                     <Flex direction={'row'} gap={0}>

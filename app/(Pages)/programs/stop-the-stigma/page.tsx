@@ -14,7 +14,13 @@ import {
   Button,
   Strong,
   Link as ChakraLink,
+  Float,
+  Box,
+  Container,
+  Flex,
+  AbsoluteCenter,
 } from "@chakra-ui/react";
+import NextImage from "next/image";
 import { useColorMode } from "@/components/ui/color-mode";
 import { poppins } from "@/components/ui/fonts";
 import {
@@ -92,10 +98,11 @@ export default function StopTheStigma() {
           imageHeight="100vh"
           imageLabel="Stop The Stigma Conference"
           title="Stop The Stigma Conference"
-        />
-        <Card.Root>
-          <Card.Body>
-            <Stack gap={"xl"} direction={"row"}>
+          titleAlignment={2}
+          titleLocation={100}
+        >
+          <Float placement={"bottom-center"} offsetY={"280px"}>
+            <HStack gapX={"8"} >
               <For
                 each={[
                   { label: "Days", value: countdown.days },
@@ -112,87 +119,139 @@ export default function StopTheStigma() {
                   value: number | string;
                 }) => {
                   return (
-                    <Card.Root key={label} bg={"blackAlpha.950"} w={"75px"}>
-                      <Card.Body>
-                        <Center>
-                          <VStack>
-                            <Text className={poppins.className}>{value}</Text>
-                            <Text className={poppins.className}>{label}</Text>
+                    <Card.Root key={label} bg={"blackAlpha.950"} w={"180px"} h={"180px"}>
+                      <Card.Body position={'relative'}>
+                        <Float placement={"middle-center"}>
+                          <VStack gapY={10}>
+                            <Text className={poppins.className} fontSize={45}>{value}</Text>
+                            <Text className={poppins.className} fontSize={45 / 2}>{label}</Text>
                           </VStack>
-                        </Center>
+                        </Float>
                       </Card.Body>
                     </Card.Root>
                   );
                 }}
               </For>
-            </Stack>
-          </Card.Body>
-        </Card.Root>
-        <HStack>
-          <Image src="/assets/stop-the-stigma/Linkedin-Carousels.png" />
-          <VStack>
-            <Heading as="h1" size="lg" mb={4}>
-              What is STOP THE STIGMA?
-            </Heading>
+            </HStack>
+          </Float>
+        </HeaderTemplate>
 
-            <Text>
-              <Strong>STOP THE STIGMA</Strong> is an annual conference centered
-              on the stigma of disability and incarceration. Now in its fourth
-              year the conference continues to provide a space for justice
-              impacted individuals to have their voices and stories heard.
-              Presented by Mokse and The Community, STOP THE STIGMA integrates
-              innovative media, storytelling, and design to engage audiences and
-              amplify impact. Together, we build an inclusive platform to
-              challenge assumptions and inspire action.
-            </Text>
-            <Button
-              bg={"teal.focusRing"}
-              variant="solid"
-              rounded="md"
-              size={"xl"}
-            >
-              <ChakraLink asChild>
-                <NextLink href="https://docs.google.com/forms/d/e/1FAIpQLSe4Z0LI5JpkPH3eKBw-8ANquRWRxNJKwpS465KOStu3Jb4v_A/viewform?usp=embed_facebook">
-                  <Text>Register Here</Text>
-                </NextLink>
-              </ChakraLink>
-            </Button>
-          </VStack>
-        </HStack>
+        <SectionTemplate>
+          <Container fluid h={"100%"}>
+            <Flex gapX={24} p={20}>
+              <Image asChild aspectRatio={4 / 5} fit={"contain"} maxW={"830px"} mx={"auto"} width={"full"}>
+                <NextImage src={"/assets/stop-the-stigma/Linkedin-Carousels.png"} width={1080} height={1350} alt={"test"} fetchPriority={"high"} sizes={"(max-width:1080px) 100vw,1080px"} />
+              </Image>
+              <Center>
+                <VStack>
+                  <Heading as={"h1"} mb={4} size={"5xl"} fontWeight={'bold'} >
+                    What is STOP THE STIGMA?
+                  </Heading>
+                  <Text textStyle={"lg"}>
+                    <Strong>STOP THE STIGMA</Strong> is an annual conference centered
+                    on the stigma of disability and incarceration. Now in its fourth
+                    year the conference continues to provide a space for justice
+                    impacted individuals to have their voices and stories heard.
+                    Presented by Mokse and The Community, STOP THE STIGMA integrates
+                    innovative media, storytelling, and design to engage audiences and
+                    amplify impact. Together, we build an inclusive platform to
+                    challenge assumptions and inspire action.
+                  </Text>
+                  <Button
+                    bg={"teal.focusRing"}
+                    variant="solid"
+                    rounded="md"
+                    size={"xl"}
+                  >
+                    <ChakraLink asChild>
+                      <NextLink href="https://docs.google.com/forms/d/e/1FAIpQLSe4Z0LI5JpkPH3eKBw-8ANquRWRxNJKwpS465KOStu3Jb4v_A/viewform?usp=embed_facebook">
+                        <Text>Register Here</Text>
+                      </NextLink>
+                    </ChakraLink>
+                  </Button>
+                </VStack>
+              </Center>
+            </Flex>
+          </Container>
+        </SectionTemplate>
+
+        <SectionTemplate>
+          <Container
+            fluid
+          // position="relative"
+          // w={"100%"}
+          // h={"0vh"}
+          // bgImage={`url(${"/assets/stop-the-stigma/stop-stigma-sect1_background.webp"})`}
+          // bgSize={"cover"}
+          // backgroundPosition={"center"}
+          // bgRepeat={"no-repeat"}
+          // aria-label={`${"Stop The Stigma Conference"} Image`} 
+          >
+            {/* <AbsoluteCenter
+              textAlign="center"
+              bg="rgba(0, 0, 0, 0.4)"
+              w={"100%"}
+              h={"100%"}
+              alignItems={"center"}
+            > */}
+              <Flex gapX={24} p={20}>
+                <VStack>
+                  <Heading as={"h2"} size={'5xl'}>
+                    Conference Highlights
+                  </Heading>
+
+                  <FeatureCard
+                    title={"Opening Night Film - Being Michelle"}
+                    description={
+                      "A groundbreaking documentary that sets the tone for the conference by centering the lived experience of a Deaf woman navigating incarceration and disability."
+                    }
+                    icon={"Keyboard"}
+                  />
+                  <FeatureCard
+                    title={"Panels on Race, Incarceration, and Disability"}
+                    description={
+                      "Thought-provoking conversations that tackle the intersections of systemic racism, ableism, and mass incarceration—areas where stigma and structural barriers collide most powerfully."
+                    }
+                    icon={"Newspaper"}
+                  />
+                  <FeatureCard
+                    title={"Theatrical Premiere - Brick by Brick"}
+                    description={
+                      "A one-act play debuting at the conference, offering a creative lens into stories of resilience, justice, and belonging."
+                    }
+                    icon={"ListAlt"}
+                  />
+                  <FeatureCard
+                    title={"35 Inspiring Speakers"}
+                    description={
+                      "A diverse lineup of national leaders, educators, advocates, and directly impacted individuals sharing expertise, lived experience, and visions for inclusive futures."
+                    }
+                    icon={"ObjectGroup"}
+                  />
+                </VStack>
+                <Box bg={"white "} boxSize={100}>
+                  <Image asChild aspectRatio={4 / 5} fit={"contain"} maxW={"830px"} mx={"auto"} width={"full"} >
+                    <NextImage
+                      src={"/assets/stop-the-stigma/Linkedin-Carousels.png"}
+                      width={1080}
+                      height={1350}
+                      alt={"test"}
+                      fetchPriority={"high"}
+                      sizes={"(max-width:1080px) 100vw,1080px"} />
+                  </Image>
+                </Box>
+              </Flex>
+            {/* </AbsoluteCenter> */}
+
+          </Container>
+
+        </SectionTemplate>
         <HeaderTemplate
           image="/assets/stop-the-stigma/stop-stigma-sect2_background.webp"
           imageHeight="100vh"
           imageLabel="Stop The Stigma Conference"
         />
-        Confrence Highlights
-        <FeatureCard
-          title={"Opening Night Film - Being Michelle"}
-          description={
-            "A groundbreaking documentary that sets the tone for the conference by centering the lived experience of a Deaf woman navigating incarceration and disability."
-          }
-          icon={"Keyboard"}
-        />
-        <FeatureCard
-          title={"Panels on Race, Incarceration, and Disability"}
-          description={
-            "Thought-provoking conversations that tackle the intersections of systemic racism, ableism, and mass incarceration—areas where stigma and structural barriers collide most powerfully."
-          }
-          icon={"Newspaper"}
-        />
-        <FeatureCard
-          title={"Theatrical Premiere - Brick by Brick"}
-          description={
-            "A one-act play debuting at the conference, offering a creative lens into stories of resilience, justice, and belonging."
-          }
-          icon={"ListAlt"}
-        />
-        <FeatureCard
-          title={"35 Inspiring Speakers"}
-          description={
-            "A diverse lineup of national leaders, educators, advocates, and directly impacted individuals sharing expertise, lived experience, and visions for inclusive futures."
-          }
-          icon={"ObjectGroup"}
-        />
+
         {/* <section
           className="elementor-section elementor-top-section elementor-element elementor-element-ln1z48d elementor-section-full_width elementor-section-content-middle elementor-section-height-default elementor-section-height-default"
           data-id="ln1z48d"
@@ -308,7 +367,7 @@ export default function StopTheStigma() {
             </div>
           </div>
         </section> */}
-      </PageBuilder>
+      </PageBuilder >
     </>
   );
 }

@@ -24,8 +24,8 @@ export default function NavigatorsNetwork() {
                             height={683}
                         />
                     </Image>
-                    <Heading size={"4xl"}>Navigator's Network</Heading>
-                    <Text>Navigator’s Network is launching as a collaboration platform for organizations that want to improve access, coordination, and real-world outcomes.</Text>
+                    <Heading size={"4xl"}>Navigator&apos;s Network</Heading>
+                    <Text>Navigator&apos;s Network is launching as a collaboration platform for organizations that want to improve access, coordination, and real-world outcomes.</Text>
                     <Button>
                         <ChakraLink asChild>
                             <NextLink href={"https://forms.office.com/Pages/ResponsePage.aspx?id=ek_Mq-3o7UmR4e2p9bxT6nRWmhssVxdCt8_vzCmu28ZUMkMwTFBIT09VMDVEVlpMOVlHU0NGVUVCWi4u"}>
@@ -38,7 +38,7 @@ export default function NavigatorsNetwork() {
             <SectionTemplate>
                 <HStack>
                     <Heading size={'4xl'}>Built for Organizations That Want to Work Better Together</Heading>
-                    <Text>Navigator's Network connects:</Text>
+                    <Text>Navigator&apos;s Network connects:</Text>
                     <List.Root>
                         <List.Item>Service providers</List.Item>
                         <List.Item>Government and community agencies</List.Item>
