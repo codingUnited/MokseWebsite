@@ -41,7 +41,7 @@ export default function Contact() {
           <div>
             <Heading as={"h2"}>Get in Touch</Heading>
             <Text>
-              We're here to support you. Reach out to learn more about our
+              We&apos;re here to support you. Reach out to learn more about our
               services, volunteer opportunities, and ways to contribute
             </Text>
 
