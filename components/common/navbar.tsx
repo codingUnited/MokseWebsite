@@ -56,7 +56,7 @@ export default function Navbar() {
   // Container props
   const ContainerProps = {
     h: notMobileDevice ? "10vh" : "5vh",
-    zIndex: 1,
+    zIndex: 2,
     position: isFixed ? "fixed" : "absolute",
     fluid: true,
     py: isFixed ? (notMobileDevice ? 8 : 2) : notMobileDevice ? 8 : 5,
