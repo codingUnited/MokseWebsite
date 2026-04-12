@@ -9,6 +9,7 @@ import {
   SimpleGrid,
   Link,
   GridItem,
+  Float,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 
@@ -23,6 +24,7 @@ export function HeaderTemplate({
   imageLabel,
   description,
   direction,
+  children,
 }: {
   title?: string;
   titleAlignment?: number;
@@ -31,7 +33,7 @@ export function HeaderTemplate({
   imageHeight?: string;
   imageLabel?: string;
   description?: string;
-  direction?: "row" | "column";
+  direction?: "row" | "column"; children?: React.ReactNode;
 }) {
   return (
     <Box
@@ -44,6 +46,7 @@ export function HeaderTemplate({
       bgRepeat={"no-repeat"}
       aria-label={`${imageLabel} Image`}
     >
+      {children}
       <AbsoluteCenter
         textAlign="center"
         bg="rgba(0, 0, 0, 0.4)"
