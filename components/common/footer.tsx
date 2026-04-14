@@ -195,7 +195,7 @@ export default function Footer() {
                         </NextLink>
                       </ChakraLink>
                       <ChakraLink asChild>
-                        <NextLink href="/about-us">
+                        <NextLink href="/about">
                           <Center>
                             <Icon
                               name="AngleRight"
@@ -257,7 +257,7 @@ export default function Footer() {
                       </ChakraLink>
 
                       <ChakraLink asChild>
-                        <NextLink href="/about-us#legal">
+                        <NextLink href="/about#legal">
                           <Center>
                             <Text textStyle={"md"}>Legal</Text>
                           </Center>

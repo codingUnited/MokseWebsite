@@ -86,9 +86,9 @@ export default function Navbar() {
           <HStack justifyContent={"space-between"} px={8}>
             <ChakraLink asChild pl={8}>
               <NextLink href="/">
-                <ChakraImage asChild>
+                <ChakraImage asChild >
                   <Image
-                    src="/MOKSE-3-180x46.png"
+                    src="/mokse-logo_darkmode.png"
                     alt="MOKSE Logo"
                     width={180}
                     height={46}
@@ -169,7 +169,7 @@ export default function Navbar() {
               <NextLink href="/">
                 <ChakraImage asChild>
                   <Image
-                    src="/MOKSE-3-180x46.png"
+                    src="/mokse-logo_darkmode.png"
                     alt="MOKSE Logo"
                     width={180}
                     height={48}
