@@ -16,6 +16,8 @@ import {
   Image,
   Box,
   Flex,
+  ClientOnly,
+  Skeleton,
 } from "@chakra-ui/react";
 import { useColorMode, useColorModeValue } from "../ui/color-mode";
 
@@ -36,9 +38,9 @@ export default function Footer() {
     "2xl": "2xl",
   });
 
-  const [logoSrc, setLogoSrc] = useState(
-    colorMode === "light" ? "/mokse-logo.png" : "/MOKSE-3-180x46.png"
-  );
+  const logoSrc = useColorModeValue("/mokse-logo_lightmode.png", "/mokse-logo_darkmode.png");
+
+
 
   const notMobileDevice = checkDeviceSize();
   return (
@@ -48,14 +50,18 @@ export default function Footer() {
           <VStack>
             <Flex justify={"space-between"} gap={40}>
               <Box>
-                <Image asChild>
-                  <NextImage
-                    src={logoSrc}
-                    alt="MOKSE Logo"
-                    width={colorMode === "light" ? 200 : 180}
-                    height={colorMode === "light" ? 51 : 46}
-                  />
-                </Image>
+                <ClientOnly fallback={<Skeleton width={180} height={46} />}>
+                  <Image asChild>
+                    <NextImage
+                      src={logoSrc}
+                      alt="MOKSE Logo"
+                      width={180}
+                      height={46}
+                    />
+                  </Image>
+                </ClientOnly>
+
+
                 <Text maxW={300} my={6}>
                   A society where all individuals have equal opportunities to
                   thrive, learn, and lead.
@@ -355,7 +361,7 @@ export default function Footer() {
           <ChakraLink asChild>
             <NextLink href="/">
               <Image
-                src="/MOKSE-3-180x46.png"
+                src="/MOKSE-logo_darkmode.png"
                 alt="MOKSE Logo"
                 width={180}
                 height={48}
