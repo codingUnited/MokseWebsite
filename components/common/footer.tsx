@@ -23,6 +23,7 @@ import { poppins } from "../ui/fonts";
 import checkDeviceSize from "../ui/breakpoints";
 
 import { Icon } from "@/components/ui/icons/icon";
+import { useState } from "react";
 
 export default function Footer() {
   const { colorMode } = useColorMode();
@@ -35,6 +36,10 @@ export default function Footer() {
     "2xl": "2xl",
   });
 
+  const [logoSrc, setLogoSrc] = useState(
+    colorMode === "light" ? "/mokse-logo.png" : "/MOKSE-3-180x46.png"
+  );
+
   const notMobileDevice = checkDeviceSize();
   return (
     <footer>
@@ -45,11 +50,8 @@ export default function Footer() {
               <Box>
                 <Image asChild>
                   <NextImage
-                    src={
-                      colorMode == "light"
-                        ? "/mokse-logo.png"
-                        : "/MOKSE-3-180x46.png"
-                    }
+
+                    src={logoSrc}
                     alt="MOKSE Logo"
                     width={200}
                     height={51}
@@ -363,7 +365,8 @@ export default function Footer() {
           </ChakraLink>
           <Button>Menu</Button>
         </HStack>
-      )}
-    </footer>
+      )
+      }
+    </footer >
   );
 }
