@@ -19,6 +19,7 @@ import {
   Container,
   Flex,
   AbsoluteCenter,
+  SimpleGrid,
 } from "@chakra-ui/react";
 import NextImage from "next/image";
 import { useColorMode } from "@/components/ui/color-mode";
@@ -194,53 +195,54 @@ export default function StopTheStigma() {
               h={"100%"}
               alignItems={"center"}
             > */}
-              <Flex gapX={24} p={20}>
-                <VStack>
-                  <Heading as={"h2"} size={'5xl'}>
-                    Conference Highlights
-                  </Heading>
+            <Flex gapX={24} p={20}>
+              <Heading as={"h2"} size={'5xl'}>
+                Conference Highlights
+              </Heading>
 
-                  <FeatureCard
-                    title={"Opening Night Film - Being Michelle"}
-                    description={
-                      "A groundbreaking documentary that sets the tone for the conference by centering the lived experience of a Deaf woman navigating incarceration and disability."
-                    }
-                    icon={"Keyboard"}
-                  />
-                  <FeatureCard
-                    title={"Panels on Race, Incarceration, and Disability"}
-                    description={
-                      "Thought-provoking conversations that tackle the intersections of systemic racism, ableism, and mass incarceration—areas where stigma and structural barriers collide most powerfully."
-                    }
-                    icon={"Newspaper"}
-                  />
-                  <FeatureCard
-                    title={"Theatrical Premiere - Brick by Brick"}
-                    description={
-                      "A one-act play debuting at the conference, offering a creative lens into stories of resilience, justice, and belonging."
-                    }
-                    icon={"ListAlt"}
-                  />
-                  <FeatureCard
-                    title={"35 Inspiring Speakers"}
-                    description={
-                      "A diverse lineup of national leaders, educators, advocates, and directly impacted individuals sharing expertise, lived experience, and visions for inclusive futures."
-                    }
-                    icon={"ObjectGroup"}
-                  />
-                </VStack>
-                <Box bg={"white "} boxSize={100}>
-                  <Image asChild aspectRatio={4 / 5} fit={"contain"} maxW={"830px"} mx={"auto"} width={"full"} >
-                    <NextImage
-                      src={"/assets/stop-the-stigma/Linkedin-Carousels.png"}
-                      width={1080}
-                      height={1350}
-                      alt={"test"}
-                      fetchPriority={"high"}
-                      sizes={"(max-width:1080px) 100vw,1080px"} />
-                  </Image>
-                </Box>
-              </Flex>
+              <SimpleGrid columns={{ base: 1, md: 2 }} gap={6}>
+
+                <FeatureCard
+                  title={"Opening Night Film - Being Michelle"}
+                  description={
+                    "A groundbreaking documentary that sets the tone for the conference by centering the lived experience of a Deaf woman navigating incarceration and disability."
+                  }
+                  icon={"Keyboard"}
+                />
+                <FeatureCard
+                  title={"Panels on Race, Incarceration, and Disability"}
+                  description={
+                    "Thought-provoking conversations that tackle the intersections of systemic racism, ableism, and mass incarceration—areas where stigma and structural barriers collide most powerfully."
+                  }
+                  icon={"Newspaper"}
+                />
+                <FeatureCard
+                  title={"Theatrical Premiere - Brick by Brick"}
+                  description={
+                    "A one-act play debuting at the conference, offering a creative lens into stories of resilience, justice, and belonging."
+                  }
+                  icon={"ListAlt"}
+                />
+                <FeatureCard
+                  title={"35 Inspiring Speakers"}
+                  description={
+                    "A diverse lineup of national leaders, educators, advocates, and directly impacted individuals sharing expertise, lived experience, and visions for inclusive futures."
+                  }
+                  icon={"ObjectGroup"}
+                />
+              </SimpleGrid>
+              <Box bg={"white "} boxSize={100}>
+                <Image asChild aspectRatio={4 / 5} fit={"contain"} maxW={"830px"} mx={"auto"} width={"full"} >
+                  <NextImage
+                    src={"/assets/stop-the-stigma/Linkedin-Carousels.png"}
+                    width={1080}
+                    height={1350}
+                    alt={"test"}
+                    fetchPriority={"high"}
+                    sizes={"(max-width:1080px) 100vw,1080px"} />
+                </Image>
+              </Box>
+            </Flex>
             {/* </AbsoluteCenter> */}
 
           </Container>
