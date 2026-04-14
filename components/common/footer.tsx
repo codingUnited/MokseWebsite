@@ -50,11 +50,10 @@ export default function Footer() {
               <Box>
                 <Image asChild>
                   <NextImage
-
                     src={logoSrc}
                     alt="MOKSE Logo"
-                    width={200}
-                    height={51}
+                    width={colorMode === "light" ? 200 : 180}
+                    height={colorMode === "light" ? 51 : 46}
                   />
                 </Image>
                 <Text maxW={300} my={6}>
