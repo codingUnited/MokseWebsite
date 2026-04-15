@@ -1,13 +1,14 @@
 "use client";
 import { BodyTemplate, HeaderTemplate, PageBuilder, SectionTemplate } from "@/components/page-builder/template";
-import { Box, Button, Card, Center, Container, Flex, Float, HStack, Portal, ScrollArea, Stack, Tabs, Tag, VStack } from "@chakra-ui/react";
+import { Box, Button, Card, Center, Container, Flex, Float, HStack, Portal, ScrollArea, Stack, Tabs, Tag, VStack, Icon as ChakraIcon, ClientOnly, Image } from "@chakra-ui/react";
 import NavigatorsNetwork from "./navigators-network/page";
 import StopTheStigma from "./stop-the-stigma/page";
-
+import NextImage from "next/image";
 import { Tooltip } from "@/components/ui/tooltip";
 import { Icon } from "@/components/ui/icons/icon";
 import { useState, useRef } from "react";
 import { usePathname } from "next/navigation";
+import { FaAngleRight } from "react-icons/fa6";
 
 
 export default function Programs() {
@@ -16,7 +17,7 @@ export default function Programs() {
         <PageBuilder>
             <Card.Root>
                 <HeaderTemplate
-                    imageHeight="10vh"
+                    imageHeight="8vh"
                 />
                 <Tabs.Root defaultValue="Programs" orientation="vertical" variant={'outline'}>
                     <Flex direction={'row'} gap={0}>
@@ -25,7 +26,7 @@ export default function Programs() {
                                 bg: "blue.500",
                                 color: "white",
                             }}>
-                                Programs
+                                All Programs
                             </Tabs.Trigger>
                             <Tabs.Trigger value="Stop-The-Stigma" _selected={{
                                 bg: "blue.500",
@@ -42,7 +43,7 @@ export default function Programs() {
                         </Tabs.List>
                         <Tabs.Content value="Programs" p={0} position={'relative'}>
                             <Float placement={"top-start"} zIndex={1} offsetX={"48px"} offsetY={5}>
-                                <Button onClick={() => setShowPrograms(!showPrograms)}>Programs</Button>
+                                <Button onClick={() => setShowPrograms(!showPrograms)}><ChakraIcon as={FaAngleRight} rotateX={"90deg"} /> Go Back</Button>
                             </Float>
                             <Container fluid>
                                 <SectionTemplate
@@ -57,11 +58,22 @@ export default function Programs() {
                                                         borderWidth=".5px"
                                                         borderRadius="md"
                                                         shadow="xs"
-                                                        flexDirection="column"
                                                         w={'xs'}
                                                         h={'sm'}
                                                     >
-                                                        <Box boxSize={'xs'} bg={"blue.500"} />
+                                                        <Center>
+                                                            <ClientOnly fallback={<Box boxSize={'xs'} bg={"blue.500"} />}>
+                                                                <Image asChild>
+                                                                    <NextImage
+                                                                        src={"/assets/stop-the-stigma/EFCO STS.webp"}
+                                                                        alt="MOKSE Logo"
+                                                                        width={180}
+                                                                        height={50}
+                                                                    />
+                                                                </Image>
+                                                            </ClientOnly>
+                                                        </Center>
+
                                                         <Card.Body p={4}>
                                                             <Stack>
                                                                 <strong>Stop The Stigma</strong>
@@ -91,7 +103,18 @@ export default function Programs() {
                                                         w={'xs'}
                                                         h={'sm'}
                                                     >
-                                                        <Box boxSize={'xs'} bg={"blue.500"} />
+                                                        <Center>
+                                                            <ClientOnly fallback={<Box boxSize={'xs'} bg={"blue.500"} />}>
+                                                                <Image asChild>
+                                                                    <NextImage
+                                                                        src={"/assets/navigators-network/EFCO BookShire.png"}
+                                                                        alt="MOKSE Logo"
+                                                                        width={225}
+                                                                        height={50}
+                                                                    />
+                                                                </Image>
+                                                            </ClientOnly>
+                                                        </Center>
                                                         <Card.Body p={4}>
                                                             <Stack>
                                                                 <strong>Navigators Network</strong>
@@ -122,7 +145,7 @@ export default function Programs() {
                         </Tabs.Content>
                         <Tabs.Content value="Navigators-Network" p={0} position={'relative'}>
                             <Float placement={"top-start"} zIndex={1} offsetX={"48px"} offsetY={5}>
-                                <Button onClick={() => setShowPrograms(!showPrograms)} > Programs</Button>
+                                <Button onClick={() => setShowPrograms(!showPrograms)} ><ChakraIcon><Icon name={"AngleRight"} /></ChakraIcon> Go Back</Button>
                             </Float>
                             <ScrollArea.Root height={"4xl"} maxW="full">
                                 <ScrollArea.Viewport>
@@ -135,7 +158,7 @@ export default function Programs() {
                         </Tabs.Content>
                         <Tabs.Content value="Stop-The-Stigma" position={'relative'} p={0} >
                             <Float placement={"top-start"} zIndex={1} offsetX={"48px"} offsetY={5}>
-                                <Button onClick={() => setShowPrograms(!showPrograms)} > Programs</Button>
+                                <Button onClick={() => setShowPrograms(!showPrograms)} ><ChakraIcon rotateX={180} asChild><Icon name={"AngleRight"} /></ChakraIcon> Go Back</Button>
                             </Float>
                             <ScrollArea.Root height={"4xl"} maxW="full">
                                 <ScrollArea.Viewport>
@@ -153,6 +176,6 @@ export default function Programs() {
                 </Tabs.Root >
             </Card.Root>
 
-        </PageBuilder>
+        </PageBuilder >
     )
 }
