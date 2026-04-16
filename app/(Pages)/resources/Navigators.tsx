@@ -19,7 +19,7 @@ import { Icon } from "@/components/ui/icons/icon";
 
 import { resourceCollectionRegistry } from "./mockResourceRegistry";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Navigators() {
   //Retrieve mock data from json file
@@ -66,22 +66,54 @@ export default function Navigators() {
   const [regionInput, setRegionInput] = useState("");
   const [categoryInput, setCategoryInput] = useState("");
   const [titleInput, setTitleInput] = useState("");
+
+  const [allResources, setAllResources] = useState<any[]>(AllResources);
   const [filteredItems, setFilteredItems] = useState(AllResources);
 
-  const searchNotion = async () => {
-    try {
-      const response = await fetch("/api/notion/database", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-      return response;
-    } catch (error) {
-      console.error("Error searching Notion database:", error);
-    }
-  };
+  const [dynamicRegions, setDynamicRegions] = useState(resourceCollectionRegistry.Regions.items);
+  const [dynamicCategories, setDynamicCategories] = useState(resourceCollectionRegistry.Categories.items);
+  const [dynamicTitles, setDynamicTitles] = useState(resourceCollectionRegistry.Titles.items);
+
+  // --- SILENT BACKGROUND FETCH TO UPGRADE DATA ---
+  useEffect(() => {
+    const fetchResources = async () => {
+      try {
+        const res = await fetch("/api/notion/database", { method: "POST" });
+        if (!res.ok) throw new Error("Failed to fetch Notion data");
+
+        const data = await res.json();
+
+        const formattedData = data.payload;
+
+        // Extract unique values
+        const uniqueRegions = Array.from(new Set(formattedData.flatMap((item: any) => item.region)))
+          .filter(Boolean)
+          .map((region) => ({ label: String(region), value: String(region) }));
+
+        const uniqueCategories = Array.from(new Set(formattedData.flatMap((item: any) => item.category)))
+          .filter(Boolean)
+          .map((cat) => ({ label: String(cat), value: String(cat) }));
+
+        const uniqueTitles = formattedData.map((item: any) => ({
+          label: String(item.title), value: String(item.title)
+        }));
+
+        // Overwrite the mock state with live Notion state
+        setAllResources(formattedData);
+        setFilteredItems(formattedData);
+        setDynamicRegions(uniqueRegions);
+        setDynamicCategories(uniqueCategories);
+        setDynamicTitles(uniqueTitles);
+
+      } catch (error) {
+        console.error("Notion fetch failed, falling back to mock JSON data:", error);
+        // We don't need to do anything here; the UI is already populated with AllResources!
+      }
+    };
+
+    fetchResources();
+  }, []);
+
 
   const applyFilters = () => {
     const noFilters =
@@ -336,7 +368,7 @@ export default function Navigators() {
               setFilteredItems(AllResources);
             }
             applyFilters();
-            await searchNotion();
+            // await searchNotion();
           }}
           aria-label="Search Resources"
         >
@@ -361,7 +393,7 @@ export default function Navigators() {
                 <Card.Body p={4}>
                   <Stack>
                     <strong>{item.title}</strong>
-                    <Box fontSize="sm" color="gray.500">
+                    <Box fontSize="sm" color="gray.500" lineClamp={2}>
                       {item.description}
                     </Box>
                     <Stack direction={"row"} gap={2}>
