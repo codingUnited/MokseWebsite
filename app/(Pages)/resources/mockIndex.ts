@@ -6,7 +6,9 @@ type ResourceItem = {
   description: string;
   category: string[];
   region: string[];
+  webLogoURL: string;
   url: string;
+  verificationDate: string;
 };
 type ResourceFile = { items: ResourceItem[] };
 // Strongly types the JSON import
