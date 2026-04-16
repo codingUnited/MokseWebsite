@@ -11,8 +11,10 @@ import {
   ScrollArea,
   Center,
   Tag,
-  Stack,
+  Stack, Image,
+  ClientOnly,
 } from "@chakra-ui/react";
+import NextImage from "next/image";
 import { Tooltip } from "@/components/ui/tooltip";
 import { AllResources } from "./mockIndex";
 import { Icon } from "@/components/ui/icons/icon";
@@ -388,11 +390,15 @@ export default function Navigators() {
                 flexDirection="row"
               >
                 <Center borderRadius="md">
-                  <Box boxSize={120} bg={"blue.500"} />
+                  <ClientOnly fallback={<Box boxSize={120} bg={"blue.500"} />}>
+                    <Image src={item.webLogoURL} alt={item.title} width={120} height={120}>
+                    </Image>
+                  </ClientOnly>
                 </Center>
                 <Card.Body p={4}>
                   <Stack>
                     <strong>{item.title}</strong>
+
                     <Box fontSize="sm" color="gray.500" lineClamp={2}>
                       {item.description}
                     </Box>

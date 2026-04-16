@@ -9,6 +9,7 @@ interface NotionDatabaseEntry {
         id: { number: number };
         description: { rich_text: { plain_text: string }[] };
         "url ( link )": { url: string };
+        WebLogoURL: { rich_text: { plain_text: string }[] };
         Name: { title: { text: { content: string } }[] };
     };
 }
@@ -45,6 +46,7 @@ export async function POST(req: NextRequest) {
                 category: baseSchema.category?.multi_select?.map(category => category.name) || [],
                 id: baseSchema.id?.number || null,
                 description: baseSchema.description?.rich_text[0]?.plain_text || "",
+                WebLogoURL: baseSchema.WebLogoURL?.rich_text[0]?.plain_text || "",
                 url: baseSchema["url ( link )"]?.url || "",
                 title: baseSchema.Name?.title.map(({ text }) => text.content).join(" ") || "",
             };
@@ -96,6 +98,7 @@ export async function GET(req: NextRequest) {
                 category: baseSchema.category?.multi_select?.map(category => category.name) || [],
                 id: baseSchema.id?.number || null,
                 description: baseSchema.description?.rich_text[0]?.plain_text || "",
+                WebLogoURL: baseSchema.WebLogoURL?.rich_text[0]?.plain_text || "",
                 url: baseSchema["url ( link )"]?.url || "",
                 title: baseSchema.Name?.title.map(({ text }) => text.content).join(" ") || "",
             };
