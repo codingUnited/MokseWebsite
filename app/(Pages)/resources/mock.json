@@ -1,108 +1,833 @@
 {
   "items": [
     {
-      "id": 1,
-      "title": "FindTreatment.gov",
-      "url": "https://findtreatment.gov/",
-      "description": "Find treatment facilities in the United States or U.S. Territories for substance abuse/addiction and/or mental health problems.",
-      "region": ["Georgia", "Wisconsin"],
-      "category": ["Healthcare"]
+      "verificationDate": "",
+      "region": [],
+      "category": ["Food Assistance"],
+      "id": 56,
+      "description": "Needs Description",
+      "WebLogoURL": "",
+      "url": "https://middlesexcountynj.gov",
+      "title": "Needs Title"
     },
     {
-      "id": 2,
-      "title": "CareerOneStop.org",
-      "url": "https://www.careeronestop.org/",
-      "description": "Help finding second chance employers by location",
-      "region": ["Alabama", "California"],
-      "category": ["Hiring Platform", "Second Chance"]
+      "verificationDate": "",
+      "region": [],
+      "category": [
+        "Second Chance",
+        "Education",
+        "Substance Abuse",
+        "Healthcare",
+        "Aftercare",
+        "Transitional Services",
+        "Housing/Shelter"
+      ],
+      "id": 70,
+      "description": "Needs Description",
+      "WebLogoURL": "",
+      "url": "https://oklahoma.gov/doc/offender-info/re-entry.html",
+      "title": "Oklahoma Dept. of Corrections Re-entry"
     },
     {
-      "id": 3,
-      "title": "HUD Exchange",
-      "url": "https://www.hudexchange.info/",
-      "description": "Housing and homeless shelters by location",
-      "region": ["Louisiana", "Arkansas"],
-      "category": ["Housing"]
+      "verificationDate": "",
+      "region": [],
+      "category": ["Housing/Shelter"],
+      "id": 52,
+      "description": "Needs Description",
+      "WebLogoURL": "",
+      "url": "https://middlesexsocialservices.com",
+      "title": "Needs Title"
     },
     {
-      "id": 4,
-      "title": "HireFelons.org",
-      "url": "https://www.hirefelons.org/",
-      "description": "Hiring resources for felons",
-      "region": ["State", "Second State"],
-      "category": ["Hiring Platform", "Second Chance"]
+      "verificationDate": "",
+      "region": ["Iowa"],
+      "category": ["Healthcare"],
+      "id": 17,
+      "description": "The Iowa Department of Health and Human Services (HHS) website outlines the state agency’s role in providing programs and services that protect and improve the health and well-being of individuals, families, and communities across Iowa. The department oversees a wide range of services, including behavioral health, disability services, public health initiatives, and social support programs, with a focus on promoting resilience and access to care. A key initiative highlighted on the site is the development of Iowa’s Behavioral Health Service System, which integrates mental health and substance use services into a more coordinated, statewide system designed to improve accessibility and ensure that individuals can receive care regardless of where they enter the system. Overall, the website emphasizes a person-centered approach that prioritizes prevention, treatment, recovery, and crisis support for all Iowans",
+      "WebLogoURL": "",
+      "url": "https://hhs.iowa.gov/",
+      "title": "Iowa Department of Health and Human Services "
     },
     {
-      "id": 5,
-      "title": "SPL Resources for the Formerly Incarcerated",
-      "url": "https://www.spl.org/programs-and-services/civics-and-social-services/resources-for-the-formerly-incarcerated",
-      "description": "Information about resources available to the formerly incarcerated",
-      "region": ["State", "Second State"],
-      "category": ["Healthcare"]
+      "verificationDate": "",
+      "region": ["Pennsylvania"],
+      "category": ["Healthcare"],
+      "id": 26,
+      "description": "Needs Description",
+      "WebLogoURL": "",
+      "url": "https://www.ddap.pa.gov",
+      "title": "Pennsylvania  Department of Drug and Alcohol Programs"
     },
     {
-      "id": 6,
-      "title": "Goodwill Industries International",
-      "url": "https://www.goodwill.org/",
-      "description": "Goodwill has re entry jobs and training services",
-      "region": ["State", "Second State"],
-      "category": ["Healthcare"]
+      "verificationDate": "",
+      "region": ["Pennsylvania"],
+      "category": ["Healthcare"],
+      "id": 27,
+      "description": "Needs Description",
+      "WebLogoURL": "",
+      "url": "https://www.pa.gov/en/agencies/dhs/departments-offices/omhsas-info",
+      "title": "Pennsylvania  Office of Mental Health and Substance Abuse Services"
     },
     {
-      "id": 7,
-      "title": "Salvation Army Resources",
-      "url": "https://www.salvationarmyusa.org/",
-      "description": "Resources",
-      "region": ["State", "Second State"],
-      "category": ["Healthcare"]
+      "verificationDate": "",
+      "region": ["South Carolina"],
+      "category": ["Healthcare"],
+      "id": 29,
+      "description": "Needs Description",
+      "WebLogoURL": "",
+      "url": "http://www.daodas.sc.gov",
+      "title": "South Carolina Department of Behavioral Health and Developmental Disabilities, Office of Substance Use Services"
     },
     {
-      "id": 8,
-      "title": "Food Finder",
-      "url": "https://www.foodfinder.us/",
-      "description": "Resources",
-      "region": ["State", "Second State"],
-      "category": ["Food Assistance"]
+      "verificationDate": "",
+      "region": [],
+      "category": ["Job Platform"],
+      "id": 48,
+      "description": "Needs Description",
+      "WebLogoURL": "",
+      "url": "https://centerforcommunitytransitions.org",
+      "title": "Needs Title"
     },
     {
-      "id": 9,
-      "title": "GeoReentryConnect",
-      "url": "https://georeentryconnect.com/",
-      "description": "General resources by state",
-      "region": ["State", "Second State"],
-      "category": ["Healthcare"]
-    },
-    {
-      "id": 10,
-      "title": "Honest Jobs",
-      "url": "https://www.honestjobs.com/",
-      "description": "Job seekers center for community transitions",
-      "region": ["State", "Second State"],
-      "category": ["Hiring Platform", "Second Chance"]
-    },
-    {
+      "verificationDate": "",
+      "region": ["Georgia"],
+      "category": ["Healthcare"],
       "id": 11,
-      "title": "Center for Community Transitions",
-      "url": "https://centerforcommunitytransitions.org/",
-      "description": "Center for Community Transitions",
-      "region": ["State", "Second State"],
-      "category": ["Healthcare"]
+      "description": "DBHDD operates state hospitals and provides for community-based services across the state through contracted providers. The department serves people living with mental health challenges, substance use disorders, intellectual and developmental disabilities, or any combination of these. As Georgia’s public safety net, our primary responsibility is to serve people who are uninsured. We also serve individuals on Medicaid and others with few resources or options. Our program divisions are: Behavioral Health, Developmental Disabilities, Hospital Services.",
+      "WebLogoURL": "",
+      "url": "https://dbhdd.georgia.gov",
+      "title": "Georgia Department of Behavioral Health and Developmental Disabilities"
     },
     {
+      "verificationDate": "",
+      "region": [],
+      "category": ["Healthcare"],
+      "id": 40,
+      "description": "Needs Description",
+      "WebLogoURL": "",
+      "url": "https://www.dhs.wisconsin.gov/",
+      "title": "Needs Title"
+    },
+    {
+      "verificationDate": "",
+      "region": [],
+      "category": ["Healthcare"],
+      "id": 39,
+      "description": "Needs Description",
+      "WebLogoURL": "",
+      "url": "https://bbh.wv.gov",
+      "title": "Needs Title"
+    },
+    {
+      "verificationDate": "",
+      "region": [],
+      "category": ["Healthcare"],
+      "id": 33,
+      "description": "Needs Description",
+      "WebLogoURL": "",
+      "url": "http://hhs.texas.gov/services/health/mental-health-substance-abuse",
+      "title": "Texas Health and Human Services Commission"
+    },
+    {
+      "verificationDate": "",
+      "region": ["Kentucky"],
+      "category": ["Healthcare"],
+      "id": 19,
+      "description": "The Kentucky Cabinet for Health and Family Services (CHFS) website outlines a state agency responsible for administering a wide range of health and human services programs aimed at improving the well-being of Kentucky residents. The agency oversees key areas such as Medicaid, public health, behavioral health, child welfare, and family support services, working through multiple departments and community partnerships to deliver care and assistance. CHFS provides access to essential services including healthcare coverage, crisis support, and public assistance programs, while also emphasizing prevention, recovery, and community well-being. Overall, the website reflects a comprehensive, statewide system designed to support vulnerable populations, promote health outcomes, and ensure access to necessary services across Kentucky",
+      "WebLogoURL": "",
+      "url": "https://www.chfs.ky.gov",
+      "title": "Kentucky Cabinet for Health and Family Services "
+    },
+    {
+      "verificationDate": "",
+      "region": [],
+      "category": ["Job Platform"],
+      "id": 43,
+      "description": "Needs Description",
+      "WebLogoURL": "",
+      "url": "https://www.hirefelons.org",
+      "title": "Needs Title"
+    },
+    {
+      "verificationDate": "",
+      "region": ["Utah"],
+      "category": ["Healthcare"],
+      "id": 34,
+      "description": "Needs Description",
+      "WebLogoURL": "",
+      "url": "https://sumh.utah.gov",
+      "title": "Utah Department of Health and Human Services, Office of Substance Use and Mental Health"
+    },
+    {
+      "verificationDate": "",
+      "region": [],
+      "category": ["Healthcare"],
+      "id": 31,
+      "description": "Needs Description",
+      "WebLogoURL": "",
+      "url": "https://dss.sd.gov/behavioralhealth/",
+      "title": "South Dakota Department of Social Services"
+    },
+    {
+      "verificationDate": "",
+      "region": [],
+      "category": ["Housing/Shelter"],
+      "id": 73,
+      "description": "Needs Description",
+      "WebLogoURL": "",
+      "url": "https://www.oacra.com/find-services/oklahoma-housing",
+      "title": "Oklahoma Reentry-Friendly Housing & Shelter"
+    },
+    {
+      "verificationDate": "",
+      "region": [],
+      "category": ["Housing/Shelter"],
+      "id": 71,
+      "description": "Needs Description",
+      "WebLogoURL": "",
+      "url": "https://hudhousingnetwork.com/",
+      "title": "HUD housing Network Resources"
+    },
+    {
+      "verificationDate": "",
+      "region": ["Hawaii"],
+      "category": ["Healthcare"],
       "id": 12,
-      "title": "Indeed.com",
-      "url": "https://www.indeed.com/",
-      "description": "Job search",
-      "region": ["State", "Second State"],
-      "category": ["Hiring Platform"]
+      "description": "The Alcohol & Drug Abuse Division is the primary and often sole source of public funds for substance abuse treatment. ADAD’s treatment efforts are designed to promote a statewide, culturally appropriate, comprehensive system of services to meet the treatment and recovery needs of individuals and families. As a requirement, treatment services prioritize admission for pregnant women and injection drug users.",
+      "WebLogoURL": "",
+      "url": "http://health.hawaii.gov/substance-abuse",
+      "title": "Hawaii Department of Health\nAlcohol and Drug Abuse Division"
     },
     {
+      "verificationDate": "",
+      "region": [],
+      "category": ["Housing/Shelter"],
+      "id": 51,
+      "description": "Needs Description",
+      "WebLogoURL": "",
+      "url": "https://www.hudexchange.info",
+      "title": "Needs Title"
+    },
+    {
+      "verificationDate": "",
+      "region": ["New Jersey"],
+      "category": ["Job Platform"],
+      "id": 49,
+      "description": "NJRC offers comprehensive wraparound services, including addiction treatment and medication-assisted treatment MAT; medical, dental, and psychiatric healthcare; federal, state, and county social services; case management; employment assistance and job training; legal services bail and court fine dismissal, birth certificate, drivers license, and social security card restoration, expungements; and veteran-specific support, discharge upgrades, HUD-VASH housing, and VA services.",
+      "WebLogoURL": "",
+      "url": "https://njreentry.org",
+      "title": "The New Jersey Reentry Corporation"
+    },
+    {
+      "verificationDate": "",
+      "region": [],
+      "category": ["Job Platform"],
+      "id": 42,
+      "description": "Needs Description",
+      "WebLogoURL": "",
+      "url": "https://www.careeronestop.org",
+      "title": "Needs Title"
+    },
+    {
+      "verificationDate": "",
+      "region": [],
+      "category": ["Food Assistance"],
+      "id": 57,
+      "description": "Needs Description",
+      "WebLogoURL": "",
+      "url": "https://www.rwjbh.org",
+      "title": "Needs Title"
+    },
+    {
+      "verificationDate": "",
+      "region": [],
+      "category": ["Crisis Hotline"],
+      "id": 68,
+      "description": "Needs Description",
+      "WebLogoURL": "",
+      "url": "https://suicidepreventionlifeline.org",
+      "title": "Needs Title"
+    },
+    {
+      "verificationDate": "",
+      "region": ["Rhode Island"],
+      "category": ["Healthcare"],
+      "id": 28,
+      "description": "Needs Description",
+      "WebLogoURL": "",
+      "url": "http://www.bhddh.ri.gov",
+      "title": "Rhode Island Department of Behavioral Healthcare, Developmental Disabilities & Hospitals"
+    },
+    {
+      "verificationDate": "",
+      "region": [],
+      "category": ["Food Assistance"],
+      "id": 54,
+      "description": "Needs Description",
+      "WebLogoURL": "",
+      "url": "https://www.foodfinder.us",
+      "title": "Needs Title"
+    },
+    {
+      "verificationDate": "",
+      "region": ["Delaware"],
+      "category": ["Healthcare"],
+      "id": 9,
+      "description": "Welcome to the Division of Substance Abuse and Mental Health Providers Resources Home.  Each area in the grid below includes selected resources and required information by topic for prospective or current DSAMH affiliated Behavioral Health service providers.  Each area has an introduction describing the resources available at the top of each section.  We strongly recommend prospective and current DSAMH affiliated providers peruse each section’s introductory description for an overall orientation to these resources.",
+      "WebLogoURL": "",
+      "url": "https://www.dhss.delaware.gov/dsamh/index",
+      "title": "Division of Substance Abuse and Mental Health"
+    },
+    {
+      "verificationDate": "",
+      "region": ["Arizona"],
+      "category": ["Healthcare"],
+      "id": 4,
+      "description": "Arizona Health Care Cost Containment System is Arizona's Medicaid agency that offers health care programs to serve Arizona residents. Individuals must meet certain income and other requirements to obtain services.",
+      "WebLogoURL": "",
+      "url": "https://www.azahcccs.gov",
+      "title": "Arizona Health Care Cost Containment System"
+    },
+    {
+      "verificationDate": "",
+      "region": [],
+      "category": ["Housing/Shelter"],
+      "id": 72,
+      "description": "Needs Description",
+      "WebLogoURL": "",
+      "url": "https://www.oxfordhouseok.org/reentry",
+      "title": "Oklahoma Oxford House"
+    },
+    {
+      "verificationDate": "",
+      "region": ["Connecticut"],
+      "category": ["Healthcare"],
+      "id": 8,
+      "description": "The Connecticut Department of Mental Health and Addiction Services is a health care agency whose mission is to promote the overall health and wellness of persons with behavioral health needs through an integrated network of holistic, comprehensive, effective, and efficient services and supports that foster dignity, respect, and self-sufficiency in those we serve.",
+      "WebLogoURL": "",
+      "url": "https://portal.ct.gov/dmhas",
+      "title": "Connecticut Department of Mental Health and Addiction Services"
+    },
+    {
+      "verificationDate": "",
+      "region": [],
+      "category": ["Food Assistance"],
+      "id": 55,
+      "description": "Needs Description",
+      "WebLogoURL": "",
+      "url": "https://middlesexsocialservices.com",
+      "title": "Needs Title"
+    },
+    {
+      "verificationDate": "",
+      "region": [],
+      "category": ["Healthcare"],
+      "id": 32,
+      "description": "Needs Description",
+      "WebLogoURL": "",
+      "url": "https://www.tn.gov/behavioral-health/",
+      "title": "Tennessee Department of Mental Health and Substance Abuse Services"
+    },
+    {
+      "verificationDate": "",
+      "region": ["North Dakota"],
+      "category": ["Healthcare"],
+      "id": 22,
+      "description": "Needs Description",
+      "WebLogoURL": "",
+      "url": "https://www.behavioralhealth.nd.gov/",
+      "title": "North Dakota Department of Health and Human Services"
+    },
+    {
+      "verificationDate": "",
+      "region": ["California"],
+      "category": ["Healthcare"],
+      "id": 6,
+      "description": "Find out about the different programs and services offered through DHCS for individuals and stakeholders.  Find out how a physician can enroll you in Medi-Cal, how to receive free health screenings, and family planning services. Get help for children in foster care, children with special medical conditions and seniors needing personal care.",
+      "WebLogoURL": "",
+      "url": "https://www.dhcs.ca.gov/services",
+      "title": "California Department of Health Care Services"
+    },
+    {
+      "verificationDate": "",
+      "region": [],
+      "category": ["Job Platform"],
+      "id": 47,
+      "description": "Needs Description",
+      "WebLogoURL": "",
+      "url": "https://www.ziprecruiter.com",
+      "title": "Needs Title"
+    },
+    {
+      "verificationDate": "",
+      "region": ["Ohio"],
+      "category": ["Healthcare"],
+      "id": 23,
+      "description": "Needs Description",
+      "WebLogoURL": "",
+      "url": "http://mha.ohio.gov",
+      "title": "Ohio Department of Behavioral Health"
+    },
+    {
+      "verificationDate": "",
+      "region": ["Alabama"],
+      "category": ["Healthcare"],
+      "id": 2,
+      "description": "The Alabama Department of Mental Health serves more than 200,000 Alabama citizens with mental illnesses, developmental disabilities, and substance use disorders. Our mission is to Serve, Empower, and Support, and promote the health and well-being of Alabamians.",
+      "WebLogoURL": "",
+      "url": "https://www.mh.alabama.gov",
+      "title": "Alabama Department of Mental Health"
+    },
+    {
+      "verificationDate": "",
+      "region": ["Alaska"],
+      "category": ["Healthcare"],
+      "id": 3,
+      "description": "The Division of Behavioral Health has a commitment to improve the quality of life of Alaskans through the right service to the right person at the right time. The central purpose of the division is to promote an integrated and comprehensive behavioral health system based on sound policy, effective practices, and partnerships.",
+      "WebLogoURL": "",
+      "url": "https://dhss.alaska.gov/dbh",
+      "title": "Alaska Department of Health"
+    },
+    {
+      "verificationDate": "",
+      "region": ["Kansas"],
+      "category": ["Healthcare"],
+      "id": 18,
+      "description": "The Behavioral Health Services Commission is the state mental health authority and is responsible for managing mental health funding in Kansas. In addition, it facilitates addiction and prevention services and programs for the State of Kansas, including targeted workforce development initiatives. In addition, the commission works in close collaboration with the Governor’s Behavioral Health Services Planning Council.\n\nOur work is supported by the Substance Abuse and Mental Health Services Administration, and KDADS. KDADS is responsible, by statute, and holds the authority and responsibility to coordinate and provide substance abuse and mental health services in Kansas. We promote effective public policy and develop and evaluate programs and resources for behavioral health prevention, treatment, and recovery services.",
+      "WebLogoURL": "",
+      "url": "https://www.kdads.ks.gov/services-programs/behavioral-health",
+      "title": "Kansas Department for Aging and Disability Services"
+    },
+    {
+      "verificationDate": "",
+      "region": [],
+      "category": ["Healthcare"],
+      "id": 37,
+      "description": "Needs Description",
+      "WebLogoURL": "",
+      "url": "http://www.dbhds.virginia.gov",
+      "title": "Needs Title"
+    },
+    {
+      "verificationDate": "",
+      "region": ["Arkansas"],
+      "category": ["Healthcare"],
+      "id": 5,
+      "description": "Together we improve the quality of life of all Arkansans by protecting the vulnerable, fostering independence, and promoting better health.",
+      "WebLogoURL": "",
+      "url": "https://humanservices.arkansas.gov",
+      "title": "Arkansas Department of Human Services"
+    },
+    {
+      "verificationDate": "",
+      "region": [],
+      "category": ["Second Chance"],
+      "id": 65,
+      "description": "Needs Description",
+      "WebLogoURL": "",
+      "url": "https://www.nj.gov/corrections",
+      "title": "Needs Title"
+    },
+    {
+      "verificationDate": "",
+      "region": ["Oklahoma"],
+      "category": ["Domestic Violence", "Housing/Shelter"],
+      "id": 77,
+      "description": "Domestic Violence, / safety resource hub; ask about emergency shelter pathways and eligibility.",
+      "WebLogoURL": "",
+      "url": "https://heartline.ok.networkofcare.org/211/",
+      "title": "Heartline"
+    },
+    {
+      "verificationDate": "",
+      "region": [],
+      "category": ["Second Chance"],
+      "id": 60,
+      "description": "Needs Description",
+      "WebLogoURL": "",
+      "url": "https://georeentryconnect.com",
+      "title": "Needs Title"
+    },
+    {
+      "verificationDate": "",
+      "region": ["Illinois"],
+      "category": ["Healthcare"],
+      "id": 15,
+      "description": "The Illinois Department of Human Services (IDHS) website provides an overview of a state agency responsible for delivering a wide range of social and health services to residents, particularly those experiencing economic hardship, disabilities, or behavioral health needs. The site highlights the department’s role in overseeing multiple divisions, including mental health, substance use prevention and recovery, developmental disabilities, and rehabilitation services. It emphasizes a coordinated, statewide system designed to promote health, safety, and independence through prevention, treatment, and support programs. Additionally, IDHS focuses on expanding access to community-based services, crisis intervention, and recovery-oriented care, ensuring individuals across Illinois can receive comprehensive and culturally responsive support",
+      "WebLogoURL": "",
+      "url": "http://www.dhs.state.il.us",
+      "title": "Illinois Department of Human Services "
+    },
+    {
+      "verificationDate": "",
+      "region": [],
+      "category": ["Healthcare"],
+      "id": 41,
+      "description": "Needs Description",
+      "WebLogoURL": "",
+      "url": "https://health.wyo.gov/behavioralhealth/mhsa",
+      "title": "Needs Title"
+    },
+    {
+      "verificationDate": "",
+      "region": [],
+      "category": ["Job Platform"],
+      "id": 44,
+      "description": "Needs Description",
+      "WebLogoURL": "",
+      "url": "https://www.goodwill.org",
+      "title": "Needs Title"
+    },
+    {
+      "verificationDate": "",
+      "region": ["Louisiana"],
+      "category": ["Healthcare"],
+      "id": 20,
+      "description": "The Louisiana Department of Health’s Office of Behavioral Health (OBH) webpage outlines the state’s system for delivering mental health and substance use services to residents. OBH is responsible for managing and coordinating a comprehensive network of care that includes community-based treatment programs, inpatient psychiatric services, and prevention initiatives aimed at improving overall quality of life. The agency emphasizes recovery, resilience, and accessibility by ensuring services are available to individuals with mental illness and addictive disorders across Louisiana. It works collaboratively with partners to provide culturally competent, integrated care that addresses both behavioral health and broader social support needs. Additionally, the site highlights crisis resources, including the 988 lifeline and other support lines, reinforcing the state’s commitment to timely intervention and ongoing support",
+      "WebLogoURL": "",
+      "url": "https://ldh.la.gov/index.cfm/subhome/10",
+      "title": "Louisiana Department of Health’s Office of Behavioral Health "
+    },
+    {
+      "verificationDate": "",
+      "region": ["Hawaii"],
+      "category": ["Healthcare"],
       "id": 13,
-      "title": "",
-      "url": "https://www.google.com",
-      "description": "Example Description",
-      "region": ["State", "Second State"],
-      "category": ["Substance Abuse", "Mental Health"]
+      "description": "The Hawaiʻi Department of Health’s Adult Mental Health Division (AMHD) website outlines a statewide system designed to provide comprehensive mental health services for adults experiencing serious mental illness. The division focuses on promoting recovery, independence, and overall well-being through culturally relevant and community-based care. AMHD coordinates a wide range of services, including case management, housing support, outpatient treatment, and inpatient psychiatric care, while working in partnership with community providers and other healthcare systems. The site also highlights crisis intervention resources such as the 988 crisis line, which offers 24/7 support for individuals in mental health emergencies. Overall, the division emphasizes accessibility, recovery-oriented care, and integrated services that support individuals in living independently and improving their quality of life",
+      "WebLogoURL": "",
+      "url": "http://health.hawaii.gov/amhd",
+      "title": "Hawaii Department of Health Adult Mental Health Division"
+    },
+    {
+      "verificationDate": "",
+      "region": ["Hotline"],
+      "category": ["Healthcare"],
+      "id": null,
+      "description": "Find treatment facilities in the United States or U.S. Territories for: substance abuse, addiction, mental health problems.",
+      "WebLogoURL": "https://findtreatment.gov/assets/images/favicon.ico",
+      "url": "https://findtreatment.gov",
+      "title": "FindTreatment.gov"
+    },
+    {
+      "verificationDate": "",
+      "region": [],
+      "category": ["Second Chance"],
+      "id": 62,
+      "description": "Needs Description",
+      "WebLogoURL": "",
+      "url": "https://nationalreentryresourcecenter.org",
+      "title": "Needs Title"
+    },
+    {
+      "verificationDate": "",
+      "region": [],
+      "category": ["Healthcare"],
+      "id": 38,
+      "description": "Needs Description",
+      "WebLogoURL": "",
+      "url": "https://www.hca.wa.gov/",
+      "title": "Needs Title"
+    },
+    {
+      "verificationDate": "",
+      "region": [],
+      "category": ["Housing/Shelter"],
+      "id": 53,
+      "description": "Needs Description",
+      "WebLogoURL": "",
+      "url": "https://cominghomemiddlesex.org",
+      "title": "Needs Title"
+    },
+    {
+      "verificationDate": "",
+      "region": [],
+      "category": ["Job Platform"],
+      "id": 45,
+      "description": "Needs Description",
+      "WebLogoURL": "",
+      "url": "https://www.honestjobs.com",
+      "title": "Needs Title"
+    },
+    {
+      "verificationDate": "",
+      "region": ["Hotline"],
+      "category": ["Healthcare"],
+      "id": 1,
+      "description": "Find mental health or substance use treatment services, access contact details for helplines or crisis lines where individuals can seek immediate assistance or guidance, and learn about support resources for individuals in recovery, including tips, tools, and support networks.",
+      "WebLogoURL": "",
+      "url": "https://www.samhsa.gov",
+      "title": "Substance Abuse and Mental Health Services Administration"
+    },
+    {
+      "verificationDate": "",
+      "region": ["Oklahoma", "Arizona"],
+      "category": [
+        "Housing/Shelter",
+        "Day Centers",
+        "Transitional Services",
+        "Second Chance"
+      ],
+      "id": 74,
+      "description": "Transitional Services options across Oklahoma that may work with people on probation, parole, or with a record",
+      "WebLogoURL": "",
+      "url": "https://www.homelessalliance.org/",
+      "title": "Homeless Alliance"
+    },
+    {
+      "verificationDate": "",
+      "region": [],
+      "category": ["Second Chance"],
+      "id": 63,
+      "description": "Needs Description",
+      "WebLogoURL": "",
+      "url": "https://njreentry.org",
+      "title": "Needs Title"
+    },
+    {
+      "verificationDate": "",
+      "region": ["South Carolina"],
+      "category": ["Healthcare"],
+      "id": 30,
+      "description": "Needs Description",
+      "WebLogoURL": "",
+      "url": "https://www.scdmh.org/",
+      "title": "South Carolina Department of Behavioral Health and Developmental Disabilities, Office of Mental Health"
+    },
+    {
+      "verificationDate": "",
+      "region": ["Oklahoma"],
+      "category": [
+        "Food Assistance",
+        "Housing/Shelter",
+        "Healthcare",
+        "Financial Support",
+        "Counseling/Therapy"
+      ],
+      "id": 76,
+      "description": "food, shelter, medical, financial support and more",
+      "WebLogoURL": "",
+      "url": "https://www.homelessalliance.org/get-help",
+      "title": "Homeless Alliance Resources"
+    },
+    {
+      "verificationDate": "",
+      "region": [],
+      "category": ["Second Chance"],
+      "id": 64,
+      "description": "Needs Description",
+      "WebLogoURL": "",
+      "url": "https://reentrycoalitionofnj.org",
+      "title": "Needs Title"
+    },
+    {
+      "verificationDate": "",
+      "region": [],
+      "category": ["Second Chance"],
+      "id": 67,
+      "description": "Needs Description",
+      "WebLogoURL": "",
+      "url": "https://njaconline.org",
+      "title": "Needs Title"
+    },
+    {
+      "verificationDate": "",
+      "region": ["Indiana"],
+      "category": ["Healthcare"],
+      "id": 16,
+      "description": "The Indiana Division of Mental Health and Addiction (DMHA), part of the Family and Social Services Administration, is responsible for overseeing and regulating mental health and substance use services across the state. The agency establishes care standards, certifies providers, and ensures that individuals have access to quality, recovery-oriented services that promote resilience for individuals, families, and communities. DMHA works through a statewide network of community mental health centers, addiction treatment providers, and certified behavioral health clinics, while also operating state psychiatric hospitals for more intensive care needs. In addition to oversight and service coordination, the division supports prevention, treatment, recovery, and crisis intervention programs, emphasizing accessibility and comprehensive care for diverse populations throughout Indiana",
+      "WebLogoURL": "",
+      "url": "http://www.in.gov/fssa/dmha/index.html",
+      "title": "Indiana Division of Mental Health and Addiction (DMHA)"
+    },
+    {
+      "verificationDate": "",
+      "region": ["Oregon"],
+      "category": ["Healthcare"],
+      "id": 25,
+      "description": "Needs Description",
+      "WebLogoURL": "",
+      "url": "http://www.oregon.gov/oha/amh/Pages/index.aspx",
+      "title": "Oregon Health Authority "
+    },
+    {
+      "verificationDate": "",
+      "region": [],
+      "category": ["Food Assistance"],
+      "id": 69,
+      "description": "Needs Description",
+      "WebLogoURL": "",
+      "url": "https://okdhslive.org",
+      "title": "Oklahoma Dept. of Human Services"
+    },
+    {
+      "verificationDate": "",
+      "region": ["Colorado"],
+      "category": ["Healthcare"],
+      "id": 7,
+      "description": "The Behavioral Health Administration is the state administration responsible for ensuring all people in Colorado have access to quality mental health and substance use disorder services, regardless of where they live, or ability to pay. BHA will help bring together community groups and governmental agencies to design a behavioral health system for all people in Colorado that is easy to access, and offers high-quality care that considers the whole person and their needs.",
+      "WebLogoURL": "",
+      "url": "https://www.colorado.gov/pacific/cdhs/community-programs-behavioral-health",
+      "title": "Colorado Behavioral Health Administration"
+    },
+    {
+      "verificationDate": "",
+      "region": [],
+      "category": ["Second Chance"],
+      "id": 66,
+      "description": "Needs Description",
+      "WebLogoURL": "",
+      "url": "https://libguides.njstatelib.org",
+      "title": "Needs Title"
+    },
+    {
+      "verificationDate": "",
+      "region": [],
+      "category": ["Job Platform"],
+      "id": 50,
+      "description": "Needs Description",
+      "WebLogoURL": "",
+      "url": "https://reentrycoalitionofnj.org",
+      "title": "Needs Title"
+    },
+    {
+      "verificationDate": "",
+      "region": ["Idaho"],
+      "category": ["Healthcare"],
+      "id": 14,
+      "description": "The Idaho Department of Health and Welfare’s Behavioral Health page provides an overview of the state’s efforts to support individuals experiencing mental health and substance use disorders. The site emphasizes a mission centered on promoting hope, recovery, and resilience through a coordinated system of care. It outlines key service areas, including adult behavioral health services, children’s behavioral health programs, substance use disorder treatment, and crisis intervention resources. The page also highlights the availability of opioid education and prevention tools, as well as 24/7 crisis support options. Overall, the resource presents behavioral health care as accessible, treatable, and supported through a statewide network of programs designed to meet the diverse needs of Idaho residents",
+      "WebLogoURL": "",
+      "url": "https://healthandwelfare.idaho.gov/services-programs/behavioral-health",
+      "title": "Behavioral Health"
+    },
+    {
+      "verificationDate": "",
+      "region": [],
+      "category": ["Healthcare"],
+      "id": 36,
+      "description": "Needs Description",
+      "WebLogoURL": "",
+      "url": "http://mentalhealth.vermont.gov",
+      "title": "Needs Title"
+    },
+    {
+      "verificationDate": "",
+      "region": ["Oklahoma"],
+      "category": ["Healthcare"],
+      "id": 24,
+      "description": "Needs Description",
+      "WebLogoURL": "",
+      "url": "http://www.odmhsas.org",
+      "title": "Oklahoma Department of Mental Health and Substance Abuse Services"
+    },
+    {
+      "verificationDate": "",
+      "region": [],
+      "category": ["Second Chance"],
+      "id": 61,
+      "description": "Needs Description",
+      "WebLogoURL": "",
+      "url": "https://reentrycenters.org",
+      "title": "Needs Title"
+    },
+    {
+      "verificationDate": "",
+      "region": [],
+      "category": ["Healthcare"],
+      "id": 35,
+      "description": "Needs Description",
+      "WebLogoURL": "https://www.healthvermont.gov/themes/custom/vdh/favicon.ico",
+      "url": "http://www.healthvermont.gov/alcohol-drugs",
+      "title": "Needs Title"
+    },
+    {
+      "verificationDate": "",
+      "region": ["Oklahoma"],
+      "category": [
+        "Financial Support",
+        "Early Childhood Education",
+        "Adult Education"
+      ],
+      "id": 75,
+      "description": "rent/mortgage assistance, early childhood ed,, and economic classes",
+      "WebLogoURL": "",
+      "url": "https://www.caaofokc.org/",
+      "title": "Community Action Partnership"
+    },
+    {
+      "verificationDate": "",
+      "region": ["North Carolina"],
+      "category": ["Healthcare"],
+      "id": 21,
+      "description": "Needs Description",
+      "WebLogoURL": "",
+      "url": "https://www.ncdhhs.gov/divisions/mhddsas",
+      "title": "North Carolina Department of Health and Human Services"
+    },
+    {
+      "verificationDate": "",
+      "region": [],
+      "category": ["Second Chance"],
+      "id": 59,
+      "description": "Needs Description",
+      "WebLogoURL": "",
+      "url": "https://salvationarmynj.org",
+      "title": "Needs Title"
+    },
+    {
+      "verificationDate": "",
+      "region": ["Florida"],
+      "category": ["Healthcare"],
+      "id": 10,
+      "description": "Working in partnership with local communities to protect the vulnerable, promote strong and economically self-sufficient families, and advance personal and family recovery and resiliency.",
+      "WebLogoURL": "",
+      "url": "https://www.myflfamilies.com",
+      "title": "Florida Families"
+    },
+    {
+      "verificationDate": "",
+      "region": [],
+      "category": ["Job Platform"],
+      "id": 46,
+      "description": "Needs Description",
+      "WebLogoURL": "",
+      "url": "https://www.indeed.com",
+      "title": "Needs Title"
+    },
+    {
+      "verificationDate": "",
+      "region": [],
+      "category": ["Second Chance"],
+      "id": 58,
+      "description": "Needs Description",
+      "WebLogoURL": "",
+      "url": "https://www.salvationarmyusa.org",
+      "title": "Needs Title"
+    },
+    {
+      "verificationDate": "",
+      "region": ["Oklahoma"],
+      "category": ["Crisis Hotline", "Counseling/Therapy"],
+      "id": 78,
+      "description": "Outpatient treatment, family therapy, crisis intervention, group therapy ",
+      "WebLogoURL": "",
+      "url": "mentalhealth.networkofcare.org",
+      "title": "New Hope Counseling Services"
+    },
+    {
+      "verificationDate": "",
+      "region": ["Oklahoma"],
+      "category": [
+        "Education",
+        "Substance Abuse",
+        "Adult Education",
+        "Legal Aid",
+        "Case Management"
+      ],
+      "id": 79,
+      "description": "Job training, legal aid, addiction recovery, and case management",
+      "WebLogoURL": "",
+      "url": "www.TEEM.org",
+      "title": "TEEM (The Education and Employment Ministry)"
     }
   ]
 }
