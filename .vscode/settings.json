@@ -1,9 +1,5 @@
 {
-  "servers": {
-    "chakra-ui": {
-      "command": "npx",
-      "args": ["-y", "@chakra-ui/react-mcp"]
-    }
-  },
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "typescript.tsdk": "node_modules/typescript/lib", // i get this error: This setting is deprecated. Use js/ts.tsdk.path instead.
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"]
+
 }

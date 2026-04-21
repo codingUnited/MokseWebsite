@@ -174,35 +174,20 @@ export default function StopTheStigma() {
               </Center>
             </Flex>
           </Container>
-        </SectionTemplate>
+         {/* </SectionTemplate>
 
-        <SectionTemplate>
-          <Container
-            fluid
-          // position="relative"
-          // w={"100%"}
-          // h={"0vh"}
-          // bgImage={`url(${"/assets/stop-the-stigma/stop-stigma-sect1_background.webp"})`}
-          // bgSize={"cover"}
-          // backgroundPosition={"center"}
-          // bgRepeat={"no-repeat"}
-          // aria-label={`${"Stop The Stigma Conference"} Image`} 
-          >
-            {/* <AbsoluteCenter
-              textAlign="center"
-              bg="rgba(0, 0, 0, 0.4)"
-              w={"100%"}
-              h={"100%"}
-              alignItems={"center"}
-            > */}
-            <Flex gapX={24} p={20}>
-              <Heading as={"h2"} size={'5xl'}>
+         <SectionTemplate>  */}
+          <Container fluid height={"100"} h={"100"} bgColor={"midnightblue"} color={"white"} > 
+
+            <Heading as={"h2"} size={'5xl'} textAlign={"center"} mb={10} fontWeight={'bold'} >
                 Conference Highlights
-              </Heading>
+            </Heading>
+            
+            <VStack gapY={16} >
+              <SimpleGrid columns={2} gap="75px" mb="20" w="40vw" textStyle={"lg"} >
 
-              <SimpleGrid columns={{ base: 1, md: 2 }} gap={6}>
-
-                <FeatureCard
+                <FeatureCard 
+                  
                   title={"Opening Night Film - Being Michelle"}
                   description={
                     "A groundbreaking documentary that sets the tone for the conference by centering the lived experience of a Deaf woman navigating incarceration and disability."
@@ -230,145 +215,17 @@ export default function StopTheStigma() {
                   }
                   icon={"ObjectGroup"}
                 />
+
               </SimpleGrid>
-              <Box bg={"white "} boxSize={100}>
-                <Image asChild aspectRatio={4 / 5} fit={"contain"} maxW={"830px"} mx={"auto"} width={"full"} >
-                  <NextImage
-                    src={"/assets/stop-the-stigma/Linkedin-Carousels.png"}
-                    width={1080}
-                    height={1350}
-                    alt={"test"}
-                    fetchPriority={"high"}
-                    sizes={"(max-width:1080px) 100vw,1080px"} />
-                </Image>
-              </Box>
-            </Flex>
-            {/* </AbsoluteCenter> */}
-
+            </VStack>
           </Container>
-
         </SectionTemplate>
+
         <HeaderTemplate
           image="/assets/stop-the-stigma/stop-stigma-sect2_background.webp"
-          imageHeight="100vh"
+          imageHeight="25vh"
           imageLabel="Stop The Stigma Conference"
         />
-
-        {/* <section
-          className="elementor-section elementor-top-section elementor-element elementor-element-ln1z48d elementor-section-full_width elementor-section-content-middle elementor-section-height-default elementor-section-height-default"
-          data-id="ln1z48d"
-          data-element_type="section"
-          data-settings='{"background_background":"classic"}'
-        >
-          <div className="elementor-container elementor-column-gap-no">
-            <div
-              className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-4292f5a"
-              data-id="4292f5a"
-              data-element_type="column"
-            >
-              <div className="elementor-widget-wrap elementor-element-populated">
-                <div
-                  className="elementor-element elementor-element-6d93f44 elementor-widget elementor-widget-image"
-                  data-id="6d93f44"
-                  data-element_type="widget"
-                  data-widget_type="image.default"
-                >
-                  <div className="elementor-widget-container">
-                    <img
-                      fetchPriority="high"
-                      decoding="async"
-                      width="1080"
-                      height="1350"
-                      src="https://mokse.org/wp-content/uploads/2025/12/Linkedin-Carousels.png"
-                      className="attachment-full size-full wp-image-1852"
-                      alt="Stop The Stigma Conference Flyer"
-                      srcSet="https://mokse.org/wp-content/uploads/2025/12/Linkedin-Carousels.png 1080w, https://mokse.org/wp-content/uploads/2025/12/Linkedin-Carousels-240x300.png 240w, https://mokse.org/wp-content/uploads/2025/12/Linkedin-Carousels-819x1024.png 819w, https://mokse.org/wp-content/uploads/2025/12/Linkedin-Carousels-768x960.png 768w"
-                      sizes="(max-width: 1080px) 100vw, 1080px"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-a8c8ff0"
-              data-id="a8c8ff0"
-              data-element_type="column"
-            >
-              <div className="elementor-widget-wrap elementor-element-populated">
-                <section
-                  className="elementor-section elementor-inner-section elementor-element elementor-element-a893ccd elementor-section-boxed elementor-section-height-default elementor-section-height-default"
-                  data-id="a893ccd"
-                  data-element_type="section"
-                >
-                  <div className="elementor-container elementor-column-gap-no">
-                    <div
-                      className="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-6534f2c"
-                      data-id="6534f2c"
-                      data-element_type="column"
-                    >
-                      <div className="elementor-widget-wrap elementor-element-populated">
-                        <div
-                          className="elementor-element elementor-element-fc9b946 elementor-widget elementor-widget-heading"
-                          data-id="fc9b946"
-                          data-element_type="widget"
-                          data-widget_type="heading.default"
-                        >
-                          <div className="elementor-widget-container">
-                            <h1 className="elementor-heading-title elementor-size-default">
-                              What is STOP THE STIGMA?
-                            </h1>{" "}
-                          </div>
-                        </div>
-                        <div
-                          className="elementor-element elementor-element-2d62856 elementor-widget elementor-widget-text-editor"
-                          data-id="2d62856"
-                          data-element_type="widget"
-                          data-widget_type="text-editor.default"
-                        >
-                          <div className="elementor-widget-container">
-                            <p>
-                              STOP THE STIGMA is an annual conference centered
-                              on the stigma of disability and incarceration. Now
-                              in itsfourth year the conference continues to
-                              provide a space for justice impacted individuals
-                              to have their voices and stories heard. Presented
-                              by Mokse and The Community, STOP THE STIGMA
-                              integrates innovative media, storytelling, and
-                              design to engage audiences and amplify impact.
-                              Together, we build an inclusive platform to
-                              challenge assumptions and inspire action.
-                            </p>{" "}
-                          </div>
-                        </div>
-                        <div
-                          className="elementor-element elementor-element-319cf5c elementor-align-left elementor-widget elementor-widget-button"
-                          data-id="319cf5c"
-                          data-element_type="widget"
-                          data-widget_type="button.default"
-                        >
-                          <div className="elementor-widget-container">
-                            <div className="elementor-button-wrapper">
-                              <a
-                                className="elementor-button elementor-button-link elementor-size-sm"
-                                href="https://docs.google.com/forms/d/e/1FAIpQLSe4Z0LI5JpkPH3eKBw-8ANquRWRxNJKwpS465KOStu3Jb4v_A/viewform?usp=embed_facebook"
-                              >
-                                <span className="elementor-button-content-wrapper">
-                                  <span className="elementor-button-text">
-                                    Register Here
-                                  </span>
-                                </span>
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </section>
-              </div>
-            </div>
-          </div>
-        </section> */}
       </PageBuilder >
     </>
   );
