@@ -14,15 +14,18 @@ import {
   Link as ChakraLink,
   Image as ChakraImage,
   Avatar,
+  VStack,
 } from "@chakra-ui/react";
 
 import checkDeviceSize from "@/components/ui/breakpoints";
 import {
   HeaderTemplate,
   PageBuilder,
+  SectionTemplate,
 } from "@/components/page-builder/template";
 import { Icon } from "@/components/ui/icons/icon";
 import { poppins } from "@/components/ui/fonts";
+import { Section } from "lucide-react";
 
 export default function Contact() {
   const notMobileDevice = checkDeviceSize();
@@ -38,7 +41,8 @@ export default function Contact() {
             description="Find out how you can contribute and make a positive impact in your community"
           />
 
-          <div>
+          <SectionTemplate >
+            <VStack justify={"center"} align={"center"} gap={4} mb={10}>
             <Heading as={"h2"}>Get in Touch</Heading>
             <Text>
               We&apos;re here to support you. Reach out to learn more about our
@@ -80,8 +84,8 @@ export default function Contact() {
                   <Card.Root
                     key={info.label}
                     variant="outline"
-                    w={"sm"}
-                    h={"xs"}
+                    w={"xxs"}
+                    h={"xxs"}
                   >
                     <Card.Body>
                       <Avatar.Root my={4} boxSize={12}>
@@ -96,6 +100,7 @@ export default function Contact() {
                 );
               })}
             </HStack>
+            </VStack>
 
             {/* Google Maps Embed Section */}
             <section>
@@ -116,7 +121,7 @@ export default function Contact() {
             <section>
               <ContactForm />
             </section>
-          </div>
+          </SectionTemplate>
 
           <main></main>
         </PageBuilder>
