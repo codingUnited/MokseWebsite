@@ -65,7 +65,7 @@ export default function Programs() {
                                                             <ClientOnly fallback={<Box boxSize={'xs'} bg={"blue.500"} />}>
                                                                 <Image asChild>
                                                                     <NextImage
-                                                                        src={"/assets/stop-the-stigma/EFCO STS.webp"}
+                                                                        src={"/assets/stop-the-stigma/stsLogo.png"}
                                                                         alt="MOKSE Logo"
                                                                         width={180}
                                                                         height={50}
@@ -107,7 +107,7 @@ export default function Programs() {
                                                             <ClientOnly fallback={<Box boxSize={'xs'} bg={"blue.500"} />}>
                                                                 <Image asChild>
                                                                     <NextImage
-                                                                        src={"/assets/navigators-network/EFCO BookShire.png"}
+                                                                        src={"/assets/navigators-network/NavNetLogo.png"}
                                                                         alt="MOKSE Logo"
                                                                         width={225}
                                                                         height={50}
