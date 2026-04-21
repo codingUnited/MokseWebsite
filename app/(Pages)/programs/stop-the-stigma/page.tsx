@@ -174,13 +174,15 @@ export default function StopTheStigma() {
               </Center>
             </Flex>
           </Container>
-         </SectionTemplate>
+         {/* </SectionTemplate>
 
-         <SectionTemplate> 
-          <Container fluid height={"100"} h={"100"} bgColor={"navy"} color={"white"} > 
+         <SectionTemplate>  */}
+          <Container fluid height={"100"} h={"100"} bgColor={"midnightblue"} color={"white"} > 
+
             <Heading as={"h2"} size={'5xl'} textAlign={"center"} mb={10} fontWeight={'bold'} >
                 Conference Highlights
             </Heading>
+            
             <VStack gapY={16} >
               <SimpleGrid columns={2} gap="75px" mb="20" w="40vw" textStyle={"lg"} >
 
@@ -217,8 +219,8 @@ export default function StopTheStigma() {
               </SimpleGrid>
             </VStack>
           </Container>
-
         </SectionTemplate>
+
         <HeaderTemplate
           image="/assets/stop-the-stigma/stop-stigma-sect2_background.webp"
           imageHeight="25vh"
