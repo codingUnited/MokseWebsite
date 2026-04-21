@@ -181,7 +181,7 @@ export default function StopTheStigma() {
          </SectionTemplate>
 
          <SectionTemplate> 
-          <Container as={SimpleGrid} columns={2} gap="15px" mb={20} centerContent fluid h={"100%"}> 
+          <Container fluid height={"100"} h={"100"}> {/*as={SimpleGrid} columns={2} gap="15px" mb={20} centerContent fluid h={"100%"} >*/}
              {/*this was a section that we were working with that had the ending ">" left off that was breaking the page, so I moved the SimpleGrid up to be the Container for
              this section and commented out the old Container and SectionTemplate tags to preserve the code that was there without breaking the page layout. 
              
@@ -209,13 +209,19 @@ export default function StopTheStigma() {
             <Heading as={"h2"} size={'5xl'} textAlign={"center"} mb={10} fontWeight={'bold'} >
                 Conference Highlights
             </Heading>
-            <SimpleGrid columns={2} gap="15px" mb={20} >
-              
+            <VStack gapY={16} >
+              <SimpleGrid columns={2} gap="75px" mb="20" w="40vw" textStyle={"lg"}>
+              {/* 
+              delete after testing the layout of the feature cards in the simple grid -JMG
+              alignContent="center" // no visible difference
+              <SimpleGrid columns={2} gap="15px" mb={20} w="dvw" > code that works 
+              */}
 
               {/* <SimpleGrid columns={2} columnGap="2" rowGap="4" >  */}
               {/* <SimpleGrid columns={[2,null,2]} mb ={20} gapX={10} gapY={16} > */}
-
-                <FeatureCard
+              
+                <FeatureCard 
+                  
                   title={"Opening Night Film - Being Michelle"}
                   description={
                     "A groundbreaking documentary that sets the tone for the conference by centering the lived experience of a Deaf woman navigating incarceration and disability."
@@ -243,7 +249,7 @@ export default function StopTheStigma() {
                   }
                   icon={"ObjectGroup"}
                 />
-              {/* </SimpleGrid> */}
+              
 
               {/* random picture unter the conference highlights. should we get rid of this? -JMG
               <Box bg={"white "} boxSize={100}>
@@ -259,6 +265,7 @@ export default function StopTheStigma() {
               </Box> */}
             </SimpleGrid>
             {/* </AbsoluteCenter> */}
+            </VStack>
 
           </Container>
 
