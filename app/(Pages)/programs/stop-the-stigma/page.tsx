@@ -173,12 +173,22 @@ export default function StopTheStigma() {
                 </VStack>
               </Center>
             </Flex>
+          {/* was here when i started working on this section, but it was causing some weird layout issues so I moved it to the simple grid below. 
+          I think it can stay there but just wanted to note that this is where it originally was in case you want to move it back. 
+           We can decide later if we want to keep this code or not and if we do we can just move the SimpleGrid back down into the SectionTemplate 
+           and uncomment the Container and SectionTemplate tags. -JMG*/}
           </Container>
-        </SectionTemplate>
+         </SectionTemplate>
 
-        <SectionTemplate>
-          <Container
-            fluid
+         <SectionTemplate> 
+          <Container as={SimpleGrid} columns={2} gap="15px" mb={20} centerContent fluid h={"100%"}> 
+             {/*this was a section that we were working with that had the ending ">" left off that was breaking the page, so I moved the SimpleGrid up to be the Container for
+             this section and commented out the old Container and SectionTemplate tags to preserve the code that was there without breaking the page layout. 
+             
+             fluid
+             */}
+
+             {/* old code ? 
           // position="relative"
           // w={"100%"}
           // h={"0vh"}
@@ -187,20 +197,23 @@ export default function StopTheStigma() {
           // backgroundPosition={"center"}
           // bgRepeat={"no-repeat"}
           // aria-label={`${"Stop The Stigma Conference"} Image`} 
-          >
-            {/* <AbsoluteCenter
+          > */}
+            {/*
+             <AbsoluteCenter
               textAlign="center"
               bg="rgba(0, 0, 0, 0.4)"
               w={"100%"}
               h={"100%"}
               alignItems={"center"}
             > */}
-            <Flex gapX={24} p={20}>
-              <Heading as={"h2"} size={'5xl'}>
+            <Heading as={"h2"} size={'5xl'} textAlign={"center"} mb={10} fontWeight={'bold'} >
                 Conference Highlights
-              </Heading>
+            </Heading>
+            <SimpleGrid columns={2} gap="15px" mb={20} >
+              
 
-              <SimpleGrid columns={{ base: 1, md: 2 }} gap={6}>
+              {/* <SimpleGrid columns={2} columnGap="2" rowGap="4" >  */}
+              {/* <SimpleGrid columns={[2,null,2]} mb ={20} gapX={10} gapY={16} > */}
 
                 <FeatureCard
                   title={"Opening Night Film - Being Michelle"}
@@ -230,7 +243,9 @@ export default function StopTheStigma() {
                   }
                   icon={"ObjectGroup"}
                 />
-              </SimpleGrid>
+              {/* </SimpleGrid> */}
+
+              {/* random picture unter the conference highlights. should we get rid of this? -JMG
               <Box bg={"white "} boxSize={100}>
                 <Image asChild aspectRatio={4 / 5} fit={"contain"} maxW={"830px"} mx={"auto"} width={"full"} >
                   <NextImage
@@ -241,8 +256,8 @@ export default function StopTheStigma() {
                     fetchPriority={"high"}
                     sizes={"(max-width:1080px) 100vw,1080px"} />
                 </Image>
-              </Box>
-            </Flex>
+              </Box> */}
+            </SimpleGrid>
             {/* </AbsoluteCenter> */}
 
           </Container>
@@ -250,7 +265,7 @@ export default function StopTheStigma() {
         </SectionTemplate>
         <HeaderTemplate
           image="/assets/stop-the-stigma/stop-stigma-sect2_background.webp"
-          imageHeight="100vh"
+          imageHeight="25vh"
           imageLabel="Stop The Stigma Conference"
         />
 
