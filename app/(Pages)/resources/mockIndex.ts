@@ -1,14 +1,16 @@
 import ResourceList from "./mock.json";
 
 type ResourceItem = {
+
   id: number;
   title: string;
   description: string;
   category: string[];
   region: string[];
-  webLogoURL: string;
+  WebLogoURL: string;
   url: string;
   verificationDate: string;
+
 };
 type ResourceFile = { items: ResourceItem[] };
 // Strongly types the JSON import
