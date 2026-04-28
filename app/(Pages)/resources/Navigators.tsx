@@ -391,7 +391,7 @@ export default function Navigators() {
               >
                 <Center borderRadius="md">
                   <ClientOnly fallback={<Box boxSize={120} bg={"blue.500"} />}>
-                    <Image src={item.webLogoURL} alt={item.title} width={120} height={120}>
+                    <Image src={item.WebLogoURL} alt={item.title} width={120} height={120}>
                     </Image>
                   </ClientOnly>
                 </Center>
