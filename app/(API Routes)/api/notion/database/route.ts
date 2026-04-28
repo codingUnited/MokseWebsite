@@ -46,7 +46,7 @@ export async function POST(req: NextRequest) {
                 category: baseSchema.category?.multi_select?.map(category => category.name) || [],
                 id: baseSchema.id?.number || null,
                 description: baseSchema.description?.rich_text[0]?.plain_text || "",
-                WebLogoURL: baseSchema.WebLogoURL?.files[0]?.file?.url || "",
+                WebLogoURL: baseSchema.WebLogoURL?.files[0]?.file?.url || null,
                 url: baseSchema["url ( link )"]?.url || "",
                 title: baseSchema.Name?.title.map(({ text }) => text.content).join(" ") || "",
             };
@@ -98,7 +98,7 @@ export async function GET(req: NextRequest) {
                 category: baseSchema.category?.multi_select?.map(category => category.name) || [],
                 id: baseSchema.id?.number || null,
                 description: baseSchema.description?.rich_text[0]?.plain_text || "",
-                WebLogoURL: baseSchema.WebLogoURL?.files[0]?.file?.url || "",
+                WebLogoURL: baseSchema.WebLogoURL?.files[0]?.file?.url || null,
                 url: baseSchema["url ( link )"]?.url || "",
                 title: baseSchema.Name?.title.map(({ text }) => text.content).join(" ") || "",
             };
