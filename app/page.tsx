@@ -40,7 +40,7 @@ export default function Home() {
             backgroundPosition={"center"}
             bgRepeat={"no-repeat"}
 
-            //  alt="Mokse hero image"
+          //  alt="Mokse hero image"
           >
             <AbsoluteCenter
               textAlign="center"
@@ -156,7 +156,7 @@ export default function Home() {
                 backgroundPosition={"center"}
                 bgRepeat={"no-repeat"}
 
-                //  alt="Mokse hero image"
+              //  alt="Mokse hero image"
               >
                 <AbsoluteCenter bg="rgba(0, 0, 0, 0)" w={"100%"} h={"100%"}>
                   <Box
@@ -171,7 +171,7 @@ export default function Home() {
                     backgroundPosition={"center"}
                     bgRepeat={"no-repeat"}
                     zIndex={1}
-                    //  alt="Mokse hero image"
+                  //  alt="Mokse hero image"
                   >
                     <AbsoluteCenter
                       bg="rgba(0, 0, 0, 0.1)"
@@ -188,7 +188,7 @@ export default function Home() {
                     Are you passionate about helping justice-impacted
                     individuals? We need compassionate volunteers to assist in
                     various roles, including mentorship, tutoring, and
-                    administrative support.
+                    administrative support...
                   </p>
                   <Button>Get Involved</Button>
                 </Container>
