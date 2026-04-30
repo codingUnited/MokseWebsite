@@ -103,8 +103,6 @@ export async function GET(req: NextRequest) {
                 title: baseSchema.Name?.title.map(({ text }) => text.content).join(" ") || "",
             };
         });
-
-
         return NextResponse.json({
             message: "Notion database fetched successfully",
             payload: payload,
