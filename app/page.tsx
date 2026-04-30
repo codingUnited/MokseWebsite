@@ -5,6 +5,7 @@ import FeatureCard from "../components/home/feature-card";
 import { empowerment } from "../data/empowerment";
 import { getInvolved } from "../data/get-involved";
 import {
+  Float,
   Container,
   Box,
   Text,
