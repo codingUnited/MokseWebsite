@@ -211,7 +211,6 @@ export default function Home() {
               </Button>
             </Center>
           </Stack>
-
           <Container w={"7xl"} pb={14} asChild>
             <Center>
               <Card.Root
