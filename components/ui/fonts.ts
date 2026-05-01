@@ -14,6 +14,7 @@ const poppins = Poppins({
 });
 const openSans = Open_Sans({
     subsets: ['latin'],
+    variable: "--font-open-sans",
     weight: ['400', '600', '700'],
 });
 export { poppins, geistSans, geistMono, openSans };
