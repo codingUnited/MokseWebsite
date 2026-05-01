@@ -9,7 +9,7 @@ interface NotionDatabaseEntry {
         id: { number: number };
         description: { rich_text: { plain_text: string }[] };
         "url ( link )": { url: string };
-        WebLogoURL: { rich_text: { plain_text: string }[] };
+        WebLogoURL: { files: { file: { url: string } }[] };
         Name: { title: { text: { content: string } }[] };
     };
 }
@@ -44,9 +44,9 @@ export async function POST(req: NextRequest) {
                 verificationDate: baseSchema.verificationDate?.date?.start || "",
                 region: baseSchema.region?.multi_select?.map((location) => location.name) || [],
                 category: baseSchema.category?.multi_select?.map(category => category.name) || [],
-                id: baseSchema.id?.number || null,
+                id: baseSchema.id?.number || 1000,
                 description: baseSchema.description?.rich_text[0]?.plain_text || "",
-                WebLogoURL: baseSchema.WebLogoURL?.rich_text[0]?.plain_text || "",
+                WebLogoURL: baseSchema.WebLogoURL?.files[0]?.file?.url || null,
                 url: baseSchema["url ( link )"]?.url || "",
                 title: baseSchema.Name?.title.map(({ text }) => text.content).join(" ") || "",
             };
@@ -96,15 +96,13 @@ export async function GET(req: NextRequest) {
                 verificationDate: baseSchema.verificationDate?.date?.start || "",
                 region: baseSchema.region?.multi_select?.map((location) => location.name) || [],
                 category: baseSchema.category?.multi_select?.map(category => category.name) || [],
-                id: baseSchema.id?.number || null,
+                id: baseSchema.id?.number || 1000,
                 description: baseSchema.description?.rich_text[0]?.plain_text || "",
-                WebLogoURL: baseSchema.WebLogoURL?.rich_text[0]?.plain_text || "",
+                WebLogoURL: baseSchema.WebLogoURL?.files[0]?.file?.url || null,
                 url: baseSchema["url ( link )"]?.url || "",
                 title: baseSchema.Name?.title.map(({ text }) => text.content).join(" ") || "",
             };
         });
-
-
         return NextResponse.json({
             message: "Notion database fetched successfully",
             payload: payload,

@@ -125,7 +125,6 @@ export default function SearchResources() {
     }
     setFilteredItems(results);
   };
-
   return (
     <>
       {notMobileDevice ? (
@@ -143,7 +142,6 @@ export default function SearchResources() {
                 </Card.Root>
               </Container>
             </BodyTemplate>
-
           </PageBuilder>
         </>
       ) : (

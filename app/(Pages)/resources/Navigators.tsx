@@ -115,8 +115,6 @@ export default function Navigators() {
 
     fetchResources();
   }, []);
-
-
   const applyFilters = () => {
     const noFilters =
       !formData.searchRegion &&
@@ -147,7 +145,6 @@ export default function Navigators() {
     }
     setFilteredItems(results);
   };
-
   return (
     <Card.Body gap={6}>
       <Group attached align={"center"} justify={"center"}>
@@ -278,7 +275,6 @@ export default function Navigators() {
               <Combobox.Trigger />
             </Combobox.IndicatorGroup>
           </Combobox.Control>
-
           <Portal>
             <Combobox.Positioner>
               <Combobox.Content>
@@ -346,7 +342,6 @@ export default function Navigators() {
               <Combobox.ClearTrigger />
             </Combobox.IndicatorGroup>
           </Combobox.Control>
-
           <Portal>
             <Combobox.Positioner>
               <Combobox.Content>
@@ -391,14 +386,12 @@ export default function Navigators() {
               >
                 <Center borderRadius="md">
                   <ClientOnly fallback={<Box boxSize={120} bg={"blue.500"} />}>
-                    <Image src={item.webLogoURL} alt={item.title} width={120} height={120}>
-                    </Image>
+                    <Image src={item.WebLogoURL} alt={item.title} width={120} height={120}/>
                   </ClientOnly>
                 </Center>
                 <Card.Body p={4}>
                   <Stack>
                     <strong>{item.title}</strong>
-
                     <Box fontSize="sm" color="gray.500" lineClamp={2}>
                       {item.description}
                     </Box>

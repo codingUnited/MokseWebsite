@@ -2,17 +2,23 @@
   "items": [
     {
       "verificationDate": "",
-      "region": [],
-      "category": ["Food Assistance"],
+      "region": [
+        "New Jersey"
+      ],
+      "category": [
+        "Food Assistance"
+      ],
       "id": 56,
-      "description": "Needs Description",
-      "WebLogoURL": "",
+      "description": "The Middlesex County provides a wide range of public services, including health, human services, public safety, and community programs for residents and businesses. It supports local municipalities through coordinated departments, resources, and initiatives that promote economic growth and community well-being ",
+      "WebLogoURL": null,
       "url": "https://middlesexcountynj.gov",
-      "title": "Needs Title"
+      "title": "Middlesex County"
     },
     {
       "verificationDate": "",
-      "region": [],
+      "region": [
+        "Oklahoma"
+      ],
       "category": [
         "Second Chance",
         "Education",
@@ -23,544 +29,753 @@
         "Housing/Shelter"
       ],
       "id": 70,
-      "description": "Needs Description",
-      "WebLogoURL": "",
+      "description": "FIND LOCAL NEIGHBOR ORGANIZATIONS WITH RESOURCES THAT HELP OKLAHOMANS IN NEED",
+      "WebLogoURL": "https://prod-files-secure.s3.us-west-2.amazonaws.com/8bd433af-561d-8126-ad47-0003f4b36e60/eb8ec40d-500e-400e-952d-1131f5e5141e/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466YNUOYBNS%2F20260428%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260428T033800Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAsaCXVzLXdlc3QtMiJHMEUCICTSSNb5BSsPo2sRh18tnJjoi9z1vlaPMQCM5zccOpptAiEA4WBvuMsHt59OW9U2rfaxyyuGesuSWhQ07WtVI3VJgbEqiAQI1P%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2Mzc0MjMxODM4MDUiDKBKrcBXSrVBe%2BafPyrcA6k6cUXnVH9ySFoTDALoGCJTVjJydGBfwg6cnituEsRqTsvzJd%2BldEOuC5vjagBRbr3N7ybiK2kgEd2%2BpMvctlWPo56eZOmK4QGOD5Nv%2BTfZeLf5hDRCnophnuxEYIEtzcSaD6CfDvegx5ia%2Bz65RcBhzsKYImt92nXkBJYRUD2G8Vv3%2BFhPi4KROMq7oNIweCtm0xqT90T9XQq7GAlfCfuCeYXuoqf21GavAzvhf0Dts7YPq%2Bq6SPrs5KfGP1%2BzlNhxh%2B2wgWpHxbk7tzC0XgB2cSKlRmFQcrXu%2BHafKshZ2WMNBbAlNBlhAq9XfpcUBX6w1WMdY1HXtRVopB4YgpxIwIw8m72EQM7RYlAw9drYUR6xGhPlGO2rflOI5RljVCDj19HI%2FrDYCBTozcvEoD11Xo6tcn%2FXWYzlTAxwIseGtDjqgIzV7j%2F3hP7V5YkQtnjj0mTSuemkK99OdCsB5js7sOnF%2FE%2Bo1TqOoMvTiUq8ma%2Bqr71V%2BAn%2F5yaf9ZKfTj%2B%2FJ7lLlPNtxk7w9EGHW8XnMK%2Fyh8hThDR4VOcuen12ddNi%2B0jDlUNDJdWnoUJI6WCXhqQAlvRLoRVpDO9%2B5njPtMehFtO1vsVyLWJ65T%2FyzzL%2BVQhHc3rWueMhMJbIwM8GOqUBjyf8YwNs4jBIc4BrdzjQnvypoWDSf%2B578ivw4ZpGoRoDQYOvhJR%2FOJdOmBQnDqG%2BcoBFPGcxw%2BPrMbPRvwOcQmWycMkCDoWZ1Z5zt5MtJGsSdNBJjwzzHHErmGlygDkuhZXZKB3ooioIF1k5IBRtv6%2Bp6KIsiBm3IHQ474g9iAMOOrVQpDFbV0yaAZQC9HzhIzHLVBo1fRsRzcrX6R24pFtuxX4N&X-Amz-Signature=da912ac63eaedc3faf8407404ffac17b6f14eea6a73b15e74f8b08d72e2b698f&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
       "url": "https://oklahoma.gov/doc/offender-info/re-entry.html",
       "title": "Oklahoma Dept. of Corrections Re-entry"
     },
     {
       "verificationDate": "",
-      "region": [],
-      "category": ["Housing/Shelter"],
+      "region": [
+        "New Jersey"
+      ],
+      "category": [
+        "Housing/Shelter",
+        "Food Assistance",
+        "Financial Support"
+      ],
       "id": 52,
-      "description": "Needs Description",
-      "WebLogoURL": "",
+      "description": "The Middlesex County Board of Social Services provides public assistance programs including food, cash, medical, and housing support for eligible residents. It works to help individuals and families meet basic needs and achieve self-sufficiency through coordinated social services ",
+      "WebLogoURL": null,
       "url": "https://middlesexsocialservices.com",
-      "title": "Needs Title"
+      "title": "Middlesex County Social Services "
     },
     {
       "verificationDate": "",
-      "region": ["Iowa"],
-      "category": ["Healthcare"],
+      "region": [
+        "Iowa"
+      ],
+      "category": [
+        "Healthcare"
+      ],
       "id": 17,
-      "description": "The Iowa Department of Health and Human Services (HHS) website outlines the state agency’s role in providing programs and services that protect and improve the health and well-being of individuals, families, and communities across Iowa. The department oversees a wide range of services, including behavioral health, disability services, public health initiatives, and social support programs, with a focus on promoting resilience and access to care. A key initiative highlighted on the site is the development of Iowa’s Behavioral Health Service System, which integrates mental health and substance use services into a more coordinated, statewide system designed to improve accessibility and ensure that individuals can receive care regardless of where they enter the system. Overall, the website emphasizes a person-centered approach that prioritizes prevention, treatment, recovery, and crisis support for all Iowans",
-      "WebLogoURL": "",
+      "description": "The Iowa Department of Health and Human Services provides programs that support health and well-being, including behavioral health, disability, and public health services. It emphasizes a coordinated, person-centered system that integrates mental health and substance use care with prevention, treatment, and crisis support.",
+      "WebLogoURL": null,
       "url": "https://hhs.iowa.gov/",
       "title": "Iowa Department of Health and Human Services "
     },
     {
       "verificationDate": "",
-      "region": ["Pennsylvania"],
-      "category": ["Healthcare"],
+      "region": [
+        "Pennsylvania"
+      ],
+      "category": [
+        "Healthcare"
+      ],
       "id": 26,
-      "description": "Needs Description",
-      "WebLogoURL": "",
+      "description": "The Pennsylvania Department of Drug and Alcohol Programs oversees a statewide system for substance use prevention, treatment, and recovery services, managing funding and coordinating care through local agencies. It also licenses treatment providers and works to ensure access to high-quality, evidence-based services across Pennsylvania (",
+      "WebLogoURL": null,
       "url": "https://www.ddap.pa.gov",
       "title": "Pennsylvania  Department of Drug and Alcohol Programs"
     },
     {
       "verificationDate": "",
-      "region": ["Pennsylvania"],
-      "category": ["Healthcare"],
+      "region": [
+        "Pennsylvania"
+      ],
+      "category": [
+        "Healthcare"
+      ],
       "id": 27,
-      "description": "Needs Description",
-      "WebLogoURL": "",
+      "description": "The Office of Mental Health and Substance Abuse Services oversees a statewide system of care for individuals with mental health and substance use disorders, ensuring access to community-based and inpatient services. It also regulates providers and supports programs that promote recovery, independence, and community well-being (",
+      "WebLogoURL": null,
       "url": "https://www.pa.gov/en/agencies/dhs/departments-offices/omhsas-info",
       "title": "Pennsylvania  Office of Mental Health and Substance Abuse Services"
     },
     {
       "verificationDate": "",
-      "region": ["South Carolina"],
-      "category": ["Healthcare"],
+      "region": [
+        "South Carolina"
+      ],
+      "category": [
+        "Healthcare"
+      ],
       "id": 29,
-      "description": "Needs Description",
-      "WebLogoURL": "",
+      "description": "The Department of Alcohol and Other Drug Abuse Services oversees a statewide system of substance use prevention, treatment, and recovery services, ensuring access through a network of local providers. It works to reduce the impact of addiction and support individuals and families across South Carolina (",
+      "WebLogoURL": null,
       "url": "http://www.daodas.sc.gov",
       "title": "South Carolina Department of Behavioral Health and Developmental Disabilities, Office of Substance Use Services"
     },
     {
       "verificationDate": "",
       "region": [],
-      "category": ["Job Platform"],
+      "category": [
+        "Job Platform"
+      ],
       "id": 48,
-      "description": "Needs Description",
-      "WebLogoURL": "",
+      "description": "The Center for Community Transitions is a nonprofit organization that supports individuals with criminal records and their families through employment, reentry, and support services. It focuses on reducing recidivism and helping people rebuild stable, productive lives in their communities.\n",
+      "WebLogoURL": null,
       "url": "https://centerforcommunitytransitions.org",
-      "title": "Needs Title"
+      "title": "Center for Community Transitions ("
     },
     {
       "verificationDate": "",
-      "region": ["Georgia"],
-      "category": ["Healthcare"],
+      "region": [
+        "Georgia"
+      ],
+      "category": [
+        "Healthcare"
+      ],
       "id": 11,
-      "description": "DBHDD operates state hospitals and provides for community-based services across the state through contracted providers. The department serves people living with mental health challenges, substance use disorders, intellectual and developmental disabilities, or any combination of these. As Georgia’s public safety net, our primary responsibility is to serve people who are uninsured. We also serve individuals on Medicaid and others with few resources or options. Our program divisions are: Behavioral Health, Developmental Disabilities, Hospital Services.",
-      "WebLogoURL": "",
+      "description": "The Georgia Department of Behavioral Health and Developmental Disabilities operates state hospitals and provides community-based services for individuals with mental health, substance use, and developmental disabilities. As Georgia’s public safety net, it primarily serves uninsured individuals and those with limited resources.",
+      "WebLogoURL": null,
       "url": "https://dbhdd.georgia.gov",
       "title": "Georgia Department of Behavioral Health and Developmental Disabilities"
     },
     {
       "verificationDate": "",
-      "region": [],
-      "category": ["Healthcare"],
+      "region": [
+        "Wisconsin"
+      ],
+      "category": [
+        "Healthcare",
+        "Substance Abuse",
+        "Mental Health",
+        "Second Chance"
+      ],
       "id": 40,
-      "description": "Needs Description",
-      "WebLogoURL": "",
+      "description": "The Wisconsin Department of Health Services oversees a statewide system of health and behavioral health services, including mental health, substance use, and community-based care. It works with local agencies and providers to deliver prevention, treatment, and recovery services across Wisconsin ",
+      "WebLogoURL": null,
       "url": "https://www.dhs.wisconsin.gov/",
-      "title": "Needs Title"
+      "title": "Wisconsin Department of Health Services"
     },
     {
       "verificationDate": "",
-      "region": [],
-      "category": ["Healthcare"],
+      "region": [
+        "West Virginia"
+      ],
+      "category": [
+        "Healthcare"
+      ],
       "id": 39,
-      "description": "Needs Description",
-      "WebLogoURL": "",
+      "description": "The West Virginia Bureau for Behavioral Health oversees a statewide system of mental health, substance use, and developmental disability services, focusing on access, quality care, and recovery. It works with community partners to provide prevention, treatment, and crisis support across West Virginia (",
+      "WebLogoURL": null,
       "url": "https://bbh.wv.gov",
-      "title": "Needs Title"
+      "title": "West Virginia Bureau for Behavioral Health"
     },
     {
       "verificationDate": "",
-      "region": [],
-      "category": ["Healthcare"],
+      "region": [
+        "Texas"
+      ],
+      "category": [
+        "Healthcare"
+      ],
       "id": 33,
-      "description": "Needs Description",
-      "WebLogoURL": "",
+      "description": "The Texas Health and Human Services provides a statewide system of mental health and substance use services for individuals of all ages, including prevention, treatment, and recovery support. It works with local providers to improve access to care and deliver community-based services across Texas (",
+      "WebLogoURL": null,
       "url": "http://hhs.texas.gov/services/health/mental-health-substance-abuse",
       "title": "Texas Health and Human Services Commission"
     },
     {
       "verificationDate": "",
-      "region": ["Kentucky"],
-      "category": ["Healthcare"],
+      "region": [
+        "Kentucky"
+      ],
+      "category": [
+        "Healthcare"
+      ],
       "id": 19,
-      "description": "The Kentucky Cabinet for Health and Family Services (CHFS) website outlines a state agency responsible for administering a wide range of health and human services programs aimed at improving the well-being of Kentucky residents. The agency oversees key areas such as Medicaid, public health, behavioral health, child welfare, and family support services, working through multiple departments and community partnerships to deliver care and assistance. CHFS provides access to essential services including healthcare coverage, crisis support, and public assistance programs, while also emphasizing prevention, recovery, and community well-being. Overall, the website reflects a comprehensive, statewide system designed to support vulnerable populations, promote health outcomes, and ensure access to necessary services across Kentucky",
-      "WebLogoURL": "",
+      "description": "The Kentucky Cabinet for Health and Family Services administers statewide health and human services, including Medicaid, public health, and behavioral health programs. It provides accessible, community-based support focused on prevention, recovery, and improving outcomes for vulnerable populations.",
+      "WebLogoURL": null,
       "url": "https://www.chfs.ky.gov",
       "title": "Kentucky Cabinet for Health and Family Services "
     },
     {
       "verificationDate": "",
       "region": [],
-      "category": ["Job Platform"],
+      "category": [
+        "Job Platform"
+      ],
       "id": 43,
-      "description": "Needs Description",
-      "WebLogoURL": "",
+      "description": "The HireFelons.org is an online resource that helps individuals with felony convictions find employment opportunities and rebuild financial stability. It provides job listings, employer guides, and practical resources to support successful reentry and career development ",
+      "WebLogoURL": null,
       "url": "https://www.hirefelons.org",
-      "title": "Needs Title"
+      "title": "HireFelons"
     },
     {
       "verificationDate": "",
-      "region": ["Utah"],
-      "category": ["Healthcare"],
+      "region": [
+        "Utah"
+      ],
+      "category": [
+        "Healthcare"
+      ],
       "id": 34,
-      "description": "Needs Description",
-      "WebLogoURL": "",
+      "description": "The Office of Substance Use and Mental Health oversees Utah’s publicly funded system of mental health and substance use services, focusing on prevention, treatment, and recovery. It works to improve access to quality care and supports a coordinated, statewide network of services for individuals and families (",
+      "WebLogoURL": null,
       "url": "https://sumh.utah.gov",
       "title": "Utah Department of Health and Human Services, Office of Substance Use and Mental Health"
     },
     {
       "verificationDate": "",
-      "region": [],
-      "category": ["Healthcare"],
+      "region": [
+        "South Dakota"
+      ],
+      "category": [
+        "Healthcare"
+      ],
       "id": 31,
-      "description": "Needs Description",
-      "WebLogoURL": "",
+      "description": "The South Dakota Department of Social Services Division of Behavioral Health provides a statewide system of mental health and substance use services, focusing on prevention, treatment, recovery, and crisis support. It works with community providers to ensure access to care and improve overall well-being across South Dakota. (",
+      "WebLogoURL": null,
       "url": "https://dss.sd.gov/behavioralhealth/",
       "title": "South Dakota Department of Social Services"
     },
     {
       "verificationDate": "",
-      "region": [],
-      "category": ["Housing/Shelter"],
+      "region": [
+        "Oklahoma"
+      ],
+      "category": [
+        "Housing/Shelter"
+      ],
       "id": 73,
-      "description": "Needs Description",
-      "WebLogoURL": "",
+      "description": "Shelters, day centers, and transitional housing options across Oklahoma that may work with people on probation, parole, or with a record. Always call ahead and confirm: ID rules, curfews, offense restrictions, and whether they can verify residency to your officer.",
+      "WebLogoURL": "https://prod-files-secure.s3.us-west-2.amazonaws.com/8bd433af-561d-8126-ad47-0003f4b36e60/0dbf2f2d-c208-48a7-94e2-e9c08d688b66/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466YNUOYBNS%2F20260428%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260428T033800Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAsaCXVzLXdlc3QtMiJHMEUCICTSSNb5BSsPo2sRh18tnJjoi9z1vlaPMQCM5zccOpptAiEA4WBvuMsHt59OW9U2rfaxyyuGesuSWhQ07WtVI3VJgbEqiAQI1P%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2Mzc0MjMxODM4MDUiDKBKrcBXSrVBe%2BafPyrcA6k6cUXnVH9ySFoTDALoGCJTVjJydGBfwg6cnituEsRqTsvzJd%2BldEOuC5vjagBRbr3N7ybiK2kgEd2%2BpMvctlWPo56eZOmK4QGOD5Nv%2BTfZeLf5hDRCnophnuxEYIEtzcSaD6CfDvegx5ia%2Bz65RcBhzsKYImt92nXkBJYRUD2G8Vv3%2BFhPi4KROMq7oNIweCtm0xqT90T9XQq7GAlfCfuCeYXuoqf21GavAzvhf0Dts7YPq%2Bq6SPrs5KfGP1%2BzlNhxh%2B2wgWpHxbk7tzC0XgB2cSKlRmFQcrXu%2BHafKshZ2WMNBbAlNBlhAq9XfpcUBX6w1WMdY1HXtRVopB4YgpxIwIw8m72EQM7RYlAw9drYUR6xGhPlGO2rflOI5RljVCDj19HI%2FrDYCBTozcvEoD11Xo6tcn%2FXWYzlTAxwIseGtDjqgIzV7j%2F3hP7V5YkQtnjj0mTSuemkK99OdCsB5js7sOnF%2FE%2Bo1TqOoMvTiUq8ma%2Bqr71V%2BAn%2F5yaf9ZKfTj%2B%2FJ7lLlPNtxk7w9EGHW8XnMK%2Fyh8hThDR4VOcuen12ddNi%2B0jDlUNDJdWnoUJI6WCXhqQAlvRLoRVpDO9%2B5njPtMehFtO1vsVyLWJ65T%2FyzzL%2BVQhHc3rWueMhMJbIwM8GOqUBjyf8YwNs4jBIc4BrdzjQnvypoWDSf%2B578ivw4ZpGoRoDQYOvhJR%2FOJdOmBQnDqG%2BcoBFPGcxw%2BPrMbPRvwOcQmWycMkCDoWZ1Z5zt5MtJGsSdNBJjwzzHHErmGlygDkuhZXZKB3ooioIF1k5IBRtv6%2Bp6KIsiBm3IHQ474g9iAMOOrVQpDFbV0yaAZQC9HzhIzHLVBo1fRsRzcrX6R24pFtuxX4N&X-Amz-Signature=a0fbc96a8039e97ab22ca3ce1f124305acc7825a3ec66576df69393e1f2eb174&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
       "url": "https://www.oacra.com/find-services/oklahoma-housing",
       "title": "Oklahoma Reentry-Friendly Housing & Shelter"
     },
     {
       "verificationDate": "",
-      "region": [],
-      "category": ["Housing/Shelter"],
+      "region": [
+        "Oklahoma"
+      ],
+      "category": [
+        "Housing/Shelter"
+      ],
       "id": 71,
-      "description": "Needs Description",
-      "WebLogoURL": "",
+      "description": " nationwide database of available HUD Housing Listings and HUD Resources.",
+      "WebLogoURL": "https://prod-files-secure.s3.us-west-2.amazonaws.com/8bd433af-561d-8126-ad47-0003f4b36e60/91053a67-9820-4db7-a8a8-00489e3e026a/Screenshot_25-4-2026_12950_hudhousingnetwork.com.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466YNUOYBNS%2F20260428%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260428T033800Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAsaCXVzLXdlc3QtMiJHMEUCICTSSNb5BSsPo2sRh18tnJjoi9z1vlaPMQCM5zccOpptAiEA4WBvuMsHt59OW9U2rfaxyyuGesuSWhQ07WtVI3VJgbEqiAQI1P%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2Mzc0MjMxODM4MDUiDKBKrcBXSrVBe%2BafPyrcA6k6cUXnVH9ySFoTDALoGCJTVjJydGBfwg6cnituEsRqTsvzJd%2BldEOuC5vjagBRbr3N7ybiK2kgEd2%2BpMvctlWPo56eZOmK4QGOD5Nv%2BTfZeLf5hDRCnophnuxEYIEtzcSaD6CfDvegx5ia%2Bz65RcBhzsKYImt92nXkBJYRUD2G8Vv3%2BFhPi4KROMq7oNIweCtm0xqT90T9XQq7GAlfCfuCeYXuoqf21GavAzvhf0Dts7YPq%2Bq6SPrs5KfGP1%2BzlNhxh%2B2wgWpHxbk7tzC0XgB2cSKlRmFQcrXu%2BHafKshZ2WMNBbAlNBlhAq9XfpcUBX6w1WMdY1HXtRVopB4YgpxIwIw8m72EQM7RYlAw9drYUR6xGhPlGO2rflOI5RljVCDj19HI%2FrDYCBTozcvEoD11Xo6tcn%2FXWYzlTAxwIseGtDjqgIzV7j%2F3hP7V5YkQtnjj0mTSuemkK99OdCsB5js7sOnF%2FE%2Bo1TqOoMvTiUq8ma%2Bqr71V%2BAn%2F5yaf9ZKfTj%2B%2FJ7lLlPNtxk7w9EGHW8XnMK%2Fyh8hThDR4VOcuen12ddNi%2B0jDlUNDJdWnoUJI6WCXhqQAlvRLoRVpDO9%2B5njPtMehFtO1vsVyLWJ65T%2FyzzL%2BVQhHc3rWueMhMJbIwM8GOqUBjyf8YwNs4jBIc4BrdzjQnvypoWDSf%2B578ivw4ZpGoRoDQYOvhJR%2FOJdOmBQnDqG%2BcoBFPGcxw%2BPrMbPRvwOcQmWycMkCDoWZ1Z5zt5MtJGsSdNBJjwzzHHErmGlygDkuhZXZKB3ooioIF1k5IBRtv6%2Bp6KIsiBm3IHQ474g9iAMOOrVQpDFbV0yaAZQC9HzhIzHLVBo1fRsRzcrX6R24pFtuxX4N&X-Amz-Signature=6beffe610c8bb24eb999c69d14203602eb70e7a7b864f0625adc2f4d0fe21e08&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
       "url": "https://hudhousingnetwork.com/",
       "title": "HUD housing Network Resources"
     },
     {
       "verificationDate": "",
-      "region": ["Hawaii"],
-      "category": ["Healthcare"],
+      "region": [
+        "Hawaii"
+      ],
+      "category": [
+        "Healthcare"
+      ],
       "id": 12,
-      "description": "The Alcohol & Drug Abuse Division is the primary and often sole source of public funds for substance abuse treatment. ADAD’s treatment efforts are designed to promote a statewide, culturally appropriate, comprehensive system of services to meet the treatment and recovery needs of individuals and families. As a requirement, treatment services prioritize admission for pregnant women and injection drug users.",
-      "WebLogoURL": "",
+      "description": "The Alcohol & Drug Abuse Division is a primary source of public funding for substance use treatment, supporting a statewide, culturally appropriate system of care. Its services prioritize high-need populations, including pregnant women and individuals who use injection drugs.",
+      "WebLogoURL": null,
       "url": "http://health.hawaii.gov/substance-abuse",
       "title": "Hawaii Department of Health\nAlcohol and Drug Abuse Division"
     },
     {
       "verificationDate": "",
       "region": [],
-      "category": ["Housing/Shelter"],
+      "category": [
+        "Housing/Shelter"
+      ],
       "id": 51,
-      "description": "Needs Description",
-      "WebLogoURL": "",
+      "description": "The HUD Exchange is an online resource that provides tools, training, and guidance for organizations delivering housing and community development programs. It supports partners with information and technical assistance to improve access to housing, homelessness services, and community-based initiatives. ",
+      "WebLogoURL": null,
       "url": "https://www.hudexchange.info",
-      "title": "Needs Title"
+      "title": "Hudexchange"
     },
     {
       "verificationDate": "",
-      "region": ["New Jersey"],
-      "category": ["Job Platform"],
+      "region": [
+        "New Jersey"
+      ],
+      "category": [
+        "Job Platform",
+        "Substance Abuse",
+        "Healthcare",
+        "Legal Aid"
+      ],
       "id": 49,
-      "description": "NJRC offers comprehensive wraparound services, including addiction treatment and medication-assisted treatment MAT; medical, dental, and psychiatric healthcare; federal, state, and county social services; case management; employment assistance and job training; legal services bail and court fine dismissal, birth certificate, drivers license, and social security card restoration, expungements; and veteran-specific support, discharge upgrades, HUD-VASH housing, and VA services.",
-      "WebLogoURL": "",
+      "description": "The New Jersey Reentry Corporation provides comprehensive wraparound services, including addiction treatment, healthcare, case management, and employment support. It also offers legal assistance and veteran-specific services to support successful reentry and long-term stability.\n",
+      "WebLogoURL": null,
       "url": "https://njreentry.org",
       "title": "The New Jersey Reentry Corporation"
     },
     {
       "verificationDate": "",
       "region": [],
-      "category": ["Job Platform"],
+      "category": [
+        "Job Platform"
+      ],
       "id": 42,
-      "description": "Needs Description",
-      "WebLogoURL": "",
+      "description": "The CareerOneStop is a comprehensive online resource sponsored by the U.S. Department of Labor that provides career exploration, training, and job search tools for individuals and employers. It offers accessible information and services to support career planning, employment, and workforce development across the United States ",
+      "WebLogoURL": null,
       "url": "https://www.careeronestop.org",
-      "title": "Needs Title"
+      "title": "CareerOneStop"
     },
     {
       "verificationDate": "",
-      "region": [],
-      "category": ["Food Assistance"],
+      "region": [
+        "New Jersey"
+      ],
+      "category": [
+        "Food Assistance"
+      ],
       "id": 57,
-      "description": "Needs Description",
-      "WebLogoURL": "",
+      "description": "The RWJBarnabas Health is New Jersey’s largest integrated healthcare system, providing comprehensive medical, behavioral health, and community-based services to millions of patients each year. It combines clinical care, research, and education to improve health outcomes and expand access to high-quality care across the state ",
+      "WebLogoURL": null,
       "url": "https://www.rwjbh.org",
-      "title": "Needs Title"
+      "title": "RWJBarnabas Health"
     },
     {
       "verificationDate": "",
-      "region": [],
-      "category": ["Crisis Hotline"],
+      "region": [
+        "Hotline"
+      ],
+      "category": [
+        "Crisis Hotline"
+      ],
       "id": 68,
-      "description": "Needs Description",
-      "WebLogoURL": "",
+      "description": " skilled, judgment-free counselors are here to provide compassionate support. You deserve to feel heard and cared about anytime, anywhere, 24/7/365.",
+      "WebLogoURL": "https://prod-files-secure.s3.us-west-2.amazonaws.com/8bd433af-561d-8126-ad47-0003f4b36e60/1349de93-aab6-4b5a-90e5-f1f806587a67/Screenshot_24-4-2026_202153_988lifeline.org.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466YNUOYBNS%2F20260428%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260428T033800Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAsaCXVzLXdlc3QtMiJHMEUCICTSSNb5BSsPo2sRh18tnJjoi9z1vlaPMQCM5zccOpptAiEA4WBvuMsHt59OW9U2rfaxyyuGesuSWhQ07WtVI3VJgbEqiAQI1P%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2Mzc0MjMxODM4MDUiDKBKrcBXSrVBe%2BafPyrcA6k6cUXnVH9ySFoTDALoGCJTVjJydGBfwg6cnituEsRqTsvzJd%2BldEOuC5vjagBRbr3N7ybiK2kgEd2%2BpMvctlWPo56eZOmK4QGOD5Nv%2BTfZeLf5hDRCnophnuxEYIEtzcSaD6CfDvegx5ia%2Bz65RcBhzsKYImt92nXkBJYRUD2G8Vv3%2BFhPi4KROMq7oNIweCtm0xqT90T9XQq7GAlfCfuCeYXuoqf21GavAzvhf0Dts7YPq%2Bq6SPrs5KfGP1%2BzlNhxh%2B2wgWpHxbk7tzC0XgB2cSKlRmFQcrXu%2BHafKshZ2WMNBbAlNBlhAq9XfpcUBX6w1WMdY1HXtRVopB4YgpxIwIw8m72EQM7RYlAw9drYUR6xGhPlGO2rflOI5RljVCDj19HI%2FrDYCBTozcvEoD11Xo6tcn%2FXWYzlTAxwIseGtDjqgIzV7j%2F3hP7V5YkQtnjj0mTSuemkK99OdCsB5js7sOnF%2FE%2Bo1TqOoMvTiUq8ma%2Bqr71V%2BAn%2F5yaf9ZKfTj%2B%2FJ7lLlPNtxk7w9EGHW8XnMK%2Fyh8hThDR4VOcuen12ddNi%2B0jDlUNDJdWnoUJI6WCXhqQAlvRLoRVpDO9%2B5njPtMehFtO1vsVyLWJ65T%2FyzzL%2BVQhHc3rWueMhMJbIwM8GOqUBjyf8YwNs4jBIc4BrdzjQnvypoWDSf%2B578ivw4ZpGoRoDQYOvhJR%2FOJdOmBQnDqG%2BcoBFPGcxw%2BPrMbPRvwOcQmWycMkCDoWZ1Z5zt5MtJGsSdNBJjwzzHHErmGlygDkuhZXZKB3ooioIF1k5IBRtv6%2Bp6KIsiBm3IHQ474g9iAMOOrVQpDFbV0yaAZQC9HzhIzHLVBo1fRsRzcrX6R24pFtuxX4N&X-Amz-Signature=cbfc4dbe54b8b04f888a30b554d0a3565f885431446e62033584138c39e8498b&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
       "url": "https://suicidepreventionlifeline.org",
-      "title": "Needs Title"
+      "title": "988 Lifeline"
     },
     {
       "verificationDate": "",
-      "region": ["Rhode Island"],
-      "category": ["Healthcare"],
+      "region": [
+        "Rhode Island"
+      ],
+      "category": [
+        "Healthcare"
+      ],
       "id": 28,
-      "description": "Needs Description",
-      "WebLogoURL": "",
+      "description": "The Rhode Island Department of Behavioral Healthcare, Developmental Disabilities and Hospitals oversees a statewide system of care for individuals with mental health, substance use, and developmental disabilities. It ensures access to high-quality, person-centered services through community programs and state-operated facilities (",
+      "WebLogoURL": null,
       "url": "http://www.bhddh.ri.gov",
       "title": "Rhode Island Department of Behavioral Healthcare, Developmental Disabilities & Hospitals"
     },
     {
       "verificationDate": "",
       "region": [],
-      "category": ["Food Assistance"],
+      "category": [
+        "Food Assistance"
+      ],
       "id": 54,
-      "description": "Needs Description",
-      "WebLogoURL": "",
+      "description": "The FoodFinder is a nationwide nonprofit platform that helps individuals locate nearby food pantries and free meal programs using an interactive map. It connects users to local food resources by providing locations, hours, and contact information for assistance across the United States ",
+      "WebLogoURL": null,
       "url": "https://www.foodfinder.us",
-      "title": "Needs Title"
+      "title": "Foodfinder"
     },
     {
       "verificationDate": "",
-      "region": ["Delaware"],
-      "category": ["Healthcare"],
+      "region": [
+        "Delaware"
+      ],
+      "category": [
+        "Healthcare"
+      ],
       "id": 9,
       "description": "Welcome to the Division of Substance Abuse and Mental Health Providers Resources Home.  Each area in the grid below includes selected resources and required information by topic for prospective or current DSAMH affiliated Behavioral Health service providers.  Each area has an introduction describing the resources available at the top of each section.  We strongly recommend prospective and current DSAMH affiliated providers peruse each section’s introductory description for an overall orientation to these resources.",
-      "WebLogoURL": "",
+      "WebLogoURL": null,
       "url": "https://www.dhss.delaware.gov/dsamh/index",
       "title": "Division of Substance Abuse and Mental Health"
     },
     {
       "verificationDate": "",
-      "region": ["Arizona"],
-      "category": ["Healthcare"],
+      "region": [
+        "Arizona"
+      ],
+      "category": [
+        "Healthcare"
+      ],
       "id": 4,
       "description": "Arizona Health Care Cost Containment System is Arizona's Medicaid agency that offers health care programs to serve Arizona residents. Individuals must meet certain income and other requirements to obtain services.",
-      "WebLogoURL": "",
+      "WebLogoURL": null,
       "url": "https://www.azahcccs.gov",
       "title": "Arizona Health Care Cost Containment System"
     },
     {
       "verificationDate": "",
-      "region": [],
-      "category": ["Housing/Shelter"],
+      "region": [
+        "Oklahoma"
+      ],
+      "category": [
+        "Housing/Shelter"
+      ],
       "id": 72,
-      "description": "Needs Description",
-      "WebLogoURL": "",
+      "description": "Democratically run, self-supporting and drug free home-publicly supported, non-profit is the umbrella organization which provides the network connecting all Oxford Houses and allocates resources to duplicate the Oxford House concept where needs arise.",
+      "WebLogoURL": "https://prod-files-secure.s3.us-west-2.amazonaws.com/8bd433af-561d-8126-ad47-0003f4b36e60/a4ba0df1-a132-4efc-937f-d9b9b6ffa1c2/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466YNUOYBNS%2F20260428%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260428T033800Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAsaCXVzLXdlc3QtMiJHMEUCICTSSNb5BSsPo2sRh18tnJjoi9z1vlaPMQCM5zccOpptAiEA4WBvuMsHt59OW9U2rfaxyyuGesuSWhQ07WtVI3VJgbEqiAQI1P%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2Mzc0MjMxODM4MDUiDKBKrcBXSrVBe%2BafPyrcA6k6cUXnVH9ySFoTDALoGCJTVjJydGBfwg6cnituEsRqTsvzJd%2BldEOuC5vjagBRbr3N7ybiK2kgEd2%2BpMvctlWPo56eZOmK4QGOD5Nv%2BTfZeLf5hDRCnophnuxEYIEtzcSaD6CfDvegx5ia%2Bz65RcBhzsKYImt92nXkBJYRUD2G8Vv3%2BFhPi4KROMq7oNIweCtm0xqT90T9XQq7GAlfCfuCeYXuoqf21GavAzvhf0Dts7YPq%2Bq6SPrs5KfGP1%2BzlNhxh%2B2wgWpHxbk7tzC0XgB2cSKlRmFQcrXu%2BHafKshZ2WMNBbAlNBlhAq9XfpcUBX6w1WMdY1HXtRVopB4YgpxIwIw8m72EQM7RYlAw9drYUR6xGhPlGO2rflOI5RljVCDj19HI%2FrDYCBTozcvEoD11Xo6tcn%2FXWYzlTAxwIseGtDjqgIzV7j%2F3hP7V5YkQtnjj0mTSuemkK99OdCsB5js7sOnF%2FE%2Bo1TqOoMvTiUq8ma%2Bqr71V%2BAn%2F5yaf9ZKfTj%2B%2FJ7lLlPNtxk7w9EGHW8XnMK%2Fyh8hThDR4VOcuen12ddNi%2B0jDlUNDJdWnoUJI6WCXhqQAlvRLoRVpDO9%2B5njPtMehFtO1vsVyLWJ65T%2FyzzL%2BVQhHc3rWueMhMJbIwM8GOqUBjyf8YwNs4jBIc4BrdzjQnvypoWDSf%2B578ivw4ZpGoRoDQYOvhJR%2FOJdOmBQnDqG%2BcoBFPGcxw%2BPrMbPRvwOcQmWycMkCDoWZ1Z5zt5MtJGsSdNBJjwzzHHErmGlygDkuhZXZKB3ooioIF1k5IBRtv6%2Bp6KIsiBm3IHQ474g9iAMOOrVQpDFbV0yaAZQC9HzhIzHLVBo1fRsRzcrX6R24pFtuxX4N&X-Amz-Signature=07f5d164804432a2f454fe8bb0b34ae15ec647adc50acf23b0995b8bb80353f5&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
       "url": "https://www.oxfordhouseok.org/reentry",
       "title": "Oklahoma Oxford House"
     },
     {
       "verificationDate": "",
-      "region": ["Connecticut"],
-      "category": ["Healthcare"],
+      "region": [
+        "Connecticut"
+      ],
+      "category": [
+        "Healthcare"
+      ],
       "id": 8,
       "description": "The Connecticut Department of Mental Health and Addiction Services is a health care agency whose mission is to promote the overall health and wellness of persons with behavioral health needs through an integrated network of holistic, comprehensive, effective, and efficient services and supports that foster dignity, respect, and self-sufficiency in those we serve.",
-      "WebLogoURL": "",
+      "WebLogoURL": null,
       "url": "https://portal.ct.gov/dmhas",
       "title": "Connecticut Department of Mental Health and Addiction Services"
     },
     {
       "verificationDate": "",
       "region": [],
-      "category": ["Food Assistance"],
+      "category": [
+        "Food Assistance"
+      ],
       "id": 55,
       "description": "Needs Description",
-      "WebLogoURL": "",
+      "WebLogoURL": null,
       "url": "https://middlesexsocialservices.com",
       "title": "Needs Title"
     },
     {
       "verificationDate": "",
-      "region": [],
-      "category": ["Healthcare"],
+      "region": [
+        "Tennessee"
+      ],
+      "category": [
+        "Healthcare"
+      ],
       "id": 32,
-      "description": "Needs Description",
-      "WebLogoURL": "",
+      "description": "The Tennessee Department of Mental Health and Substance Abuse Services provides statewide leadership for mental health and substance use services, offering prevention, treatment, and recovery support. It works to improve access to care and support individuals through community-based programs and crisis services across Tennessee (",
+      "WebLogoURL": null,
       "url": "https://www.tn.gov/behavioral-health/",
       "title": "Tennessee Department of Mental Health and Substance Abuse Services"
     },
     {
       "verificationDate": "",
-      "region": ["North Dakota"],
-      "category": ["Healthcare"],
+      "region": [
+        "North Dakota"
+      ],
+      "category": [
+        "Healthcare"
+      ],
       "id": 22,
-      "description": "Needs Description",
-      "WebLogoURL": "",
+      "description": "The North Dakota Health and Human Services Behavioral Health Division leads and oversees a statewide system of care for mental health and substance use services, focusing on prevention, treatment, and recovery. It works with community partners to improve access, ensure quality care, and support individuals and families across North Dakota. (",
+      "WebLogoURL": null,
       "url": "https://www.behavioralhealth.nd.gov/",
       "title": "North Dakota Department of Health and Human Services"
     },
     {
       "verificationDate": "",
-      "region": ["California"],
-      "category": ["Healthcare"],
+      "region": [
+        "California"
+      ],
+      "category": [
+        "Healthcare"
+      ],
       "id": 6,
       "description": "Find out about the different programs and services offered through DHCS for individuals and stakeholders.  Find out how a physician can enroll you in Medi-Cal, how to receive free health screenings, and family planning services. Get help for children in foster care, children with special medical conditions and seniors needing personal care.",
-      "WebLogoURL": "",
+      "WebLogoURL": null,
       "url": "https://www.dhcs.ca.gov/services",
       "title": "California Department of Health Care Services"
     },
     {
       "verificationDate": "",
       "region": [],
-      "category": ["Job Platform"],
+      "category": [
+        "Job Platform"
+      ],
       "id": 47,
-      "description": "Needs Description",
-      "WebLogoURL": "",
+      "description": "The ZipRecruiter is an online employment platform that connects job seekers with employers through job listings and AI-powered matching tools. It helps users search for jobs, apply easily, and supports employers in finding qualified candidates across a wide network of job boards ",
+      "WebLogoURL": null,
       "url": "https://www.ziprecruiter.com",
-      "title": "Needs Title"
+      "title": "Ziprecruiter"
     },
     {
       "verificationDate": "",
-      "region": ["Ohio"],
-      "category": ["Healthcare"],
+      "region": [
+        "Ohio"
+      ],
+      "category": [
+        "Healthcare"
+      ],
       "id": 23,
-      "description": "Needs Description",
-      "WebLogoURL": "",
+      "description": "The Ohio Department of Behavioral Health provides statewide leadership for mental health and addiction services, focusing on prevention, treatment, and recovery. It works to improve access to quality care and support the well-being of individuals and communities across Ohio.\n",
+      "WebLogoURL": null,
       "url": "http://mha.ohio.gov",
       "title": "Ohio Department of Behavioral Health"
     },
     {
       "verificationDate": "",
-      "region": ["Alabama"],
-      "category": ["Healthcare"],
+      "region": [
+        "Alabama"
+      ],
+      "category": [
+        "Healthcare"
+      ],
       "id": 2,
       "description": "The Alabama Department of Mental Health serves more than 200,000 Alabama citizens with mental illnesses, developmental disabilities, and substance use disorders. Our mission is to Serve, Empower, and Support, and promote the health and well-being of Alabamians.",
-      "WebLogoURL": "",
+      "WebLogoURL": null,
       "url": "https://www.mh.alabama.gov",
       "title": "Alabama Department of Mental Health"
     },
     {
       "verificationDate": "",
-      "region": ["Alaska"],
-      "category": ["Healthcare"],
+      "region": [
+        "Alaska"
+      ],
+      "category": [
+        "Healthcare"
+      ],
       "id": 3,
       "description": "The Division of Behavioral Health has a commitment to improve the quality of life of Alaskans through the right service to the right person at the right time. The central purpose of the division is to promote an integrated and comprehensive behavioral health system based on sound policy, effective practices, and partnerships.",
-      "WebLogoURL": "",
+      "WebLogoURL": null,
       "url": "https://dhss.alaska.gov/dbh",
       "title": "Alaska Department of Health"
     },
     {
       "verificationDate": "",
-      "region": ["Kansas"],
-      "category": ["Healthcare"],
+      "region": [
+        "Kansas"
+      ],
+      "category": [
+        "Healthcare"
+      ],
       "id": 18,
-      "description": "The Behavioral Health Services Commission is the state mental health authority and is responsible for managing mental health funding in Kansas. In addition, it facilitates addiction and prevention services and programs for the State of Kansas, including targeted workforce development initiatives. In addition, the commission works in close collaboration with the Governor’s Behavioral Health Services Planning Council.\n\nOur work is supported by the Substance Abuse and Mental Health Services Administration, and KDADS. KDADS is responsible, by statute, and holds the authority and responsibility to coordinate and provide substance abuse and mental health services in Kansas. We promote effective public policy and develop and evaluate programs and resources for behavioral health prevention, treatment, and recovery services.",
-      "WebLogoURL": "",
+      "description": "The Behavioral Health Services Commission serves as Kansas’s mental health authority, managing funding and supporting addiction, prevention, and workforce development programs. It collaborates with the Governor’s Behavioral Health Services Planning Council to strengthen statewide behavioral health services.",
+      "WebLogoURL": null,
       "url": "https://www.kdads.ks.gov/services-programs/behavioral-health",
-      "title": "Kansas Department for Aging and Disability Services"
+      "title": "Kansas Behavioral Health "
     },
     {
       "verificationDate": "",
-      "region": [],
-      "category": ["Healthcare"],
+      "region": [
+        "Virginia"
+      ],
+      "category": [
+        "Healthcare"
+      ],
       "id": 37,
-      "description": "Needs Description",
-      "WebLogoURL": "",
+      "description": "The Virginia Department of Behavioral Health and Developmental Services oversees a statewide system of mental health, substance use, and developmental disability services, coordinating care through community providers and state facilities. It focuses on prevention, treatment, recovery, and promoting wellness across Virginia",
+      "WebLogoURL": null,
       "url": "http://www.dbhds.virginia.gov",
-      "title": "Needs Title"
+      "title": "Virginia Department of Behavioral Health and Developmental Services"
     },
     {
       "verificationDate": "",
-      "region": ["Arkansas"],
-      "category": ["Healthcare"],
+      "region": [
+        "Arkansas"
+      ],
+      "category": [
+        "Healthcare"
+      ],
       "id": 5,
       "description": "Together we improve the quality of life of all Arkansans by protecting the vulnerable, fostering independence, and promoting better health.",
-      "WebLogoURL": "",
+      "WebLogoURL": null,
       "url": "https://humanservices.arkansas.gov",
       "title": "Arkansas Department of Human Services"
     },
     {
       "verificationDate": "",
-      "region": [],
-      "category": ["Second Chance"],
+      "region": [
+        "New Jersey"
+      ],
+      "category": [
+        "Second Chance"
+      ],
       "id": 65,
-      "description": "Needs Description",
-      "WebLogoURL": "",
+      "description": "in collaboration with New Jersey Reentry Corporation (NJRC) and Education and Health Centers of America (EHCA), a \"continuum of care\" that begins during incarceration and follows veterans directly into the community.",
+      "WebLogoURL": "https://prod-files-secure.s3.us-west-2.amazonaws.com/8bd433af-561d-8126-ad47-0003f4b36e60/b33e554a-1a0f-4596-9cfa-442fbfba3cbf/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466YNUOYBNS%2F20260428%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260428T033800Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAsaCXVzLXdlc3QtMiJHMEUCICTSSNb5BSsPo2sRh18tnJjoi9z1vlaPMQCM5zccOpptAiEA4WBvuMsHt59OW9U2rfaxyyuGesuSWhQ07WtVI3VJgbEqiAQI1P%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2Mzc0MjMxODM4MDUiDKBKrcBXSrVBe%2BafPyrcA6k6cUXnVH9ySFoTDALoGCJTVjJydGBfwg6cnituEsRqTsvzJd%2BldEOuC5vjagBRbr3N7ybiK2kgEd2%2BpMvctlWPo56eZOmK4QGOD5Nv%2BTfZeLf5hDRCnophnuxEYIEtzcSaD6CfDvegx5ia%2Bz65RcBhzsKYImt92nXkBJYRUD2G8Vv3%2BFhPi4KROMq7oNIweCtm0xqT90T9XQq7GAlfCfuCeYXuoqf21GavAzvhf0Dts7YPq%2Bq6SPrs5KfGP1%2BzlNhxh%2B2wgWpHxbk7tzC0XgB2cSKlRmFQcrXu%2BHafKshZ2WMNBbAlNBlhAq9XfpcUBX6w1WMdY1HXtRVopB4YgpxIwIw8m72EQM7RYlAw9drYUR6xGhPlGO2rflOI5RljVCDj19HI%2FrDYCBTozcvEoD11Xo6tcn%2FXWYzlTAxwIseGtDjqgIzV7j%2F3hP7V5YkQtnjj0mTSuemkK99OdCsB5js7sOnF%2FE%2Bo1TqOoMvTiUq8ma%2Bqr71V%2BAn%2F5yaf9ZKfTj%2B%2FJ7lLlPNtxk7w9EGHW8XnMK%2Fyh8hThDR4VOcuen12ddNi%2B0jDlUNDJdWnoUJI6WCXhqQAlvRLoRVpDO9%2B5njPtMehFtO1vsVyLWJ65T%2FyzzL%2BVQhHc3rWueMhMJbIwM8GOqUBjyf8YwNs4jBIc4BrdzjQnvypoWDSf%2B578ivw4ZpGoRoDQYOvhJR%2FOJdOmBQnDqG%2BcoBFPGcxw%2BPrMbPRvwOcQmWycMkCDoWZ1Z5zt5MtJGsSdNBJjwzzHHErmGlygDkuhZXZKB3ooioIF1k5IBRtv6%2Bp6KIsiBm3IHQ474g9iAMOOrVQpDFbV0yaAZQC9HzhIzHLVBo1fRsRzcrX6R24pFtuxX4N&X-Amz-Signature=6ef68fbc80854642a47aa2959df8a02c4c729440a45c81c625c378fb3875cbe5&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
       "url": "https://www.nj.gov/corrections",
-      "title": "Needs Title"
+      "title": "New Jersey Corrections "
     },
     {
       "verificationDate": "",
-      "region": ["Oklahoma"],
-      "category": ["Domestic Violence", "Housing/Shelter"],
-      "id": 77,
+      "region": [
+        "Oklahoma"
+      ],
+      "category": [
+        "Domestic Violence",
+        "Housing/Shelter"
+      ],
+      "id": 76,
       "description": "Domestic Violence, / safety resource hub; ask about emergency shelter pathways and eligibility.",
-      "WebLogoURL": "",
+      "WebLogoURL": "https://prod-files-secure.s3.us-west-2.amazonaws.com/8bd433af-561d-8126-ad47-0003f4b36e60/f9ae21fd-0cb9-4620-8455-5b4a123e298a/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466YNUOYBNS%2F20260428%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260428T033800Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAsaCXVzLXdlc3QtMiJHMEUCICTSSNb5BSsPo2sRh18tnJjoi9z1vlaPMQCM5zccOpptAiEA4WBvuMsHt59OW9U2rfaxyyuGesuSWhQ07WtVI3VJgbEqiAQI1P%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2Mzc0MjMxODM4MDUiDKBKrcBXSrVBe%2BafPyrcA6k6cUXnVH9ySFoTDALoGCJTVjJydGBfwg6cnituEsRqTsvzJd%2BldEOuC5vjagBRbr3N7ybiK2kgEd2%2BpMvctlWPo56eZOmK4QGOD5Nv%2BTfZeLf5hDRCnophnuxEYIEtzcSaD6CfDvegx5ia%2Bz65RcBhzsKYImt92nXkBJYRUD2G8Vv3%2BFhPi4KROMq7oNIweCtm0xqT90T9XQq7GAlfCfuCeYXuoqf21GavAzvhf0Dts7YPq%2Bq6SPrs5KfGP1%2BzlNhxh%2B2wgWpHxbk7tzC0XgB2cSKlRmFQcrXu%2BHafKshZ2WMNBbAlNBlhAq9XfpcUBX6w1WMdY1HXtRVopB4YgpxIwIw8m72EQM7RYlAw9drYUR6xGhPlGO2rflOI5RljVCDj19HI%2FrDYCBTozcvEoD11Xo6tcn%2FXWYzlTAxwIseGtDjqgIzV7j%2F3hP7V5YkQtnjj0mTSuemkK99OdCsB5js7sOnF%2FE%2Bo1TqOoMvTiUq8ma%2Bqr71V%2BAn%2F5yaf9ZKfTj%2B%2FJ7lLlPNtxk7w9EGHW8XnMK%2Fyh8hThDR4VOcuen12ddNi%2B0jDlUNDJdWnoUJI6WCXhqQAlvRLoRVpDO9%2B5njPtMehFtO1vsVyLWJ65T%2FyzzL%2BVQhHc3rWueMhMJbIwM8GOqUBjyf8YwNs4jBIc4BrdzjQnvypoWDSf%2B578ivw4ZpGoRoDQYOvhJR%2FOJdOmBQnDqG%2BcoBFPGcxw%2BPrMbPRvwOcQmWycMkCDoWZ1Z5zt5MtJGsSdNBJjwzzHHErmGlygDkuhZXZKB3ooioIF1k5IBRtv6%2Bp6KIsiBm3IHQ474g9iAMOOrVQpDFbV0yaAZQC9HzhIzHLVBo1fRsRzcrX6R24pFtuxX4N&X-Amz-Signature=e1b71cc6d6f3a69074e675642942223bb89f6fe4f18b3368dbc84c8756fbf55e&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
       "url": "https://heartline.ok.networkofcare.org/211/",
       "title": "Heartline"
     },
     {
       "verificationDate": "",
       "region": [],
-      "category": ["Second Chance"],
+      "category": [
+        "Second Chance"
+      ],
       "id": 60,
-      "description": "Needs Description",
-      "WebLogoURL": "",
+      "description": "The GEO Reentry Connect is a free nationwide platform that connects formerly incarcerated individuals to resources such as housing, employment, education, and treatment services. It supports successful reintegration by providing tools, resource maps, and guidance to reduce barriers and promote long-term stability ",
+      "WebLogoURL": null,
       "url": "https://georeentryconnect.com",
-      "title": "Needs Title"
+      "title": "Georeentry "
     },
     {
       "verificationDate": "",
-      "region": ["Illinois"],
-      "category": ["Healthcare"],
+      "region": [
+        "Illinois"
+      ],
+      "category": [
+        "Healthcare"
+      ],
       "id": 15,
-      "description": "The Illinois Department of Human Services (IDHS) website provides an overview of a state agency responsible for delivering a wide range of social and health services to residents, particularly those experiencing economic hardship, disabilities, or behavioral health needs. The site highlights the department’s role in overseeing multiple divisions, including mental health, substance use prevention and recovery, developmental disabilities, and rehabilitation services. It emphasizes a coordinated, statewide system designed to promote health, safety, and independence through prevention, treatment, and support programs. Additionally, IDHS focuses on expanding access to community-based services, crisis intervention, and recovery-oriented care, ensuring individuals across Illinois can receive comprehensive and culturally responsive support",
-      "WebLogoURL": "",
+      "description": "The Illinois Department of Human Services delivers statewide social and behavioral health services for individuals facing economic hardship, disabilities, and mental health or substance use needs. It oversees divisions such as mental health, substance use recovery, and rehabilitation, emphasizing accessible, community-based and recovery-oriented care.",
+      "WebLogoURL": null,
       "url": "http://www.dhs.state.il.us",
       "title": "Illinois Department of Human Services "
     },
     {
       "verificationDate": "",
-      "region": [],
-      "category": ["Healthcare"],
+      "region": [
+        "Wyoming"
+      ],
+      "category": [
+        "Healthcare",
+        "Substance Abuse",
+        "Second Chance",
+        "Mental Health"
+      ],
       "id": 41,
-      "description": "Needs Description",
-      "WebLogoURL": "",
+      "description": "The Wyoming Department of Health Behavioral Health Division oversees a statewide system of mental health and substance use services, including prevention, treatment, and recovery support. It manages funding and works with providers to ensure access to coordinated care for individuals and families across Wyoming ",
+      "WebLogoURL": null,
       "url": "https://health.wyo.gov/behavioralhealth/mhsa",
-      "title": "Needs Title"
+      "title": "Wyoming Department of Health,"
     },
     {
       "verificationDate": "",
       "region": [],
-      "category": ["Job Platform"],
+      "category": [
+        "Job Platform",
+        "Education",
+        "Second Chance"
+      ],
       "id": 44,
-      "description": "Needs Description",
-      "WebLogoURL": "",
+      "description": "The Goodwill Industries International is a nationwide nonprofit that provides job training, employment placement, and education services for individuals facing barriers to work. It funds these programs through donated goods and retail stores, helping people build skills, find jobs, and achieve long-term self-sufficiency ",
+      "WebLogoURL": null,
       "url": "https://www.goodwill.org",
-      "title": "Needs Title"
+      "title": "GoodWill"
     },
     {
       "verificationDate": "",
-      "region": ["Louisiana"],
-      "category": ["Healthcare"],
+      "region": [
+        "Louisiana"
+      ],
+      "category": [
+        "Healthcare"
+      ],
       "id": 20,
-      "description": "The Louisiana Department of Health’s Office of Behavioral Health (OBH) webpage outlines the state’s system for delivering mental health and substance use services to residents. OBH is responsible for managing and coordinating a comprehensive network of care that includes community-based treatment programs, inpatient psychiatric services, and prevention initiatives aimed at improving overall quality of life. The agency emphasizes recovery, resilience, and accessibility by ensuring services are available to individuals with mental illness and addictive disorders across Louisiana. It works collaboratively with partners to provide culturally competent, integrated care that addresses both behavioral health and broader social support needs. Additionally, the site highlights crisis resources, including the 988 lifeline and other support lines, reinforcing the state’s commitment to timely intervention and ongoing support",
-      "WebLogoURL": "",
+      "description": "The Office of Behavioral Health coordinates a statewide system of mental health and substance use services, including community programs, inpatient care, and prevention efforts. It emphasizes recovery, accessibility, and crisis support, including resources like the 988 Suicide & Crisis Lifeline.",
+      "WebLogoURL": null,
       "url": "https://ldh.la.gov/index.cfm/subhome/10",
       "title": "Louisiana Department of Health’s Office of Behavioral Health "
     },
     {
       "verificationDate": "",
-      "region": ["Hawaii"],
-      "category": ["Healthcare"],
+      "region": [
+        "Hawaii"
+      ],
+      "category": [
+        "Healthcare"
+      ],
       "id": 13,
-      "description": "The Hawaiʻi Department of Health’s Adult Mental Health Division (AMHD) website outlines a statewide system designed to provide comprehensive mental health services for adults experiencing serious mental illness. The division focuses on promoting recovery, independence, and overall well-being through culturally relevant and community-based care. AMHD coordinates a wide range of services, including case management, housing support, outpatient treatment, and inpatient psychiatric care, while working in partnership with community providers and other healthcare systems. The site also highlights crisis intervention resources such as the 988 crisis line, which offers 24/7 support for individuals in mental health emergencies. Overall, the division emphasizes accessibility, recovery-oriented care, and integrated services that support individuals in living independently and improving their quality of life",
-      "WebLogoURL": "",
+      "description": "The Adult Mental Health Division provides a statewide system of care for adults with serious mental illness, emphasizing recovery, independence, and culturally relevant, community-based services. It coordinates supports such as case management, housing, and treatment, while offering 24/7 crisis resources like the 988 Suicide & Crisis Lifeline",
+      "WebLogoURL": null,
       "url": "http://health.hawaii.gov/amhd",
       "title": "Hawaii Department of Health Adult Mental Health Division"
     },
     {
       "verificationDate": "",
-      "region": ["Hotline"],
-      "category": ["Healthcare"],
-      "id": null,
+      "region": [
+        "Hotline"
+      ],
+      "category": [
+        "Healthcare"
+      ],
+      "id": 84,
       "description": "Find treatment facilities in the United States or U.S. Territories for: substance abuse, addiction, mental health problems.",
-      "WebLogoURL": "https://findtreatment.gov/assets/images/favicon.ico",
+      "WebLogoURL": null,
       "url": "https://findtreatment.gov",
       "title": "FindTreatment.gov"
     },
     {
       "verificationDate": "",
-      "region": [],
-      "category": ["Second Chance"],
+      "region": [
+        "Nationwide"
+      ],
+      "category": [
+        "Second Chance"
+      ],
       "id": 62,
-      "description": "Needs Description",
-      "WebLogoURL": "",
+      "description": "the nation’s primary source of information and guidance in reentry.",
+      "WebLogoURL": "https://prod-files-secure.s3.us-west-2.amazonaws.com/8bd433af-561d-8126-ad47-0003f4b36e60/d5f987fc-4889-48f5-ad94-a21a1e9a88a6/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466YNUOYBNS%2F20260428%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260428T033801Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAsaCXVzLXdlc3QtMiJHMEUCICTSSNb5BSsPo2sRh18tnJjoi9z1vlaPMQCM5zccOpptAiEA4WBvuMsHt59OW9U2rfaxyyuGesuSWhQ07WtVI3VJgbEqiAQI1P%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2Mzc0MjMxODM4MDUiDKBKrcBXSrVBe%2BafPyrcA6k6cUXnVH9ySFoTDALoGCJTVjJydGBfwg6cnituEsRqTsvzJd%2BldEOuC5vjagBRbr3N7ybiK2kgEd2%2BpMvctlWPo56eZOmK4QGOD5Nv%2BTfZeLf5hDRCnophnuxEYIEtzcSaD6CfDvegx5ia%2Bz65RcBhzsKYImt92nXkBJYRUD2G8Vv3%2BFhPi4KROMq7oNIweCtm0xqT90T9XQq7GAlfCfuCeYXuoqf21GavAzvhf0Dts7YPq%2Bq6SPrs5KfGP1%2BzlNhxh%2B2wgWpHxbk7tzC0XgB2cSKlRmFQcrXu%2BHafKshZ2WMNBbAlNBlhAq9XfpcUBX6w1WMdY1HXtRVopB4YgpxIwIw8m72EQM7RYlAw9drYUR6xGhPlGO2rflOI5RljVCDj19HI%2FrDYCBTozcvEoD11Xo6tcn%2FXWYzlTAxwIseGtDjqgIzV7j%2F3hP7V5YkQtnjj0mTSuemkK99OdCsB5js7sOnF%2FE%2Bo1TqOoMvTiUq8ma%2Bqr71V%2BAn%2F5yaf9ZKfTj%2B%2FJ7lLlPNtxk7w9EGHW8XnMK%2Fyh8hThDR4VOcuen12ddNi%2B0jDlUNDJdWnoUJI6WCXhqQAlvRLoRVpDO9%2B5njPtMehFtO1vsVyLWJ65T%2FyzzL%2BVQhHc3rWueMhMJbIwM8GOqUBjyf8YwNs4jBIc4BrdzjQnvypoWDSf%2B578ivw4ZpGoRoDQYOvhJR%2FOJdOmBQnDqG%2BcoBFPGcxw%2BPrMbPRvwOcQmWycMkCDoWZ1Z5zt5MtJGsSdNBJjwzzHHErmGlygDkuhZXZKB3ooioIF1k5IBRtv6%2Bp6KIsiBm3IHQ474g9iAMOOrVQpDFbV0yaAZQC9HzhIzHLVBo1fRsRzcrX6R24pFtuxX4N&X-Amz-Signature=e8a40cefb8cede86ad0eeea5cf40a4045334f68f7bda99de49ec0089fbadb2dd&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
       "url": "https://nationalreentryresourcecenter.org",
-      "title": "Needs Title"
+      "title": "National Reentry Resource  Center"
     },
     {
       "verificationDate": "",
-      "region": [],
-      "category": ["Healthcare"],
+      "region": [
+        "Washington"
+      ],
+      "category": [
+        "Healthcare"
+      ],
       "id": 38,
-      "description": "Needs Description",
-      "WebLogoURL": "",
+      "description": "The Washington State Health Care Authority provides a statewide system of behavioral health services, including mental health and substance use prevention, treatment, and recovery support. It funds and coordinates care through community providers, ensuring access to services for individuals across Washington ",
+      "WebLogoURL": null,
       "url": "https://www.hca.wa.gov/",
-      "title": "Needs Title"
+      "title": "Washington State Health Care Authority"
     },
     {
       "verificationDate": "",
-      "region": [],
-      "category": ["Housing/Shelter"],
+      "region": [
+        "New Jersey"
+      ],
+      "category": [
+        "Housing/Shelter"
+      ],
       "id": 53,
-      "description": "Needs Description",
-      "WebLogoURL": "",
+      "description": "The Coming Home of Middlesex County is a collaborative organization focused on preventing and ending homelessness through partnerships, housing initiatives, and coordinated social services. It connects individuals to resources and support systems that promote stability and long-term well-being.\n",
+      "WebLogoURL": null,
       "url": "https://cominghomemiddlesex.org",
-      "title": "Needs Title"
+      "title": "Coming Home of Middlesex County"
     },
     {
       "verificationDate": "",
       "region": [],
-      "category": ["Job Platform"],
+      "category": [
+        "Job Platform"
+      ],
       "id": 45,
-      "description": "Needs Description",
-      "WebLogoURL": "",
+      "description": "The Honest Jobs is a nationwide employment platform that connects individuals with criminal records to second-chance job opportunities and supportive resources. It helps users find work faster while partnering with employers committed to fair-chance hiring and successful reentry ",
+      "WebLogoURL": null,
       "url": "https://www.honestjobs.com",
-      "title": "Needs Title"
+      "title": "Honest Jobs"
     },
     {
       "verificationDate": "",
-      "region": ["Hotline"],
-      "category": ["Healthcare"],
+      "region": [
+        "Hotline"
+      ],
+      "category": [
+        "Healthcare"
+      ],
       "id": 1,
       "description": "Find mental health or substance use treatment services, access contact details for helplines or crisis lines where individuals can seek immediate assistance or guidance, and learn about support resources for individuals in recovery, including tips, tools, and support networks.",
-      "WebLogoURL": "",
+      "WebLogoURL": null,
       "url": "https://www.samhsa.gov",
       "title": "Substance Abuse and Mental Health Services Administration"
     },
     {
       "verificationDate": "",
-      "region": ["Oklahoma", "Arizona"],
+      "region": [
+        "Oklahoma",
+        "Arizona"
+      ],
       "category": [
         "Housing/Shelter",
         "Day Centers",
@@ -569,265 +784,423 @@
       ],
       "id": 74,
       "description": "Transitional Services options across Oklahoma that may work with people on probation, parole, or with a record",
-      "WebLogoURL": "",
+      "WebLogoURL": "https://prod-files-secure.s3.us-west-2.amazonaws.com/8bd433af-561d-8126-ad47-0003f4b36e60/bddac327-8653-45ba-be70-9e3b810d29be/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466YNUOYBNS%2F20260428%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260428T033801Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAsaCXVzLXdlc3QtMiJHMEUCICTSSNb5BSsPo2sRh18tnJjoi9z1vlaPMQCM5zccOpptAiEA4WBvuMsHt59OW9U2rfaxyyuGesuSWhQ07WtVI3VJgbEqiAQI1P%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2Mzc0MjMxODM4MDUiDKBKrcBXSrVBe%2BafPyrcA6k6cUXnVH9ySFoTDALoGCJTVjJydGBfwg6cnituEsRqTsvzJd%2BldEOuC5vjagBRbr3N7ybiK2kgEd2%2BpMvctlWPo56eZOmK4QGOD5Nv%2BTfZeLf5hDRCnophnuxEYIEtzcSaD6CfDvegx5ia%2Bz65RcBhzsKYImt92nXkBJYRUD2G8Vv3%2BFhPi4KROMq7oNIweCtm0xqT90T9XQq7GAlfCfuCeYXuoqf21GavAzvhf0Dts7YPq%2Bq6SPrs5KfGP1%2BzlNhxh%2B2wgWpHxbk7tzC0XgB2cSKlRmFQcrXu%2BHafKshZ2WMNBbAlNBlhAq9XfpcUBX6w1WMdY1HXtRVopB4YgpxIwIw8m72EQM7RYlAw9drYUR6xGhPlGO2rflOI5RljVCDj19HI%2FrDYCBTozcvEoD11Xo6tcn%2FXWYzlTAxwIseGtDjqgIzV7j%2F3hP7V5YkQtnjj0mTSuemkK99OdCsB5js7sOnF%2FE%2Bo1TqOoMvTiUq8ma%2Bqr71V%2BAn%2F5yaf9ZKfTj%2B%2FJ7lLlPNtxk7w9EGHW8XnMK%2Fyh8hThDR4VOcuen12ddNi%2B0jDlUNDJdWnoUJI6WCXhqQAlvRLoRVpDO9%2B5njPtMehFtO1vsVyLWJ65T%2FyzzL%2BVQhHc3rWueMhMJbIwM8GOqUBjyf8YwNs4jBIc4BrdzjQnvypoWDSf%2B578ivw4ZpGoRoDQYOvhJR%2FOJdOmBQnDqG%2BcoBFPGcxw%2BPrMbPRvwOcQmWycMkCDoWZ1Z5zt5MtJGsSdNBJjwzzHHErmGlygDkuhZXZKB3ooioIF1k5IBRtv6%2Bp6KIsiBm3IHQ474g9iAMOOrVQpDFbV0yaAZQC9HzhIzHLVBo1fRsRzcrX6R24pFtuxX4N&X-Amz-Signature=434c92ff6046f7272e706d61a1a9217abafcf4c8a4886c4725178c8c226d0879&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
       "url": "https://www.homelessalliance.org/",
       "title": "Homeless Alliance"
     },
     {
       "verificationDate": "",
-      "region": [],
-      "category": ["Second Chance"],
+      "region": [
+        "New Jersey"
+      ],
+      "category": [
+        "Second Chance"
+      ],
       "id": 63,
-      "description": "Needs Description",
-      "WebLogoURL": "",
+      "description": "a non-profit agency with a mission to transform the lives of persons returning from addiction treatment, jail or prison, or the theater of combat. NJRC offers comprehensive wraparound services and veteran-specific support (discharge upgrades, HUD-VASH housing, VA services).",
+      "WebLogoURL": "https://prod-files-secure.s3.us-west-2.amazonaws.com/8bd433af-561d-8126-ad47-0003f4b36e60/5eea801e-3132-4efb-9788-f0fe51c62476/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466YNUOYBNS%2F20260428%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260428T033801Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAsaCXVzLXdlc3QtMiJHMEUCICTSSNb5BSsPo2sRh18tnJjoi9z1vlaPMQCM5zccOpptAiEA4WBvuMsHt59OW9U2rfaxyyuGesuSWhQ07WtVI3VJgbEqiAQI1P%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2Mzc0MjMxODM4MDUiDKBKrcBXSrVBe%2BafPyrcA6k6cUXnVH9ySFoTDALoGCJTVjJydGBfwg6cnituEsRqTsvzJd%2BldEOuC5vjagBRbr3N7ybiK2kgEd2%2BpMvctlWPo56eZOmK4QGOD5Nv%2BTfZeLf5hDRCnophnuxEYIEtzcSaD6CfDvegx5ia%2Bz65RcBhzsKYImt92nXkBJYRUD2G8Vv3%2BFhPi4KROMq7oNIweCtm0xqT90T9XQq7GAlfCfuCeYXuoqf21GavAzvhf0Dts7YPq%2Bq6SPrs5KfGP1%2BzlNhxh%2B2wgWpHxbk7tzC0XgB2cSKlRmFQcrXu%2BHafKshZ2WMNBbAlNBlhAq9XfpcUBX6w1WMdY1HXtRVopB4YgpxIwIw8m72EQM7RYlAw9drYUR6xGhPlGO2rflOI5RljVCDj19HI%2FrDYCBTozcvEoD11Xo6tcn%2FXWYzlTAxwIseGtDjqgIzV7j%2F3hP7V5YkQtnjj0mTSuemkK99OdCsB5js7sOnF%2FE%2Bo1TqOoMvTiUq8ma%2Bqr71V%2BAn%2F5yaf9ZKfTj%2B%2FJ7lLlPNtxk7w9EGHW8XnMK%2Fyh8hThDR4VOcuen12ddNi%2B0jDlUNDJdWnoUJI6WCXhqQAlvRLoRVpDO9%2B5njPtMehFtO1vsVyLWJ65T%2FyzzL%2BVQhHc3rWueMhMJbIwM8GOqUBjyf8YwNs4jBIc4BrdzjQnvypoWDSf%2B578ivw4ZpGoRoDQYOvhJR%2FOJdOmBQnDqG%2BcoBFPGcxw%2BPrMbPRvwOcQmWycMkCDoWZ1Z5zt5MtJGsSdNBJjwzzHHErmGlygDkuhZXZKB3ooioIF1k5IBRtv6%2Bp6KIsiBm3IHQ474g9iAMOOrVQpDFbV0yaAZQC9HzhIzHLVBo1fRsRzcrX6R24pFtuxX4N&X-Amz-Signature=d07c74c03911efdc13a0c784a007d5b012cabd06162ba9d15a882adb7719e471&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
       "url": "https://njreentry.org",
-      "title": "Needs Title"
+      "title": "New Jersey Reentry Corporation"
     },
     {
       "verificationDate": "",
-      "region": ["South Carolina"],
-      "category": ["Healthcare"],
+      "region": [
+        "South Carolina"
+      ],
+      "category": [
+        "Healthcare"
+      ],
       "id": 30,
-      "description": "Needs Description",
-      "WebLogoURL": "",
+      "description": "The South Carolina Department of Mental Health provides a comprehensive statewide system of mental health services, including community-based care, inpatient treatment, and crisis support. It focuses on recovery-oriented services for children, adults, and families across South Carolina. (",
+      "WebLogoURL": null,
       "url": "https://www.scdmh.org/",
       "title": "South Carolina Department of Behavioral Health and Developmental Disabilities, Office of Mental Health"
     },
     {
       "verificationDate": "",
-      "region": ["Oklahoma"],
-      "category": [
-        "Food Assistance",
-        "Housing/Shelter",
-        "Healthcare",
-        "Financial Support",
-        "Counseling/Therapy"
+      "region": [
+        "New Jersey"
       ],
-      "id": 76,
-      "description": "food, shelter, medical, financial support and more",
-      "WebLogoURL": "",
-      "url": "https://www.homelessalliance.org/get-help",
-      "title": "Homeless Alliance Resources"
-    },
-    {
-      "verificationDate": "",
-      "region": [],
-      "category": ["Second Chance"],
+      "category": [
+        "Second Chance"
+      ],
       "id": 64,
-      "description": "Needs Description",
-      "WebLogoURL": "",
+      "description": "The Reentry Coalition of New Jersey promotes public safety and reduces recidivism by offering individuals exiting the criminal justice system with direct access to reputable reentry agencies and various resources throughout the state to ensure long-term success.",
+      "WebLogoURL": "https://prod-files-secure.s3.us-west-2.amazonaws.com/8bd433af-561d-8126-ad47-0003f4b36e60/4061c28a-26a0-4636-823a-12689a944ab5/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466YNUOYBNS%2F20260428%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260428T033801Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAsaCXVzLXdlc3QtMiJHMEUCICTSSNb5BSsPo2sRh18tnJjoi9z1vlaPMQCM5zccOpptAiEA4WBvuMsHt59OW9U2rfaxyyuGesuSWhQ07WtVI3VJgbEqiAQI1P%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2Mzc0MjMxODM4MDUiDKBKrcBXSrVBe%2BafPyrcA6k6cUXnVH9ySFoTDALoGCJTVjJydGBfwg6cnituEsRqTsvzJd%2BldEOuC5vjagBRbr3N7ybiK2kgEd2%2BpMvctlWPo56eZOmK4QGOD5Nv%2BTfZeLf5hDRCnophnuxEYIEtzcSaD6CfDvegx5ia%2Bz65RcBhzsKYImt92nXkBJYRUD2G8Vv3%2BFhPi4KROMq7oNIweCtm0xqT90T9XQq7GAlfCfuCeYXuoqf21GavAzvhf0Dts7YPq%2Bq6SPrs5KfGP1%2BzlNhxh%2B2wgWpHxbk7tzC0XgB2cSKlRmFQcrXu%2BHafKshZ2WMNBbAlNBlhAq9XfpcUBX6w1WMdY1HXtRVopB4YgpxIwIw8m72EQM7RYlAw9drYUR6xGhPlGO2rflOI5RljVCDj19HI%2FrDYCBTozcvEoD11Xo6tcn%2FXWYzlTAxwIseGtDjqgIzV7j%2F3hP7V5YkQtnjj0mTSuemkK99OdCsB5js7sOnF%2FE%2Bo1TqOoMvTiUq8ma%2Bqr71V%2BAn%2F5yaf9ZKfTj%2B%2FJ7lLlPNtxk7w9EGHW8XnMK%2Fyh8hThDR4VOcuen12ddNi%2B0jDlUNDJdWnoUJI6WCXhqQAlvRLoRVpDO9%2B5njPtMehFtO1vsVyLWJ65T%2FyzzL%2BVQhHc3rWueMhMJbIwM8GOqUBjyf8YwNs4jBIc4BrdzjQnvypoWDSf%2B578ivw4ZpGoRoDQYOvhJR%2FOJdOmBQnDqG%2BcoBFPGcxw%2BPrMbPRvwOcQmWycMkCDoWZ1Z5zt5MtJGsSdNBJjwzzHHErmGlygDkuhZXZKB3ooioIF1k5IBRtv6%2Bp6KIsiBm3IHQ474g9iAMOOrVQpDFbV0yaAZQC9HzhIzHLVBo1fRsRzcrX6R24pFtuxX4N&X-Amz-Signature=e1643b1027383efe43b4950b0ca74b6e50eedf0ab07d943f24e3f5884166b29a&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
       "url": "https://reentrycoalitionofnj.org",
-      "title": "Needs Title"
+      "title": "Reentry Coalition of New Jeresey "
     },
     {
       "verificationDate": "",
-      "region": [],
-      "category": ["Second Chance"],
+      "region": [
+        "New Jersey"
+      ],
+      "category": [
+        "Second Chance"
+      ],
       "id": 67,
-      "description": "Needs Description",
-      "WebLogoURL": "",
+      "description": "Reintergration, HIV/AIDS support with housing ",
+      "WebLogoURL": "https://prod-files-secure.s3.us-west-2.amazonaws.com/8bd433af-561d-8126-ad47-0003f4b36e60/e89750eb-58f7-4f58-9ec2-20a685237f50/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466YNUOYBNS%2F20260428%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260428T033801Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAsaCXVzLXdlc3QtMiJHMEUCICTSSNb5BSsPo2sRh18tnJjoi9z1vlaPMQCM5zccOpptAiEA4WBvuMsHt59OW9U2rfaxyyuGesuSWhQ07WtVI3VJgbEqiAQI1P%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2Mzc0MjMxODM4MDUiDKBKrcBXSrVBe%2BafPyrcA6k6cUXnVH9ySFoTDALoGCJTVjJydGBfwg6cnituEsRqTsvzJd%2BldEOuC5vjagBRbr3N7ybiK2kgEd2%2BpMvctlWPo56eZOmK4QGOD5Nv%2BTfZeLf5hDRCnophnuxEYIEtzcSaD6CfDvegx5ia%2Bz65RcBhzsKYImt92nXkBJYRUD2G8Vv3%2BFhPi4KROMq7oNIweCtm0xqT90T9XQq7GAlfCfuCeYXuoqf21GavAzvhf0Dts7YPq%2Bq6SPrs5KfGP1%2BzlNhxh%2B2wgWpHxbk7tzC0XgB2cSKlRmFQcrXu%2BHafKshZ2WMNBbAlNBlhAq9XfpcUBX6w1WMdY1HXtRVopB4YgpxIwIw8m72EQM7RYlAw9drYUR6xGhPlGO2rflOI5RljVCDj19HI%2FrDYCBTozcvEoD11Xo6tcn%2FXWYzlTAxwIseGtDjqgIzV7j%2F3hP7V5YkQtnjj0mTSuemkK99OdCsB5js7sOnF%2FE%2Bo1TqOoMvTiUq8ma%2Bqr71V%2BAn%2F5yaf9ZKfTj%2B%2FJ7lLlPNtxk7w9EGHW8XnMK%2Fyh8hThDR4VOcuen12ddNi%2B0jDlUNDJdWnoUJI6WCXhqQAlvRLoRVpDO9%2B5njPtMehFtO1vsVyLWJ65T%2FyzzL%2BVQhHc3rWueMhMJbIwM8GOqUBjyf8YwNs4jBIc4BrdzjQnvypoWDSf%2B578ivw4ZpGoRoDQYOvhJR%2FOJdOmBQnDqG%2BcoBFPGcxw%2BPrMbPRvwOcQmWycMkCDoWZ1Z5zt5MtJGsSdNBJjwzzHHErmGlygDkuhZXZKB3ooioIF1k5IBRtv6%2Bp6KIsiBm3IHQ474g9iAMOOrVQpDFbV0yaAZQC9HzhIzHLVBo1fRsRzcrX6R24pFtuxX4N&X-Amz-Signature=33ff3a2095964844390370a70cd142301150ff7f03f2f5c5571c5adbeffe6969&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
       "url": "https://njaconline.org",
-      "title": "Needs Title"
+      "title": "New Jersey Association on Correction"
     },
     {
       "verificationDate": "",
-      "region": ["Indiana"],
-      "category": ["Healthcare"],
+      "region": [
+        "Indiana"
+      ],
+      "category": [
+        "Healthcare"
+      ],
       "id": 16,
-      "description": "The Indiana Division of Mental Health and Addiction (DMHA), part of the Family and Social Services Administration, is responsible for overseeing and regulating mental health and substance use services across the state. The agency establishes care standards, certifies providers, and ensures that individuals have access to quality, recovery-oriented services that promote resilience for individuals, families, and communities. DMHA works through a statewide network of community mental health centers, addiction treatment providers, and certified behavioral health clinics, while also operating state psychiatric hospitals for more intensive care needs. In addition to oversight and service coordination, the division supports prevention, treatment, recovery, and crisis intervention programs, emphasizing accessibility and comprehensive care for diverse populations throughout Indiana",
-      "WebLogoURL": "",
+      "description": "The Indiana Division of Mental Health and Addiction oversees and regulates mental health and substance use services, ensuring access to quality, recovery-oriented care. It works through community providers and state hospitals to support prevention, treatment, and crisis services across Indiana.",
+      "WebLogoURL": null,
       "url": "http://www.in.gov/fssa/dmha/index.html",
       "title": "Indiana Division of Mental Health and Addiction (DMHA)"
     },
     {
       "verificationDate": "",
-      "region": ["Oregon"],
-      "category": ["Healthcare"],
+      "region": [
+        "Oregon"
+      ],
+      "category": [
+        "Healthcare"
+      ],
       "id": 25,
-      "description": "Needs Description",
-      "WebLogoURL": "",
+      "description": "The Oregon Health Authority Behavioral Health Division provides a statewide system of mental health and addiction services, promoting physical, mental, and social well-being through accessible, community-based care. It works collaboratively with providers and communities to expand services, improve access, and support recovery across Oregon (",
+      "WebLogoURL": null,
       "url": "http://www.oregon.gov/oha/amh/Pages/index.aspx",
       "title": "Oregon Health Authority "
     },
     {
       "verificationDate": "",
-      "region": [],
-      "category": ["Food Assistance"],
+      "region": [
+        "Oklahoma"
+      ],
+      "category": [
+        "Food Assistance"
+      ],
       "id": 69,
-      "description": "Needs Description",
-      "WebLogoURL": "",
+      "description": "official website for Oklahoma Human Services (OKDHS) that allows residents to apply for, renew, and manage public benefits online",
+      "WebLogoURL": "https://prod-files-secure.s3.us-west-2.amazonaws.com/8bd433af-561d-8126-ad47-0003f4b36e60/ed7f48fa-958e-4f19-9a58-dcdfc99cd90e/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466YNUOYBNS%2F20260428%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260428T033801Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAsaCXVzLXdlc3QtMiJHMEUCICTSSNb5BSsPo2sRh18tnJjoi9z1vlaPMQCM5zccOpptAiEA4WBvuMsHt59OW9U2rfaxyyuGesuSWhQ07WtVI3VJgbEqiAQI1P%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2Mzc0MjMxODM4MDUiDKBKrcBXSrVBe%2BafPyrcA6k6cUXnVH9ySFoTDALoGCJTVjJydGBfwg6cnituEsRqTsvzJd%2BldEOuC5vjagBRbr3N7ybiK2kgEd2%2BpMvctlWPo56eZOmK4QGOD5Nv%2BTfZeLf5hDRCnophnuxEYIEtzcSaD6CfDvegx5ia%2Bz65RcBhzsKYImt92nXkBJYRUD2G8Vv3%2BFhPi4KROMq7oNIweCtm0xqT90T9XQq7GAlfCfuCeYXuoqf21GavAzvhf0Dts7YPq%2Bq6SPrs5KfGP1%2BzlNhxh%2B2wgWpHxbk7tzC0XgB2cSKlRmFQcrXu%2BHafKshZ2WMNBbAlNBlhAq9XfpcUBX6w1WMdY1HXtRVopB4YgpxIwIw8m72EQM7RYlAw9drYUR6xGhPlGO2rflOI5RljVCDj19HI%2FrDYCBTozcvEoD11Xo6tcn%2FXWYzlTAxwIseGtDjqgIzV7j%2F3hP7V5YkQtnjj0mTSuemkK99OdCsB5js7sOnF%2FE%2Bo1TqOoMvTiUq8ma%2Bqr71V%2BAn%2F5yaf9ZKfTj%2B%2FJ7lLlPNtxk7w9EGHW8XnMK%2Fyh8hThDR4VOcuen12ddNi%2B0jDlUNDJdWnoUJI6WCXhqQAlvRLoRVpDO9%2B5njPtMehFtO1vsVyLWJ65T%2FyzzL%2BVQhHc3rWueMhMJbIwM8GOqUBjyf8YwNs4jBIc4BrdzjQnvypoWDSf%2B578ivw4ZpGoRoDQYOvhJR%2FOJdOmBQnDqG%2BcoBFPGcxw%2BPrMbPRvwOcQmWycMkCDoWZ1Z5zt5MtJGsSdNBJjwzzHHErmGlygDkuhZXZKB3ooioIF1k5IBRtv6%2Bp6KIsiBm3IHQ474g9iAMOOrVQpDFbV0yaAZQC9HzhIzHLVBo1fRsRzcrX6R24pFtuxX4N&X-Amz-Signature=deb6bf3ea16dc3621f80e6d5c0ff612479e0bfaf98ff0b88bd22b7a39566c774&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
       "url": "https://okdhslive.org",
       "title": "Oklahoma Dept. of Human Services"
     },
     {
       "verificationDate": "",
-      "region": ["Colorado"],
-      "category": ["Healthcare"],
+      "region": [
+        "Colorado"
+      ],
+      "category": [
+        "Healthcare"
+      ],
       "id": 7,
       "description": "The Behavioral Health Administration is the state administration responsible for ensuring all people in Colorado have access to quality mental health and substance use disorder services, regardless of where they live, or ability to pay. BHA will help bring together community groups and governmental agencies to design a behavioral health system for all people in Colorado that is easy to access, and offers high-quality care that considers the whole person and their needs.",
-      "WebLogoURL": "",
+      "WebLogoURL": null,
       "url": "https://www.colorado.gov/pacific/cdhs/community-programs-behavioral-health",
       "title": "Colorado Behavioral Health Administration"
     },
     {
       "verificationDate": "",
-      "region": [],
-      "category": ["Second Chance"],
+      "region": [
+        "New Jersey"
+      ],
+      "category": [
+        "Second Chance"
+      ],
       "id": 66,
-      "description": "Needs Description",
-      "WebLogoURL": "",
+      "description": "Resource guides for education resources, health and medical resources, etc.",
+      "WebLogoURL": "https://prod-files-secure.s3.us-west-2.amazonaws.com/8bd433af-561d-8126-ad47-0003f4b36e60/00f717b8-3c49-4b3e-b590-c176dd84dace/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466YNUOYBNS%2F20260428%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260428T033801Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAsaCXVzLXdlc3QtMiJHMEUCICTSSNb5BSsPo2sRh18tnJjoi9z1vlaPMQCM5zccOpptAiEA4WBvuMsHt59OW9U2rfaxyyuGesuSWhQ07WtVI3VJgbEqiAQI1P%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2Mzc0MjMxODM4MDUiDKBKrcBXSrVBe%2BafPyrcA6k6cUXnVH9ySFoTDALoGCJTVjJydGBfwg6cnituEsRqTsvzJd%2BldEOuC5vjagBRbr3N7ybiK2kgEd2%2BpMvctlWPo56eZOmK4QGOD5Nv%2BTfZeLf5hDRCnophnuxEYIEtzcSaD6CfDvegx5ia%2Bz65RcBhzsKYImt92nXkBJYRUD2G8Vv3%2BFhPi4KROMq7oNIweCtm0xqT90T9XQq7GAlfCfuCeYXuoqf21GavAzvhf0Dts7YPq%2Bq6SPrs5KfGP1%2BzlNhxh%2B2wgWpHxbk7tzC0XgB2cSKlRmFQcrXu%2BHafKshZ2WMNBbAlNBlhAq9XfpcUBX6w1WMdY1HXtRVopB4YgpxIwIw8m72EQM7RYlAw9drYUR6xGhPlGO2rflOI5RljVCDj19HI%2FrDYCBTozcvEoD11Xo6tcn%2FXWYzlTAxwIseGtDjqgIzV7j%2F3hP7V5YkQtnjj0mTSuemkK99OdCsB5js7sOnF%2FE%2Bo1TqOoMvTiUq8ma%2Bqr71V%2BAn%2F5yaf9ZKfTj%2B%2FJ7lLlPNtxk7w9EGHW8XnMK%2Fyh8hThDR4VOcuen12ddNi%2B0jDlUNDJdWnoUJI6WCXhqQAlvRLoRVpDO9%2B5njPtMehFtO1vsVyLWJ65T%2FyzzL%2BVQhHc3rWueMhMJbIwM8GOqUBjyf8YwNs4jBIc4BrdzjQnvypoWDSf%2B578ivw4ZpGoRoDQYOvhJR%2FOJdOmBQnDqG%2BcoBFPGcxw%2BPrMbPRvwOcQmWycMkCDoWZ1Z5zt5MtJGsSdNBJjwzzHHErmGlygDkuhZXZKB3ooioIF1k5IBRtv6%2Bp6KIsiBm3IHQ474g9iAMOOrVQpDFbV0yaAZQC9HzhIzHLVBo1fRsRzcrX6R24pFtuxX4N&X-Amz-Signature=58538815d467b44c13214cd014e4b791e9525b6ff1c2ebaaf9aa4d3d54270273&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
       "url": "https://libguides.njstatelib.org",
-      "title": "Needs Title"
+      "title": "NJSL Research Library"
     },
     {
       "verificationDate": "",
-      "region": [],
-      "category": ["Job Platform"],
+      "region": [
+        "New Jersey"
+      ],
+      "category": [
+        "Job Platform",
+        "Substance Abuse",
+        "Second Chance"
+      ],
       "id": 50,
-      "description": "Needs Description",
-      "WebLogoURL": "",
+      "description": "The Reentry Coalition of New Jersey is a network of agencies that supports individuals returning from incarceration by connecting them to reentry services and resources. It focuses on reducing recidivism and promoting successful reintegration through advocacy, education, and community-based support. ",
+      "WebLogoURL": null,
       "url": "https://reentrycoalitionofnj.org",
-      "title": "Needs Title"
+      "title": "The Reentry Coalition of New Jersey"
     },
     {
       "verificationDate": "",
-      "region": ["Idaho"],
-      "category": ["Healthcare"],
+      "region": [
+        "Idaho"
+      ],
+      "category": [
+        "Healthcare"
+      ],
       "id": 14,
-      "description": "The Idaho Department of Health and Welfare’s Behavioral Health page provides an overview of the state’s efforts to support individuals experiencing mental health and substance use disorders. The site emphasizes a mission centered on promoting hope, recovery, and resilience through a coordinated system of care. It outlines key service areas, including adult behavioral health services, children’s behavioral health programs, substance use disorder treatment, and crisis intervention resources. The page also highlights the availability of opioid education and prevention tools, as well as 24/7 crisis support options. Overall, the resource presents behavioral health care as accessible, treatable, and supported through a statewide network of programs designed to meet the diverse needs of Idaho residents",
-      "WebLogoURL": "",
+      "description": "The Idaho Department of Health and Welfare provides a coordinated system of care for mental health and substance use disorders, focused on hope, recovery, and resilience. It offers services for adults and youth, substance use treatment, prevention resources, and 24/7 crisis support across the state.",
+      "WebLogoURL": null,
       "url": "https://healthandwelfare.idaho.gov/services-programs/behavioral-health",
       "title": "Behavioral Health"
     },
     {
       "verificationDate": "",
-      "region": [],
-      "category": ["Healthcare"],
+      "region": [
+        "Vermont"
+      ],
+      "category": [
+        "Healthcare"
+      ],
       "id": 36,
-      "description": "Needs Description",
-      "WebLogoURL": "",
+      "description": "The Vermont Department of Mental Health oversees a statewide system of mental health services, promoting prevention, recovery, and community-based care. It works through regional providers to ensure accessible, coordinated support for individuals and families across Vermont (",
+      "WebLogoURL": null,
       "url": "http://mentalhealth.vermont.gov",
-      "title": "Needs Title"
+      "title": "Vermont Department of Mental Health"
     },
     {
       "verificationDate": "",
-      "region": ["Oklahoma"],
-      "category": ["Healthcare"],
+      "region": [
+        "Oklahoma"
+      ],
+      "category": [
+        "Healthcare"
+      ],
       "id": 24,
-      "description": "Needs Description",
-      "WebLogoURL": "",
+      "description": "The Oklahoma Department of Mental Health and Substance Abuse Services oversees a statewide system for mental health and substance use prevention, treatment, and recovery services. It serves as Oklahoma’s behavioral health safety net, providing accessible care through community programs and state-operated facilities. (",
+      "WebLogoURL": null,
       "url": "http://www.odmhsas.org",
       "title": "Oklahoma Department of Mental Health and Substance Abuse Services"
     },
     {
       "verificationDate": "",
-      "region": [],
-      "category": ["Second Chance"],
+      "region": [
+        "Alabama"
+      ],
+      "category": [
+        "Second Chance"
+      ],
       "id": 61,
-      "description": "Needs Description",
-      "WebLogoURL": "",
+      "description": " six-month private program with the 9 essentials of successful reentry: career-quality jobs, housing, transportation, mobile phone, debit card account, life coaching, GPS-communications app, nutrition, and a state ID. ",
+      "WebLogoURL": "https://prod-files-secure.s3.us-west-2.amazonaws.com/8bd433af-561d-8126-ad47-0003f4b36e60/e30d6e31-6860-4c16-9eb2-6159ea18e61d/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466YNUOYBNS%2F20260428%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260428T033801Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAsaCXVzLXdlc3QtMiJHMEUCICTSSNb5BSsPo2sRh18tnJjoi9z1vlaPMQCM5zccOpptAiEA4WBvuMsHt59OW9U2rfaxyyuGesuSWhQ07WtVI3VJgbEqiAQI1P%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2Mzc0MjMxODM4MDUiDKBKrcBXSrVBe%2BafPyrcA6k6cUXnVH9ySFoTDALoGCJTVjJydGBfwg6cnituEsRqTsvzJd%2BldEOuC5vjagBRbr3N7ybiK2kgEd2%2BpMvctlWPo56eZOmK4QGOD5Nv%2BTfZeLf5hDRCnophnuxEYIEtzcSaD6CfDvegx5ia%2Bz65RcBhzsKYImt92nXkBJYRUD2G8Vv3%2BFhPi4KROMq7oNIweCtm0xqT90T9XQq7GAlfCfuCeYXuoqf21GavAzvhf0Dts7YPq%2Bq6SPrs5KfGP1%2BzlNhxh%2B2wgWpHxbk7tzC0XgB2cSKlRmFQcrXu%2BHafKshZ2WMNBbAlNBlhAq9XfpcUBX6w1WMdY1HXtRVopB4YgpxIwIw8m72EQM7RYlAw9drYUR6xGhPlGO2rflOI5RljVCDj19HI%2FrDYCBTozcvEoD11Xo6tcn%2FXWYzlTAxwIseGtDjqgIzV7j%2F3hP7V5YkQtnjj0mTSuemkK99OdCsB5js7sOnF%2FE%2Bo1TqOoMvTiUq8ma%2Bqr71V%2BAn%2F5yaf9ZKfTj%2B%2FJ7lLlPNtxk7w9EGHW8XnMK%2Fyh8hThDR4VOcuen12ddNi%2B0jDlUNDJdWnoUJI6WCXhqQAlvRLoRVpDO9%2B5njPtMehFtO1vsVyLWJ65T%2FyzzL%2BVQhHc3rWueMhMJbIwM8GOqUBjyf8YwNs4jBIc4BrdzjQnvypoWDSf%2B578ivw4ZpGoRoDQYOvhJR%2FOJdOmBQnDqG%2BcoBFPGcxw%2BPrMbPRvwOcQmWycMkCDoWZ1Z5zt5MtJGsSdNBJjwzzHHErmGlygDkuhZXZKB3ooioIF1k5IBRtv6%2Bp6KIsiBm3IHQ474g9iAMOOrVQpDFbV0yaAZQC9HzhIzHLVBo1fRsRzcrX6R24pFtuxX4N&X-Amz-Signature=2e495b36d10a77971c3c702df52a727f21792858c00a2e315ad860b4204f910a&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
       "url": "https://reentrycenters.org",
-      "title": "Needs Title"
+      "title": "Alliance Reentry Centers"
     },
     {
       "verificationDate": "",
-      "region": [],
-      "category": ["Healthcare"],
+      "region": [
+        "Vermont"
+      ],
+      "category": [
+        "Healthcare"
+      ],
       "id": 35,
-      "description": "Needs Description",
-      "WebLogoURL": "https://www.healthvermont.gov/themes/custom/vdh/favicon.ico",
+      "description": "The Vermont Department of Health Alcohol and Drug Abuse Programs provides a statewide system of substance use prevention, treatment, and recovery services. It focuses on reducing harm, expanding access to care, and supporting individuals and communities across Vermont.",
+      "WebLogoURL": null,
       "url": "http://www.healthvermont.gov/alcohol-drugs",
-      "title": "Needs Title"
+      "title": "Vermont Department of Health – Alcohol & Drug Abuse Programs"
     },
     {
       "verificationDate": "",
-      "region": ["Oklahoma"],
+      "region": [
+        "Oklahoma"
+      ],
       "category": [
         "Financial Support",
         "Early Childhood Education",
         "Adult Education"
       ],
       "id": 75,
-      "description": "rent/mortgage assistance, early childhood ed,, and economic classes",
-      "WebLogoURL": "",
+      "description": "service provider to the Afghan Support Center in Oklahoma City. ",
+      "WebLogoURL": "https://prod-files-secure.s3.us-west-2.amazonaws.com/8bd433af-561d-8126-ad47-0003f4b36e60/866ec577-f678-4b53-aa3f-ba943ac69e9f/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466YNUOYBNS%2F20260428%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260428T033801Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAsaCXVzLXdlc3QtMiJHMEUCICTSSNb5BSsPo2sRh18tnJjoi9z1vlaPMQCM5zccOpptAiEA4WBvuMsHt59OW9U2rfaxyyuGesuSWhQ07WtVI3VJgbEqiAQI1P%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2Mzc0MjMxODM4MDUiDKBKrcBXSrVBe%2BafPyrcA6k6cUXnVH9ySFoTDALoGCJTVjJydGBfwg6cnituEsRqTsvzJd%2BldEOuC5vjagBRbr3N7ybiK2kgEd2%2BpMvctlWPo56eZOmK4QGOD5Nv%2BTfZeLf5hDRCnophnuxEYIEtzcSaD6CfDvegx5ia%2Bz65RcBhzsKYImt92nXkBJYRUD2G8Vv3%2BFhPi4KROMq7oNIweCtm0xqT90T9XQq7GAlfCfuCeYXuoqf21GavAzvhf0Dts7YPq%2Bq6SPrs5KfGP1%2BzlNhxh%2B2wgWpHxbk7tzC0XgB2cSKlRmFQcrXu%2BHafKshZ2WMNBbAlNBlhAq9XfpcUBX6w1WMdY1HXtRVopB4YgpxIwIw8m72EQM7RYlAw9drYUR6xGhPlGO2rflOI5RljVCDj19HI%2FrDYCBTozcvEoD11Xo6tcn%2FXWYzlTAxwIseGtDjqgIzV7j%2F3hP7V5YkQtnjj0mTSuemkK99OdCsB5js7sOnF%2FE%2Bo1TqOoMvTiUq8ma%2Bqr71V%2BAn%2F5yaf9ZKfTj%2B%2FJ7lLlPNtxk7w9EGHW8XnMK%2Fyh8hThDR4VOcuen12ddNi%2B0jDlUNDJdWnoUJI6WCXhqQAlvRLoRVpDO9%2B5njPtMehFtO1vsVyLWJ65T%2FyzzL%2BVQhHc3rWueMhMJbIwM8GOqUBjyf8YwNs4jBIc4BrdzjQnvypoWDSf%2B578ivw4ZpGoRoDQYOvhJR%2FOJdOmBQnDqG%2BcoBFPGcxw%2BPrMbPRvwOcQmWycMkCDoWZ1Z5zt5MtJGsSdNBJjwzzHHErmGlygDkuhZXZKB3ooioIF1k5IBRtv6%2Bp6KIsiBm3IHQ474g9iAMOOrVQpDFbV0yaAZQC9HzhIzHLVBo1fRsRzcrX6R24pFtuxX4N&X-Amz-Signature=914524f33f861a5eec5dc48b9c9dcd54b460553111839a3d4822e9e82cc0d3d6&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
       "url": "https://www.caaofokc.org/",
-      "title": "Community Action Partnership"
+      "title": "Community Action Agency of Oklahoma City"
     },
     {
       "verificationDate": "",
-      "region": ["North Carolina"],
-      "category": ["Healthcare"],
+      "region": [
+        "North Carolina"
+      ],
+      "category": [
+        "Healthcare"
+      ],
       "id": 21,
-      "description": "Needs Description",
-      "WebLogoURL": "",
+      "description": "The Division of Mental Health, Developmental Disabilities, and Substance Use Services builds and oversees a statewide system of care supporting mental health, substance use, and developmental disability services. It focuses on improving access, recovery, and community-based support for individuals across North Carolina.",
+      "WebLogoURL": null,
       "url": "https://www.ncdhhs.gov/divisions/mhddsas",
       "title": "North Carolina Department of Health and Human Services"
     },
     {
       "verificationDate": "",
-      "region": [],
-      "category": ["Second Chance"],
+      "region": [
+        "New Jersey"
+      ],
+      "category": [
+        "Second Chance"
+      ],
       "id": 59,
-      "description": "Needs Description",
-      "WebLogoURL": "",
+      "description": "The Salvation Army New Jersey provides community-based services including food assistance, housing support, rehabilitation programs, and emergency aid for individuals and families in need. It works to meet basic human needs without discrimination while supporting stability and recovery across local communities ",
+      "WebLogoURL": null,
       "url": "https://salvationarmynj.org",
-      "title": "Needs Title"
+      "title": "Salvation Army New Jersey "
     },
     {
       "verificationDate": "",
-      "region": ["Florida"],
-      "category": ["Healthcare"],
+      "region": [
+        "Florida"
+      ],
+      "category": [
+        "Healthcare"
+      ],
       "id": 10,
       "description": "Working in partnership with local communities to protect the vulnerable, promote strong and economically self-sufficient families, and advance personal and family recovery and resiliency.",
-      "WebLogoURL": "",
+      "WebLogoURL": null,
       "url": "https://www.myflfamilies.com",
       "title": "Florida Families"
     },
     {
       "verificationDate": "",
       "region": [],
-      "category": ["Job Platform"],
+      "category": [
+        "Job Platform"
+      ],
       "id": 46,
-      "description": "Needs Description",
-      "WebLogoURL": "",
+      "description": "The Indeed is a global job search and hiring platform that connects job seekers with employment opportunities and employers with talent. It offers tools for job searching, resume posting, and company research, supporting workforce development across more than 60 countries ",
+      "WebLogoURL": null,
       "url": "https://www.indeed.com",
-      "title": "Needs Title"
+      "title": "Indeed"
     },
     {
       "verificationDate": "",
       "region": [],
-      "category": ["Second Chance"],
+      "category": [
+        "Second Chance"
+      ],
       "id": 58,
-      "description": "Needs Description",
-      "WebLogoURL": "",
+      "description": "The The Salvation Army is a nationwide nonprofit that provides a wide range of social services, including food assistance, housing, disaster relief, and rehabilitation programs. It works to meet basic human needs and support vulnerable individuals and families through community-based services and outreach programs ",
+      "WebLogoURL": null,
       "url": "https://www.salvationarmyusa.org",
-      "title": "Needs Title"
+      "title": "Salvation Army"
     },
     {
       "verificationDate": "",
-      "region": ["Oklahoma"],
-      "category": ["Crisis Hotline", "Counseling/Therapy"],
-      "id": 78,
-      "description": "Outpatient treatment, family therapy, crisis intervention, group therapy ",
-      "WebLogoURL": "",
+      "region": [
+        "Oklahoma"
+      ],
+      "category": [
+        "Crisis Hotline",
+        "Counseling/Therapy"
+      ],
+      "id": 77,
+      "description": " provides vital information to help link consumers to support groups and personal advocacy resources in the community. The site also provides a repository of evidence-based practices – successful, creative ways for communities to respond to their behavioral-health needs.",
+      "WebLogoURL": "https://prod-files-secure.s3.us-west-2.amazonaws.com/8bd433af-561d-8126-ad47-0003f4b36e60/183be09d-432e-46f2-8e6b-ec9922aad07d/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466YNUOYBNS%2F20260428%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260428T033801Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAsaCXVzLXdlc3QtMiJHMEUCICTSSNb5BSsPo2sRh18tnJjoi9z1vlaPMQCM5zccOpptAiEA4WBvuMsHt59OW9U2rfaxyyuGesuSWhQ07WtVI3VJgbEqiAQI1P%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2Mzc0MjMxODM4MDUiDKBKrcBXSrVBe%2BafPyrcA6k6cUXnVH9ySFoTDALoGCJTVjJydGBfwg6cnituEsRqTsvzJd%2BldEOuC5vjagBRbr3N7ybiK2kgEd2%2BpMvctlWPo56eZOmK4QGOD5Nv%2BTfZeLf5hDRCnophnuxEYIEtzcSaD6CfDvegx5ia%2Bz65RcBhzsKYImt92nXkBJYRUD2G8Vv3%2BFhPi4KROMq7oNIweCtm0xqT90T9XQq7GAlfCfuCeYXuoqf21GavAzvhf0Dts7YPq%2Bq6SPrs5KfGP1%2BzlNhxh%2B2wgWpHxbk7tzC0XgB2cSKlRmFQcrXu%2BHafKshZ2WMNBbAlNBlhAq9XfpcUBX6w1WMdY1HXtRVopB4YgpxIwIw8m72EQM7RYlAw9drYUR6xGhPlGO2rflOI5RljVCDj19HI%2FrDYCBTozcvEoD11Xo6tcn%2FXWYzlTAxwIseGtDjqgIzV7j%2F3hP7V5YkQtnjj0mTSuemkK99OdCsB5js7sOnF%2FE%2Bo1TqOoMvTiUq8ma%2Bqr71V%2BAn%2F5yaf9ZKfTj%2B%2FJ7lLlPNtxk7w9EGHW8XnMK%2Fyh8hThDR4VOcuen12ddNi%2B0jDlUNDJdWnoUJI6WCXhqQAlvRLoRVpDO9%2B5njPtMehFtO1vsVyLWJ65T%2FyzzL%2BVQhHc3rWueMhMJbIwM8GOqUBjyf8YwNs4jBIc4BrdzjQnvypoWDSf%2B578ivw4ZpGoRoDQYOvhJR%2FOJdOmBQnDqG%2BcoBFPGcxw%2BPrMbPRvwOcQmWycMkCDoWZ1Z5zt5MtJGsSdNBJjwzzHHErmGlygDkuhZXZKB3ooioIF1k5IBRtv6%2Bp6KIsiBm3IHQ474g9iAMOOrVQpDFbV0yaAZQC9HzhIzHLVBo1fRsRzcrX6R24pFtuxX4N&X-Amz-Signature=14f481a419ecd403973e2addf87cdabf4bef48b7a60ce643aea6b2453a333b22&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
       "url": "mentalhealth.networkofcare.org",
-      "title": "New Hope Counseling Services"
+      "title": "Network of Care"
     },
     {
       "verificationDate": "",
-      "region": ["Oklahoma"],
+      "region": [
+        "Oklahoma"
+      ],
       "category": [
         "Education",
         "Substance Abuse",
         "Adult Education",
         "Legal Aid",
-        "Case Management"
+        "Case Management",
+        "job training",
+        "Bus Passes"
       ],
-      "id": 79,
-      "description": "Job training, legal aid, addiction recovery, and case management",
-      "WebLogoURL": "",
+      "id": 78,
+      "description": "nonprofit organization dedicated to breaking cycles of incarceration and poverty through education, personal development and work readiness training.",
+      "WebLogoURL": "https://prod-files-secure.s3.us-west-2.amazonaws.com/8bd433af-561d-8126-ad47-0003f4b36e60/17531ea1-ca4b-4c8c-ae6f-6cfc5ab38b97/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466YNUOYBNS%2F20260428%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260428T033801Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAsaCXVzLXdlc3QtMiJHMEUCICTSSNb5BSsPo2sRh18tnJjoi9z1vlaPMQCM5zccOpptAiEA4WBvuMsHt59OW9U2rfaxyyuGesuSWhQ07WtVI3VJgbEqiAQI1P%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2Mzc0MjMxODM4MDUiDKBKrcBXSrVBe%2BafPyrcA6k6cUXnVH9ySFoTDALoGCJTVjJydGBfwg6cnituEsRqTsvzJd%2BldEOuC5vjagBRbr3N7ybiK2kgEd2%2BpMvctlWPo56eZOmK4QGOD5Nv%2BTfZeLf5hDRCnophnuxEYIEtzcSaD6CfDvegx5ia%2Bz65RcBhzsKYImt92nXkBJYRUD2G8Vv3%2BFhPi4KROMq7oNIweCtm0xqT90T9XQq7GAlfCfuCeYXuoqf21GavAzvhf0Dts7YPq%2Bq6SPrs5KfGP1%2BzlNhxh%2B2wgWpHxbk7tzC0XgB2cSKlRmFQcrXu%2BHafKshZ2WMNBbAlNBlhAq9XfpcUBX6w1WMdY1HXtRVopB4YgpxIwIw8m72EQM7RYlAw9drYUR6xGhPlGO2rflOI5RljVCDj19HI%2FrDYCBTozcvEoD11Xo6tcn%2FXWYzlTAxwIseGtDjqgIzV7j%2F3hP7V5YkQtnjj0mTSuemkK99OdCsB5js7sOnF%2FE%2Bo1TqOoMvTiUq8ma%2Bqr71V%2BAn%2F5yaf9ZKfTj%2B%2FJ7lLlPNtxk7w9EGHW8XnMK%2Fyh8hThDR4VOcuen12ddNi%2B0jDlUNDJdWnoUJI6WCXhqQAlvRLoRVpDO9%2B5njPtMehFtO1vsVyLWJ65T%2FyzzL%2BVQhHc3rWueMhMJbIwM8GOqUBjyf8YwNs4jBIc4BrdzjQnvypoWDSf%2B578ivw4ZpGoRoDQYOvhJR%2FOJdOmBQnDqG%2BcoBFPGcxw%2BPrMbPRvwOcQmWycMkCDoWZ1Z5zt5MtJGsSdNBJjwzzHHErmGlygDkuhZXZKB3ooioIF1k5IBRtv6%2Bp6KIsiBm3IHQ474g9iAMOOrVQpDFbV0yaAZQC9HzhIzHLVBo1fRsRzcrX6R24pFtuxX4N&X-Amz-Signature=a7a25f6faecdbb71deaf501739e3bd3c41aa055f532d74e20aac09b5ea946ad8&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
       "url": "www.TEEM.org",
       "title": "TEEM (The Education and Employment Ministry)"
+    },
+    {
+      "verificationDate": "",
+      "region": [
+        "Oklahoma"
+      ],
+      "category": [
+        "Food Assistance",
+        "Healthcare",
+        "Education"
+      ],
+      "id": 80,
+      "description": "We provide essential services that empower individuals and families—offering access to food, healthcare, education, and support systems to help our neighbors thrive.",
+      "WebLogoURL": "https://prod-files-secure.s3.us-west-2.amazonaws.com/8bd433af-561d-8126-ad47-0003f4b36e60/5010735c-a35b-4aba-8ae0-d14a183aaa12/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466YNUOYBNS%2F20260428%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260428T033801Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAsaCXVzLXdlc3QtMiJHMEUCICTSSNb5BSsPo2sRh18tnJjoi9z1vlaPMQCM5zccOpptAiEA4WBvuMsHt59OW9U2rfaxyyuGesuSWhQ07WtVI3VJgbEqiAQI1P%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2Mzc0MjMxODM4MDUiDKBKrcBXSrVBe%2BafPyrcA6k6cUXnVH9ySFoTDALoGCJTVjJydGBfwg6cnituEsRqTsvzJd%2BldEOuC5vjagBRbr3N7ybiK2kgEd2%2BpMvctlWPo56eZOmK4QGOD5Nv%2BTfZeLf5hDRCnophnuxEYIEtzcSaD6CfDvegx5ia%2Bz65RcBhzsKYImt92nXkBJYRUD2G8Vv3%2BFhPi4KROMq7oNIweCtm0xqT90T9XQq7GAlfCfuCeYXuoqf21GavAzvhf0Dts7YPq%2Bq6SPrs5KfGP1%2BzlNhxh%2B2wgWpHxbk7tzC0XgB2cSKlRmFQcrXu%2BHafKshZ2WMNBbAlNBlhAq9XfpcUBX6w1WMdY1HXtRVopB4YgpxIwIw8m72EQM7RYlAw9drYUR6xGhPlGO2rflOI5RljVCDj19HI%2FrDYCBTozcvEoD11Xo6tcn%2FXWYzlTAxwIseGtDjqgIzV7j%2F3hP7V5YkQtnjj0mTSuemkK99OdCsB5js7sOnF%2FE%2Bo1TqOoMvTiUq8ma%2Bqr71V%2BAn%2F5yaf9ZKfTj%2B%2FJ7lLlPNtxk7w9EGHW8XnMK%2Fyh8hThDR4VOcuen12ddNi%2B0jDlUNDJdWnoUJI6WCXhqQAlvRLoRVpDO9%2B5njPtMehFtO1vsVyLWJ65T%2FyzzL%2BVQhHc3rWueMhMJbIwM8GOqUBjyf8YwNs4jBIc4BrdzjQnvypoWDSf%2B578ivw4ZpGoRoDQYOvhJR%2FOJdOmBQnDqG%2BcoBFPGcxw%2BPrMbPRvwOcQmWycMkCDoWZ1Z5zt5MtJGsSdNBJjwzzHHErmGlygDkuhZXZKB3ooioIF1k5IBRtv6%2Bp6KIsiBm3IHQ474g9iAMOOrVQpDFbV0yaAZQC9HzhIzHLVBo1fRsRzcrX6R24pFtuxX4N&X-Amz-Signature=d4f165a11edf53de9c490b8c298786c3766e77738776b2808a5ad4a70def6269&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+      "url": "https://neighborsalongtheline.org/",
+      "title": "Neighbors Along the Line"
+    },
+    {
+      "verificationDate": "",
+      "region": [
+        "Nationwide"
+      ],
+      "category": [
+        "utility assistance",
+        "Rent Assistance",
+        "clothing",
+        "Food Assistance",
+        "Substance Abuse",
+        "Healthcare",
+        "Domestic Violence",
+        "Disaster Relief",
+        "Counseling/Therapy"
+      ],
+      "id": 81,
+      "description": "The Salvation Army, an international movement, is an evangelical part of the universal Christian Church. Its message is based on the Bible. Its ministry is motivated by the love of God. Its mission is to preach the gospel of Jesus Christ and to meet human needs in His name without discrimination.",
+      "WebLogoURL": "https://prod-files-secure.s3.us-west-2.amazonaws.com/8bd433af-561d-8126-ad47-0003f4b36e60/82ecff1d-0335-478c-8a18-237eb2108d4d/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466YNUOYBNS%2F20260428%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260428T033801Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAsaCXVzLXdlc3QtMiJHMEUCICTSSNb5BSsPo2sRh18tnJjoi9z1vlaPMQCM5zccOpptAiEA4WBvuMsHt59OW9U2rfaxyyuGesuSWhQ07WtVI3VJgbEqiAQI1P%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2Mzc0MjMxODM4MDUiDKBKrcBXSrVBe%2BafPyrcA6k6cUXnVH9ySFoTDALoGCJTVjJydGBfwg6cnituEsRqTsvzJd%2BldEOuC5vjagBRbr3N7ybiK2kgEd2%2BpMvctlWPo56eZOmK4QGOD5Nv%2BTfZeLf5hDRCnophnuxEYIEtzcSaD6CfDvegx5ia%2Bz65RcBhzsKYImt92nXkBJYRUD2G8Vv3%2BFhPi4KROMq7oNIweCtm0xqT90T9XQq7GAlfCfuCeYXuoqf21GavAzvhf0Dts7YPq%2Bq6SPrs5KfGP1%2BzlNhxh%2B2wgWpHxbk7tzC0XgB2cSKlRmFQcrXu%2BHafKshZ2WMNBbAlNBlhAq9XfpcUBX6w1WMdY1HXtRVopB4YgpxIwIw8m72EQM7RYlAw9drYUR6xGhPlGO2rflOI5RljVCDj19HI%2FrDYCBTozcvEoD11Xo6tcn%2FXWYzlTAxwIseGtDjqgIzV7j%2F3hP7V5YkQtnjj0mTSuemkK99OdCsB5js7sOnF%2FE%2Bo1TqOoMvTiUq8ma%2Bqr71V%2BAn%2F5yaf9ZKfTj%2B%2FJ7lLlPNtxk7w9EGHW8XnMK%2Fyh8hThDR4VOcuen12ddNi%2B0jDlUNDJdWnoUJI6WCXhqQAlvRLoRVpDO9%2B5njPtMehFtO1vsVyLWJ65T%2FyzzL%2BVQhHc3rWueMhMJbIwM8GOqUBjyf8YwNs4jBIc4BrdzjQnvypoWDSf%2B578ivw4ZpGoRoDQYOvhJR%2FOJdOmBQnDqG%2BcoBFPGcxw%2BPrMbPRvwOcQmWycMkCDoWZ1Z5zt5MtJGsSdNBJjwzzHHErmGlygDkuhZXZKB3ooioIF1k5IBRtv6%2Bp6KIsiBm3IHQ474g9iAMOOrVQpDFbV0yaAZQC9HzhIzHLVBo1fRsRzcrX6R24pFtuxX4N&X-Amz-Signature=181fb36a9f5e0f99135b64b8c796ae10932ebb4788556d91f7ec03b2ea800edf&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+      "url": "https://www.salvationarmyusa.org/usa-southern-territory/",
+      "title": "Salvation Army"
+    },
+    {
+      "verificationDate": "",
+      "region": [
+        "Oklahoma"
+      ],
+      "category": [
+        "Food Assistance",
+        "Housing/Shelter",
+        "clothing",
+        "identification",
+        "utility assistance"
+      ],
+      "id": 79,
+      "description": " a not-for-profit agency founded for the purposes of providing temporary assistance to persons in a crises situation-We assist Sand Springs area residents experiencing economic crisis by moving families forward towards self-sufficiency.",
+      "WebLogoURL": "https://prod-files-secure.s3.us-west-2.amazonaws.com/8bd433af-561d-8126-ad47-0003f4b36e60/3bb69bda-687d-4377-823c-0fa643a3be32/Screenshot_25-4-2026_10059_sscsok.org.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466YNUOYBNS%2F20260428%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260428T033801Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAsaCXVzLXdlc3QtMiJHMEUCICTSSNb5BSsPo2sRh18tnJjoi9z1vlaPMQCM5zccOpptAiEA4WBvuMsHt59OW9U2rfaxyyuGesuSWhQ07WtVI3VJgbEqiAQI1P%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2Mzc0MjMxODM4MDUiDKBKrcBXSrVBe%2BafPyrcA6k6cUXnVH9ySFoTDALoGCJTVjJydGBfwg6cnituEsRqTsvzJd%2BldEOuC5vjagBRbr3N7ybiK2kgEd2%2BpMvctlWPo56eZOmK4QGOD5Nv%2BTfZeLf5hDRCnophnuxEYIEtzcSaD6CfDvegx5ia%2Bz65RcBhzsKYImt92nXkBJYRUD2G8Vv3%2BFhPi4KROMq7oNIweCtm0xqT90T9XQq7GAlfCfuCeYXuoqf21GavAzvhf0Dts7YPq%2Bq6SPrs5KfGP1%2BzlNhxh%2B2wgWpHxbk7tzC0XgB2cSKlRmFQcrXu%2BHafKshZ2WMNBbAlNBlhAq9XfpcUBX6w1WMdY1HXtRVopB4YgpxIwIw8m72EQM7RYlAw9drYUR6xGhPlGO2rflOI5RljVCDj19HI%2FrDYCBTozcvEoD11Xo6tcn%2FXWYzlTAxwIseGtDjqgIzV7j%2F3hP7V5YkQtnjj0mTSuemkK99OdCsB5js7sOnF%2FE%2Bo1TqOoMvTiUq8ma%2Bqr71V%2BAn%2F5yaf9ZKfTj%2B%2FJ7lLlPNtxk7w9EGHW8XnMK%2Fyh8hThDR4VOcuen12ddNi%2B0jDlUNDJdWnoUJI6WCXhqQAlvRLoRVpDO9%2B5njPtMehFtO1vsVyLWJ65T%2FyzzL%2BVQhHc3rWueMhMJbIwM8GOqUBjyf8YwNs4jBIc4BrdzjQnvypoWDSf%2B578ivw4ZpGoRoDQYOvhJR%2FOJdOmBQnDqG%2BcoBFPGcxw%2BPrMbPRvwOcQmWycMkCDoWZ1Z5zt5MtJGsSdNBJjwzzHHErmGlygDkuhZXZKB3ooioIF1k5IBRtv6%2Bp6KIsiBm3IHQ474g9iAMOOrVQpDFbV0yaAZQC9HzhIzHLVBo1fRsRzcrX6R24pFtuxX4N&X-Amz-Signature=dec059134bb2f724d49e78b1edc7cce33331ef09cb2810f7d9dcbf02d8f69d53&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+      "url": "https://sscsok.org/",
+      "title": "Sand Springs Community Services"
+    },
+    {
+      "verificationDate": "",
+      "region": [
+        "Oklahoma"
+      ],
+      "category": [
+        "Food Assistance",
+        "utility assistance"
+      ],
+      "id": 82,
+      "description": "we exist to help each person take the next step in finding and following Jesus Christ. ",
+      "WebLogoURL": "https://prod-files-secure.s3.us-west-2.amazonaws.com/8bd433af-561d-8126-ad47-0003f4b36e60/2ba924a1-8daf-4f48-a46e-53da913f9d51/Screenshot_25-4-2026_114940_www.ssnazarene.org.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466YNUOYBNS%2F20260428%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260428T033801Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAsaCXVzLXdlc3QtMiJHMEUCICTSSNb5BSsPo2sRh18tnJjoi9z1vlaPMQCM5zccOpptAiEA4WBvuMsHt59OW9U2rfaxyyuGesuSWhQ07WtVI3VJgbEqiAQI1P%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2Mzc0MjMxODM4MDUiDKBKrcBXSrVBe%2BafPyrcA6k6cUXnVH9ySFoTDALoGCJTVjJydGBfwg6cnituEsRqTsvzJd%2BldEOuC5vjagBRbr3N7ybiK2kgEd2%2BpMvctlWPo56eZOmK4QGOD5Nv%2BTfZeLf5hDRCnophnuxEYIEtzcSaD6CfDvegx5ia%2Bz65RcBhzsKYImt92nXkBJYRUD2G8Vv3%2BFhPi4KROMq7oNIweCtm0xqT90T9XQq7GAlfCfuCeYXuoqf21GavAzvhf0Dts7YPq%2Bq6SPrs5KfGP1%2BzlNhxh%2B2wgWpHxbk7tzC0XgB2cSKlRmFQcrXu%2BHafKshZ2WMNBbAlNBlhAq9XfpcUBX6w1WMdY1HXtRVopB4YgpxIwIw8m72EQM7RYlAw9drYUR6xGhPlGO2rflOI5RljVCDj19HI%2FrDYCBTozcvEoD11Xo6tcn%2FXWYzlTAxwIseGtDjqgIzV7j%2F3hP7V5YkQtnjj0mTSuemkK99OdCsB5js7sOnF%2FE%2Bo1TqOoMvTiUq8ma%2Bqr71V%2BAn%2F5yaf9ZKfTj%2B%2FJ7lLlPNtxk7w9EGHW8XnMK%2Fyh8hThDR4VOcuen12ddNi%2B0jDlUNDJdWnoUJI6WCXhqQAlvRLoRVpDO9%2B5njPtMehFtO1vsVyLWJ65T%2FyzzL%2BVQhHc3rWueMhMJbIwM8GOqUBjyf8YwNs4jBIc4BrdzjQnvypoWDSf%2B578ivw4ZpGoRoDQYOvhJR%2FOJdOmBQnDqG%2BcoBFPGcxw%2BPrMbPRvwOcQmWycMkCDoWZ1Z5zt5MtJGsSdNBJjwzzHHErmGlygDkuhZXZKB3ooioIF1k5IBRtv6%2Bp6KIsiBm3IHQ474g9iAMOOrVQpDFbV0yaAZQC9HzhIzHLVBo1fRsRzcrX6R24pFtuxX4N&X-Amz-Signature=e19ff8cd5c6613a3bf9fbafdb3a2ca4e6dd31727922c902802e4da7855d30e3d&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+      "url": "https://www.ssnazarene.org/contact-us/",
+      "title": "Church of Nazarene"
+    },
+    {
+      "verificationDate": "",
+      "region": [
+        "Oklahoma"
+      ],
+      "category": [
+        "Food Assistance"
+      ],
+      "id": 83,
+      "description": "a growing church family who strives to love God and love others. ",
+      "WebLogoURL": "https://prod-files-secure.s3.us-west-2.amazonaws.com/8bd433af-561d-8126-ad47-0003f4b36e60/22b50b39-e710-4476-8442-0074ba2a8831/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466YNUOYBNS%2F20260428%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260428T033801Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAsaCXVzLXdlc3QtMiJHMEUCICTSSNb5BSsPo2sRh18tnJjoi9z1vlaPMQCM5zccOpptAiEA4WBvuMsHt59OW9U2rfaxyyuGesuSWhQ07WtVI3VJgbEqiAQI1P%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2Mzc0MjMxODM4MDUiDKBKrcBXSrVBe%2BafPyrcA6k6cUXnVH9ySFoTDALoGCJTVjJydGBfwg6cnituEsRqTsvzJd%2BldEOuC5vjagBRbr3N7ybiK2kgEd2%2BpMvctlWPo56eZOmK4QGOD5Nv%2BTfZeLf5hDRCnophnuxEYIEtzcSaD6CfDvegx5ia%2Bz65RcBhzsKYImt92nXkBJYRUD2G8Vv3%2BFhPi4KROMq7oNIweCtm0xqT90T9XQq7GAlfCfuCeYXuoqf21GavAzvhf0Dts7YPq%2Bq6SPrs5KfGP1%2BzlNhxh%2B2wgWpHxbk7tzC0XgB2cSKlRmFQcrXu%2BHafKshZ2WMNBbAlNBlhAq9XfpcUBX6w1WMdY1HXtRVopB4YgpxIwIw8m72EQM7RYlAw9drYUR6xGhPlGO2rflOI5RljVCDj19HI%2FrDYCBTozcvEoD11Xo6tcn%2FXWYzlTAxwIseGtDjqgIzV7j%2F3hP7V5YkQtnjj0mTSuemkK99OdCsB5js7sOnF%2FE%2Bo1TqOoMvTiUq8ma%2Bqr71V%2BAn%2F5yaf9ZKfTj%2B%2FJ7lLlPNtxk7w9EGHW8XnMK%2Fyh8hThDR4VOcuen12ddNi%2B0jDlUNDJdWnoUJI6WCXhqQAlvRLoRVpDO9%2B5njPtMehFtO1vsVyLWJ65T%2FyzzL%2BVQhHc3rWueMhMJbIwM8GOqUBjyf8YwNs4jBIc4BrdzjQnvypoWDSf%2B578ivw4ZpGoRoDQYOvhJR%2FOJdOmBQnDqG%2BcoBFPGcxw%2BPrMbPRvwOcQmWycMkCDoWZ1Z5zt5MtJGsSdNBJjwzzHHErmGlygDkuhZXZKB3ooioIF1k5IBRtv6%2Bp6KIsiBm3IHQ474g9iAMOOrVQpDFbV0yaAZQC9HzhIzHLVBo1fRsRzcrX6R24pFtuxX4N&X-Amz-Signature=45b65ce90c2ca5f06b353e59a0f5fba046d68899bc1e7f54a88f70f4830dc3a7&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+      "url": "https://www.sandspringschurchofchrist.com/",
+      "title": "Church of Christ"
     }
   ]
 }
