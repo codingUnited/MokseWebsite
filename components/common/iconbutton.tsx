@@ -2,7 +2,7 @@
 //  & React.ComponentProps<typeof ChakraIcon>
 
 export default function IconButton({
-  link,
+  // link,
   platform,
   url,
   icon,

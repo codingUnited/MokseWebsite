@@ -1,6 +1,6 @@
 "use client";
 import { HeaderTemplate, PageBuilder, SectionTemplate } from '@/components/page-builder/template';
-import { Button, Link as ChakraLink, Text, Image, HStack, Heading, List } from "@chakra-ui/react";
+import { Button, Link as ChakraLink, Text, Image, HStack, Center, VStack, Box, Heading, List, Card } from "@chakra-ui/react";
 import NextLink from "next/link";
 import NextImage from "next/image";
 
@@ -20,8 +20,8 @@ export default function NavigatorsNetwork() {
                         <NextImage
                             src="/assets/navigators-network/partners-shaking-hands.webp"
                             alt="Navigators Network Background"
-                            width={1080} //300w // 768w  // 1536 
-                            height={683}
+                            width={575} // start was 1024 //300w // 768w  // 1536 
+                            height={383} // start 683
                         />
                     </Image>
                     <Heading size={"4xl"}>Navigator&apos;s Network</Heading>
@@ -54,52 +54,80 @@ export default function NavigatorsNetwork() {
                         <NextImage
                             src="/assets/navigators-network/women-shaking-hands-outside.webp"
                             alt="Women shaking hands"
-                            width={949}
-                            height={1024}
+                            width={550}
+                            height={593}
                         />
                     </Image>
                 </HStack>
             </SectionTemplate>
             <SectionTemplate>
-                <HStack>
-                    <Image asChild alt="">
-                        <NextImage
-                            src="/assets/navigators-network/top-view-convo.webp"
-                            alt="Top view of co-workers talking"
-                            width={757}
-                            height={1024}
-                        />
-                    </Image>
-                    <Heading size={'4xl'}>Launching Soon — Now Onboarding Partners</Heading>
-                    <Text>We are actively building the platform and onboarding early partners.</Text>
-                    <Text>Organizations that sign up now will receive:</Text>
-                    <List.Root>
-                        <List.Item>Early access opportunities</List.Item>
-                        <List.Item>Partnership details</List.Item>
-                        <List.Item>Feature updates as they go live</List.Item>
-                        <List.Item>Shared resource announcements</List.Item>
-                    </List.Root>
-                </HStack>
-            </SectionTemplate>
-            <SectionTemplate>
-                <HStack>
-                    <Heading size={'4xl'}>Get In Touch</Heading>
-                    <Text>Christiana “Sunshine” Longway</Text>
-                    <Text>Sunshine@mokse.org</Text>
-                    <Button>
-                        {/*BUTTON GOES TO TOP OF PAGE */}
-                        <Text color={'black'}>Launching April 23rd, 2026</Text>
+                <Center>
+                    <Card.Root gap={40} flexDirection={"row"} border={0}>
+                        <Image asChild alt="">
+                            <NextImage
+                                src="/assets/navigators-network/top-view-convo.webp"
+                                alt="Top view of co-workers talking"
+                                width={550}
+                                height={743}
+                            />
+                        </Image>
 
-                    </Button>
-                    <Image asChild alt="">
-                        <NextImage
-                            src='/assets/navigators-network/women-holding-map.webp'
-                            alt='Women holding map'
-                            width={768}
-                            height={772}
-                        />
-                    </Image>
-                </HStack>
+                        <Center>
+                            <VStack>
+                                <Heading size={'4xl'} maxWidth={"500px"} fontWeight={700}>
+                                    Launching Soon — Now Onboarding Partners
+                                </Heading>
+                                <Card.Title>We are actively building the platform and onboarding early partners.</Card.Title>
+
+                                <VStack w={"full"} gap={5} alignItems={'left'}><Card.Description textStyle={"lg"}>
+                                    Organizations that sign up now will receive:
+                                    <VStack w={"full"} gap={5} alignItems={"self-start"}>
+                                        <List.Root>
+                                            <List.Item>Early access opportunities</List.Item>
+                                            <List.Item>Partnership details</List.Item>
+                                            <List.Item>Feature updates as they go live</List.Item>
+                                            <List.Item>Shared resource announcements</List.Item>
+                                        </List.Root>
+                                    </VStack>
+                                </Card.Description></VStack>
+
+                            </VStack>
+                        </Center>
+
+                    </Card.Root>
+                </Center>
+
+            </SectionTemplate >
+
+            <SectionTemplate>
+                <Center>
+                    <Card.Root gap={40} flexDirection={"row"} border={0}>
+                        <Center>
+                            <VStack>
+                                <Heading size={"6xl"}>Get In Touch</Heading>
+                                <VStack w={"full"} gap={5} alignItems={'left'}>
+                                    <Card.Title color={"#6E7180"}>Christiana "Sunshine" Longway</Card.Title>
+                                    <Card.Description color={"#6E7180"} textStyle={"lg"}>Sunshine@mokse.org</Card.Description>
+                                    <Button bg={'#43c0b3'}>
+                                        {/*BUTTON GOES TO TOP OF PAGE */}
+                                        Launching April 23rd, 2026
+                                    </Button>
+                                </VStack>
+
+                            </VStack>
+                        </Center>
+
+                        <Image asChild alt="">
+                            <NextImage
+                                src='/assets/navigators-network/women-holding-map.webp'
+                                alt='Women holding map'
+                                width={600}
+                                height={603}
+                            />
+                        </Image>
+                    </Card.Root>
+                </Center>
+
             </SectionTemplate>
         </PageBuilder >
 

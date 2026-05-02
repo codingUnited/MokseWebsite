@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import type { TeamMember } from '../../data/team';
-import { Card, Text } from '@chakra-ui/react';
+import { Card } from '@chakra-ui/react';
+// import { Text } from '@chakra-ui/react';
 import { poppins } from '../ui/fonts';
 
 export default function TeamMemberCard({ name, title, email, imagePath }: TeamMember) {

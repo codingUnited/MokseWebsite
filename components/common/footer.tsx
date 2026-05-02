@@ -25,18 +25,18 @@ import { poppins } from "../ui/fonts";
 import checkDeviceSize from "../ui/breakpoints";
 
 import { Icon } from "@/components/ui/icons/icon";
-import { useState } from "react";
+// import { useState } from "react";
 
 export default function Footer() {
-  const { colorMode } = useColorMode();
-  const current = useBreakpointValue({
-    base: "base",
-    sm: "sm",
-    md: "md",
-    lg: "lg",
-    xl: "xl",
-    "2xl": "2xl",
-  });
+  // const { colorMode } = useColorMode();
+  // const current = useBreakpointValue({
+  //   base: "base",
+  //   sm: "sm",
+  //   md: "md",
+  //   lg: "lg",
+  //   xl: "xl",
+  //   "2xl": "2xl",
+  // });
 
   const logoSrc = useColorModeValue("/mokse-logo_lightmode.png", "/mokse-logo_darkmode.png");
 
@@ -51,17 +51,16 @@ export default function Footer() {
             <Flex justify={"space-between"} gap={40}>
               <Box>
                 <ClientOnly fallback={<Skeleton width={180} height={46} />}>
-                  <Image asChild>
+                  <Image asChild
+                    alt={"MOKSE Logo"}>
                     <NextImage
                       src={logoSrc}
-                      alt="MOKSE Logo"
+                      alt={"MOKSE Logo"}
                       width={180}
                       height={46}
                     />
                   </Image>
                 </ClientOnly>
-
-
                 <Text maxW={300} my={6}>
                   A society where all individuals have equal opportunities to
                   thrive, learn, and lead.
@@ -360,12 +359,14 @@ export default function Footer() {
         <HStack justify={"space-between"} py={3.5} px={1}>
           <ChakraLink asChild>
             <NextLink href="/">
-              <Image
-                src="/MOKSE-logo_darkmode.png"
-                alt="MOKSE Logo"
-                width={180}
-                height={48}
-              />
+              <Image asChild alt="MOKSE Logo">
+                <NextImage
+                  src="/MOKSE-logo_darkmode.png"
+                  width={180}
+                  height={48}
+                  alt={"MOKSE Logo"}
+                />
+              </Image>
             </NextLink>
           </ChakraLink>
           <Button>Menu</Button>
