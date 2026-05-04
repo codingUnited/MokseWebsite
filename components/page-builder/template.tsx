@@ -9,7 +9,7 @@ import {
   SimpleGrid,
   Link,
   GridItem,
-  Float,
+  // Float, 
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 

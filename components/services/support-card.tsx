@@ -1,11 +1,12 @@
 "use client";
-import Image from "next/image";
-import NextLink from "next/link";
+// import Image from "next/image"; 
+// import NextLink from "next/link";
 
 import { IconName } from "../ui/icons/icon-registry";
 import { Icon } from "../ui/icons/icon";
-import { Card, Image as ChakraImage, Heading, Text } from "@chakra-ui/react";
-import { Link as ChakraLink, SimpleGrid } from "@chakra-ui/react";
+import { Card,  Heading, Text } from "@chakra-ui/react";
+// import {Image as ChakraImage,} from "@chakra-ui/react";
+// import { Link as ChakraLink, SimpleGrid } from "@chakra-ui/react";
 
 
 interface SupportCardProps {

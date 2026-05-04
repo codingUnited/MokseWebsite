@@ -10,7 +10,7 @@ import {
   Button,
   Text,
   Badge,
-  VStack,
+  // VStack, 
   Float,
   Box,
 } from "@chakra-ui/react";

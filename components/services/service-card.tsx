@@ -5,7 +5,8 @@ import NextLink from "next/link";
 import { IconName } from "../ui/icons/icon-registry";
 import { Icon } from "../ui/icons/icon";
 import { Card, Image as ChakraImage, Float, Heading } from "@chakra-ui/react";
-import { Link as ChakraLink, SimpleGrid } from "@chakra-ui/react";
+import { Link as ChakraLink } from "@chakra-ui/react";
+// import { SimpleGrid } from "@chakra-ui/react"; 
 
 interface ServiceCardProps {
   icon: IconName;

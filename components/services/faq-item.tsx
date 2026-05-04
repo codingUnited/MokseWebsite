@@ -1,25 +1,25 @@
 "use client";
 
-import { useState } from "react";
+// import { useState } from "react"; 
 import {
   Accordion,
-  Button,
+  // Button, 
   Card,
-  Container,
+  // Container, 
   Span,
   Text,
 } from "@chakra-ui/react";
 import { Icon } from "../ui/icons/icon";
 import { faqItems } from "@/data/services";
 import { SectionTemplate } from "../page-builder/template";
-interface FaqItemProps {
-  index: string;
-  question: string;
-  answer: string;
-}
+// interface FaqItemProps {
+//   index: string;
+//   question: string;
+//   answer: string;
+// }
 
 export default function FaqItem() {
-  const [isOpen, setIsOpen] = useState(false);
+  // const [isOpen, setIsOpen] = useState(false); 
 
   return (
     <SectionTemplate

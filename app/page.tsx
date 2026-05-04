@@ -20,9 +20,11 @@ import {
   Stack,
   Card,
   Image as ChakraImage,
+  HStack,
 } from "@chakra-ui/react";
 import { RiArrowRightLine } from "react-icons/ri";
 import { poppins } from "../components/ui/fonts";
+// import { openSans } from "../components/ui/fonts";
 import checkDeviceSize from "../components/ui/breakpoints";
 import { Icon } from "@/components/ui/icons/icon";
 
@@ -40,7 +42,6 @@ export default function Home() {
             bgSize={"cover"}
             backgroundPosition={"center"}
             bgRepeat={"no-repeat"}
-
           //  alt="Mokse hero image"
           >
             <AbsoluteCenter
@@ -138,64 +139,121 @@ export default function Home() {
               </Center>
             </VStack>
           </Container>
-          <Container bg={"teal.solid"} h={"46vh"} fluid my={"25vh"}>
-            <Card.Root
-              flexDirection={"row"}
-              size={"sm"}
-              h={"100%"}
-              ml={"25vh"}
-              bg="rgba(0, 0, 0, 0)"
-              border={0}
-            >
-              <Box
-                position="relative"
-                borderRadius={"xl"}
-                w={"350px"}
-                h={"55vh"}
-                bgImage={"url('/home-backdrop-image.jpg')"}
-                bgSize={"cover"}
-                backgroundPosition={"center"}
-                bgRepeat={"no-repeat"}
 
-              //  alt="Mokse hero image"
-              >
-                <AbsoluteCenter bg="rgba(0, 0, 0, 0)" w={"100%"} h={"100%"}>
-                  <Box
-                    position="relative"
-                    borderRadius={"lg"}
-                    top={"-88px"}
-                    left={"-125px"}
-                    w={"350px"}
-                    h={"55vh"}
-                    bgImage={"url('/assets/home/Image-1-1.jpg')"}
-                    bgSize={"cover"}
-                    backgroundPosition={"center"}
-                    bgRepeat={"no-repeat"}
-                    zIndex={1}
-                  //  alt="Mokse hero image"
-                  >
-                    <AbsoluteCenter
-                      bg="rgba(0, 0, 0, 0.1)"
-                      w={"100%"}
-                      h={"100%"}
-                    ></AbsoluteCenter>
-                  </Box>
-                </AbsoluteCenter>
+          <HStack justifyContent={"space-between"} h={"46vh"} my={"25vh"} gap={60}>
+            {/* Fix top/bottom alignment of image */}
+            <ChakraImage
+              height={"53%"}
+              width={"325px"}
+              src={"/dots.webp"}
+              alt={"Mokse hero image"}
+              pt={0}
+            />
+
+            <HStack bg={"#43c0b3"} >
+              <Box position={"relative"} h={"46vh"}>
+                {/* Computer Image */}
+                <ChakraImage
+                  rounded={"md"}
+                  h={"100%"}
+                  w={"356px"}
+                  fit={"contain"}
+                  src={"/home-backdrop-image.jpg"}
+                  alt={"Mokse hero image"}
+                />
+                {
+                  /* People Image
+                  * Fix Sizing
+                   */
+                }
+                <Float placement={"top-start"} offsetY={40} offsetX={25}>
+                  <ChakraImage
+                    rounded={"md"}
+                    fit={"contain"}
+                    h={"100%"}
+                    w={"356px"}
+                    src={"/assets/home/Image-1-1.jpg"}
+                    alt={"Mokse hero image"}
+                  />
+                </Float>
               </Box>
-              <Card.Body w={"25px"}>
-                <Container _light={{ color: "white" }}>
-                  <h3>Make a Difference - Get Involved!</h3>
-                  <p>
+              <Container ml={"8vh"}>
+                <HStack>
+                  <Heading size={"3xl"} as={"h2"}>
+                    <Text>Make a Difference</Text>
+                    <Text>- Get Involved!</Text>
+                  </Heading>
+                </HStack>
+                <Box w={"full"}>
+                  <Text textStyle={"lg"} mt={4} mb={8} >
                     Are you passionate about helping justice-impacted
                     individuals? We need compassionate volunteers to assist in
                     various roles, including mentorship, tutoring, and
-                    administrative support...
-                  </p>
-                  <Button>Get Involved</Button>
-                </Container>
-              </Card.Body>
-            </Card.Root>
-          </Container>
+                    administrative support.
+                  </Text>
+                </Box>
+                <Button size={"lg"}>Get Involved <Icon name={"ArrowRight"} size={4} /></Button>
+              </Container>
+
+              {/* ORIGINAL SETUP */}
+              {/* <Card.Root
+                flexDirection={"row"}
+                size={"sm"}
+                h={"100%"}
+                ml={"25vh"}
+                bg="rgba(0, 0, 0, 0)"
+                border={0}
+              >
+                <Box
+                  position="relative"
+                  borderRadius={"xl"}
+                  w={"350px"}
+                  h={"55vh"}
+                  bgImage={"url('/home-backdrop-image.jpg')"}
+                  bgSize={"cover"}
+                  backgroundPosition={"center"}
+                  bgRepeat={"no-repeat"}
+                  // alt="Mokse hero image"
+                >
+                  <AbsoluteCenter bg="rgba(0, 0, 0, 0)" w={"100%"} h={"100%"}>
+                    <Box
+                      position="relative"
+                      borderRadius={"lg"}
+                      top={"-88px"}
+                      left={"-125px"}
+                      w={"350px"}
+                      h={"55vh"}
+                      bgImage={"url('/assets/home/Image-1-1.jpg')"}
+                      bgSize={"cover"}
+                      backgroundPosition={"center"}
+                      bgRepeat={"no-repeat"}
+                      zIndex={1}
+                    //  alt="Mokse hero image"
+                    >
+                      <AbsoluteCenter
+                        bg="rgba(0, 0, 0, 0.1)"
+                        w={"100%"}
+                        h={"100%"}
+                      ></AbsoluteCenter>
+                    </Box>
+                  </AbsoluteCenter>
+                </Box>
+                <Card.Body w={"25px"}>
+                  <Container _light={{ color: "white" }}>
+                    <h3>Make a Difference - Get Involved!</h3>
+                    <p>
+                      Are you passionate about helping justice-impacted
+                      individuals? We need compassionate volunteers to assist in
+                      various roles, including mentorship, tutoring, and
+                      administrative support...
+                    </p>
+                    <Button>Get Involved</Button>
+                  </Container>
+                </Card.Body>
+              </Card.Root> */}
+            </HStack>
+          </HStack>
+
           <Stack>
             <Stack direction={"row"}>
               {getInvolved.map((f) => (
@@ -325,7 +383,7 @@ export default function Home() {
               </GridItem>
             </SimpleGrid>
           </Container>
-        </VStack>
+        </VStack >
       ) : (
         <VStack>
           <Box
@@ -392,7 +450,8 @@ export default function Home() {
             </Center>
           </Box>
         </VStack>
-      )}
+      )
+      }
     </>
   );
 }
