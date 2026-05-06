@@ -74,7 +74,7 @@ export default function AboutUs() {
           </Box>
           {/* ABOUT US */}
           <Container as={"main"} maxW={"7xl"} h={"100%"}>
-            <SimpleGrid as={"section"} pt={12} pb={35} columns={[1, 2]} gap={6}>
+            <SimpleGrid as={"section"} pt={12} pb={"35px"} columns={{ base: 1, md: 2 }} gap={6}>
               <Card.Root p={8}>
                 <Avatar.Root size={"2xl"}>
                   <Icon name={"Gem"} size={8} color={"#44C1B4"} />
