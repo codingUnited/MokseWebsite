@@ -1,16 +1,16 @@
 import Image from "next/image";
 import NextLink from "next/link";
-import ServiceCard from "../../../components/services/service-card";
-import SupportCard from "../../../components/services/support-card";
-import FaqItem from "../../../components/services/faq-item";
-import { services, supportOptions, faqItems } from "../../../data/services";
+import ServiceCard from "@/components/services/service-card";
+import SupportCard from "@/components/services/support-card";
+import FaqItem from "@/components/services/faq-item";
+import { services, supportOptions, faqItems } from "@/data/services";
 import { Link as ChakraLink, HStack, SimpleGrid } from "@chakra-ui/react";
 import {
   HeaderTemplate,
   PageBuilder,
   BodyTemplate,
   SectionTemplate,
-} from "../../../components/page-builder/template";
+} from "@/components/page-builder/template";
 
 export default function Services() {
   return (

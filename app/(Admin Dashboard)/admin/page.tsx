@@ -15,6 +15,7 @@ import {
   Tabs,
   SimpleGrid,
   Avatar,
+  Heading,
 } from "@chakra-ui/react";
 import { useState } from "react";
 import membersData from "./settings/members.json";
@@ -48,11 +49,20 @@ export default function Admin() {
   };
   return (
     <PageBuilder>
-      <HeaderTemplate imageHeight="8vh" />
-      <SectionTemplate title="Admin Panel" direction="row">
+      <HeaderTemplate imageHeight="0vh" />
+      <SectionTemplate direction="row">
         {!isAuthenticated && (
           <Card.Root width={"sm"} h={"sm"} size={"lg"} alignSelf={"center"}>
-            <Card.Header>Admin Login</Card.Header>
+            <Card.Header alignItems={"center"} justifyContent={"center"}>
+              <Heading size={{ base: "3xl" }}>
+                Admin Login
+              </Heading>
+            </Card.Header>
+            <Input placeholder={"2xl"} hideBelow={'2xl'} />
+            <Input placeholder={"xl"} hideBelow={'xl'} />
+            <Input placeholder={"lg"} hideBelow={'lg'} />
+            <Input placeholder={"md"} hideBelow={'md'} />
+            <Input placeholder={"sm"} hideBelow={'sm'} />
             <Card.Body>
               <form action="submit">
                 <Fieldset.Root>

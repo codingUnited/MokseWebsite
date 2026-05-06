@@ -1,8 +1,8 @@
 "use client";
 import NextImage from "next/image";
-import TeamMemberCard from "../../../components/about/team-member-card";
+import TeamMemberCard from "@/components/about/team-member-card";
 // import { GemIcon } from '@/components/ui/icons';
-import { executiveBoard, teamMembers } from "../../../data/team";
+import { executiveBoard, teamMembers } from "@/data/team";
 import {
   Container,
   Box,
@@ -17,9 +17,9 @@ import {
   Card,
   Avatar,
 } from "@chakra-ui/react";
-import { poppins } from "../../../components/ui/fonts";
+import { poppins } from "@/components/ui/fonts";
 import NextLink from "next/link";
-import checkDeviceSize from "../../../components/ui/breakpoints";
+import checkDeviceSize from "@/components/ui/breakpoints";
 import { Icon } from "@/components/ui/icons/icon";
 
 export default function AboutUs() {
@@ -37,7 +37,7 @@ export default function AboutUs() {
             backgroundPosition={"center"}
             bgRepeat={"no-repeat"}
 
-            //  alt="Mokse hero image"
+          //  alt="Mokse hero image"
           >
             <AbsoluteCenter
               textAlign="center"

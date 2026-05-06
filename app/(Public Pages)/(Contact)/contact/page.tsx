@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import ContactForm from "../../../components/contact/contact-form";
-import { contactInfo, socialLinks, mapEmbedUrl } from "../../../data/contact";
+import ContactForm from "@/components/contact/contact-form";
+import { contactInfo, socialLinks, mapEmbedUrl } from "@/data/contact";
 
 import NextLink from "next/link";
 import {
@@ -43,63 +43,63 @@ export default function Contact() {
 
           <SectionTemplate >
             <VStack justify={"center"} align={"center"} gap={4} mb={10}>
-            <Heading as={"h2"}>Get in Touch</Heading>
-            <Text>
-              We&apos;re here to support you. Reach out to learn more about our
-              services, volunteer opportunities, and ways to contribute
-            </Text>
+              <Heading as={"h2"}>Get in Touch</Heading>
+              <Text>
+                We&apos;re here to support you. Reach out to learn more about our
+                services, volunteer opportunities, and ways to contribute
+              </Text>
 
-            <HStack justify={"left"} align={"center"} gap={4}>
-              {socialLinks.map((link) => (
-                <ChakraLink asChild key={link.url}>
-                  <NextLink
-                    href={link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Icon
-                      name={link.platform}
-                      border={"lg"}
-                      borderRadius={"full"}
-                      size={8}
-                      bg={"teal.focusRing"}
-                      borderColor={"teal.focusRing"}
-                      aria-label={`Visit our ${link.platform} page`}
-                    />
-                    <span>{link.platform}</span>
-                  </NextLink>
-                </ChakraLink>
-              ))}
-            </HStack>
-            {/* Contact Info Cards Section */}
-            <HStack>
-              {contactInfo.map((info) => {
-                info.value ? (
-                  <a href={info.value}>{info.value}</a>
-                ) : (
-                  <Text>{info.value}</Text>
-                );
+              <HStack justify={"left"} align={"center"} gap={4}>
+                {socialLinks.map((link) => (
+                  <ChakraLink asChild key={link.url}>
+                    <NextLink
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Icon
+                        name={link.platform}
+                        border={"lg"}
+                        borderRadius={"full"}
+                        size={8}
+                        bg={"teal.focusRing"}
+                        borderColor={"teal.focusRing"}
+                        aria-label={`Visit our ${link.platform} page`}
+                      />
+                      <span>{link.platform}</span>
+                    </NextLink>
+                  </ChakraLink>
+                ))}
+              </HStack>
+              {/* Contact Info Cards Section */}
+              <HStack>
+                {contactInfo.map((info) => {
+                  info.value ? (
+                    <a href={info.value}>{info.value}</a>
+                  ) : (
+                    <Text>{info.value}</Text>
+                  );
 
-                return (
-                  <Card.Root
-                    key={info.label}
-                    variant="outline"
-                    w={"xxs"}
-                    h={"xxs"}
-                  >
-                    <Card.Body>
-                      <Avatar.Root my={4} boxSize={12}>
-                        <Icon name={info.icon} size={6} />
-                      </Avatar.Root>
-                      <Card.Title className={poppins.className}>
-                        {info.label}
-                      </Card.Title>
-                      <ChakraLink href={info.phoneNumber}>{info.value}</ChakraLink>
-                    </Card.Body>
-                  </Card.Root>
-                );
-              })}
-            </HStack>
+                  return (
+                    <Card.Root
+                      key={info.label}
+                      variant="outline"
+                      w={"xxs"}
+                      h={"xxs"}
+                    >
+                      <Card.Body>
+                        <Avatar.Root my={4} boxSize={12}>
+                          <Icon name={info.icon} size={6} />
+                        </Avatar.Root>
+                        <Card.Title className={poppins.className}>
+                          {info.label}
+                        </Card.Title>
+                        <ChakraLink href={info.phoneNumber}>{info.value}</ChakraLink>
+                      </Card.Body>
+                    </Card.Root>
+                  );
+                })}
+              </HStack>
             </VStack>
 
             {/* Google Maps Embed Section */}

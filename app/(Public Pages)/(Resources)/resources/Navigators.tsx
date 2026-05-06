@@ -383,10 +383,11 @@ export default function Navigators() {
                 borderRadius="md"
                 shadow="xs"
                 flexDirection="row"
+                overflow="hidden"
               >
                 <Center borderRadius="md">
                   <ClientOnly fallback={<Box boxSize={120} bg={"blue.500"} />}>
-                    <Image src={item.WebLogoURL} alt={item.title} width={120} height={120}/>
+                    <Image src={item.WebLogoURL} alt={item.title} width={120} height={120} fit="contain" p={2} bg="#545454" />
                   </ClientOnly>
                 </Center>
                 <Card.Body p={4}>

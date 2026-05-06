@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
-import Footer from "../components/common/footer";
-import { Provider } from "./provider";
-import Navbar from "../components/common/navbar";
+// import Footer from "@/components/common/footer";
+import Footer from "@/app/(Admin Dashboard)/components/footer";
+import { Provider } from "@/app/provider";
+// import Navbar from "@/components/common/navbar";
+import Navbar from "@/app/(Admin Dashboard)/components/navbar";
+
 
 const openSans = Open_Sans({
   weight: ["400", "600", "700"],
