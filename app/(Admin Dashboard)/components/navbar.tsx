@@ -64,7 +64,7 @@ export default function Navbar() {
 
   const [open, setOpen] = useState(false)
   // Container props
-  const ContainerProps = {
+  const ContainerProps: StackProps = {
     h: { mobile: "10dvh", tablet: "30dvh", laptop: "50dvh", xLarge: "70dvh", "2XLarge": "90dvh" }, //"2XLarge": "10dvh",
     zIndex: 2, //2,
 
@@ -72,11 +72,7 @@ export default function Navbar() {
 
     boxShadow: { base: "2xl" },//isFixed ? "2xl" : "none",
     bg: {
-      base: colorMode === "light"
-        ? "black"
-        : "blackAlpha.950"
-      ,
-      aboveBase: colorMode === "light"
+      mobile: colorMode === "light"
         ? "black"
         : "blackAlpha.950"
     },
