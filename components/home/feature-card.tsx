@@ -17,7 +17,7 @@ export default function FeatureCard({
   icon,
 }: FeatureCardProps) {
   return (
-    <Card.Root variant="outline" w={"sm"} h={"xs"}>
+    <Card.Root variant="outline" w={{ mobile: "xs" }} h={"xs"}>
       <Card.Body>
         <Avatar.Root my={4} boxSize={12}>
           <Icon name={icon} size={6} />
