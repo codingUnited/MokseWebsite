@@ -373,7 +373,7 @@ export default function Home() {
                 role="img"
                 aria-label="Mokse hero image 1"
                 rounded="md"
-              />
+              /> 
             </Center>
           </GridItem>
         </SimpleGrid>
