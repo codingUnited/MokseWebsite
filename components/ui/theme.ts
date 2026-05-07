@@ -3,7 +3,7 @@ import { createSystem, defaultConfig, defineConfig } from "@chakra-ui/react"
 const config = defineConfig({
   theme: {
     breakpoints: {
-      mobile: "375px",
+      mobile: "320px",
       tablet: "768px",
       laptop: "1024px",
       xLarge: "1440px",
