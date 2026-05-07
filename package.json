@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint . 2>&1",
-    "typecheck": "tsc --noEmit 2>&1"
+    "typecheck": "tsc --noEmit 2>&1",
+    "postinstall": "npx @chakra-ui/cli typegen ./components/ui/theme.ts"
   },
   "dependencies": {
     "@chakra-ui/react": "^3.34.0",
