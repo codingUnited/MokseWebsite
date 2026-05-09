@@ -65,14 +65,18 @@ export default function Navbar() {
   const [open, setOpen] = useState(false)
   // Container props
   const ContainerProps: StackProps = {
-    h: { mobile: "10dvh", tablet: "30dvh", laptop: "50dvh", xLarge: "70dvh", "2XLarge": "90dvh" }, //"2XLarge": "10dvh",
+    h: { mobileS: "12dvh" }, //"2XLarge": "10dvh",
     zIndex: 2, //2,
 
     py: { base: 5, mdTo2xl: 8 },//isFixed ? (notMobileDevice ? 8 : 2) : notMobileDevice ? 8 : 5,
 
     boxShadow: { base: "2xl" },//isFixed ? "2xl" : "none",
     bg: {
-      mobile: colorMode === "light"
+      mobileS: colorMode === "light"
+        ? "black"
+        : "blackAlpha.950"
+      ,
+      tablet: colorMode === "dark"
         ? "black"
         : "blackAlpha.950"
     },
@@ -80,19 +84,19 @@ export default function Navbar() {
     className: openSans.className,//openSans.className,
     justifyContent: "space-between",
 
-  }
+  };
 
   // Nav text props
-  const navTextProps = {
+  const navTextProps: StackProps = {
     fontSize: "16px",
     fontWeight: 600,
     _light: { color: "white" },
-  } as const;
+  };
 
   return (
     <HStack {...ContainerProps} as={"nav"} color={"#f8f7f7"}>
 
-      <ChakraLink asChild pl={{ mobile: 4, laptop: 8 }}>
+      <ChakraLink asChild pl={{ mobileS: 4, laptop: 8 }}>
         <NextLink href="/">
           <ChakraImage asChild >
             <Image
