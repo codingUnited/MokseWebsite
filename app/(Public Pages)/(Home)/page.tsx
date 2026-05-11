@@ -33,30 +33,29 @@ export default function Home() {
       <Box
         roundedBottomRight={{ mobileS: "40px" }}
         w={{ mobileS: "100dvw" }}
-        h={{ mobileS: "98dvh" }}
+        h={{ mobileS: "98dvh", tablet: "92dvh" }}
         bgImage={"url('/assets/home/HeroImage.jpg')"}
-        bgSize={{ mobileS: "291%" }}
-        backgroundPosition={{ mobileS: "right bottom" }}
+        bgSize={{ mobileS: "291%", tablet: "100%" }}
+        backgroundPosition={{ mobileS: "right bottom", tablet: "center" }}
         bgRepeat={{ mobileS: "no-repeat" }}
         bgColor={{ mobileS: "rgba(0, 0, 0, 0.4)" }}
         bgBlendMode={{ mobileS: "multiply" }}
         role="img"
         aria-label="Mokse hero image 1"
-      // alt="Mokse hero image"
       >
-        <SimpleGrid w={{ mobileS: "100%" }} h={{ mobileS: "100%" }} pt={{ mobileS: "28dvh" }} columns={{ mobileS: 1 }}>
+        <SimpleGrid w={{ mobileS: "100%" }} h={{ mobileS: "100%" }} pt={{ mobileS: "28dvh", tablet: "12dvh" }} columns={{ mobileS: 1 }}>
           <VStack gap={{ mobileS: 5 }} >
             <Heading as={"h1"}
-              size={{ mobileS: "3xl" }}
+              size={{ mobileS: "3xl", tablet: "6xl" }}
               className={poppins.className}
               textTransform={"capitalize"}
-              verticalAlign={"baseline"}
-              textAlign={{ mobileS: "center" }}
+              verticalAlign={{ mobileS: "baseline" }}
+              textAlign={{ mobileS: "center", tablet: "left" }}
               lineHeight={{ mobileS: "1.48" }}
               letterSpacing={{ mobileS: "1px" }}
               alignSelf={{ mobileS: "normal", tablet: "start" }}
               _dark={{ color: "white" }}
-              _light={{ color: "white" }} pl={1}
+              _light={{ color: "white" }} pl={{ mobileS: 1, tablet: "100px" }}
             >
               Empowering<br />
               change through<br />
@@ -64,12 +63,13 @@ export default function Home() {
               advocacy
             </Heading>
 
-            <Container w={{ mobileS: "container.xs" }} >
+            <Container w={{ mobileS: "container.xs", tablet: "container.md" }} >
               <Text
-                textAlign={{ mobileS: "center" }}
-                alignSelf={{ mobileS: "center" }}
+                textAlign={{ mobileS: "center", tablet: "left" }}
+                alignSelf={{ mobileS: "center", }}
                 _dark={{ color: "white" }}
                 _light={{ color: "white" }}
+                w={{ mobileS: "100%", tablet: "40%" }}
               >
                 We strive to break down barriers and stop the
                 stigma associated with incarceration through
@@ -78,7 +78,7 @@ export default function Home() {
               </Text>
             </Container>
 
-            <Button justifySelf={{ mobileS: "baseline" }}
+            <Button justifySelf={{ mobileS: "baseline", tablet: "start" }}
               mt={{ mobileS: "5dvh" }}
               bg={"teal.focusRing"}
               variant={"solid"}
