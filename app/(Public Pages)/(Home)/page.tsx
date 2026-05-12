@@ -26,6 +26,7 @@ import {
 import { poppins } from "@/components/ui/fonts";
 // import { openSans } from "@/components/ui/fonts"; 
 import { Icon } from "@/components/ui/icons/icon";
+import Pictures from "./components/Pictures";
 
 export default function Home() {
   return (
@@ -252,9 +253,9 @@ export default function Home() {
           borderRadius={"0"}
           gap={6}
           bg="rgba(0, 0, 0, 0.0)"
-          w={{ mobileS: "sm", tablet: "md" }}
+          maxW={{ mobileS: "sm", tablet: "md", laptop: "4xl" }}
         >
-          <Card.Body >
+          <Card.Body w={{ mobileS: "100%", tablet: "100%" }} gap={4} p={0}>
             <Heading
               textStyle={{ mobileS: "3xl" }}
               className={poppins.className}
@@ -269,103 +270,21 @@ export default function Home() {
           </Card.Body>
 
           <AspectRatio
-            maxW={{ mobileS: "100%" }} maxH={{ mobileS: "450px" }} ratio={16 / 9}>
+            maxW={{ mobileS: "100%", tablet: "100%" }}
+            minW={{ mobileS: "100%", tablet: "100px" }}
+            maxH={{ mobileS: "450px", tablet: "100%" }}
+            minH={{ mobileS: "100%", tablet: "100px" }}
+            ratio={16 / 9}>
             <iframe
               src="https://www.youtube-nocookie.com/embed/p2q--KoXnXA?si=6mz92ZtuwqfrvnSZ"
               title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
             />
           </AspectRatio>
         </Card.Root>
       </Container >
 
-      <Container fluid centerContent p={0}>
-        <SimpleGrid columns={{ mobileS: 1, tablet: 4 }} gap={{ mobileS: 20, tablet: 8 }} pt={8} >
-          <GridItem colSpan={{ mobileS: 1, tablet: 2 }} >
-            <Box
-              h={{ mobileS: "230px", tablet: "216px", laptop: "328px" }}
-              w={{ mobileS: "343px", tablet: "325px", laptop: "493px" }}
-              bgImage={"url('/assets/home/IMG_0997-1-1024x683.webp')"}
-              bgRepeat={{ mobileS: "no-repeat" }}
-              backgroundPosition={"center"}
-              bgSize={{ mobileS: "100%", tablet: "contain" }}
-              role="img"
-              aria-label="Mokse hero image 1"
-              rounded="md"
-            />
-          </GridItem>
-          <GridItem colSpan={{ mobileS: 1, tablet: 2 }}>
-            <Box
-              h={{ mobileS: "230px", tablet: "216px", laptop: "328px" }}
-              w={{ mobileS: "343px", tablet: "325px", laptop: "493px" }}
-              bgImage={"url('/assets/home/IMG_1004-1024x683.webp')"}
-              bgRepeat={{ mobileS: "no-repeat" }}
-              backgroundPosition={"center"}
-              bgSize={{ mobileS: "100%", tablet: "contain" }}
-              role="img"
-              aria-label="Mokse hero image 1"
-              rounded="md"
-            />
-          </GridItem>
-          <GridItem colSpan={{ mobileS: 1, tablet: 2 }}>
-            <Box
-              h={{ mobileS: "125%", tablet: "325px" }}
-              w={{ tablet: "325px" }}
-              aspectRatio={{ mobileS: "square" }}
-              bgImage={"url('/assets/home/IMG_1011-300x300.webp')"}
-              bgRepeat={{ mobileS: "no-repeat" }}
-              backgroundPosition={"center"}
-              bgSize={{ mobileS: "cover", tablet: "contain" }}
-              role="img"
-              aria-label="Mokse hero image 1"
-              rounded="md"
-            />
-          </GridItem>
-          <GridItem colSpan={{ mobileS: 1, tablet: 2 }}>
-            <Box
-              h={{ mobileS: "125%", tablet: "325px" }}
-              w={{ tablet: "325px" }}
-              aspectRatio={{ mobileS: "square" }}
-              bgImage={"url('/assets/home/IMG_1012-300x300.webp')"}
-              bgRepeat={{ mobileS: "no-repeat" }}
-              backgroundPosition={"center"}
-              bgSize={{ mobileS: "cover", tablet: "contain" }}
-              role="img"
-              aria-label="Mokse hero image 1"
-              rounded="md"
-            />
-          </GridItem>
-          <GridItem colSpan={{ mobileS: 1, tablet: 2 }}>
-            <Box
-              h={{ mobileS: "125%", tablet: "325px" }}
-              w={{ tablet: "325px" }}
-              aspectRatio={{ mobileS: "square" }}
-              bgImage={"url('/assets/home/IMG_1027-300x300.webp')"}
-              bgRepeat={{ mobileS: "no-repeat" }}
-              backgroundPosition={"center"}
-              bgSize={{ mobileS: "cover", tablet: "contain" }}
-              role="img"
-              aria-label="Mokse hero image 1"
-              rounded="md"
-            />
-          </GridItem>
-          <GridItem colSpan={{ mobileS: 1, tablet: 2 }}>
-            <Box
-              h={{ mobileS: "125%", tablet: "325px" }}
-              w={{ tablet: "325px" }}
-              aspectRatio={{ mobileS: "square" }}
-              bgImage={"url('/assets/home/IMG_0995-300x300.webp')"}
-              bgRepeat={{ mobileS: "no-repeat" }}
-              backgroundPosition={"center"}
-              bgSize={{ mobileS: "cover", tablet: "contain" }}
-              role="img"
-              aria-label="Mokse hero image 1"
-              rounded="md"
-            />
-          </GridItem>
-        </SimpleGrid>
-      </Container>
+      <Pictures />
     </VStack >
   );
 }
