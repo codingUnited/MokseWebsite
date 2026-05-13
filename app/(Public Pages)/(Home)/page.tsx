@@ -30,33 +30,33 @@ import Pictures from "./components/Pictures";
 
 export default function Home() {
   return (
-    <VStack w={{ mobileS: "100dvw" }}>
+    <VStack w={{ base: "100dvw" }}>
       <Box
-        roundedBottomRight={{ mobileS: "40px" }}
-        w={{ mobileS: "100dvw" }}
-        h={{ mobileS: "98dvh", tablet: "92dvh" }}
+        roundedBottomRight={{ base: "40px" }}
+        w={{ base: "100dvw" }}
+        h={{ base: "98dvh", md: "92dvh" }}
         bgImage={"url('/assets/home/HeroImage.jpg')"}
-        bgSize={{ mobileS: "291%", tablet: "100%" }}
-        backgroundPosition={{ mobileS: "right bottom", tablet: "center" }}
-        bgRepeat={{ mobileS: "no-repeat" }}
-        bgColor={{ mobileS: "rgba(0, 0, 0, 0.4)" }}
-        bgBlendMode={{ mobileS: "multiply" }}
+        bgSize={{ base: "291%", md: "100%" }}
+        backgroundPosition={{ base: "right bottom", md: "center" }}
+        bgRepeat={{ base: "no-repeat" }}
+        bgColor={{ base: "rgba(0, 0, 0, 0.4)" }}
+        bgBlendMode={{ base: "multiply" }}
         role="img"
         aria-label="Mokse hero image 1"
       >
-        <SimpleGrid w={{ mobileS: "100%" }} h={{ mobileS: "100%" }} pt={{ mobileS: "28dvh", tablet: "12dvh" }} columns={{ mobileS: 1 }}>
-          <VStack gap={{ mobileS: 5 }} >
+        <SimpleGrid w={{ base: "100%" }} h={{ base: "100%" }} pt={{ base: "28dvh", md: "12dvh" }} columns={{ base: 1 }}>
+          <VStack gap={{ base: 5 }} >
             <Heading as={"h1"}
-              size={{ mobileS: "3xl", tablet: "6xl" }}
+              size={{ base: "3xl", md: "6xl" }}
               className={poppins.className}
               textTransform={"capitalize"}
-              verticalAlign={{ mobileS: "baseline" }}
-              textAlign={{ mobileS: "center", tablet: "left" }}
-              lineHeight={{ mobileS: "1.48" }}
-              letterSpacing={{ mobileS: "1px" }}
-              alignSelf={{ mobileS: "normal", tablet: "start" }}
+              verticalAlign={{ base: "baseline" }}
+              textAlign={{ base: "center", md: "left" }}
+              lineHeight={{ base: "1.48" }}
+              letterSpacing={{ base: "1px" }}
+              alignSelf={{ base: "normal", md: "start" }}
               _dark={{ color: "white" }}
-              _light={{ color: "white" }} pl={{ mobileS: 1, tablet: "100px" }}
+              _light={{ color: "white" }} pl={{ base: 1, md: "100px" }}
             >
               Empowering<br />
               change through<br />
@@ -64,13 +64,13 @@ export default function Home() {
               advocacy
             </Heading>
 
-            <Container w={{ mobileS: "container.xs", tablet: "container.md" }} >
+            <Container w={{ base: "container.xs", md: "container.md" }} >
               <Text
-                textAlign={{ mobileS: "center", tablet: "left" }}
-                alignSelf={{ mobileS: "center", }}
+                textAlign={{ base: "center", md: "left" }}
+                alignSelf={{ base: "center", }}
                 _dark={{ color: "white" }}
                 _light={{ color: "white" }}
-                w={{ mobileS: "100%", tablet: "40%" }}
+                w={{ base: "100%", md: "40%" }}
               >
                 We strive to break down barriers and stop the
                 stigma associated with incarceration through
@@ -79,12 +79,12 @@ export default function Home() {
               </Text>
             </Container>
 
-            <Button justifySelf={{ mobileS: "baseline", tablet: "start" }}
-              mt={{ mobileS: "5dvh" }}
+            <Button justifySelf={{ base: "baseline", md: "start" }}
+              mt={{ base: "5dvh" }}
               bg={"teal.focusRing"}
               variant={"solid"}
               rounded={"md"}
-              size={{ mobileS: "lg" }}
+              size={{ base: "lg" }}
               boxShadow={"0px 12px 24px -8px #3b4fe466"}
             >
               <ChakraLink asChild
@@ -101,9 +101,9 @@ export default function Home() {
 
       <Container fluid>
         <VStack>
-          <Container pt={{ mobileS: "15dvh" }}>
+          <Container pt={{ base: "15dvh" }}>
             <Heading as="h2"
-              size={{ mobileS: "2xl" }}
+              size={{ base: "2xl" }}
               fontWeight={"bold"}
               className={poppins.className}
               textAlign={"center"}
@@ -122,10 +122,10 @@ export default function Home() {
             bg={"brand.Mturquoise"}
             variant="solid"
             rounded="md"
-            size={{ mobileS: "lg" }}
+            size={{ base: "lg" }}
             boxShadow={"0px 12px 24px -8px #3b4fe466"}
-            mt={{ mobileS: "2dvh" }}
-            mb={{ mobileS: "15dvh" }}
+            mt={{ base: "2dvh" }}
+            mb={{ base: "15dvh" }}
           >
             <ChakraLink asChild>
               <NextLink href="/about">
@@ -135,8 +135,8 @@ export default function Home() {
             </ChakraLink>
           </Button>
           <SimpleGrid
-            columns={{ mobileS: 1, tablet: 2 }}
-            row={{ mobileS: 1, tablet: 2 }}
+            columns={{ base: 1, md: 2 }}
+            row={{ base: 1, md: 2 }}
             pt={8}
             gap={8}
             css={{
@@ -154,44 +154,44 @@ export default function Home() {
         </VStack>
       </Container >
 
-      <Container bg={"brand.Mturquoise"} position={"relative"} h={{ mobileS: "80dvh" }} mt={{ mobileS: "36dvh" }}>
-        <Float placement={"top-end"} offsetY={"90px"} offsetX={"127px"}>
+      <Container bg={"brand.Mturquoise"} position={"relative"} h={{ base: "80dvh" }} mt={{ base: "36dvh" }}>
+        <Float placement={"top-end"} offsetY={{ base: "90px" }} offsetX={{ base: "127px" }}>
           <ChakraImage
             // height={"53%"}
             // width={"325px"}
             src={"/dots.webp"}
             alt={"Mokse hero image"}
             pt={0}
-            hideFrom={"mobileS"}
+            hideBelow={"md"}
           />
           <Box
-            w={{ mobileS: "255px" }}
-            h={{ mobileS: "392px" }}
-            bgImage={{ mobileS: "url('/home-backdrop-image.jpg')" }}
-            bgSize={{ mobileS: "contain" }}
-            bgRepeat={{ mobileS: "no-repeat" }}
+            w={{ base: "255px" }}
+            h={{ base: "392px" }}
+            bgImage={{ base: "url('/home-backdrop-image.jpg')" }}
+            bgSize={{ base: "contain" }}
+            bgRepeat={{ base: "no-repeat" }}
             rounded={"lg"}
-            bgBlendMode={{ mobileS: "multiply" }}
+            bgBlendMode={{ base: "multiply" }}
             role="img"
             aria-label="Mokse hero image 1"
             position={"relative"}
           >
-            <Float placement={"top-start"} offsetY={{ mobileS: "118px" }} offsetX={{ mobileS: "-32px" }}>
+            <Float placement={"top-start"} offsetY={{ base: "118px" }} offsetX={{ base: "-32px" }}>
               <Box
-                w={{ mobileS: "255px" }}
-                h={{ mobileS: "392px" }}
-                bgImage={{ mobileS: "url('/assets/home/Image-1-1.jpg')" }}
-                bgSize={{ mobileS: "contain" }}
-                bgRepeat={{ mobileS: "no-repeat" }}
+                w={{ base: "255px" }}
+                h={{ base: "392px" }}
+                bgImage={{ base: "url('/assets/home/Image-1-1.jpg')" }}
+                bgSize={{ base: "contain" }}
+                bgRepeat={{ base: "no-repeat" }}
                 rounded={"lg"}
-                bgBlendMode={{ mobileS: "multiply" }}
+                bgBlendMode={{ base: "multiply" }}
                 role="img"
                 aria-label="Mokse hero image 2" />
             </Float>
           </Box>
         </Float>
 
-        <Container h={{ mobileS: "46dvh" }} mt={{ mobileS: "40dvh" }} >
+        <Container h={{ base: "46dvh" }} mt={{ base: "40dvh" }} >
           <HStack>
             <Heading as={"h2"}>
               <Text textStyle={"2xl"} >
@@ -200,7 +200,7 @@ export default function Home() {
               <Text textStyle={"2xl"}>- Get Involved!</Text>
             </Heading>
           </HStack>
-          <Box pt={{ mobileS: "2dvh" }} >
+          <Box pt={{ base: "2dvh" }} >
             <Text >
               Are you passionate about helping justice-impacted
               individuals? We need compassionate volunteers to assist in
@@ -208,8 +208,8 @@ export default function Home() {
               administrative support.
             </Text>
           </Box>
-          <Button mt={{ mobileS: "4dvh" }}
-            size={{ mobileS: "lg" }} h={{ mobileS: "6dvh" }}>
+          <Button mt={{ base: "4dvh" }}
+            size={{ base: "lg" }} h={{ base: "6dvh" }}>
             Get Involved <Icon name={"ArrowRight"} />
           </Button>
         </Container>
@@ -217,8 +217,8 @@ export default function Home() {
 
       <Container fluid centerContent>
         <SimpleGrid
-          columns={{ mobileS: 1, tablet: 2 }}
-          row={{ mobileS: 1, tablet: 2 }}
+          columns={{ base: 1, md: 2 }}
+          row={{ base: 1, md: 2 }}
           pt={8}
           gap={8}
           css={{
@@ -234,30 +234,30 @@ export default function Home() {
         <Button
           bg={"brand.Mturquoise"}
           variant="solid"
-          w={{ mobileS: "45dvw", tablet: "20dvw" }}
-          h={{ mobileS: "8dvh" }}
+          w={{ base: "45dvw", md: "20dvw" }}
+          h={{ base: "8dvh" }}
           alignSelf={"center"}
-          mt={{ mobileS: 8 }}
-          mb={{ mobileS: 16 }}
+          mt={{ base: 8 }}
+          mb={{ base: 16 }}
           boxShadow={"0px 12px 24px -8px #3b4fe466"}>
           <ChakraLink asChild>
             <NextLink href="https://www.paypal.com/donate/?hosted_button_id=G46WV8T5NG85A">
-              <Text _light={{ color: "white" }} textStyle={{ mobileS: "lg" }}>Donate</Text>
+              <Text _light={{ color: "white" }} textStyle={{ base: "lg" }}>Donate</Text>
             </NextLink>
           </ChakraLink>
         </Button>
       </Container>
       <Container pb={14} fluid asChild>
         <Card.Root
-          flexDirection={{ mobileS: "column", tablet: "row" }}
+          flexDirection={{ base: "column", md: "row" }}
           borderRadius={"0"}
           gap={6}
           bg="rgba(0, 0, 0, 0.0)"
-          maxW={{ mobileS: "sm", tablet: "md", laptop: "4xl" }}
+          maxW={{ base: "sm", md: "md", laptop: "4xl" }}
         >
-          <Card.Body w={{ mobileS: "100%", tablet: "100%" }} gap={4} p={0}>
+          <Card.Body w={{ base: "100%", md: "100%" }} gap={4} p={0}>
             <Heading
-              textStyle={{ mobileS: "3xl" }}
+              textStyle={{ base: "3xl" }}
               className={poppins.className}
               textAlign={"left"}
               verticalAlign={"baseline"}
@@ -270,10 +270,10 @@ export default function Home() {
           </Card.Body>
 
           <AspectRatio
-            maxW={{ mobileS: "100%", tablet: "100%" }}
-            minW={{ mobileS: "100%", tablet: "100px" }}
-            maxH={{ mobileS: "450px", tablet: "100%" }}
-            minH={{ mobileS: "100%", tablet: "100px" }}
+            maxW={{ base: "100%", md: "100%" }}
+            minW={{ base: "100%", md: "100px" }}
+            maxH={{ base: "450px", md: "100%" }}
+            minH={{ base: "100%", md: "100px" }}
             ratio={16 / 9}>
             <iframe
               src="https://www.youtube-nocookie.com/embed/p2q--KoXnXA?si=6mz92ZtuwqfrvnSZ"

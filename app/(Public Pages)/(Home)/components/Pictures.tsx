@@ -1,63 +1,66 @@
-import { Box, Container, GridItem, SimpleGrid } from "@chakra-ui/react";
+import { Box, Center, Container, GridItem, SimpleGrid } from "@chakra-ui/react";
 
 export default function Pictures() {
     const ImageSrcs = ['/assets/home/IMG_1011-300x300.webp', '/assets/home/IMG_1012-300x300.webp', '/assets/home/IMG_1027-300x300.webp', '/assets/home/IMG_0995-300x300.webp']
 
     return (
-        <Container fluid centerContent p={0}>
+        <Container fluid asChild >
             <SimpleGrid
-                columns={{ mobileS: 1, tablet: 4 }}
-                gap={{ mobileS: 20, tablet: 8 }}
-                pt={8}
-                width="full"
+                columns={{ base: 1, md: 4, }}
+                gap={{ base: 20, md: 8 }}
             >
-                <GridItem colSpan={{ mobileS: 1, tablet: 2 }} >
+                <GridItem colSpan={{ base: 1, md: 2 }} justifySelf={"center"}>
                     <Box
                         bgImage={"url('/assets/home/IMG_0997-1-1024x683.webp')"}
-                        bgRepeat={{ mobileS: "no-repeat" }}
+                        bgRepeat={{ base: "no-repeat" }}
                         backgroundPosition={"center"}
-                        bgSize={{ mobileS: "100%", tablet: "contain" }}
+                        bgSize={{ base: "100%", md: "contain" }}
                         role="img"
                         aria-label="Mokse hero image 1"
                         rounded="md"
 
-                        _portrait={{ h: { mobileS: "230px", tablet: "216px" }, w: { mobileS: "343px", tablet: "325px" } }}
-                        _landscape={{ h: { mobileS: "100px", tablet: "100px" }, w: { mobileS: "230px", tablet: "216px" } }}
+                        _portrait={{ h: { base: "230px", md: "216px" }, w: { base: "343px", md: "325px" } }}
+                        _landscape={{ h: { base: "100px", md: "100px" }, w: { base: "230px", md: "216px" } }}
 
                     />
-                </GridItem>
-                <GridItem colSpan={{ mobileS: 1, tablet: 2 }}>
-                    <Box
-                        bgImage={"url('/assets/home/IMG_1004-1024x683.webp')"}
-                        bgRepeat={{ mobileS: "no-repeat" }}
-                        backgroundPosition={"center"}
-                        bgSize={{ mobileS: "100%", tablet: "contain" }}
-                        role="img"
-                        aria-label="Mokse hero image 1"
-                        rounded="md"
-                        _portrait={{ h: { mobileS: "230px", tablet: "216px" }, w: { mobileS: "343px", tablet: "325px" } }}
-                        _landscape={{ h: { mobileS: "343px", tablet: "325px" }, w: { mobileS: "230px", tablet: "216px" } }}
 
-                    />
                 </GridItem>
-
-                {ImageSrcs.map((src, index) => (
-                    <GridItem key={index} colSpan={{ mobileS: 1, tablet: 2 }}>
+                <GridItem colSpan={{ base: 1, md: 2 }}>
+                    <Center>
                         <Box
-                            h={{ mobileS: "125%", tablet: "325px" }}
-                            w={{ tablet: "325px" }}
-                            aspectRatio={{ mobileS: "square" }}
-                            bgImage={`url(${src})`}
-                            bgRepeat={{ mobileS: "no-repeat" }}
+                            bgImage={"url('/assets/home/IMG_1004-1024x683.webp')"}
+                            bgRepeat={{ base: "no-repeat" }}
                             backgroundPosition={"center"}
-                            bgSize={{ mobileS: "cover", tablet: "contain" }}
+                            bgSize={{ base: "100%", md: "contain" }}
                             role="img"
                             aria-label="Mokse hero image 1"
                             rounded="md"
-                            _portrait={{ h: { mobileS: "125%", tablet: "325px" }, w: { tablet: "325px", } }}
-                            _landscape={{ h: { tablet: "325px" }, w: { mobileS: "125%", tablet: "325px" } }}
+                            _portrait={{ h: { base: "230px", md: "216px" }, w: { base: "343px", md: "325px" } }}
+                            _landscape={{ h: { base: "343px", md: "325px" }, w: { base: "230px", md: "216px" } }}
 
                         />
+                    </Center>
+
+                </GridItem>
+
+                {ImageSrcs.map((src, index) => (
+                    <GridItem key={index} colSpan={{ base: 1, md: 2 }} >
+                        <Center>
+                            <Box
+                                aspectRatio={{ base: "square" }}
+                                bgImage={`url(${src})`}
+                                bgRepeat={{ base: "no-repeat" }}
+                                backgroundPosition={"center"}
+                                bgSize={{ base: "cover", md: "contain" }}
+                                role="img"
+                                aria-label="Mokse hero image 1"
+                                rounded="md"
+                                _portrait={{ h: { base: "230px", md: "325px" }, w: { md: "325px", } }}
+                                _landscape={{ h: { md: "325px" }, w: { base: "125%", md: "325px" } }}
+
+                            />
+                        </Center>
+
                     </GridItem>
                 ))}
             </SimpleGrid>
