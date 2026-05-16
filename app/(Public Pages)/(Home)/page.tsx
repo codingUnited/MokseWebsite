@@ -22,6 +22,7 @@ import {
   Image as ChakraImage,
   HStack,
   AspectRatio,
+  Grid,
 } from "@chakra-ui/react";
 import { poppins } from "@/components/ui/fonts";
 // import { openSans } from "@/components/ui/fonts"; 
@@ -30,10 +31,10 @@ import Pictures from "./components/Pictures";
 
 export default function Home() {
   return (
-    <VStack w={{ base: "100dvw" }}>
+    <VStack w={{ base: "100%" }}>
       <Box
         roundedBottomRight={{ base: "40px" }}
-        w={{ base: "100dvw" }}
+        w={{ base: "100%" }}
         h={{ base: "98dvh", md: "92dvh" }}
         bgImage={"url('/assets/home/HeroImage.jpg')"}
         bgSize={{ base: "291%", md: "100%" }}
@@ -216,9 +217,9 @@ export default function Home() {
       </Container>
 
       <Container fluid centerContent>
-        <SimpleGrid
-          columns={{ base: 1, md: 2 }}
-          row={{ base: 1, md: 2 }}
+        <Grid
+          templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }}
+          templateRows={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }}
           pt={8}
           gap={8}
           css={{
@@ -230,7 +231,7 @@ export default function Home() {
           {getInvolved.map((f) => (
             <FeatureCard key={f.title} {...f} />
           ))}
-        </SimpleGrid>
+        </Grid>
         <Button
           bg={"brand.Mturquoise"}
           variant="solid"
@@ -250,9 +251,9 @@ export default function Home() {
       <Container pb={14} fluid asChild>
         <Card.Root
           flexDirection={{ base: "column", md: "row" }}
-          borderRadius={"0"}
           gap={6}
           bg="rgba(0, 0, 0, 0.0)"
+          p={10}
           maxW={{ base: "sm", md: "md", laptop: "4xl" }}
         >
           <Card.Body w={{ base: "100%", md: "100%" }} gap={4} p={0}>

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Open_Sans } from "next/font/google";
 // import Footer from "@/components/common/footer";
 import Footer from "@/app/(Admin Dashboard)/components/footer";
@@ -16,7 +16,13 @@ export const metadata: Metadata = {
   title: "Mokse - Empowering Change Through Education and Advocacy",
   description:
     "We strive to break down barriers and stop the stigma associated with incarceration through consulting services, educational conferences, and business support programs.",
+
 };
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1
+}
 
 export default function RootLayout({
   children,

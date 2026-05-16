@@ -1,12 +1,12 @@
-import { Box, Center, Container, GridItem, SimpleGrid } from "@chakra-ui/react";
+import { Box, Center, Container, Grid, GridItem, SimpleGrid } from "@chakra-ui/react";
 
 export default function Pictures() {
     const ImageSrcs = ['/assets/home/IMG_1011-300x300.webp', '/assets/home/IMG_1012-300x300.webp', '/assets/home/IMG_1027-300x300.webp', '/assets/home/IMG_0995-300x300.webp']
 
     return (
         <Container fluid asChild >
-            <SimpleGrid
-                columns={{ base: 1, md: 4, }}
+            <Grid
+                templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(4, 1fr)" }}
                 gap={{ base: 20, md: 8 }}
             >
                 <GridItem colSpan={{ base: 1, md: 2 }} justifySelf={"center"}>
@@ -63,7 +63,7 @@ export default function Pictures() {
 
                     </GridItem>
                 ))}
-            </SimpleGrid>
+            </Grid>
         </Container>
     )
 }

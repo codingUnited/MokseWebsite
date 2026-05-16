@@ -17,13 +17,26 @@ export default function FeatureCard({
   icon,
 }: FeatureCardProps) {
   return (
-    <Card.Root variant="outline" w={{ mobile: "xs" }} h={"xs"}>
-      <Card.Body>
-        <Avatar.Root my={4} boxSize={12}>
-          <Icon name={icon} size={6} />
+    <Card.Root
+      variant="outline"
+      w="full"
+      h="full" // Ensures cards in a grid stretch to the exact same vertical height
+      overflow="hidden" // Prevents text from ever breaking out of the borders
+    >
+      <Card.Body gap={3} display="flex" flexDirection="column">
+        {/* bg="transparent" removes the default gray circle if your icon already has color */}
+        <Avatar.Root my={2} boxSize={12} bg="transparent">
+          <Icon name={icon} size={8} color="teal.focusRing" />
         </Avatar.Root>
-        <Card.Title className={poppins.className}>{title}</Card.Title>
-        <Text>{description}</Text>
+
+        <Card.Title className={poppins.className} textStyle="xl">
+          {title}
+        </Card.Title>
+
+        {/* Added line height and muted color for better readability on long paragraphs */}
+        <Text color="fg.muted" lineHeight="tall" flex="1">
+          {description}
+        </Text>
       </Card.Body>
     </Card.Root>
   );

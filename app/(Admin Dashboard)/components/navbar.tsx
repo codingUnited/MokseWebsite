@@ -65,22 +65,16 @@ export default function Navbar() {
   const [open, setOpen] = useState(false)
   // Container props
   const ContainerProps: StackProps = {
-    h: { mobileS: "12dvh" }, //"2XLarge": "10dvh",
+    h: { base: "12dvh" }, //"2XLarge": "10dvh",
     zIndex: 2, //2,
 
     py: { base: 5, mdTo2xl: 8 },//isFixed ? (notMobileDevice ? 8 : 2) : notMobileDevice ? 8 : 5,
 
     boxShadow: { base: "2xl" },//isFixed ? "2xl" : "none",
     bg: {
-      mobileS: colorMode === "light"
-        ? "black"
-        : "blackAlpha.950"
-      ,
-      tablet: colorMode === "dark"
-        ? "black"
-        : "blackAlpha.950"
+      base: "black",
     },
-    w: "100dvw",
+    w: "100%",
     className: openSans.className,//openSans.className,
     justifyContent: "space-between",
 
@@ -92,11 +86,17 @@ export default function Navbar() {
     fontWeight: 600,
     _light: { color: "white" },
   };
+  // Mobile nav text props
+  const mobileNavTextProps: StackProps = {
+    fontSize: "16px",
+    fontWeight: 600,
+    _light: { color: "white" },
+  };
 
   return (
     <HStack {...ContainerProps} as={"nav"} color={"#f8f7f7"}>
 
-      <ChakraLink asChild pl={{ mobileS: 4, laptop: 8 }}>
+      <ChakraLink asChild pl={{ base: 4, md: 8 }}>
         <NextLink href="/">
           <ChakraImage asChild >
             <Image
@@ -109,7 +109,7 @@ export default function Navbar() {
 
         </NextLink>
       </ChakraLink>
-      <HStack justifyContent={"space-evenly"} spaceX={6} px={8} hideBelow={"laptop"}>
+      <HStack justifyContent={"space-evenly"} spaceX={6} px={8} hideBelow={"md"}>
         <ChakraLink asChild>
           <NextLink href="/about">
             <Text {...navTextProps}>About</Text>
@@ -177,9 +177,9 @@ export default function Navbar() {
       </HStack>
 
       {/* Mobile Menu */}
-      <Drawer.Root size={"full"} open={open} onOpenChange={(e) => setOpen(e.open)}  >
-        <Drawer.Trigger asChild mr={8}>
-          <Button variant="outline" size="sm">
+      <Drawer.Root size={"full"} open={open} onOpenChange={(e) => setOpen(e.open)} >
+        <Drawer.Trigger asChild mr={8} hideFrom={"md"}>
+          <Button variant="outline" size="sm" color="white">
             Menu
           </Button>
         </Drawer.Trigger>
@@ -197,24 +197,24 @@ export default function Navbar() {
                     <VStack gapY={4} alignItems={"start"}>
                       <ChakraLink asChild>
                         <NextLink href="/about">
-                          <Text {...navTextProps}>About</Text>
+                          <Text {...mobileNavTextProps}>About</Text>
                         </NextLink>
                       </ChakraLink>
                       <ChakraLink asChild>
                         <NextLink href="/contact">
-                          <Text {...navTextProps}>Contact</Text>
+                          <Text {...mobileNavTextProps}>Contact</Text>
                         </NextLink>
                       </ChakraLink>
                       <ChakraLink asChild>
                         <NextLink href="/services">
-                          <Text {...navTextProps}>Services</Text>
+                          <Text {...mobileNavTextProps}>Services</Text>
                         </NextLink>
                       </ChakraLink>
 
                       <ChakraLink asChild>
                         <NextLink href="/programs">
                           <Box position={"relative"} display={"inline-block"}>
-                            <Text {...navTextProps}>
+                            <Text {...mobileNavTextProps}>
                               {/* Float the badge to the above the text */}
                               Programs
                             </Text>
@@ -229,7 +229,7 @@ export default function Navbar() {
                       <ChakraLink asChild>
                         <NextLink href="/resources">
                           <Box position={"relative"} display={"inline-block"}>
-                            <Text {...navTextProps}>
+                            <Text {...mobileNavTextProps}>
                               {/* Float the badge to the above the text */}
                               Resources
                             </Text>

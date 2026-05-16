@@ -7,22 +7,12 @@ import {
   Input,
   InputGroup,
   Card,
-  HStack,
+  Stack,
   Heading,
-  Button,
-  Combobox,
-  Portal,
   useFilter,
   useListCollection,
-  Group,
-  ScrollArea,
-  Center,
-  Tag,
-  Stack,
-  Tabs,
 } from "@chakra-ui/react";
 import { useRef, useState } from "react";
-import checkDeviceSize from "@/components/ui/breakpoints";
 import { Icon } from "@/components/ui/icons/icon";
 import {
   BodyTemplate,
@@ -32,19 +22,14 @@ import {
 
 import { resourceCollectionRegistry } from "./mockResourceRegistry";
 import { AllResources } from "./mockIndex";
-import { Tooltip } from "@/components/ui/tooltip";
 import Navigators from "./Navigators";
-import Networks from "./Networks";
-import Calendar from "./Calendar";
-export default function SearchResources() {
-  //Retrieve mock data from json file
-  const [searchlist, setSearchlist] = useState(null);
 
+export default function SearchResources() {
+  const [searchlist, setSearchlist] = useState(null);
   const { contains } = useFilter({ sensitivity: "base" });
 
-  const [value, setValue] = useState("Initial value");
+  const [value, setValue] = useState("");
   const inputRef = useRef<HTMLInputElement | null>(null);
-  const notMobileDevice = checkDeviceSize();
 
   const endElement = value ? (
     <CloseButton
@@ -88,8 +73,9 @@ export default function SearchResources() {
       initialItems: titleCollection.items,
       itemToString: (item) => item.label,
       filter: contains,
-    },
+    }
   );
+
   const [regionInput, setRegionInput] = useState("");
   const [categoryInput, setCategoryInput] = useState("");
   const [titleInput, setTitleInput] = useState("");
@@ -107,12 +93,12 @@ export default function SearchResources() {
     let results = AllResources;
     if (formData.searchRegion) {
       results = results.filter((resources) =>
-        resources.region.includes(formData.searchRegion),
+        resources.region.includes(formData.searchRegion)
       );
     }
     if (formData.searchCategory) {
       results = results.filter((resources) =>
-        resources.category.includes(formData.searchCategory),
+        resources.category.includes(formData.searchCategory)
       );
     }
     if (formData.searchQuery) {
@@ -120,55 +106,40 @@ export default function SearchResources() {
       results = results.filter(
         (resources) =>
           resources.title.toLowerCase().includes(q) ||
-          resources.description.toLowerCase().includes(q),
+          resources.description.toLowerCase().includes(q)
       );
     }
     setFilteredItems(results);
   };
+
   return (
-    <>
-      {notMobileDevice ? (
-        <>
-          <PageBuilder>
-            <HeaderTemplate
-              title={"Resources"}
-              imageHeight={"28vh"}
-              titleAlignment={2}
-              titleLocation={100} />
-            <BodyTemplate>
-              <Container fluid>
-                <Card.Root>
-                  <Navigators /> 
-                </Card.Root>
-              </Container>
-            </BodyTemplate>
-          </PageBuilder>
-        </>
-      ) : (
-        // This is a placeholder for the mobile view to be updated later
-        // Search
-        <Container as={"main"} maxW={"7xl"} h={"100%"}>
-          <HStack as={"section"}>
-            <article>
-              <Icon name="Gem" />
-              <Box>
-                <Heading as="h3">Search</Heading>
-                <InputGroup endElement={endElement}>
-                  <Input
-                    list={searchlist ?? ""}
-                    ref={inputRef}
-                    placeholder="Email"
-                    value={value}
-                    onChange={(e) => {
-                      setValue(e.currentTarget.value);
-                    }}
-                  />
-                </InputGroup>
-              </Box>
-            </article>
-          </HStack>
+    <PageBuilder>
+      <HeaderTemplate
+        title={"Resources"}
+        imageHeight={{ base: "30vh", md: "10vh" }}
+      />
+
+      <BodyTemplate>
+        <Container fluid px={{ base: 0, md: 4 }}>
+          {/* Unified Layout: Stacks vertically on mobile, horizontally on desktop */}
+          <Stack direction={{ base: "column", md: "row" }} gap={6} w="full" align="flex-start">
+
+            {/* Search/Filter Sidebar Area */}
+
+
+            {/* Main Content Area (Navigators / Results) */}
+            <Box flex="1" w="full">
+              <Card.Root w="full" variant="outline">
+                <Card.Body>
+                  <Navigators />
+                  {/* Future implementation: Render your filteredItems here */}
+                </Card.Body>
+              </Card.Root>
+            </Box>
+
+          </Stack>
         </Container>
-      )}
-    </>
+      </BodyTemplate>
+    </PageBuilder>
   );
 }
