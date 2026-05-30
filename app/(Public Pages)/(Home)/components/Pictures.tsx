@@ -4,60 +4,58 @@ export default function Pictures() {
     const ImageSrcs = ['/assets/home/IMG_1011-300x300.webp', '/assets/home/IMG_1012-300x300.webp', '/assets/home/IMG_1027-300x300.webp', '/assets/home/IMG_0995-300x300.webp']
 
     return (
-        <Container fluid asChild >
+        <Container fluid px={{ base: 4, md: 8 }} maxW={{ base: "100%", xl: "container.xl" }} pb={{ base: 8, md: 12 }} asChild >
             <SimpleGrid
-                columns={{ base: 1, md: 4, }}
-                gap={{ base: 20, md: 8 }}
+                columns={{ base: 1, sm: 2, md: 4 }}
+                gap={{ base: 4, md: 8 }}
             >
-                <GridItem colSpan={{ base: 1, md: 2 }} justifySelf={"center"}>
-                    <Box
-                        bgImage={"url('/assets/home/IMG_0997-1-1024x683.webp')"}
-                        bgRepeat={{ base: "no-repeat" }}
-                        backgroundPosition={"center"}
-                        bgSize={{ base: "100%", md: "contain" }}
-                        role="img"
-                        aria-label="Mokse hero image 1"
-                        rounded="md"
-
-                        _portrait={{ h: { base: "230px", md: "216px" }, w: { base: "343px", md: "325px" } }}
-                        _landscape={{ h: { base: "100px", md: "100px" }, w: { base: "230px", md: "216px" } }}
-
-                    />
-
-                </GridItem>
-                <GridItem colSpan={{ base: 1, md: 2 }}>
+                <GridItem colSpan={{ base: 1, sm: 2, md: 2 }}>
                     <Center>
                         <Box
-                            bgImage={"url('/assets/home/IMG_1004-1024x683.webp')"}
-                            bgRepeat={{ base: "no-repeat" }}
+                            w={"100%"}
+                            maxW={{ base: "100%", md: "100%" }}
+                            aspectRatio={4 / 3}
+                            bgImage={"url('/assets/home/IMG_0997-1-1024x683.webp')"}
+                            bgRepeat={"no-repeat"}
                             backgroundPosition={"center"}
-                            bgSize={{ base: "100%", md: "contain" }}
+                            bgSize={"cover"}
                             role="img"
                             aria-label="Mokse hero image 1"
                             rounded="md"
-                            _portrait={{ h: { base: "230px", md: "216px" }, w: { base: "343px", md: "325px" } }}
-                            _landscape={{ h: { base: "343px", md: "325px" }, w: { base: "230px", md: "216px" } }}
-
+                        />
+                    </Center>
+                </GridItem>
+                <GridItem colSpan={{ base: 1, sm: 2, md: 2 }}>
+                    <Center>
+                        <Box
+                            w={"100%"}
+                            maxW={{ base: "100%", md: "100%" }}
+                            aspectRatio={4 / 3}
+                            bgImage={"url('/assets/home/IMG_1004-1024x683.webp')"}
+                            bgRepeat={"no-repeat"}
+                            backgroundPosition={"center"}
+                            bgSize={"cover"}
+                            role="img"
+                            aria-label="Mokse hero image 2"
+                            rounded="md"
                         />
                     </Center>
 
                 </GridItem>
 
                 {ImageSrcs.map((src, index) => (
-                    <GridItem key={index} colSpan={{ base: 1, md: 2 }} >
+                    <GridItem key={index} colSpan={{ base: 1, md: 1 }} >
                         <Center>
                             <Box
-                                aspectRatio={{ base: "square" }}
+                                w={"100%"}
+                                aspectRatio={1}
                                 bgImage={`url(${src})`}
-                                bgRepeat={{ base: "no-repeat" }}
+                                bgRepeat={"no-repeat"}
                                 backgroundPosition={"center"}
-                                bgSize={{ base: "cover", md: "contain" }}
+                                bgSize={"cover"}
                                 role="img"
-                                aria-label="Mokse hero image 1"
+                                aria-label="Mokse gallery image"
                                 rounded="md"
-                                _portrait={{ h: { base: "230px", md: "325px" }, w: { md: "325px", } }}
-                                _landscape={{ h: { md: "325px" }, w: { base: "125%", md: "325px" } }}
-
                             />
                         </Center>
 

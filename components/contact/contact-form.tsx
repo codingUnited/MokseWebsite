@@ -115,9 +115,9 @@ export default function ContactForm() {
   };
 
   return (
-    <Container maxW="3xl" py={8}>
+    <Container maxW={{ base: "100%", md: "3xl" }} px={{ base: 4, md: 8 }} py={{ base: 6, md: 8 }}>
       <Card.Root>
-        <Card.Body gap={6}>
+        <Card.Body gap={6} p={{ base: 4, md: 6 }}>
           <form onSubmit={handleSubmit}>
             <Fieldset.Root>
               <Stack>

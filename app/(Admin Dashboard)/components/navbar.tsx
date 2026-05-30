@@ -65,51 +65,56 @@ export default function Navbar() {
   const [open, setOpen] = useState(false)
   // Container props
   const ContainerProps: StackProps = {
-    h: { mobileS: "12dvh" }, //"2XLarge": "10dvh",
-    zIndex: 2, //2,
-
-    py: { base: 5, mdTo2xl: 8 },//isFixed ? (notMobileDevice ? 8 : 2) : notMobileDevice ? 8 : 5,
-
-    boxShadow: { base: "2xl" },//isFixed ? "2xl" : "none",
-    bg: {
-      mobileS: colorMode === "light"
-        ? "black"
-        : "blackAlpha.950"
-      ,
-      tablet: colorMode === "dark"
-        ? "black"
-        : "blackAlpha.950"
-    },
-    w: "100dvw",
-    className: openSans.className,//openSans.className,
+    h: { base: "64px", md: "72px", lg: "80px" },
+    minH: { base: "64px", md: "72px", lg: "80px" },
+    zIndex: 2,
+    py: { base: 3, md: 4, lg: 5 },
+    px: { base: 2, md: 4, lg: 6 },
+    boxShadow: "2xl",
+    bg: colorMode === "light" ? "black" : "blackAlpha.950",
+    w: "100%",
+    maxW: "100vw",
+    className: openSans.className,
     justifyContent: "space-between",
-
+    alignItems: "center",
   };
 
-  // Nav text props
+  // Nav text props (for the dark navbar — light text)
   const navTextProps: StackProps = {
-    fontSize: "16px",
+    fontSize: { base: "14px", lg: "16px" },
     fontWeight: 600,
     _light: { color: "white" },
+  };
+
+  // Drawer text props (drawer bg is light in light mode, so text must be dark)
+  const drawerTextProps: StackProps = {
+    fontSize: { base: "md", md: "lg" },
+    fontWeight: 600,
+    _light: { color: "gray.800" },
+    _dark: { color: "white" },
   };
 
   return (
     <HStack {...ContainerProps} as={"nav"} color={"#f8f7f7"}>
 
-      <ChakraLink asChild pl={{ mobileS: 4, laptop: 8 }}>
+      <ChakraLink asChild pl={{ base: 2, md: 4, lg: 8 }}>
         <NextLink href="/">
-          <ChakraImage asChild >
+          <ChakraImage asChild
+            w={{ base: "120px", sm: "140px", md: "160px", lg: "180px" }}
+            h={"auto"}
+          >
             <Image
               src="/mokse-logo_darkmode.png"
               alt="MOKSE Logo"
-              width={"180"}
-              height={"46"}
+              width={180}
+              height={46}
+              priority
             />
           </ChakraImage>
 
         </NextLink>
       </ChakraLink>
-      <HStack justifyContent={"space-evenly"} spaceX={6} px={8} hideBelow={"laptop"}>
+      <HStack justifyContent={"space-evenly"} spaceX={{ lg: 3, xl: 6 }} px={{ lg: 4, xl: 8 }} hideBelow={"laptop"}>
         <ChakraLink asChild>
           <NextLink href="/about">
             <Text {...navTextProps}>About</Text>
@@ -177,12 +182,13 @@ export default function Navbar() {
       </HStack>
 
       {/* Mobile Menu */}
-      <Drawer.Root size={"full"} open={open} onOpenChange={(e) => setOpen(e.open)}  >
-        <Drawer.Trigger asChild mr={8}>
-          <Button variant="outline" size="sm">
-            Menu
-          </Button>
-        </Drawer.Trigger>
+      <Box hideFrom={"laptop"} mr={{ base: 2, md: 4 }}>
+        <Drawer.Root size={"full"} open={open} onOpenChange={(e) => setOpen(e.open)}  >
+          <Drawer.Trigger asChild>
+            <Button variant="outline" size={{ base: "sm", md: "md" }} color={"white"} borderColor={"whiteAlpha.700"}>
+              Menu
+            </Button>
+          </Drawer.Trigger>
         <Portal>
           <Drawer.Backdrop />
           <Drawer.Positioner>
@@ -192,59 +198,58 @@ export default function Navbar() {
               </Drawer.Header>
               <Drawer.Body>
                 <Container>
-                  <VStack>
-                    <Heading>Navigation</Heading>
-                    <VStack gapY={4} alignItems={"start"}>
-                      <ChakraLink asChild>
-                        <NextLink href="/about">
-                          <Text {...navTextProps}>About</Text>
-                        </NextLink>
-                      </ChakraLink>
-                      <ChakraLink asChild>
-                        <NextLink href="/contact">
-                          <Text {...navTextProps}>Contact</Text>
-                        </NextLink>
-                      </ChakraLink>
-                      <ChakraLink asChild>
-                        <NextLink href="/services">
-                          <Text {...navTextProps}>Services</Text>
-                        </NextLink>
-                      </ChakraLink>
+                  <VStack gap={8} align={"stretch"} pt={4}>
+                    <VStack gap={3} align={"stretch"}>
+                      <Heading size={"md"}>Navigation</Heading>
+                      <VStack gap={5} alignItems={"start"} pl={2}>
+                        <ChakraLink asChild onClick={() => setOpen(false)}>
+                          <NextLink href="/about">
+                            <Text {...drawerTextProps}>About</Text>
+                          </NextLink>
+                        </ChakraLink>
+                        <ChakraLink asChild onClick={() => setOpen(false)}>
+                          <NextLink href="/contact">
+                            <Text {...drawerTextProps}>Contact</Text>
+                          </NextLink>
+                        </ChakraLink>
+                        <ChakraLink asChild onClick={() => setOpen(false)}>
+                          <NextLink href="/services">
+                            <Text {...drawerTextProps}>Services</Text>
+                          </NextLink>
+                        </ChakraLink>
 
-                      <ChakraLink asChild>
-                        <NextLink href="/programs">
-                          <Box position={"relative"} display={"inline-block"}>
-                            <Text {...navTextProps}>
-                              {/* Float the badge to the above the text */}
-                              Programs
-                            </Text>
-                            <Float placement={"middle-start"} offsetX="-5" >
-                              <Badge variant="solid" colorPalette="green">
-                                New
-                              </Badge>
-                            </Float>
-                          </Box>
-                        </NextLink>
-                      </ChakraLink>
-                      <ChakraLink asChild>
-                        <NextLink href="/resources">
-                          <Box position={"relative"} display={"inline-block"}>
-                            <Text {...navTextProps}>
-                              {/* Float the badge to the above the text */}
-                              Resources
-                            </Text>
-                            <Float placement={"middle-start"} offsetX="-5"
-                            >
-                              <Badge variant="solid" colorPalette="green">
-                                New
-                              </Badge>
-                            </Float>
-                          </Box>
-                        </NextLink>
-                      </ChakraLink>
+                        <ChakraLink asChild onClick={() => setOpen(false)}>
+                          <NextLink href="/programs">
+                            <Box position={"relative"} display={"inline-block"}>
+                              <Text {...drawerTextProps}>
+                                Programs
+                              </Text>
+                              <Float placement={"middle-end"} offsetX="-8">
+                                <Badge variant="solid" colorPalette="green">
+                                  New
+                                </Badge>
+                              </Float>
+                            </Box>
+                          </NextLink>
+                        </ChakraLink>
+                        <ChakraLink asChild onClick={() => setOpen(false)}>
+                          <NextLink href="/resources">
+                            <Box position={"relative"} display={"inline-block"}>
+                              <Text {...drawerTextProps}>
+                                Resources
+                              </Text>
+                              <Float placement={"middle-end"} offsetX="-8">
+                                <Badge variant="solid" colorPalette="green">
+                                  New
+                                </Badge>
+                              </Float>
+                            </Box>
+                          </NextLink>
+                        </ChakraLink>
+                      </VStack>
                     </VStack>
 
-                    <Heading>Appearance</Heading>
+                    <Heading size={"md"}>Appearance</Heading>
                     <ButtonGroup>
                       <Button
                         bg={
@@ -267,7 +272,7 @@ export default function Navbar() {
                 </Container>
               </Drawer.Body>
               <Drawer.Footer justifyContent={"center"}>
-                <Button variant="outline" size="sm" onClick={() => setOpen(false)} mb={"10dvh"}>
+                <Button variant="outline" size="sm" onClick={() => setOpen(false)} mb={{ base: 4, md: 8 }}>
                   Close
                 </Button>
               </Drawer.Footer>
@@ -277,7 +282,8 @@ export default function Navbar() {
             </Drawer.Content>
           </Drawer.Positioner>
         </Portal>
-      </Drawer.Root>
+        </Drawer.Root>
+      </Box>
     </HStack >
   );
 }

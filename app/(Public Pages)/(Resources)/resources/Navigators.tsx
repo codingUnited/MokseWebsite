@@ -146,8 +146,13 @@ export default function Navigators() {
     setFilteredItems(results);
   };
   return (
-    <Card.Body gap={6}>
-      <Group attached align={"center"} justify={"center"}>
+    <Card.Body gap={{ base: 4, md: 6 }} p={{ base: 3, md: 6 }}>
+      <Stack
+        direction={{ base: "column", md: "row" }}
+        align={{ base: "stretch", md: "center" }}
+        justify={"center"}
+        gap={{ base: 2, md: 0 }}
+      >
         <Combobox.Root
           collection={regionDropDown}
           onInputValueChange={(event) => {
@@ -368,37 +373,49 @@ export default function Navigators() {
             // await searchNotion();
           }}
           aria-label="Search Resources"
+          w={{ base: "100%", md: "auto" }}
         >
           <Icon name={"Search"} />
         </Button>
-      </Group>
+      </Stack>
       {/* CARD TABLE SECTION */}
-      <ScrollArea.Root height={"xl"} maxW="full">
+      <ScrollArea.Root height={{ base: "lg", md: "xl" }} maxW="full">
         <ScrollArea.Viewport>
-          <ScrollArea.Content spaceY="1" textStyle="sm">
+          <ScrollArea.Content spaceY={2} textStyle="sm">
             {filteredItems.map((item) => (
               <Card.Root
                 key={item.id}
                 borderWidth=".5px"
                 borderRadius="md"
                 shadow="xs"
-                flexDirection="row"
+                flexDirection={{ base: "column", sm: "row" }}
                 overflow="hidden"
+                w={"100%"}
               >
-                <Center borderRadius="md">
-                  <ClientOnly fallback={<Box boxSize={120} bg={"blue.500"} />}>
-                    <Image src={item.WebLogoURL} alt={item.title} width={120} height={120} fit="contain" p={2} bg="#545454" />
+                <Center borderRadius="md" minW={{ sm: "120px" }} w={{ base: "100%", sm: "auto" }}>
+                  <ClientOnly fallback={<Box boxSize={{ base: "100%", sm: 120 }} bg={"blue.500"} />}>
+                    <Image
+                      src={item.WebLogoURL}
+                      alt={item.title}
+                      width={120}
+                      height={120}
+                      fit="contain"
+                      p={2}
+                      bg="#545454"
+                      w={{ base: "100%", sm: "120px" }}
+                      h={{ base: "120px", sm: "120px" }}
+                    />
                   </ClientOnly>
                 </Center>
-                <Card.Body p={4}>
+                <Card.Body p={{ base: 3, md: 4 }}>
                   <Stack>
                     <strong>{item.title}</strong>
                     <Box fontSize="sm" color="gray.500" lineClamp={2}>
                       {item.description}
                     </Box>
-                    <Stack direction={"row"} gap={2}>
+                    <Stack direction={{ base: "column", sm: "row" }} gap={2}>
                       <Tooltip content={item.region.join(", ")}>
-                        <Tag.Root size={"lg"} maxW={"xs"}>
+                        <Tag.Root size={{ base: "md", md: "lg" }} maxW={"xs"}>
                           <Tag.Label>
                             {item.region.length > 0
                               ? `+${item.region.length} Regions`
@@ -406,7 +423,7 @@ export default function Navigators() {
                           </Tag.Label>
                         </Tag.Root>
                       </Tooltip>
-                      <Tag.Root size={"lg"} maxW={"xs"}>
+                      <Tag.Root size={{ base: "md", md: "lg" }} maxW={"xs"}>
                         <Tag.Label>{item.category.join(", ")}</Tag.Label>
                       </Tag.Root>
                     </Stack>

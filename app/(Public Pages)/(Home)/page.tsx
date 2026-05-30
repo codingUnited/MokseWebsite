@@ -30,33 +30,43 @@ import Pictures from "./components/Pictures";
 
 export default function Home() {
   return (
-    <VStack w={{ base: "100dvw" }}>
+    <VStack w={"100%"} maxW={"100vw"} overflowX={"hidden"}>
       <Box
-        roundedBottomRight={{ base: "40px" }}
-        w={{ base: "100dvw" }}
-        h={{ base: "98dvh", md: "92dvh" }}
+        roundedBottomRight={{ base: "24px", md: "40px" }}
+        w={"100%"}
+        minH={{ base: "560px", md: "620px", lg: "720px" }}
+        h={{ base: "auto", md: "92vh" }}
+        py={{ base: "120px", md: "20vh" }}
         bgImage={"url('/assets/home/HeroImage.jpg')"}
-        bgSize={{ base: "291%", md: "100%" }}
-        backgroundPosition={{ base: "right bottom", md: "center" }}
-        bgRepeat={{ base: "no-repeat" }}
-        bgColor={{ base: "rgba(0, 0, 0, 0.4)" }}
-        bgBlendMode={{ base: "multiply" }}
+        bgSize={"cover"}
+        backgroundPosition={{ base: "center", md: "center" }}
+        bgRepeat={"no-repeat"}
+        bgColor={"rgba(0, 0, 0, 0.4)"}
+        bgBlendMode={"multiply"}
         role="img"
         aria-label="Mokse hero image 1"
       >
-        <SimpleGrid w={{ base: "100%" }} h={{ base: "100%" }} pt={{ base: "28dvh", md: "12dvh" }} columns={{ base: 1 }}>
-          <VStack gap={{ base: 5 }} >
+        <SimpleGrid w={"100%"} h={"100%"} columns={1}>
+          <VStack
+            gap={{ base: 4, md: 5 }}
+            px={{ base: 4, md: 8 }}
+            align={{ base: "center", md: "flex-start" }}
+            maxW={{ md: "container.xl" }}
+            mx={"auto"}
+            w={"100%"}
+          >
             <Heading as={"h1"}
-              size={{ base: "3xl", md: "6xl" }}
+              size={{ base: "2xl", sm: "3xl", md: "5xl", lg: "6xl" }}
               className={poppins.className}
               textTransform={"capitalize"}
-              verticalAlign={{ base: "baseline" }}
+              verticalAlign={"baseline"}
               textAlign={{ base: "center", md: "left" }}
-              lineHeight={{ base: "1.48" }}
-              letterSpacing={{ base: "1px" }}
-              alignSelf={{ base: "normal", md: "start" }}
+              lineHeight={{ base: 1.25, md: 1.2 }}
+              letterSpacing={"0.5px"}
+              alignSelf={{ base: "center", md: "flex-start" }}
               _dark={{ color: "white" }}
-              _light={{ color: "white" }} pl={{ base: 1, md: "100px" }}
+              _light={{ color: "white" }}
+              pl={{ base: 0, md: "60px", lg: "100px" }}
             >
               Empowering<br />
               change through<br />
@@ -64,13 +74,13 @@ export default function Home() {
               advocacy
             </Heading>
 
-            <Container w={{ base: "container.xs", md: "container.md" }} >
+            <Container px={{ base: 2, md: 0 }} pl={{ md: "60px", lg: "100px" }} maxW={{ base: "100%", md: "container.md" }}>
               <Text
                 textAlign={{ base: "center", md: "left" }}
-                alignSelf={{ base: "center", }}
+                fontSize={{ base: "sm", md: "md", lg: "lg" }}
                 _dark={{ color: "white" }}
                 _light={{ color: "white" }}
-                w={{ base: "100%", md: "40%" }}
+                w={{ base: "100%", md: "60%" }}
               >
                 We strive to break down barriers and stop the
                 stigma associated with incarceration through
@@ -79,12 +89,14 @@ export default function Home() {
               </Text>
             </Container>
 
-            <Button justifySelf={{ base: "baseline", md: "start" }}
-              mt={{ base: "5dvh" }}
+            <Button
+              alignSelf={{ base: "center", md: "flex-start" }}
+              ml={{ md: "60px", lg: "100px" }}
+              mt={{ base: 4, md: 6 }}
               bg={"teal.focusRing"}
               variant={"solid"}
               rounded={"md"}
-              size={{ base: "lg" }}
+              size={{ base: "md", md: "lg" }}
               boxShadow={"0px 12px 24px -8px #3b4fe466"}
             >
               <ChakraLink asChild
@@ -99,11 +111,11 @@ export default function Home() {
         </SimpleGrid>
       </Box>
 
-      <Container fluid>
+      <Container fluid px={{ base: 4, md: 8 }} maxW={{ base: "100%", xl: "container.xl" }}>
         <VStack>
-          <Container pt={{ base: "15dvh" }}>
+          <Container pt={{ base: 12, md: 20, lg: 28 }} px={{ base: 0 }}>
             <Heading as="h2"
-              size={{ base: "2xl" }}
+              size={{ base: "xl", sm: "2xl", md: "3xl" }}
               fontWeight={"bold"}
               className={poppins.className}
               textAlign={"center"}
@@ -113,7 +125,12 @@ export default function Home() {
               A Commitment To Empowerment
             </Heading>
           </Container>
-          <Text textStyle={"md"} textAlign={"center"}>
+          <Text
+            fontSize={{ base: "sm", md: "md", lg: "lg" }}
+            textAlign={"center"}
+            maxW={{ base: "100%", md: "container.md" }}
+            px={{ base: 2, md: 0 }}
+          >
             To transform the lives of learners by providing accessible
             education, entrepreneurial support, and empowerment resources
             that foster personal and professional growth.
@@ -122,10 +139,10 @@ export default function Home() {
             bg={"brand.Mturquoise"}
             variant="solid"
             rounded="md"
-            size={{ base: "lg" }}
+            size={{ base: "md", md: "lg" }}
             boxShadow={"0px 12px 24px -8px #3b4fe466"}
-            mt={{ base: "2dvh" }}
-            mb={{ base: "15dvh" }}
+            mt={{ base: 3, md: 4 }}
+            mb={{ base: 10, md: 16, lg: 24 }}
           >
             <ChakraLink asChild>
               <NextLink href="/about">
@@ -136,9 +153,10 @@ export default function Home() {
           </Button>
           <SimpleGrid
             columns={{ base: 1, md: 2 }}
-            row={{ base: 1, md: 2 }}
-            pt={8}
-            gap={8}
+            pt={{ base: 4, md: 8 }}
+            gap={{ base: 6, md: 8 }}
+            w={"100%"}
+            justifyItems={"center"}
             css={{
               "& > *": {
                 border: "0.5px solid rgba(0, 0, 0, 0.2)",
@@ -154,73 +172,86 @@ export default function Home() {
         </VStack>
       </Container >
 
-      <Container bg={"brand.Mturquoise"} position={"relative"} h={{ base: "80dvh" }} mt={{ base: "36dvh" }}>
-        <Float placement={"top-end"} offsetY={{ base: "90px" }} offsetX={{ base: "127px" }}>
-          <ChakraImage
-            // height={"53%"}
-            // width={"325px"}
-            src={"/dots.webp"}
-            alt={"Mokse hero image"}
-            pt={0}
-            hideBelow={"md"}
-          />
-          <Box
-            w={{ base: "255px" }}
-            h={{ base: "392px" }}
-            bgImage={{ base: "url('/home-backdrop-image.jpg')" }}
-            bgSize={{ base: "contain" }}
-            bgRepeat={{ base: "no-repeat" }}
-            rounded={"lg"}
-            bgBlendMode={{ base: "multiply" }}
-            role="img"
-            aria-label="Mokse hero image 1"
-            position={"relative"}
-          >
-            <Float placement={"top-start"} offsetY={{ base: "118px" }} offsetX={{ base: "-32px" }}>
-              <Box
-                w={{ base: "255px" }}
-                h={{ base: "392px" }}
-                bgImage={{ base: "url('/assets/home/Image-1-1.jpg')" }}
-                bgSize={{ base: "contain" }}
-                bgRepeat={{ base: "no-repeat" }}
-                rounded={"lg"}
-                bgBlendMode={{ base: "multiply" }}
-                role="img"
-                aria-label="Mokse hero image 2" />
-            </Float>
-          </Box>
-        </Float>
-
-        <Container h={{ base: "46dvh" }} mt={{ base: "40dvh" }} >
-          <HStack>
+      <Container
+        bg={"brand.Mturquoise"}
+        position={"relative"}
+        mt={{ base: 12, md: 20, lg: 28 }}
+        py={{ base: 10, md: 16 }}
+        px={{ base: 6, md: 10 }}
+        maxW={"100%"}
+      >
+        <Stack
+          direction={{ base: "column", md: "row" }}
+          align={{ base: "center", md: "center" }}
+          justify={"space-between"}
+          gap={{ base: 8, md: 12 }}
+        >
+          <Box flex={"1"} maxW={{ base: "100%", md: "55%" }} order={{ base: 2, md: 1 }}>
             <Heading as={"h2"}>
-              <Text textStyle={"2xl"} >
+              <Text textStyle={{ base: "xl", md: "2xl", lg: "3xl" }} >
                 Make a Difference
               </Text>
-              <Text textStyle={"2xl"}>- Get Involved!</Text>
+              <Text textStyle={{ base: "xl", md: "2xl", lg: "3xl" }}>- Get Involved!</Text>
             </Heading>
-          </HStack>
-          <Box pt={{ base: "2dvh" }} >
-            <Text >
-              Are you passionate about helping justice-impacted
-              individuals? We need compassionate volunteers to assist in
-              various roles, including mentorship, tutoring, and
-              administrative support.
-            </Text>
+            <Box pt={{ base: 3, md: 4 }} >
+              <Text fontSize={{ base: "sm", md: "md" }}>
+                Are you passionate about helping justice-impacted
+                individuals? We need compassionate volunteers to assist in
+                various roles, including mentorship, tutoring, and
+                administrative support.
+              </Text>
+            </Box>
+            <Button mt={{ base: 4, md: 6 }} size={{ base: "md", md: "lg" }}>
+              Get Involved <Icon name={"ArrowRight"} />
+            </Button>
           </Box>
-          <Button mt={{ base: "4dvh" }}
-            size={{ base: "lg" }} h={{ base: "6dvh" }}>
-            Get Involved <Icon name={"ArrowRight"} />
-          </Button>
-        </Container>
+
+          <Box
+            position={"relative"}
+            order={{ base: 1, md: 2 }}
+            w={{ base: "260px", md: "300px", lg: "340px" }}
+            h={{ base: "400px", md: "460px", lg: "500px" }}
+            flexShrink={0}
+          >
+            <Box
+              position={"absolute"}
+              top={0}
+              left={0}
+              w={"100%"}
+              h={"100%"}
+              bgImage={"url('/home-backdrop-image.jpg')"}
+              bgSize={"cover"}
+              backgroundPosition={"center"}
+              bgRepeat={"no-repeat"}
+              rounded={"lg"}
+              role="img"
+              aria-label="Mokse hero image 1"
+            />
+            <Box
+              position={"absolute"}
+              top={{ base: "60px", md: "80px" }}
+              left={{ base: "-30px", md: "-40px" }}
+              w={"100%"}
+              h={"100%"}
+              bgImage={"url('/assets/home/Image-1-1.jpg')"}
+              bgSize={"cover"}
+              backgroundPosition={"center"}
+              bgRepeat={"no-repeat"}
+              rounded={"lg"}
+              role="img"
+              aria-label="Mokse hero image 2"
+            />
+          </Box>
+        </Stack>
       </Container>
 
-      <Container fluid centerContent>
+      <Container fluid centerContent px={{ base: 4, md: 8 }} maxW={{ base: "100%", xl: "container.xl" }} mt={{ base: 12, md: 16 }}>
         <SimpleGrid
           columns={{ base: 1, md: 2 }}
-          row={{ base: 1, md: 2 }}
-          pt={8}
-          gap={8}
+          pt={{ base: 4, md: 8 }}
+          gap={{ base: 6, md: 8 }}
+          w={"100%"}
+          justifyItems={"center"}
           css={{
             "& > *": {
               border: "0.5px solid rgba(0, 0, 0, 0.2)",
@@ -234,46 +265,46 @@ export default function Home() {
         <Button
           bg={"brand.Mturquoise"}
           variant="solid"
-          w={{ base: "45dvw", md: "20dvw" }}
-          h={{ base: "8dvh" }}
+          w={{ base: "60%", sm: "240px", md: "260px" }}
+          minH={{ base: "48px", md: "56px" }}
           alignSelf={"center"}
-          mt={{ base: 8 }}
-          mb={{ base: 16 }}
+          mt={{ base: 6, md: 8 }}
+          mb={{ base: 10, md: 16 }}
           boxShadow={"0px 12px 24px -8px #3b4fe466"}>
           <ChakraLink asChild>
             <NextLink href="https://www.paypal.com/donate/?hosted_button_id=G46WV8T5NG85A">
-              <Text _light={{ color: "white" }} textStyle={{ base: "lg" }}>Donate</Text>
+              <Text _light={{ color: "white" }} fontSize={{ base: "md", md: "lg" }}>Donate</Text>
             </NextLink>
           </ChakraLink>
         </Button>
       </Container>
-      <Container pb={14} fluid asChild>
+      <Container pb={{ base: 8, md: 14 }} px={{ base: 4, md: 8 }} maxW={{ base: "100%", lg: "container.xl" }} asChild>
         <Card.Root
           flexDirection={{ base: "column", md: "row" }}
           borderRadius={"0"}
-          gap={6}
+          gap={{ base: 4, md: 6 }}
           bg="rgba(0, 0, 0, 0.0)"
-          maxW={{ base: "sm", md: "md", laptop: "4xl" }}
+          w={"100%"}
         >
-          <Card.Body w={{ base: "100%", md: "100%" }} gap={4} p={0}>
+          <Card.Body w={{ base: "100%", md: "50%" }} gap={4} p={0}>
             <Heading
-              textStyle={{ base: "3xl" }}
+              textStyle={{ base: "xl", sm: "2xl", md: "2xl", lg: "3xl" }}
               className={poppins.className}
-              textAlign={"left"}
+              textAlign={{ base: "center", md: "left" }}
               verticalAlign={"baseline"}
               textTransform={"capitalize"}>
               Special Story: The three words that changed my life
             </Heading>
-            <Card.Description>
+            <Card.Description
+              fontSize={{ base: "sm", md: "md" }}
+              textAlign={{ base: "center", md: "left" }}
+            >
               Mokse is proud to share the TEDx talk of Dr. Matthews.
             </Card.Description>
           </Card.Body>
 
           <AspectRatio
-            maxW={{ base: "100%", md: "100%" }}
-            minW={{ base: "100%", md: "100px" }}
-            maxH={{ base: "450px", md: "100%" }}
-            minH={{ base: "100%", md: "100px" }}
+            w={{ base: "100%", md: "50%" }}
             ratio={16 / 9}>
             <iframe
               src="https://www.youtube-nocookie.com/embed/p2q--KoXnXA?si=6mz92ZtuwqfrvnSZ"
