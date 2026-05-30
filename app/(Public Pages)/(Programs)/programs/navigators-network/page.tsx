@@ -246,4 +246,6 @@ export default function NavigatorsNetwork() {
             </SectionTemplate>
         </PageBuilder>
     );
+        </PageBuilder>
+    );
 }

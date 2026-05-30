@@ -1,4 +1,4 @@
-import { Box, Center, Container, GridItem, SimpleGrid } from "@chakra-ui/react";
+import { Box, Center, Container, Grid, GridItem, SimpleGrid } from "@chakra-ui/react";
 
 export default function Pictures() {
     const ImageSrcs = ['/assets/home/IMG_1011-300x300.webp', '/assets/home/IMG_1012-300x300.webp', '/assets/home/IMG_1027-300x300.webp', '/assets/home/IMG_0995-300x300.webp']
@@ -61,7 +61,7 @@ export default function Pictures() {
 
                     </GridItem>
                 ))}
-            </SimpleGrid>
+            </Grid>
         </Container>
     )
 }

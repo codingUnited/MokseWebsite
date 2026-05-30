@@ -1,4 +1,5 @@
 "use client";
+
 import {
   Box,
   Card,
@@ -7,74 +8,59 @@ import {
   Portal,
   useFilter,
   useListCollection,
-  Group,
   ScrollArea,
   Center,
   Tag,
-  Stack, Image,
+  Stack,
+  Image,
   ClientOnly,
 } from "@chakra-ui/react";
-import NextImage from "next/image";
 import { Tooltip } from "@/components/ui/tooltip";
 import { AllResources } from "./mockIndex";
 import { Icon } from "@/components/ui/icons/icon";
-
 import { resourceCollectionRegistry } from "./mockResourceRegistry";
-
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Navigators() {
-  //Retrieve mock data from json file
-  const [searchlist, setSearchlist] = useState(null);
-
   const { contains } = useFilter({ sensitivity: "base" });
 
-  const [value, setValue] = useState("Initial value");
-  const inputRef = useRef<HTMLInputElement | null>(null);
-
-  const [formData, setFormData] = useState<{
-    searchRegion: string;
-    searchCategory: string;
-    searchQuery: string;
-  }>({
-    searchQuery: "",
+  const [formData, setFormData] = useState({
     searchRegion: "",
     searchCategory: "",
+    searchQuery: "",
   });
 
-  const regionCollection = resourceCollectionRegistry.Regions;
-  const categoryCollection = resourceCollectionRegistry.Categories;
-  const titleCollection = resourceCollectionRegistry.Titles;
-
-  const { collection: regionDropDown, filter: filterRegions } =
-    useListCollection({
-      initialItems: regionCollection.items,
-      itemToString: (item) => item.label,
-      filter: contains,
-    });
-  const { collection: categoryDropDown, filter: filterCategories } =
-    useListCollection({
-      initialItems: categoryCollection.items,
-      itemToString: (item) => item.label,
-      filter: contains,
-    });
-  const { collection: titleDropDown, filter: filterTitles } = useListCollection(
-    {
-      initialItems: titleCollection.items,
-      itemToString: (item) => item.label,
-      filter: contains,
-    },
-  );
-  const [regionInput, setRegionInput] = useState("");
-  const [categoryInput, setCategoryInput] = useState("");
-  const [titleInput, setTitleInput] = useState("");
-
+  // Data States
   const [allResources, setAllResources] = useState<any[]>(AllResources);
   const [filteredItems, setFilteredItems] = useState(AllResources);
 
+  // Dynamic Dropdown States
   const [dynamicRegions, setDynamicRegions] = useState(resourceCollectionRegistry.Regions.items);
   const [dynamicCategories, setDynamicCategories] = useState(resourceCollectionRegistry.Categories.items);
   const [dynamicTitles, setDynamicTitles] = useState(resourceCollectionRegistry.Titles.items);
+
+  // Chakra UI Collections (bound to dynamic state)
+  const { collection: regionDropDown, filter: filterRegions } = useListCollection({
+    initialItems: dynamicRegions,
+    itemToString: (item) => item.label,
+    filter: contains,
+  });
+
+  const { collection: categoryDropDown, filter: filterCategories } = useListCollection({
+    initialItems: dynamicCategories,
+    itemToString: (item) => item.label,
+    filter: contains,
+  });
+
+  const { collection: titleDropDown, filter: filterTitles } = useListCollection({
+    initialItems: dynamicTitles,
+    itemToString: (item) => item.label,
+    filter: contains,
+  });
+
+  const [regionInput, setRegionInput] = useState("");
+  const [categoryInput, setCategoryInput] = useState("");
+  const [titleInput, setTitleInput] = useState("");
 
   // --- SILENT BACKGROUND FETCH TO UPGRADE DATA ---
   useEffect(() => {
@@ -82,12 +68,9 @@ export default function Navigators() {
       try {
         const res = await fetch("/api/notion/database", { method: "POST" });
         if (!res.ok) throw new Error("Failed to fetch Notion data");
-
         const data = await res.json();
-
         const formattedData = data.payload;
 
-        // Extract unique values
         const uniqueRegions = Array.from(new Set(formattedData.flatMap((item: any) => item.region)))
           .filter(Boolean)
           .map((region) => ({ label: String(region), value: String(region) }));
@@ -100,51 +83,43 @@ export default function Navigators() {
           label: String(item.title), value: String(item.title)
         }));
 
-        // Overwrite the mock state with live Notion state
         setAllResources(formattedData);
         setFilteredItems(formattedData);
         setDynamicRegions(uniqueRegions);
         setDynamicCategories(uniqueCategories);
         setDynamicTitles(uniqueTitles);
-
       } catch (error) {
         console.error("Notion fetch failed, falling back to mock JSON data:", error);
-        // We don't need to do anything here; the UI is already populated with AllResources!
       }
     };
-
     fetchResources();
   }, []);
+
   const applyFilters = () => {
-    const noFilters =
-      !formData.searchRegion &&
-      !formData.searchCategory &&
-      !formData.searchQuery;
+    const noFilters = !formData.searchRegion && !formData.searchCategory && !formData.searchQuery;
+
     if (noFilters) {
-      setFilteredItems(AllResources);
+      setFilteredItems(allResources);
       return;
     }
-    let results = AllResources;
+
+    let results = allResources;
+
     if (formData.searchRegion) {
-      results = results.filter((resources) =>
-        resources.region.includes(formData.searchRegion),
-      );
+      results = results.filter((r) => r.region.includes(formData.searchRegion));
     }
     if (formData.searchCategory) {
-      results = results.filter((resources) =>
-        resources.category.includes(formData.searchCategory),
-      );
+      results = results.filter((r) => r.category.includes(formData.searchCategory));
     }
     if (formData.searchQuery) {
       const q = formData.searchQuery.toLowerCase();
       results = results.filter(
-        (resources) =>
-          resources.title.toLowerCase().includes(q) ||
-          resources.description.toLowerCase().includes(q),
+        (r) => r.title.toLowerCase().includes(q) || r.description.toLowerCase().includes(q)
       );
     }
     setFilteredItems(results);
   };
+
   return (
     <Card.Body gap={{ base: 4, md: 6 }} p={{ base: 3, md: 6 }}>
       <Stack
@@ -362,20 +337,19 @@ export default function Navigators() {
           </Portal>
         </Combobox.Root>
         <Button
-          onClick={async () => {
+          w={{ base: "100%", md: "auto" }}
+          onClick={() => {
             if (!titleInput && !categoryInput && !regionInput) {
-              filterTitles("");
-              filterCategories("");
-              filterRegions("");
-              setFilteredItems(AllResources);
+              setFilteredItems(allResources);
+            } else {
+              applyFilters();
             }
-            applyFilters();
-            // await searchNotion();
           }}
           aria-label="Search Resources"
           w={{ base: "100%", md: "auto" }}
         >
           <Icon name={"Search"} />
+          <Box display={{ base: "inline", md: "none" }} ml={2}>Search</Box>
         </Button>
       </Stack>
       {/* CARD TABLE SECTION */}
@@ -417,9 +391,9 @@ export default function Navigators() {
                       <Tooltip content={item.region.join(", ")}>
                         <Tag.Root size={{ base: "md", md: "lg" }} maxW={"xs"}>
                           <Tag.Label>
-                            {item.region.length > 0
+                            {item.region.length > 1
                               ? `+${item.region.length} Regions`
-                              : item.region}
+                              : item.region[0]}
                           </Tag.Label>
                         </Tag.Root>
                       </Tooltip>

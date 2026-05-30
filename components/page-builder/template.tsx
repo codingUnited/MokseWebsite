@@ -3,37 +3,33 @@ import {
   Box,
   Text,
   Stack,
-  AbsoluteCenter,
   VStack,
   Heading,
-  SimpleGrid,
   Link,
-  GridItem,
-  // Float, 
+  Center,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
-
 import { poppins } from "../ui/fonts";
 
 export function HeaderTemplate({
   title,
-  titleAlignment = 1,
   titleLocation = 75,
   image,
   imageHeight,
   imageLabel,
   description,
-  direction,
+  direction = "column",
   children,
 }: {
   title?: string;
-  titleAlignment?: number;
+  titleAlignment?: number; // Kept for backwards compatibility if used elsewhere
   titleLocation?: number;
   image?: string;
   imageHeight?: any;
   imageLabel?: string;
   description?: string;
-  direction?: "row" | "column"; children?: React.ReactNode;
+  direction?: "row" | "column";
+  children?: React.ReactNode;
 }) {
   return (
     <Box
@@ -48,8 +44,8 @@ export function HeaderTemplate({
       aria-label={`${imageLabel} Image`}
     >
       {children}
-      <AbsoluteCenter
-        textAlign="center"
+      {/* Replaced AbsoluteCenter with Center to better handle natural flex heights */}
+      <Center
         bg="rgba(0, 0, 0, 0.4)"
         w={"100%"}
         h={"100%"}
@@ -94,6 +90,7 @@ export function HeaderTemplate({
     </Box >
   );
 }
+
 export function BodyTemplate({ children }: { children: React.ReactNode }) {
   return (
     <Container maxW={{ base: "100%", md: "container.md", lg: "container.lg", xl: "7xl" }} px={{ base: 4, md: 6, lg: 8 }} h={"100%"}>
@@ -103,10 +100,11 @@ export function BodyTemplate({ children }: { children: React.ReactNode }) {
     </Container>
   );
 }
+
 export function SectionTemplate({
   title,
   description,
-  direction,
+  direction = "column",
   children,
 }: {
   title?: string;
@@ -150,26 +148,31 @@ export function PageBuilder({
   children: React.ReactNode;
 }>) {
   return (
-    <Stack direction={direction ?? "column"} w={"100%"}>
+    <Stack direction={{ base: "column", md: direction ?? "column" }} w={"100%"}>
       {children}
     </Stack>
   );
 }
 
-/** 
-* @param linkTo The URL to link to  
-* @param props The props for the text element
-* @param displayText The text to display
-*/
-export function LinkBuilder(
-  { linkTo, props, displayText }
-    : Readonly<{
-      linkTo: string;
-      props: React.ComponentProps<typeof Text>
-      displayText: string;
-    }>) {
-  return <Link asChild>
-    <NextLink href={linkTo}>
-      <Text {...props}>{displayText}</Text></NextLink>
-  </Link>;
+/**
+ * @param linkTo The URL to link to
+ * @param props The props for the text element
+ * @param displayText The text to display
+ */
+export function LinkBuilder({
+  linkTo,
+  props,
+  displayText,
+}: Readonly<{
+  linkTo: string;
+  props: React.ComponentProps<typeof Text>;
+  displayText: string;
+}>) {
+  return (
+    <Link asChild>
+      <NextLink href={linkTo}>
+        <Text {...props}>{displayText}</Text>
+      </NextLink>
+    </Link>
+  );
 }

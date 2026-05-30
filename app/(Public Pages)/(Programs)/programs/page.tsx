@@ -161,7 +161,7 @@ export default function Programs() {
                                         ))}
                                     </SimpleGrid>
                                 </SectionTemplate>
-                            </Container>
+                            </Box>
                         </Tabs.Content>
 
                         <Tabs.Content value="Stop-The-Stigma" p={0}>

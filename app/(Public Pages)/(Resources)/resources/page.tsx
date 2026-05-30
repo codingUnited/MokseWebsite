@@ -8,6 +8,7 @@ import {
 } from "@/components/page-builder/template";
 import Navigators from "./Navigators";
 
+
 export default function SearchResources() {
   return (
     <PageBuilder>

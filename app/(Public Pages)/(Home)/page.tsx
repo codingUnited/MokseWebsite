@@ -22,6 +22,7 @@ import {
   Image as ChakraImage,
   HStack,
   AspectRatio,
+  Grid,
 } from "@chakra-ui/react";
 import { poppins } from "@/components/ui/fonts";
 // import { openSans } from "@/components/ui/fonts"; 
@@ -261,7 +262,7 @@ export default function Home() {
           {getInvolved.map((f) => (
             <FeatureCard key={f.title} {...f} />
           ))}
-        </SimpleGrid>
+        </Grid>
         <Button
           bg={"brand.Mturquoise"}
           variant="solid"
