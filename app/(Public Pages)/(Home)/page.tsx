@@ -262,7 +262,7 @@ export default function Home() {
           {getInvolved.map((f) => (
             <FeatureCard key={f.title} {...f} />
           ))}
-        </Grid>
+        </SimpleGrid>
         <Button
           bg={"brand.Mturquoise"}
           variant="solid"

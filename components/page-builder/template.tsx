@@ -7,6 +7,9 @@ import {
   Heading,
   Link,
   Center,
+  SimpleGrid,
+  GridItem,
+  // AbsoluteCenter removed in favor of Center
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { poppins } from "../ui/fonts";
@@ -14,6 +17,7 @@ import { poppins } from "../ui/fonts";
 export function HeaderTemplate({
   title,
   titleLocation = 75,
+  titleAlignment = 1,
   image,
   imageHeight,
   imageLabel,
@@ -86,7 +90,7 @@ export function HeaderTemplate({
             </VStack>
           </GridItem>
         </SimpleGrid>
-      </AbsoluteCenter>
+      </Center>
     </Box >
   );
 }

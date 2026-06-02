@@ -346,7 +346,6 @@ export default function Navigators() {
             }
           }}
           aria-label="Search Resources"
-          w={{ base: "100%", md: "auto" }}
         >
           <Icon name={"Search"} />
           <Box display={{ base: "inline", md: "none" }} ml={2}>Search</Box>

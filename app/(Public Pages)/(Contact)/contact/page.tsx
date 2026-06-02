@@ -2,6 +2,7 @@
 
 import ContactForm from "@/components/contact/contact-form";
 import { contactInfo, socialLinks } from "@/data/contact";
+import NextLink from "next/link";
 
 import {
   Box,
@@ -12,7 +13,6 @@ import {
   Link as ChakraLink,
   Avatar,
   VStack,
-  SimpleGrid,
   SimpleGrid,
 } from "@chakra-ui/react";
 
