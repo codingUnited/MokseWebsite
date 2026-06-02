@@ -4,7 +4,7 @@ import NextLink from "next/link";
 
 import { IconName } from "../ui/icons/icon-registry";
 import { Icon } from "../ui/icons/icon";
-import { Box, Card, Float, Heading, Link as ChakraLink } from "@chakra-ui/react";
+import { Box, Card, Float, Heading, Image as ChakraImage, Link as ChakraLink } from "@chakra-ui/react";
 
 interface ServiceCardProps {
   icon: IconName;

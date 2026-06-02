@@ -61,7 +61,7 @@ export default function Pictures() {
 
                     </GridItem>
                 ))}
-            </Grid>
+            </SimpleGrid>
         </Container>
     )
 }
