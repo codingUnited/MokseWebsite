@@ -27,11 +27,17 @@ export default function SupportCard({
   // iconLink,
 }: SupportCardProps) {
   return (
-    <Card.Root maxW={"sm"} minW={"xs"} borderRadius={8} minH={"xs"}>
+    <Card.Root
+      w={"100%"}
+      maxW={{ base: "100%", sm: "sm" }}
+      minW={0}
+      borderRadius={8}
+      minH={{ base: "auto", md: "xs" }}
+    >
       {/* <ChakraImage asChild borderTopRadius={8}>
         <Image src={image} alt={imageAlt} width={384} height={286} />
       </ChakraImage> */}
-      <Card.Body height={"md"}>
+      <Card.Body height={{ base: "auto", md: "md" }} p={{ base: 4, md: 6 }}>
         {/* <ChakraLink asChild>
           <NextLink
             href={iconLink}
@@ -42,16 +48,13 @@ export default function SupportCard({
           name={icon}
           bg={"teal.focusRing"}
           borderRadius={"lg"}
-          p={4}
-          boxSize={14}
-        // position={"absolute"}
-        // right={10}
-        // top={255}
+          p={{ base: 3, md: 4 }}
+          boxSize={{ base: 12, md: 14 }}
         />
         {/* </NextLink>
         </ChakraLink>             */}
-        <Heading as={"h4"}>{title}</Heading>
-        <Text paddingY={5}>{description}</Text>
+        <Heading as={"h4"} fontSize={{ base: "lg", md: "xl" }}>{title}</Heading>
+        <Text paddingY={{ base: 3, md: 5 }} fontSize={{ base: "sm", md: "md" }}>{description}</Text>
       </Card.Body>
     </Card.Root>
   );

@@ -29,18 +29,18 @@ export const executiveBoard: TeamMember[] = [
 ];
 
 export const teamMembers: TeamMember[] = [
-  {
-    name: 'Dr. Lowell C. Matthews',
-    title: 'President',
-    email: 'cmatthews@mokse.org',
-    imagePath: '/team/lowell-matthews.jpg',
-  },
-  {
-    name: 'Dr. Adeola Adeniyi',
-    title: 'Chief Financial Officer',
-    email: 'adeniyi@mokse.org',
-    imagePath: '/team/adeola-adeniyi.jpg',
-  },
+  // {
+  //   name: 'Dr. Lowell C. Matthews',
+  //   title: 'President',
+  //   email: 'cmatthews@mokse.org',
+  //   imagePath: '/team/lowell-matthews.jpg',
+  // },
+  // {
+  //   name: 'Dr. Adeola Adeniyi',
+  //   title: 'Chief Financial Officer',
+  //   email: 'adeniyi@mokse.org',
+  //   imagePath: '/team/adeola-adeniyi.jpg',
+  // },
   {
     name: 'Ben Wright',
     title: 'Stop the Stigma Director',
