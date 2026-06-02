@@ -17,13 +17,18 @@ export default function FeatureCard({
   icon,
 }: FeatureCardProps) {
   return (
-    <Card.Root variant="outline" w={{ mobile: "xs" }} h={"xs"}>
-      <Card.Body>
-        <Avatar.Root my={4} boxSize={12}>
+    <Card.Root
+      variant="outline"
+      w={"100%"}
+      maxW={{ base: "100%", sm: "sm", md: "md" }}
+      minH={{ base: "auto", md: "xs" }}
+    >
+      <Card.Body p={{ base: 4, md: 6 }}>
+        <Avatar.Root my={{ base: 2, md: 4 }} boxSize={{ base: 10, md: 12 }}>
           <Icon name={icon} size={6} />
         </Avatar.Root>
-        <Card.Title className={poppins.className}>{title}</Card.Title>
-        <Text>{description}</Text>
+        <Card.Title className={poppins.className} fontSize={{ base: "lg", md: "xl" }}>{title}</Card.Title>
+        <Text fontSize={{ base: "sm", md: "md" }}>{description}</Text>
       </Card.Body>
     </Card.Root>
   );

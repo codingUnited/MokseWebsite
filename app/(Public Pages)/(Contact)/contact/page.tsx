@@ -1,23 +1,21 @@
 "use client";
 
-import Image from "next/image";
 import ContactForm from "@/components/contact/contact-form";
-import { contactInfo, socialLinks, mapEmbedUrl } from "@/data/contact";
-
+import { contactInfo, socialLinks } from "@/data/contact";
 import NextLink from "next/link";
+
 import {
   Box,
   Text,
-  HStack,
+  Stack,
   Heading,
   Card,
   Link as ChakraLink,
-  Image as ChakraImage,
   Avatar,
   VStack,
+  SimpleGrid,
 } from "@chakra-ui/react";
 
-import checkDeviceSize from "@/components/ui/breakpoints";
 import {
   HeaderTemplate,
   PageBuilder,
@@ -25,201 +23,132 @@ import {
 } from "@/components/page-builder/template";
 import { Icon } from "@/components/ui/icons/icon";
 import { poppins } from "@/components/ui/fonts";
-import { Section } from "lucide-react";
 
 export default function Contact() {
-  const notMobileDevice = checkDeviceSize();
   return (
-    <>
-      {notMobileDevice ? (
-        <PageBuilder>
-          <HeaderTemplate
-            title="Contact Us"
-            imageHeight={"52.1vh"}
-            image="/assets/contact/1500.jpg"
-            imageLabel="Contact Us Hero"
-            description="Find out how you can contribute and make a positive impact in your community"
-          />
+    <PageBuilder>
+      <HeaderTemplate
+        title="Contact Us"
+        image="/assets/contact/1500.jpg"
+        imageLabel="Contact Us Hero"
+        description="Find out how you can contribute and make a positive impact in your community"
+      />
 
-          <SectionTemplate >
-            <VStack justify={"center"} align={"center"} gap={4} mb={10}>
-              <Heading as={"h2"}>Get in Touch</Heading>
-              <Text>
-                We&apos;re here to support you. Reach out to learn more about our
-                services, volunteer opportunities, and ways to contribute
-              </Text>
+      <SectionTemplate>
+        <VStack
+          justify={"center"}
+          align={"center"}
+          gap={{ base: 4, md: 6 }}
+          mb={{ base: 6, md: 10 }}
+          px={{ base: 4, md: 8 }}
+          w={"100%"}
+        >
+          <Heading
+            as={"h2"}
+            fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
+            textAlign={"center"}
+          >
+            Get in Touch
+          </Heading>
+          <Text
+            fontSize={{ base: "sm", md: "md", lg: "lg" }}
+            textAlign={"center"}
+            maxW={{ base: "100%", md: "container.md" }}
+          >
+            We&apos;re here to support you. Reach out to learn more about our
+            services, volunteer opportunities, and ways to contribute
+          </Text>
 
-              <HStack justify={"left"} align={"center"} gap={4}>
-                {socialLinks.map((link) => (
-                  <ChakraLink asChild key={link.url}>
-                    <NextLink
-                      href={link.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Icon
-                        name={link.platform}
-                        border={"lg"}
-                        borderRadius={"full"}
-                        size={8}
-                        bg={"teal.focusRing"}
-                        borderColor={"teal.focusRing"}
-                        aria-label={`Visit our ${link.platform} page`}
-                      />
-                      <span>{link.platform}</span>
-                    </NextLink>
+          <Stack
+            direction={"row"}
+            justify={"center"}
+            align={"center"}
+            gap={{ base: 3, md: 4 }}
+            wrap={"wrap"}
+          >
+            {socialLinks.map((link) => (
+              <ChakraLink asChild key={link.url}>
+                <NextLink
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Icon
+                    name={link.platform}
+                    border={"lg"}
+                    borderRadius={"full"}
+                    size={8}
+                    bg={"teal.focusRing"}
+                    borderColor={"teal.focusRing"}
+                    aria-label={`Visit our ${link.platform} page`}
+                  />
+                </NextLink>
+              </ChakraLink>
+            ))}
+          </Stack>
+
+          {/* Contact Info Cards Section */}
+          <SimpleGrid
+            columns={{ base: 1, sm: 2, lg: 3 }}
+            gap={{ base: 4, md: 6 }}
+            w={"100%"}
+            mt={{ base: 4, md: 6 }}
+          >
+            {contactInfo.map((info) => (
+              <Card.Root
+                key={info.label}
+                variant="outline"
+                w={"100%"}
+                minH={{ base: "auto", md: "180px" }}
+              >
+                <Card.Body p={{ base: 4, md: 6 }}>
+                  <Avatar.Root my={{ base: 2, md: 4 }} boxSize={{ base: 10, md: 12 }}>
+                    <Icon name={info.icon} size={6} />
+                  </Avatar.Root>
+                  <Card.Title className={poppins.className} fontSize={{ base: "md", md: "lg" }}>
+                    {info.label}
+                  </Card.Title>
+                  <ChakraLink
+                    href={info.phoneNumber ?? info.value}
+                    fontSize={{ base: "sm", md: "md" }}
+                    wordBreak={"break-word"}
+                  >
+                    {info.value}
                   </ChakraLink>
-                ))}
-              </HStack>
-              {/* Contact Info Cards Section */}
-              <HStack>
-                {contactInfo.map((info) => {
-                  info.value ? (
-                    <a href={info.value}>{info.value}</a>
-                  ) : (
-                    <Text>{info.value}</Text>
-                  );
+                </Card.Body>
+              </Card.Root>
+            ))}
+          </SimpleGrid>
+        </VStack>
 
-                  return (
-                    <Card.Root
-                      key={info.label}
-                      variant="outline"
-                      w={"xxs"}
-                      h={"xxs"}
-                    >
-                      <Card.Body>
-                        <Avatar.Root my={4} boxSize={12}>
-                          <Icon name={info.icon} size={6} />
-                        </Avatar.Root>
-                        <Card.Title className={poppins.className}>
-                          {info.label}
-                        </Card.Title>
-                        <ChakraLink href={info.phoneNumber}>{info.value}</ChakraLink>
-                      </Card.Body>
-                    </Card.Root>
-                  );
-                })}
-              </HStack>
-            </VStack>
+        {/* Google Maps Embed Section */}
+        <Box
+          as={"section"}
+          w={"100%"}
+          px={{ base: 4, md: 8 }}
+        >
+          <Box
+            asChild
+            width="100%"
+            h={{ base: "280px", sm: "340px", md: "420px", lg: "500px" }}
+          >
+            <iframe
+              loading="lazy"
+              style={{ border: 0 }}
+              allowFullScreen
+              src="https://maps.google.com/maps?q=497%20Hooksett%20Road%2C%20Suite%20362%2C%20Manchester%2C%20NH%2003104&amp;t=m&amp;z=10&amp;output=embed&amp;iwloc=near"
+              title="497 Hooksett Road, Suite 362, Manchester, NH 03104"
+              referrerPolicy="no-referrer-when-downgrade"
+              aria-label="497 Hooksett Road, Suite 362, Manchester, NH 03104"
+            ></iframe>
+          </Box>
+        </Box>
 
-            {/* Google Maps Embed Section */}
-            <section>
-              <Box asChild width="100%" height="50vh">
-                <iframe
-                  loading="lazy"
-                  // src={mapEmbedUrl}
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  src="https://maps.google.com/maps?q=497%20Hooksett%20Road%2C%20Suite%20362%2C%20Manchester%2C%20NH%2003104&amp;t=m&amp;z=10&amp;output=embed&amp;iwloc=near"
-                  title="497 Hooksett Road, Suite 362, Manchester, NH 03104"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  aria-label="497 Hooksett Road, Suite 362, Manchester, NH 03104"
-                ></iframe>
-              </Box>
-              {/* Contact Form Section */}
-            </section>
-            <section>
-              <ContactForm />
-            </section>
-          </SectionTemplate>
-
-          <main></main>
-        </PageBuilder>
-      ) : (
-        <>
-          <main>
-            {/* Hero Section */}
-            <section>
-              <ChakraImage asChild>
-                <Image
-                  src="/assets/contact/1500.jpg"
-                  alt="Contact Mokse"
-                  fill
-                  priority
-                />
-              </ChakraImage>
-              <div>
-                <h1>Contact Us</h1>
-                <p>
-                  Find out how you can contribute and make a positive impact in
-                  your community
-                </p>
-              </div>
-            </section>
-
-            {/* Get In Touch Section */}
-            <section>
-              <div>
-                <h2>Get in Touch</h2>
-                <p>
-                  We&apos;re here to support you. Reach out to learn more about
-                  our services, volunteer opportunities, and ways to contribute
-                </p>
-                <div>
-                  {socialLinks.map((link) => (
-                    <a
-                      key={link.platform}
-                      href={link.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={`Visit our ${link.platform} page`}
-                    >
-                      <Icon name={link.platform} size={10} />
-                      <span>{link.platform}</span>
-                    </a>
-                  ))}
-                </div>
-              </div>
-            </section>
-
-            {/* Contact Info Cards Section */}
-            <section>
-              <div>
-                {contactInfo.map((info) => {
-                  const content = info.phoneNumber ? (
-                    <a href={info.phoneNumber}>{info.value}</a>
-                  ) : (
-                    <p>{info.value}</p>
-                  );
-
-                  return (
-                    <article key={info.label}>
-                      hello
-                      <div>{info.icon}</div>
-                      <h4>{info.label}</h4>
-                      {content}
-                    </article>
-                  );
-                })}
-              </div>
-            </section>
-
-            {/* Google Maps Embed Section */}
-            <section>
-              <div>
-                <iframe
-                  src={mapEmbedUrl}
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Mokse Office Location"
-                />
-              </div>
-            </section>
-
-            {/* Contact Form Section */}
-            <section>
-              <div>
-                <ContactForm />
-              </div>
-            </section>
-          </main>
-          )
-        </>
-      )}
-    </>
+        {/* Contact Form Section */}
+        <Box as={"section"} w={"100%"}>
+          <ContactForm />
+        </Box>
+      </SectionTemplate>
+    </PageBuilder>
   );
 }

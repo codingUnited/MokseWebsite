@@ -58,11 +58,13 @@ export default function Admin() {
                 Admin Login
               </Heading>
             </Card.Header>
-            <Input placeholder={"2xl"} hideBelow={'2xl'} />
-            <Input placeholder={"xl"} hideBelow={'xl'} />
-            <Input placeholder={"lg"} hideBelow={'lg'} />
-            <Input placeholder={"md"} hideBelow={'md'} />
-            <Input placeholder={"sm"} hideBelow={'sm'} />
+            <Input placeholder={"4k"} hideBelow={'4k'} />
+            <Input placeholder={"laptopL"} hideBelow={'laptopL'} />
+            <Input placeholder={"laptop"} hideBelow={'laptop'} />
+            <Input placeholder={"tablet"} hideBelow={'tablet'} />
+            <Input placeholder={"mobileL"} hideBelow={'mobileL'} />
+            <Input placeholder={"mobileM"} hideBelow={'mobileM'} />
+            <Input placeholder={"mobileS"} hideBelow={'mobileS'} />
             <Card.Body>
               <form action="submit">
                 <Fieldset.Root>
