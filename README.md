@@ -1,4 +1,4 @@
-# Mokse Website
+# Mokse Educational Service Website
 
 This is a [Next.js](https://nextjs.org/) project containerized with Docker and MongoDB, built for local development and easy deployment.
 The stack includes:
