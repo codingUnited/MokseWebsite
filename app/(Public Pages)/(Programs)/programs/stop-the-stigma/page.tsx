@@ -55,15 +55,13 @@ export default function StopTheStigma() {
       setCountdown({
         days: Math.floor(distance / (1000 * 60 * 60 * 24)),
         hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-        hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
         minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
         seconds: Math.floor((distance % (1000 * 60)) / 1000),
-      });
       });
     }, 1000);
     return () => clearInterval(updateTimer);
   }, [countdownTarget.target]);
-  }, [countdownTarget.target]);
+
 
   return (
     <PageBuilder>
